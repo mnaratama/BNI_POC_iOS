@@ -1,0 +1,6 @@
+framework module Pods_BNIMobileTests {
+  umbrella header "Pods-BNIMobileTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

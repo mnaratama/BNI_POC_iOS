@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="65Y-kz-hzs">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Customer Reg View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CustomerRegView" customModule="BNIMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BNI_Logo" id="5yb-hM-jkj">
+                                <rect key="frame" x="154" y="108" width="86" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to enjoy the app to its fullest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ck9-KY-Ay3">
+                                <rect key="frame" x="38.666666666666657" y="232.00000000000003" width="315.66666666666674" height="50.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLD-0Q-i7I">
+                                <rect key="frame" x="48.666666666666657" y="435" width="296" height="51"/>
+                                <color key="backgroundColor" red="0.16862745098039217" green="0.59607843137254901" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="296" id="ESf-9O-OKy"/>
+                                    <constraint firstAttribute="height" constant="51" id="Srn-iD-Jgi"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Let’s get started">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonTappedToStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d4V-2A-5Pz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ck9-KY-Ay3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ioc-xV-vkL"/>
+                            <constraint firstItem="ck9-KY-Ay3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38.666666666666657" id="SQH-Mt-oYG"/>
+                            <constraint firstItem="cLD-0Q-i7I" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UTA-9m-gpH"/>
+                            <constraint firstItem="cLD-0Q-i7I" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gtH-vm-KZG"/>
+                            <constraint firstItem="ck9-KY-Ay3" firstAttribute="top" secondItem="5yb-hM-jkj" secondAttribute="bottom" constant="39" id="wpQ-za-ZU4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="090-mv-tu6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
+        </scene>
+        <!--Enter Mobile Number-->
+        <scene sceneID="ReB-wt-IhV">
+            <objects>
+                <viewController storyboardIdentifier="EnterMobileNumberVC" title="Enter Mobile Number" id="mFo-fG-Sm0" customClass="EnterMobileNumberView" customModule="BNIMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tZt-nu-5As">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84h-Q6-kzr">
+                                <rect key="frame" x="16" y="84" width="87" height="15"/>
+                                <color key="tintColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OlO-Je-DGe">
+                                <rect key="frame" x="16" y="123.00000000000001" width="361" height="18.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fel-ND-YfX">
+                                <rect key="frame" x="16" y="144.66666666666666" width="361" height="1"/>
+                                <color key="backgroundColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="2wI-6d-eve"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOZ-H2-wv3">
+                                <rect key="frame" x="16" y="151.66666666666666" width="361" height="43"/>
+                                <color key="tintColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">We will verify your number matches our records and a one-time-passcode will be sent to you. Please make sure it’s the number you previously registered with BNI Mobile Banking.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyc-c2-vuf">
+                                <rect key="frame" x="65" y="719" width="263" height="51"/>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.59607843140000005" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="pc3-aR-MtH"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonTappedToStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aS4-PK-rRa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="92n-Qk-Xe3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="92n-Qk-Xe3" firstAttribute="trailing" secondItem="jyc-c2-vuf" secondAttribute="trailing" constant="65" id="0fM-c8-hRL"/>
+                            <constraint firstItem="92n-Qk-Xe3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="84h-Q6-kzr" secondAttribute="trailing" symbolic="YES" id="5kO-uR-dXc"/>
+                            <constraint firstItem="fel-ND-YfX" firstAttribute="top" secondItem="OlO-Je-DGe" secondAttribute="bottom" constant="3" id="C9o-KZ-BQU"/>
+                            <constraint firstItem="84h-Q6-kzr" firstAttribute="top" secondItem="92n-Qk-Xe3" secondAttribute="top" constant="25" id="CFO-ZK-HRy"/>
+                            <constraint firstItem="jyc-c2-vuf" firstAttribute="leading" secondItem="92n-Qk-Xe3" secondAttribute="leading" constant="65" id="Ec6-MQ-rKs"/>
+                            <constraint firstItem="OlO-Je-DGe" firstAttribute="top" secondItem="84h-Q6-kzr" secondAttribute="bottom" constant="24" id="G1c-88-7dk"/>
+                            <constraint firstItem="92n-Qk-Xe3" firstAttribute="trailing" secondItem="BOZ-H2-wv3" secondAttribute="trailing" constant="16" id="GBE-2Z-fk3"/>
+                            <constraint firstItem="fel-ND-YfX" firstAttribute="trailing" secondItem="tZt-nu-5As" secondAttribute="trailingMargin" id="GT5-gh-JV6"/>
+                            <constraint firstItem="BOZ-H2-wv3" firstAttribute="leading" secondItem="92n-Qk-Xe3" secondAttribute="leading" constant="16" id="Qz6-Uy-Rcb"/>
+                            <constraint firstItem="fel-ND-YfX" firstAttribute="leading" secondItem="tZt-nu-5As" secondAttribute="leadingMargin" id="SMe-Tt-sQY"/>
+                            <constraint firstItem="92n-Qk-Xe3" firstAttribute="trailing" secondItem="OlO-Je-DGe" secondAttribute="trailing" constant="16" id="a8v-K7-E8v"/>
+                            <constraint firstItem="OlO-Je-DGe" firstAttribute="leading" secondItem="92n-Qk-Xe3" secondAttribute="leading" constant="16" id="ded-fT-yCg"/>
+                            <constraint firstItem="BOZ-H2-wv3" firstAttribute="top" secondItem="fel-ND-YfX" secondAttribute="bottom" constant="6" id="e18-3P-ATJ"/>
+                            <constraint firstItem="BOZ-H2-wv3" firstAttribute="leading" secondItem="92n-Qk-Xe3" secondAttribute="leading" constant="16" id="hoi-db-pVC"/>
+                            <constraint firstItem="84h-Q6-kzr" firstAttribute="leading" secondItem="92n-Qk-Xe3" secondAttribute="leading" constant="16" id="ksk-wh-eFu"/>
+                            <constraint firstItem="92n-Qk-Xe3" firstAttribute="bottom" secondItem="jyc-c2-vuf" secondAttribute="bottom" constant="48" id="xIy-MM-aTr"/>
+                            <constraint firstItem="92n-Qk-Xe3" firstAttribute="trailing" secondItem="BOZ-H2-wv3" secondAttribute="trailing" constant="16" id="zbW-gc-b0H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomLineLabel" destination="BOZ-H2-wv3" id="h61-KS-qBz"/>
+                        <outlet property="nextButton" destination="jyc-c2-vuf" id="71I-YE-db6"/>
+                        <outlet property="textField" destination="OlO-Je-DGe" id="Sre-pC-g4c"/>
+                        <outlet property="titleLabel" destination="84h-Q6-kzr" id="Gu9-Su-S5n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7IQ-lT-gsW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2309.1603053435115" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vj3-3m-eHf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="65Y-kz-hzs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AQy-Q1-lKR">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ExO-k0-gyh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQb-Kg-sNC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BNI_Logo" width="83" height="83"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

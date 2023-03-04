@@ -1,0 +1,6 @@
+framework module Pods_BNIMobile {
+  umbrella header "Pods-BNIMobile-umbrella.h"
+
+  export *
+  module * { export * }
+}
