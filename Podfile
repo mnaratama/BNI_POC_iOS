@@ -5,7 +5,7 @@ inhibit_all_warnings!
 use_frameworks!
 
 def import_pods
-    #pod 'AKNetworking',  :git => 'git@INMBZP4112.in.dst.ibm.com:apple-coc-frameworks-private/aknetworking.git', :commit => '6dcaaa0b'
+    pod 'AKNetworking',  :git => 'git@github.com:maverick-poc/maverick-ibm-AKNetworking.git'
 end
 
  platform :ios, '13.0'

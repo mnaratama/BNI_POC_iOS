@@ -19,6 +19,8 @@
 		7457C12129B1B5C5006874D5 /* BNIMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C12029B1B5C5006874D5 /* BNIMobileUITests.swift */; };
 		7457C12329B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C12229B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift */; };
 		747FF27D29B20D5E009AC232 /* EnterMobileNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747FF27C29B20D5E009AC232 /* EnterMobileNumberView.swift */; };
+		749B662B29B5EDD500B0A4A4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B662929B5EDD500B0A4A4 /* Request.swift */; };
+		749B662C29B5EDD500B0A4A4 /* NetworkAccessLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B662A29B5EDD500B0A4A4 /* NetworkAccessLayer.swift */; };
 		80347F2029B39CD700048831 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80347F1F29B39CD700048831 /* Logger.swift */; };
 		8085B94929B5B5C5000E2E22 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8085B94829B5B5C4000E2E22 /* Coordinator.swift */; };
 		C2FCCD806E8293C5DD249483 /* Pods_BNIMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338CAD3C4A0339FBDB92446B /* Pods_BNIMobileUITests.framework */; };
@@ -61,6 +63,8 @@
 		7457C12029B1B5C5006874D5 /* BNIMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIMobileUITests.swift; sourceTree = "<group>"; };
 		7457C12229B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIMobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		747FF27C29B20D5E009AC232 /* EnterMobileNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberView.swift; sourceTree = "<group>"; };
+		749B662929B5EDD500B0A4A4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		749B662A29B5EDD500B0A4A4 /* NetworkAccessLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAccessLayer.swift; sourceTree = "<group>"; };
 		80347F1F29B39CD700048831 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		8085B94829B5B5C4000E2E22 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = BNIMobile/Core/Coordinators/Coordinator.swift; sourceTree = SOURCE_ROOT; };
 		A0D1B923D4501D8290D729A3 /* Pods-BNIMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileUITests.release.xcconfig"; path = "Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,9 +219,10 @@
 		749B661A29B3670000B0A4A4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				749B661B29B3670900B0A4A4 /* Modules */,
-				749B661F29B367A700B0A4A4 /* Coordinators */,
 				749B661D29B3679600B0A4A4 /* BaseClasses */,
+				749B661F29B367A700B0A4A4 /* Coordinators */,
+				749B661B29B3670900B0A4A4 /* Modules */,
+				749B662829B5ED6000B0A4A4 /* Networking */,
 				749B661E29B367A000B0A4A4 /* Utils */,
 			);
 			path = Core;
@@ -264,6 +269,15 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		749B662829B5ED6000B0A4A4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				749B662A29B5EDD500B0A4A4 /* NetworkAccessLayer.swift */,
+				749B662929B5EDD500B0A4A4 /* Request.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		80347F1E29B39CB500048831 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +297,7 @@
 				7457C0F829B1B5C1006874D5 /* Sources */,
 				7457C0F929B1B5C1006874D5 /* Frameworks */,
 				7457C0FA29B1B5C1006874D5 /* Resources */,
+				F42C8672C2F8FDDDB0D6A829 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,6 +316,7 @@
 				7457C10E29B1B5C5006874D5 /* Sources */,
 				7457C10F29B1B5C5006874D5 /* Frameworks */,
 				7457C11029B1B5C5006874D5 /* Resources */,
+				A3F0EC2C1FECBA8E61276B7C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,6 +336,7 @@
 				7457C11829B1B5C5006874D5 /* Sources */,
 				7457C11929B1B5C5006874D5 /* Frameworks */,
 				7457C11A29B1B5C5006874D5 /* Resources */,
+				EDF944AAD0DD28D03EF8D81A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -424,6 +441,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A3F0EC2C1FECBA8E61276B7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AE40FED1BCB2F0C85D790103 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -468,6 +502,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EDF944AAD0DD28D03EF8D81A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F42C8672C2F8FDDDB0D6A829 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BNIMobile/Pods-BNIMobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BNIMobile/Pods-BNIMobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BNIMobile/Pods-BNIMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -479,6 +547,8 @@
 				7457C10429B1B5C1006874D5 /* CustomerRegView.swift in Sources */,
 				8085B94929B5B5C5000E2E22 /* Coordinator.swift in Sources */,
 				747FF27D29B20D5E009AC232 /* EnterMobileNumberView.swift in Sources */,
+				749B662C29B5EDD500B0A4A4 /* NetworkAccessLayer.swift in Sources */,
+				749B662B29B5EDD500B0A4A4 /* Request.swift in Sources */,
 				7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */,
 				7457C10229B1B5C1006874D5 /* SceneDelegate.swift in Sources */,
 			);

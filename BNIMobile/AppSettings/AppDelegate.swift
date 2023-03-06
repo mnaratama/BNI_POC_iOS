@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AKNetworking
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Configure the AKNetworkingSession
+        DataSourceManager.baseURLString = "https://f8da5de4-d527-4c3a-bc3c-c6594acf6f1a.mock.pstmn.io"
+        DataSourceManager.localMode = false
+        
         return true
     }
 
