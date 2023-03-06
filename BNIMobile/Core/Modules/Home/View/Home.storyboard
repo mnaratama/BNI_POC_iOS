@@ -179,6 +179,9 @@
                                                         <state key="normal" image="ic_settings_black">
                                                             <color key="titleColor" systemColor="labelColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="settingTapped:" destination="46W-5l-i7b" eventType="touchUpInside" id="BCf-vF-qW9"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,10 +213,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R8J-Qg-uqn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R8J-Qg-uqn">
                                 <rect key="frame" x="0.0" y="167" width="390" height="643"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nTd-Qp-BlU"/>
@@ -234,6 +237,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qrh-ta-6uO"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="2Z4-Bv-yMH" id="JNV-BV-qde"/>
+                        <outlet property="pointLabel" destination="11r-3E-dqz" id="WlU-HA-Sj0"/>
+                        <outlet property="profileImg" destination="KP4-b2-lHc" id="aJg-c8-Dm2"/>
+                        <outlet property="profileLabel" destination="HN0-q5-rfl" id="0GW-ZL-eJK"/>
+                        <outlet property="tableView" destination="R8J-Qg-uqn" id="iYc-NX-LFW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiP-29-dwM" sceneMemberID="firstResponder"/>
             </objects>

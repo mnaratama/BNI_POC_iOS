@@ -20,17 +20,17 @@ class HomeHeaderTableCell: UITableViewCell {
         super.awakeFromNib()
         
         selectionStyle = .none
-        backgroundColor = .clear
+//        backgroundColor = UIColor.systemTeal
         
         setupCollectionView()
     }
     
-    override func layoutSubviews() {
-        collectionViewHeightConstraint.constant = (width / 2) + 4
-    }
+//    override func layoutSubviews() {
+//        collectionViewHeightConstraint.constant = (width / 2) + 4
+//    }
     
     private func setupCollectionView(){
-//        collectionView.register([HomePageHeaderTabCollectionCell.self])
+//        collectionView.register(HomeQuicklinksCollectionCell.self, forCellWithReuseIdentifier: "QuicklinksCollectionCell")
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -38,6 +38,10 @@ class HomeHeaderTableCell: UITableViewCell {
         flowLayout.minimumLineSpacing = 16
         flowLayout.minimumInteritemSpacing = 0
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+    }
+    
+    private func setupView(){
+        
     }
     
     func bind(items: [HomeHeaderTab]){

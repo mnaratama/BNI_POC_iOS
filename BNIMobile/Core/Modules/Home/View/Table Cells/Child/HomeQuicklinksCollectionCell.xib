@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VfL-RJ-uj1" customClass="HomeQuicklinksCollectionCell" customModule="BNIMobile" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="QuicklinksCollectionCell" id="VfL-RJ-uj1" customClass="HomeQuicklinksCollectionCell" customModule="BNIMobile" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="66" height="122"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -22,10 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="66" height="122"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnI-Hw-2Ck">
-                                <rect key="frame" x="0.0" y="8" width="66" height="66"/>
+                                <rect key="frame" x="16" y="8" width="34" height="66"/>
                                 <subviews>
                                     <imageView autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" image="GradientSilver" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-FU-eVv">
-                                        <rect key="frame" x="17" y="17" width="32" height="32"/>
+                                        <rect key="frame" x="1" y="17" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="8L4-Q4-gfo"/>
                                             <constraint firstAttribute="width" secondItem="d2X-FU-eVv" secondAttribute="height" multiplier="1:1" id="Q0m-dw-3iV"/>
@@ -58,15 +58,15 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3z-2G-3Nd">
                                 <rect key="frame" x="0.0" y="82" width="66" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.43529409170150757" green="0.43529409170150757" blue="0.43529409170150757" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.43529409170150757" green="0.43529409170150757" blue="0.43529409170150757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="H3z-2G-3Nd" firstAttribute="leading" secondItem="UJx-jG-iPv" secondAttribute="leading" id="0Ci-Il-fU5"/>
-                            <constraint firstItem="XnI-Hw-2Ck" firstAttribute="leading" secondItem="UJx-jG-iPv" secondAttribute="leading" id="6hJ-xA-YcE"/>
-                            <constraint firstAttribute="trailing" secondItem="XnI-Hw-2Ck" secondAttribute="trailing" id="AFc-8d-Sga"/>
+                            <constraint firstItem="XnI-Hw-2Ck" firstAttribute="leading" secondItem="UJx-jG-iPv" secondAttribute="leading" constant="16" id="6hJ-xA-YcE"/>
+                            <constraint firstAttribute="trailing" secondItem="XnI-Hw-2Ck" secondAttribute="trailing" constant="16" id="AFc-8d-Sga"/>
                             <constraint firstItem="H3z-2G-3Nd" firstAttribute="top" secondItem="XnI-Hw-2Ck" secondAttribute="bottom" constant="8" id="Py6-Yn-FMG"/>
                             <constraint firstAttribute="trailing" secondItem="H3z-2G-3Nd" secondAttribute="trailing" id="Xkc-H9-WJ7"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="H3z-2G-3Nd" secondAttribute="bottom" constant="4" id="f0g-It-8dp"/>
@@ -95,7 +95,7 @@
                 <outlet property="quicklinkLabel" destination="H3z-2G-3Nd" id="iNa-Kr-aF7"/>
                 <outlet property="quicklinkView" destination="XnI-Hw-2Ck" id="R5I-59-QCn"/>
             </connections>
-            <point key="canvasLocation" x="522" y="74"/>
+            <point key="canvasLocation" x="521.53846153846155" y="73.93364928909952"/>
         </collectionViewCell>
     </objects>
     <resources>

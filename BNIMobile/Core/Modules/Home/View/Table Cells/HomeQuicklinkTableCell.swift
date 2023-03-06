@@ -11,63 +11,58 @@ class HomeQuicklinkTableCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
-    private let width = UIScreen.main.bounds.width / 3
-    private var height = 154.0
-//    var items: [HomePageRevampProgram]?
+    var items: [HomeQuicklink]?
     var didSelectCell: ((Int)->Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         selectionStyle = .none
-        backgroundColor = .clear
+        backgroundColor = .white
         setupCollectionView()
     }
     
     private func setupCollectionView(){
-//        collectionView.register([HomeQuicklinksCollectionCell.self])
+        collectionView.register(UINib(nibName: "HomeQuicklinksCollectionCell", bundle: .main), forCellWithReuseIdentifier: "QuicklinksCollectionCell")
+
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.reloadData()
         
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
-        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+//        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
     
-    func bind(data: [HomePageRevampProgram], bottomLine: Bool = false){
-//        items = data
+    func bind(data: [HomeQuicklink]){
+        items = data
         collectionView.reloadData()
-//        bottomLineView.isHidden = !bottomLine
-        height = bottomLine ? 170.0 : 154.0
+//        height = bottomLine ? 170.0 : 154.0
     }
 }
 
 extension HomeQuicklinkTableCell{
-    struct HomePageRevampProgram {
+    struct HomeQuicklink {
         let id: Int
         let name: String
-        let desc: String
         let image: String
     }
 }
 
 extension HomeQuicklinkTableCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return self.items?.count ?? 0
-        return 0
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        if let cell: HomePageRevampProgramCollectionCell = collectionView.dequeueReusableCell(for: indexPath){
-//            cell.bind(image: items?[indexPath.row].image ?? "", title: items?[indexPath.row].name ?? "", body: items?[indexPath.row].desc ?? "")
-//            return cell
-//        }
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuicklinksCollectionCell", for: indexPath) as! HomeQuicklinksCollectionCell
+        cell.bind()
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: width, height: 92)
+        return CGSize(width: UIScreen.main.bounds.width/4, height: 120)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
