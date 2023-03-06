@@ -58,7 +58,7 @@ class EnterMobileNumberView: UIViewController, UITextFieldDelegate {
     
     /// called each time user enters a value in the textFiled, Validation should happen here
     @objc func updatedValue(textField: UITextField) {
-        guard let valueString = textField.text else {
+        guard let _ = textField.text else {
             return
         }
 
@@ -69,7 +69,7 @@ class EnterMobileNumberView: UIViewController, UITextFieldDelegate {
 
     /// called when the keyboard gets dismissed,  any additional validation should happen here
     func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let enteredText = textField.text else {
+        guard let _ = textField.text else {
             return
         }
         self.nextButton(shouldEnable: true)
