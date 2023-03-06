@@ -19,6 +19,8 @@
 		7457C12129B1B5C5006874D5 /* BNIMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C12029B1B5C5006874D5 /* BNIMobileUITests.swift */; };
 		7457C12329B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C12229B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift */; };
 		747FF27D29B20D5E009AC232 /* EnterMobileNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747FF27C29B20D5E009AC232 /* EnterMobileNumberView.swift */; };
+		80347F2029B39CD700048831 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80347F1F29B39CD700048831 /* Logger.swift */; };
+		8085B94929B5B5C5000E2E22 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8085B94829B5B5C4000E2E22 /* Coordinator.swift */; };
 		C2FCCD806E8293C5DD249483 /* Pods_BNIMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338CAD3C4A0339FBDB92446B /* Pods_BNIMobileUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		7457C12029B1B5C5006874D5 /* BNIMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIMobileUITests.swift; sourceTree = "<group>"; };
 		7457C12229B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIMobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		747FF27C29B20D5E009AC232 /* EnterMobileNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberView.swift; sourceTree = "<group>"; };
+		80347F1F29B39CD700048831 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		8085B94829B5B5C4000E2E22 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = BNIMobile/Core/Utils/Logger/Coordinator.swift; sourceTree = SOURCE_ROOT; };
 		A0D1B923D4501D8290D729A3 /* Pods-BNIMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileUITests.release.xcconfig"; path = "Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E4D0B1FB41C2511E6D4B0380 /* Pods-BNIMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobile.release.xcconfig"; path = "Target Support Files/Pods-BNIMobile/Pods-BNIMobile.release.xcconfig"; sourceTree = "<group>"; };
 		E698197688DBE50548379716 /* Pods_BNIMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +251,7 @@
 		749B661E29B367A000B0A4A4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				80347F1E29B39CB500048831 /* Logger */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -254,8 +259,17 @@
 		749B661F29B367A700B0A4A4 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				8085B94829B5B5C4000E2E22 /* Coordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		80347F1E29B39CB500048831 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				80347F1F29B39CD700048831 /* Logger.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,7 +475,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80347F2029B39CD700048831 /* Logger.swift in Sources */,
 				7457C10429B1B5C1006874D5 /* CustomerRegView.swift in Sources */,
+				8085B94929B5B5C5000E2E22 /* Coordinator.swift in Sources */,
 				747FF27D29B20D5E009AC232 /* EnterMobileNumberView.swift in Sources */,
 				7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */,
 				7457C10229B1B5C1006874D5 /* SceneDelegate.swift in Sources */,
@@ -650,6 +666,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -682,6 +699,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
