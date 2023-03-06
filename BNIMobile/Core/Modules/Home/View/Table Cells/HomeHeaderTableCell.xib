@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -62,11 +61,14 @@
                                                     <constraint firstAttribute="width" secondItem="Iqm-kD-tjC" secondAttribute="height" multiplier="1:1" id="qGE-nd-BMW"/>
                                                     <constraint firstAttribute="width" constant="16" id="vX7-Tw-YGr"/>
                                                 </constraints>
-                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <color key="tintColor" name="BNI Teal"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="ic_copy_green">
-                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                    <color key="titleColor" name="BNI Teal"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="copyTapped:" destination="PHr-Wi-qoS" eventType="touchUpInside" id="uIX-cQ-t8l"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -104,6 +106,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="collectionView" destination="q4x-ia-zF2" id="ZFt-pa-E19"/>
+                <outlet property="containerView" destination="2ny-gW-ric" id="tX5-qt-Mzd"/>
                 <outlet property="flowLayout" destination="OZ4-hG-SfV" id="IQc-hU-d0B"/>
             </connections>
             <point key="canvasLocation" x="2.8985507246376816" y="72.991071428571431"/>
@@ -112,10 +115,7 @@
     <resources>
         <image name="ic_copy_green" width="14" height="14"/>
         <namedColor name="BNI Teal">
-            <color red="0.16899999976158142" green="0.59600001573562622" blue="0.67100000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.40000000000000002" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

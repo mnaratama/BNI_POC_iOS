@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2363ED6529B601F200295D40 /* HomeRecentTransactionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363ED6429B601F200295D40 /* HomeRecentTransactionTableCell.swift */; };
+		2363ED6729B6021100295D40 /* HomeRecentTransactionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2363ED6629B6021100295D40 /* HomeRecentTransactionTableCell.xib */; };
+		2363ED6929B6211E00295D40 /* HomeRecentTransactionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363ED6829B6211E00295D40 /* HomeRecentTransactionCollectionCell.swift */; };
+		2363ED6B29B6212800295D40 /* HomeRecentTransactionCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2363ED6A29B6212800295D40 /* HomeRecentTransactionCollectionCell.xib */; };
 		2369A28D29B586A70006C0C8 /* HomeHeaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369A28C29B586A70006C0C8 /* HomeHeaderTableCell.swift */; };
 		2369A28F29B586D20006C0C8 /* HomeHeaderTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2369A28E29B586D20006C0C8 /* HomeHeaderTableCell.xib */; };
 		2369A29129B5A0E00006C0C8 /* HomeQuicklinkTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369A29029B5A0E00006C0C8 /* HomeQuicklinkTableCell.swift */; };
@@ -48,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2363ED6429B601F200295D40 /* HomeRecentTransactionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentTransactionTableCell.swift; sourceTree = "<group>"; };
+		2363ED6629B6021100295D40 /* HomeRecentTransactionTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecentTransactionTableCell.xib; sourceTree = "<group>"; };
+		2363ED6829B6211E00295D40 /* HomeRecentTransactionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentTransactionCollectionCell.swift; sourceTree = "<group>"; };
+		2363ED6A29B6212800295D40 /* HomeRecentTransactionCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecentTransactionCollectionCell.xib; sourceTree = "<group>"; };
 		2369A28C29B586A70006C0C8 /* HomeHeaderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderTableCell.swift; sourceTree = "<group>"; };
 		2369A28E29B586D20006C0C8 /* HomeHeaderTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderTableCell.xib; sourceTree = "<group>"; };
 		2369A29029B5A0E00006C0C8 /* HomeQuicklinkTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeQuicklinkTableCell.swift; sourceTree = "<group>"; };
@@ -130,6 +138,8 @@
 				2369A28E29B586D20006C0C8 /* HomeHeaderTableCell.xib */,
 				2369A29029B5A0E00006C0C8 /* HomeQuicklinkTableCell.swift */,
 				2369A29229B5A0E80006C0C8 /* HomeQuicklinkTableCell.xib */,
+				2363ED6429B601F200295D40 /* HomeRecentTransactionTableCell.swift */,
+				2363ED6629B6021100295D40 /* HomeRecentTransactionTableCell.xib */,
 			);
 			path = "Table Cells";
 			sourceTree = "<group>";
@@ -139,6 +149,8 @@
 			children = (
 				2369A29529B5AAF40006C0C8 /* HomeQuicklinksCollectionCell.xib */,
 				2369A29729B5AB000006C0C8 /* HomeQuicklinksCollectionCell.swift */,
+				2363ED6A29B6212800295D40 /* HomeRecentTransactionCollectionCell.xib */,
+				2363ED6829B6211E00295D40 /* HomeRecentTransactionCollectionCell.swift */,
 			);
 			path = Child;
 			sourceTree = "<group>";
@@ -440,10 +452,12 @@
 				7457C10C29B1B5C5006874D5 /* LaunchScreen.storyboard in Resources */,
 				2369A29329B5A0E80006C0C8 /* HomeQuicklinkTableCell.xib in Resources */,
 				2369A29629B5AAF40006C0C8 /* HomeQuicklinksCollectionCell.xib in Resources */,
+				2363ED6B29B6212800295D40 /* HomeRecentTransactionCollectionCell.xib in Resources */,
 				7457C10929B1B5C5006874D5 /* Assets.xcassets in Resources */,
 				7457C10729B1B5C1006874D5 /* Main.storyboard in Resources */,
 				CA79D3E729B4979B00FDCF06 /* Home.storyboard in Resources */,
 				2369A28F29B586D20006C0C8 /* HomeHeaderTableCell.xib in Resources */,
+				2363ED6729B6021100295D40 /* HomeRecentTransactionTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +557,9 @@
 				747FF27D29B20D5E009AC232 /* EnterMobileNumberView.swift in Sources */,
 				7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */,
 				CA79D3E929B49D4500FDCF06 /* HomeView.swift in Sources */,
+				2363ED6529B601F200295D40 /* HomeRecentTransactionTableCell.swift in Sources */,
 				2369A28D29B586A70006C0C8 /* HomeHeaderTableCell.swift in Sources */,
+				2363ED6929B6211E00295D40 /* HomeRecentTransactionCollectionCell.swift in Sources */,
 				7457C10229B1B5C1006874D5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -720,9 +736,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MY65R8DR6S;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MY65R8DR6S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BNIMobile/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -738,6 +756,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.BNIMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = BNI_POC_DEVELOPMENT;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -753,9 +773,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MY65R8DR6S;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MY65R8DR6S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BNIMobile/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -771,6 +793,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.BNIMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = BNI_POC_DEVELOPMENT;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
