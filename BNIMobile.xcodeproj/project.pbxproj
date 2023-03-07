@@ -43,6 +43,7 @@
 		237BD97029B71260003923D1 /* MySpaceClaimRewardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237BD96F29B71260003923D1 /* MySpaceClaimRewardCollectionCell.swift */; };
 		237BD97229B71268003923D1 /* MySpaceClaimRewardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 237BD97129B71268003923D1 /* MySpaceClaimRewardCollectionCell.xib */; };
 		237BD97429B72696003923D1 /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237BD97329B72696003923D1 /* HomepageView.swift */; };
+		23E27D3B29B7723F004737DC /* QuicklinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E27D3A29B7723F004737DC /* QuicklinksView.swift */; };
 		5BC07276206D885092ED4A31 /* Pods_BNIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AF8BEA4437779214F08121 /* Pods_BNIMobile.framework */; };
 		6D18617980145072F808653C /* Pods_BNIMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E698197688DBE50548379716 /* Pods_BNIMobileTests.framework */; };
 		7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C0FF29B1B5C1006874D5 /* AppDelegate.swift */; };
@@ -114,6 +115,7 @@
 		237BD96F29B71260003923D1 /* MySpaceClaimRewardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpaceClaimRewardCollectionCell.swift; sourceTree = "<group>"; };
 		237BD97129B71268003923D1 /* MySpaceClaimRewardCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySpaceClaimRewardCollectionCell.xib; sourceTree = "<group>"; };
 		237BD97329B72696003923D1 /* HomepageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
+		23E27D3A29B7723F004737DC /* QuicklinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuicklinksView.swift; sourceTree = "<group>"; };
 		32B1DEC082ECBC362E51D9AE /* Pods-BNIMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		338CAD3C4A0339FBDB92446B /* Pods_BNIMobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B1D5717B2947FEF02006F57 /* Pods-BNIMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobile.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobile/Pods-BNIMobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -456,6 +458,7 @@
 				CA79D3E829B49D4500FDCF06 /* HomeView.swift */,
 				237BD95E29B6E7E8003923D1 /* MySpaceView.swift */,
 				237BD97329B72696003923D1 /* HomepageView.swift */,
+				23E27D3A29B7723F004737DC /* QuicklinksView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -687,6 +690,7 @@
 				2369A29129B5A0E00006C0C8 /* HomeQuicklinkTableCell.swift in Sources */,
 				237BD95F29B6E7E8003923D1 /* MySpaceView.swift in Sources */,
 				237BD96C29B71012003923D1 /* MySpaceClaimRewardTableCell.swift in Sources */,
+				23E27D3B29B7723F004737DC /* QuicklinksView.swift in Sources */,
 				7457C10429B1B5C1006874D5 /* CustomerRegView.swift in Sources */,
 				237BD96329B6F905003923D1 /* MySpaceHeaderTableCell.swift in Sources */,
 				237BD97029B71260003923D1 /* MySpaceClaimRewardCollectionCell.swift in Sources */,
