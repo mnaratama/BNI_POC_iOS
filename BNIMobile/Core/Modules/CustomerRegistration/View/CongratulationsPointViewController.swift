@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CongratulationsPointViewController: UIViewController {
+class CongratulationsPointViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,4 +18,7 @@ class CongratulationsPointViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
 
+    @IBAction func CloseButtonAction(_ sender: Any) {
+        //TODO: Load EPIC3 Here
+    }
 }

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Customer Reg View-->
+        <!--New User Landing View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CustomerRegView" customModule="BNIMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewUserLandingViewController" id="BYZ-38-t0r" customClass="NewUserLandingViewController" customModule="BNIMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
         </scene>
-        <!--Enter Mobile Number View-->
+        <!--Enter Mobile Number View Controller-->
         <scene sceneID="ReB-wt-IhV">
             <objects>
-                <viewController storyboardIdentifier="EnterMobileNumberVC" id="mFo-fG-Sm0" customClass="EnterMobileNumberView" customModule="BNIMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EnterMobileNumberViewController" id="mFo-fG-Sm0" customClass="EnterMobileNumberViewController" customModule="BNIMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tZt-nu-5As">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,8 +120,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonTappedToStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aS4-PK-rRa"/>
-                                    <segue destination="KAc-da-FRO" kind="show" id="ed1-UW-MXg"/>
+                                    <action selector="buttonDoneTapped:" destination="mFo-fG-Sm0" eventType="touchUpInside" id="lb7-4k-YY6"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zX-PV-bJX">
@@ -200,12 +199,12 @@
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--Otp View Controller-->
         <scene sceneID="9Ke-kL-GQ1">
             <objects>
-                <viewController id="KAc-da-FRO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OtpViewController" id="KAc-da-FRO" customClass="OtpViewController" customModule="BNIMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HVy-An-3Hg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hU0-V7-r1q">
@@ -252,7 +251,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHq-Bt-bzc">
-                                <rect key="frame" x="16" y="687" width="361" height="48"/>
+                                <rect key="frame" x="16" y="722" width="361" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="mht-7W-2RE"/>
@@ -554,15 +553,15 @@ enjoy your BNI Mobile Banking app!</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter user id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4j0-DG-aXt">
-                                                <rect key="frame" x="10" y="24.333333333333314" width="333.66666666666669" height="40"/>
+                                                <rect key="frame" x="10" y="24.333333333333314" width="333.66666666666669" height="48"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="fYZ-Qt-uVp"/>
+                                                    <constraint firstAttribute="height" constant="48" id="fYZ-Qt-uVp"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oQ-0Y-5wj">
-                                                <rect key="frame" x="0.0" y="72" width="353.66666666666669" height="1"/>
+                                                <rect key="frame" x="0.0" y="80" width="353.66666666666669" height="1"/>
                                                 <color key="backgroundColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="MWk-aw-du9"/>
@@ -572,7 +571,7 @@ enjoy your BNI Mobile Banking app!</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User ID not found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjl-0w-R0e">
-                                                <rect key="frame" x="0.0" y="83" width="99.666666666666671" height="14.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="91" width="99.666666666666671" height="14.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -604,15 +603,15 @@ enjoy your BNI Mobile Banking app!</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FzI-1X-UWb">
-                                                <rect key="frame" x="10" y="24.333333333333371" width="333.66666666666669" height="40"/>
+                                                <rect key="frame" x="10" y="24.333333333333371" width="333.66666666666669" height="48"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="nmf-SE-Yf7"/>
+                                                    <constraint firstAttribute="height" constant="48" id="nmf-SE-Yf7"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoK-a9-Ocr">
-                                                <rect key="frame" x="0.0" y="72" width="353.66666666666669" height="1"/>
+                                                <rect key="frame" x="0.0" y="80" width="353.66666666666669" height="1"/>
                                                 <color key="backgroundColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="ZDo-2j-bh5"/>
@@ -622,7 +621,7 @@ enjoy your BNI Mobile Banking app!</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrG-hD-Yg5">
-                                                <rect key="frame" x="0.0" y="83" width="94.666666666666671" height="14.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="91" width="94.666666666666671" height="14.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

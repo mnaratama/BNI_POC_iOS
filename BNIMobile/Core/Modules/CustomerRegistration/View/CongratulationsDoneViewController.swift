@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CongratulationsDoneViewController: UIViewController {
+class CongratulationsDoneViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ class CongratulationsDoneViewController: UIViewController {
     }
 
     @IBAction func buttonDoneTapped(_ sender: Any) {
-        guard let viewController = UIStoryboard(name: VCConstants.mainStoryboardName, bundle: nil).instantiateViewController(withIdentifier: VCConstants.congratulationsPointVC) as? CongratulationsPointViewController else {
+        guard let viewController = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.congratulationsPointVC) as? CongratulationsPointViewController else {
             fatalError("Failed to load Main from CongratulationsPointViewController file")
         }
         self.navigationController?.pushViewController(viewController, animated: true)
