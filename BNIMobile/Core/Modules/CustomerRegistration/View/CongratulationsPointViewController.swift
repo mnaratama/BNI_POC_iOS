@@ -18,4 +18,7 @@ class CongratulationsPointViewController: BaseViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
 
+    @IBAction func CloseButtonAction(_ sender: Any) {
+        //TODO: Load EPIC3 Here
+    }
 }

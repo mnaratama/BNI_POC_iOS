@@ -263,9 +263,9 @@
 		749B661C29B3672200B0A4A4 /* CustomerRegistration */ = {
 			isa = PBXGroup;
 			children = (
-				747FF27B29B20B3C009AC232 /* ViewModel */,
 				747FF27A29B20B06009AC232 /* Model */,
 				747FF27929B20AFE009AC232 /* View */,
+				747FF27B29B20B3C009AC232 /* ViewModel */,
 			);
 			path = CustomerRegistration;
 			sourceTree = "<group>";
