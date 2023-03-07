@@ -16,7 +16,6 @@
 import UIKit
 
 class NewUserLandingViewController: BaseViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +26,7 @@ class NewUserLandingViewController: BaseViewController {
         })
     }
     
-    @IBAction func buttonTappedToStart(_ sender: Any) {        
+    @IBAction func buttonTappedToStart(_ sender: Any) {
         guard let viewController = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.enterMobileNumberVC) as? EnterMobileNumberViewController else {
             fatalError("Failed to load Main from EnterMobileNumberVC file")
         }

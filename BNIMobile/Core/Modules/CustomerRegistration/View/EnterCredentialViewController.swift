@@ -22,12 +22,19 @@ class EnterCredentialViewController: BaseViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }
-
+    
     @IBAction func buttonNextTapped(_ sender: Any) {
         guard let viewController = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.congratulationsDoneVC) as? CongratulationsDoneViewController else {
             fatalError("Failed to load Main from CongratulationsDoneViewController file")
         }
+        userDefaultsToSaveCustomerRegStatus()
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func userDefaultsToSaveCustomerRegStatus() {
+        //TODO: can be removed once we have the API inplace to determine this status
+        var userDefaults = UserDefaults.standard
+        userDefaults.set(true, forKey: "hasCustomerRegistered")
     }
     
     func hideErrorLabel(){
