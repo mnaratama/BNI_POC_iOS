@@ -90,17 +90,17 @@
 		3D8BCB08356E717334D3BD927ED2D238 /* Global.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Global.swift; path = AKNetworking/Sources/Helpers/Global.swift; sourceTree = "<group>"; };
 		3ECB8DB69DF530A4F366DE6B74C012A3 /* Pods-BNIMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		3EF55E9ACA5B05163A204C58C3C32FD7 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = AKNetworking/Sources/Core/Serializers/JSON.swift; sourceTree = "<group>"; };
-		42B492CD81F37209A8854EE8CA2B9A45 /* AKNetworking */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AKNetworking; path = AKNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B492CD81F37209A8854EE8CA2B9A45 /* AKNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AKNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C9D5796D80150DB782CC2F8AEE6BAE /* Pods-BNIMobile-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobile-Info.plist"; sourceTree = "<group>"; };
 		45C194190FC8958A006A362F20FA11BD /* AKRequestLogging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AKRequestLogging.swift; path = AKNetworking/Sources/Core/Logging/AKRequestLogging.swift; sourceTree = "<group>"; };
 		46EB617FF47B6674670631570AAEF617 /* Enums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enums.swift; path = AKNetworking/Sources/Core/Managers/Enums.swift; sourceTree = "<group>"; };
 		50A43357FF666BED88DAE4B6D2F6547E /* Pods-BNIMobileUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BNIMobileUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5230B7448DC9688184788D3BC2F9F3F3 /* StubURLHTTPProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubURLHTTPProtocol.swift; path = AKNetworking/Sources/Core/Serializers/StubURLHTTPProtocol.swift; sourceTree = "<group>"; };
 		5448522E7656F3A532A171F940EA8FC6 /* Pods-BNIMobile-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BNIMobile-frameworks.sh"; sourceTree = "<group>"; };
-		570F32157296728E7D85F2EB86208BB7 /* Pods-BNIMobileUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BNIMobileUITests"; path = Pods_BNIMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		570F32157296728E7D85F2EB86208BB7 /* Pods_BNIMobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		593F9B1554F4014BEFF6B8CB1604B556 /* CacheManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheManager.swift; path = AKNetworking/Sources/Core/Managers/CacheManager.swift; sourceTree = "<group>"; };
 		5A19BFFAA1A011CDBBA0327D8EB03A15 /* AKReachability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AKReachability.swift; path = AKNetworking/Sources/Helpers/AKReachability.swift; sourceTree = "<group>"; };
-		66E7A90098D3B86172A21310774EB67A /* Pods-BNIMobileTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BNIMobileTests"; path = Pods_BNIMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66E7A90098D3B86172A21310774EB67A /* Pods_BNIMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71AA65FA9BC619868E1A7D1288134AEE /* Pods-BNIMobile-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobile-acknowledgements.plist"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		769AA1E7FEDA5DEE270AD156AD565BF8 /* AKNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AKNetworking.modulemap; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		9499164256AB430F6E672731C8094CA5 /* AKNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AKNetworking-umbrella.h"; sourceTree = "<group>"; };
 		985D1686D3D31F2754214DA05D190FDC /* Pods-BNIMobileTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BNIMobileTests-dummy.m"; sourceTree = "<group>"; };
 		9C02EBE2693EC444B31A9DE5CB3330C9 /* UIImageView+ImageCaching.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+ImageCaching.swift"; path = "AKNetworking/Sources/Helpers/UIImageView+ImageCaching.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F33BC43946B40D881C4B30A9874EA61 /* DataSourceManager+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DataSourceManager+Extensions.swift"; path = "AKNetworking/Sources/Core/Managers/DataSourceManager+Extensions.swift"; sourceTree = "<group>"; };
 		A65F455D96CDD32D7EFBE2C14B1D894E /* Pods-BNIMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		AC983C511D12204C42A9A48C44A6915D /* String+Base64.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Base64.swift"; path = "AKNetworking/Sources/Helpers/String+Base64.swift"; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		DA411249640E2CCBEC80D30F7A5DC466 /* Pods-BNIMobileUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BNIMobileUITests-umbrella.h"; sourceTree = "<group>"; };
 		DABB76A2234BA2219174A266DEE4E204 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = AKNetworking/Sources/Core/Managers/SessionManager.swift; sourceTree = "<group>"; };
 		DAD5FB9898140CB59948CF137600473D /* AKNetworking-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AKNetworking-Info.plist"; sourceTree = "<group>"; };
-		E7B75CD46A320C33DB7DC4B441ECC453 /* Pods-BNIMobile */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BNIMobile"; path = Pods_BNIMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B75CD46A320C33DB7DC4B441ECC453 /* Pods_BNIMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8410F39CAAE69C14C184D8D0E52F9CF /* AKNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AKNetworking-dummy.m"; sourceTree = "<group>"; };
 		E8D8032C5F835C927C628405B1C74D00 /* Pods-BNIMobileUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BNIMobileUITests-frameworks.sh"; sourceTree = "<group>"; };
 		ECC28291795E844EBA0B3DC9503D0E58 /* Pods-BNIMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobile.release.xcconfig"; sourceTree = "<group>"; };
@@ -239,10 +239,10 @@
 		7EA772039AEE1B4C2642505B2558BB73 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				42B492CD81F37209A8854EE8CA2B9A45 /* AKNetworking */,
-				E7B75CD46A320C33DB7DC4B441ECC453 /* Pods-BNIMobile */,
-				66E7A90098D3B86172A21310774EB67A /* Pods-BNIMobileTests */,
-				570F32157296728E7D85F2EB86208BB7 /* Pods-BNIMobileUITests */,
+				42B492CD81F37209A8854EE8CA2B9A45 /* AKNetworking.framework */,
+				E7B75CD46A320C33DB7DC4B441ECC453 /* Pods_BNIMobile.framework */,
+				66E7A90098D3B86172A21310774EB67A /* Pods_BNIMobileTests.framework */,
+				570F32157296728E7D85F2EB86208BB7 /* Pods_BNIMobileUITests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,7 +296,6 @@
 				9C02EBE2693EC444B31A9DE5CB3330C9 /* UIImageView+ImageCaching.swift */,
 				2ACC05859D2FEB58EBAC51F4FEE79A20 /* Support Files */,
 			);
-			name = AKNetworking;
 			path = AKNetworking;
 			sourceTree = "<group>";
 		};
@@ -390,7 +389,7 @@
 			);
 			name = "Pods-BNIMobileUITests";
 			productName = Pods_BNIMobileUITests;
-			productReference = 570F32157296728E7D85F2EB86208BB7 /* Pods-BNIMobileUITests */;
+			productReference = 570F32157296728E7D85F2EB86208BB7 /* Pods_BNIMobileUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D0711ED88575B7370859CD1B8432B8BF /* AKNetworking */ = {
@@ -408,7 +407,7 @@
 			);
 			name = AKNetworking;
 			productName = AKNetworking;
-			productReference = 42B492CD81F37209A8854EE8CA2B9A45 /* AKNetworking */;
+			productReference = 42B492CD81F37209A8854EE8CA2B9A45 /* AKNetworking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E05A586B5E5AA95F8839269583605E8B /* Pods-BNIMobile */ = {
@@ -427,7 +426,7 @@
 			);
 			name = "Pods-BNIMobile";
 			productName = Pods_BNIMobile;
-			productReference = E7B75CD46A320C33DB7DC4B441ECC453 /* Pods-BNIMobile */;
+			productReference = E7B75CD46A320C33DB7DC4B441ECC453 /* Pods_BNIMobile.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E2F8CF67D326FFA3CB050FF39259C9EB /* Pods-BNIMobileTests */ = {
@@ -446,7 +445,7 @@
 			);
 			name = "Pods-BNIMobileTests";
 			productName = Pods_BNIMobileTests;
-			productReference = 66E7A90098D3B86172A21310774EB67A /* Pods-BNIMobileTests */;
+			productReference = 66E7A90098D3B86172A21310774EB67A /* Pods_BNIMobileTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -600,11 +599,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -624,6 +623,7 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -820,11 +820,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -844,6 +844,7 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -960,11 +961,11 @@
 			baseConfigurationReference = B1329313C55EC0C73057A8AC530C9325 /* AKNetworking.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -981,6 +982,7 @@
 				MODULEMAP_FILE = "Target Support Files/AKNetworking/AKNetworking.modulemap";
 				PRODUCT_MODULE_NAME = AKNetworking;
 				PRODUCT_NAME = AKNetworking;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -998,11 +1000,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1022,6 +1024,7 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
