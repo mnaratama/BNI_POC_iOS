@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TermAndConditionView : UIViewController {
+class AddRecipientTermAndConditionView : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Term and Condition View")

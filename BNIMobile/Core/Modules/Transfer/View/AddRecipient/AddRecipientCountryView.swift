@@ -7,10 +7,10 @@
 
 import UIKit
 
-class BenificiaryAddCountryView : UIViewController {
+class AddRecipientCountryView : UIViewController {
     
     enum Constants {
-        static let beneficiaryAddDetailsVC = "BeneficiaryAddDetailsVC"
+        static let beneficiaryAddDetailsVC = "Transfer"
     }
     
     override func viewDidLoad() {
@@ -20,8 +20,7 @@ class BenificiaryAddCountryView : UIViewController {
     
     
     @IBAction func buttonNextTapped(_ sender: Any) {
-        
-        guard let viewController = UIStoryboard(name: Constants.beneficiaryAddDetailsVC, bundle: nil).instantiateViewController(withIdentifier: Constants.beneficiaryAddDetailsVC) as? BeneficiaryAddDetailsView else {
+        guard let viewController = UIStoryboard(name: Constants.beneficiaryAddDetailsVC, bundle: nil).instantiateViewController(withIdentifier: Constants.beneficiaryAddDetailsVC) as? AddRecipientAccountDetailsView else {
             fatalError("Failed to load Transfer from BenificiaryAddDetailsVC file")
         }
             

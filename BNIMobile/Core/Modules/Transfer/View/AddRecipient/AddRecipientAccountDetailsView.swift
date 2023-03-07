@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BeneficiaryAddDetailsView : UIViewController {
+class AddRecipientAccountDetailsView : UIViewController {
     
     enum Constants {
         static let beneficiaryAddReviewVC = "BeneficiaryAddReviewVC"
@@ -21,7 +21,7 @@ class BeneficiaryAddDetailsView : UIViewController {
     }
     
     @IBAction func buttonNextTapped(_ sender: Any) {
-        guard let viewController = UIStoryboard(name: Constants.beneficiaryAddReviewVC, bundle: nil).instantiateViewController(withIdentifier: Constants.beneficiaryAddReviewVC) as? BeneficiaryAddReviewView else {
+        guard let viewController = UIStoryboard(name: Constants.beneficiaryAddReviewVC, bundle: nil).instantiateViewController(withIdentifier: Constants.beneficiaryAddReviewVC) as? AddRecipientReviewDetailsView else {
             fatalError("Failed to load Transfer from BenificiaryAddReviewVC file")
         }
             

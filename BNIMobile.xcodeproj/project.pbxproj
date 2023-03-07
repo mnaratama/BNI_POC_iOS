@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C617A4429B5E3FD00A18AE9 /* SuccessAddBeneficiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C617A4329B5E3FD00A18AE9 /* SuccessAddBeneficiaryView.swift */; };
-		0C617A4629B5EC1300A18AE9 /* BenificiaryAddDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C617A4529B5EC1300A18AE9 /* BenificiaryAddDetailsView.swift */; };
-		0C617A4829B5EC7200A18AE9 /* BenificiaryAddReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C617A4729B5EC7200A18AE9 /* BenificiaryAddReviewView.swift */; };
-		0C617A4A29B5F0D000A18AE9 /* TermAndConditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C617A4929B5F0D000A18AE9 /* TermAndConditionView.swift */; };
-		0CE4827F29B5819E00A2FADC /* Transfer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4827E29B5819E00A2FADC /* Transfer.storyboard */; };
-		0CE4828129B581B400A2FADC /* TransferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4828029B581B400A2FADC /* TransferView.swift */; };
-		0CE4828329B5836000A2FADC /* BenificiaryAddCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4828229B5836000A2FADC /* BenificiaryAddCountryView.swift */; };
+		0C47B60E29B6EB9E00513244 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47B60D29B6EB9E00513244 /* RadioButton.swift */; };
+		0C47B61129B73FBB00513244 /* AddRecipientBankDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47B61029B73FBB00513244 /* AddRecipientBankDetailsView.swift */; };
+		0C47B61429B7481100513244 /* TransferLandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C47B61329B7481100513244 /* TransferLandingPage.storyboard */; };
+		0C47B61629B7482E00513244 /* TransferLandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47B61529B7482E00513244 /* TransferLandingPageView.swift */; };
+		0C47B61929B7487500513244 /* Transfer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C47B61829B7487500513244 /* Transfer.storyboard */; };
+		0C47B61B29B7488900513244 /* TransferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47B61A29B7488900513244 /* TransferView.swift */; };
+		0C47B61D29B74AAD00513244 /* AddRecipientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47B61C29B74AAD00513244 /* AddRecipientView.swift */; };
+		0C47B61F29B74C3100513244 /* TransferEnterDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47B61E29B74C3100513244 /* TransferEnterDataView.swift */; };
+		0C617A4429B5E3FD00A18AE9 /* AddRecipientSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C617A4329B5E3FD00A18AE9 /* AddRecipientSuccessView.swift */; };
+		0C617A4629B5EC1300A18AE9 /* AddRecipientAccountDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C617A4529B5EC1300A18AE9 /* AddRecipientAccountDetailsView.swift */; };
+		0C617A4829B5EC7200A18AE9 /* AddRecipientReviewDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C617A4729B5EC7200A18AE9 /* AddRecipientReviewDetailsView.swift */; };
+		0C617A4A29B5F0D000A18AE9 /* AddRecipientTermAndConditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C617A4929B5F0D000A18AE9 /* AddRecipientTermAndConditionView.swift */; };
+		0CE4827F29B5819E00A2FADC /* AddRecipient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4827E29B5819E00A2FADC /* AddRecipient.storyboard */; };
+		0CE4828329B5836000A2FADC /* AddRecipientCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4828229B5836000A2FADC /* AddRecipientCountryView.swift */; };
 		5BC07276206D885092ED4A31 /* Pods_BNIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AF8BEA4437779214F08121 /* Pods_BNIMobile.framework */; };
 		6D18617980145072F808653C /* Pods_BNIMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E698197688DBE50548379716 /* Pods_BNIMobileTests.framework */; };
 		7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C0FF29B1B5C1006874D5 /* AppDelegate.swift */; };
@@ -49,13 +56,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C617A4329B5E3FD00A18AE9 /* SuccessAddBeneficiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessAddBeneficiaryView.swift; sourceTree = "<group>"; };
-		0C617A4529B5EC1300A18AE9 /* BenificiaryAddDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenificiaryAddDetailsView.swift; sourceTree = "<group>"; };
-		0C617A4729B5EC7200A18AE9 /* BenificiaryAddReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenificiaryAddReviewView.swift; sourceTree = "<group>"; };
-		0C617A4929B5F0D000A18AE9 /* TermAndConditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermAndConditionView.swift; sourceTree = "<group>"; };
-		0CE4827E29B5819E00A2FADC /* Transfer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transfer.storyboard; sourceTree = "<group>"; };
-		0CE4828029B581B400A2FADC /* TransferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferView.swift; sourceTree = "<group>"; };
-		0CE4828229B5836000A2FADC /* BenificiaryAddCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenificiaryAddCountryView.swift; sourceTree = "<group>"; };
+		0C47B60D29B6EB9E00513244 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RadioButton.swift; path = BNIMobile/Core/Modules/Transfer/View/BeneficiaryAddCountry/RadioButton.swift; sourceTree = SOURCE_ROOT; };
+		0C47B61029B73FBB00513244 /* AddRecipientBankDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientBankDetailsView.swift; sourceTree = "<group>"; };
+		0C47B61329B7481100513244 /* TransferLandingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferLandingPage.storyboard; sourceTree = "<group>"; };
+		0C47B61529B7482E00513244 /* TransferLandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferLandingPageView.swift; sourceTree = "<group>"; };
+		0C47B61829B7487500513244 /* Transfer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transfer.storyboard; sourceTree = "<group>"; };
+		0C47B61A29B7488900513244 /* TransferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferView.swift; sourceTree = "<group>"; };
+		0C47B61C29B74AAD00513244 /* AddRecipientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientView.swift; sourceTree = "<group>"; };
+		0C47B61E29B74C3100513244 /* TransferEnterDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferEnterDataView.swift; sourceTree = "<group>"; };
+		0C617A4329B5E3FD00A18AE9 /* AddRecipientSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientSuccessView.swift; sourceTree = "<group>"; };
+		0C617A4529B5EC1300A18AE9 /* AddRecipientAccountDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientAccountDetailsView.swift; sourceTree = "<group>"; };
+		0C617A4729B5EC7200A18AE9 /* AddRecipientReviewDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientReviewDetailsView.swift; sourceTree = "<group>"; };
+		0C617A4929B5F0D000A18AE9 /* AddRecipientTermAndConditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientTermAndConditionView.swift; sourceTree = "<group>"; };
+		0CE4827E29B5819E00A2FADC /* AddRecipient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipient.storyboard; sourceTree = "<group>"; };
+		0CE4828229B5836000A2FADC /* AddRecipientCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientCountryView.swift; sourceTree = "<group>"; };
 		32B1DEC082ECBC362E51D9AE /* Pods-BNIMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		338CAD3C4A0339FBDB92446B /* Pods_BNIMobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B1D5717B2947FEF02006F57 /* Pods-BNIMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobile.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobile/Pods-BNIMobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +125,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C47B60F29B73EE500513244 /* AddRecipient */ = {
+			isa = PBXGroup;
+			children = (
+				0CE4827E29B5819E00A2FADC /* AddRecipient.storyboard */,
+				0C47B61C29B74AAD00513244 /* AddRecipientView.swift */,
+				0CE4828229B5836000A2FADC /* AddRecipientCountryView.swift */,
+				0C617A4529B5EC1300A18AE9 /* AddRecipientAccountDetailsView.swift */,
+				0C617A4729B5EC7200A18AE9 /* AddRecipientReviewDetailsView.swift */,
+				0C617A4329B5E3FD00A18AE9 /* AddRecipientSuccessView.swift */,
+				0C617A4929B5F0D000A18AE9 /* AddRecipientTermAndConditionView.swift */,
+				0C47B61029B73FBB00513244 /* AddRecipientBankDetailsView.swift */,
+			);
+			path = AddRecipient;
+			sourceTree = "<group>";
+		};
+		0C47B61229B747F900513244 /* LandingPage */ = {
+			isa = PBXGroup;
+			children = (
+				0C47B61329B7481100513244 /* TransferLandingPage.storyboard */,
+				0C47B61529B7482E00513244 /* TransferLandingPageView.swift */,
+			);
+			path = LandingPage;
+			sourceTree = "<group>";
+		};
+		0C47B61729B7484900513244 /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				0C47B61829B7487500513244 /* Transfer.storyboard */,
+				0C47B61A29B7488900513244 /* TransferView.swift */,
+				0C47B61E29B74C3100513244 /* TransferEnterDataView.swift */,
+			);
+			path = Transfer;
+			sourceTree = "<group>";
+		};
 		0CE4827A29B5806A00A2FADC /* Transfer */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,13 +186,9 @@
 		0CE4827D29B5817B00A2FADC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0CE4827E29B5819E00A2FADC /* Transfer.storyboard */,
-				0CE4828029B581B400A2FADC /* TransferView.swift */,
-				0CE4828229B5836000A2FADC /* BenificiaryAddCountryView.swift */,
-				0C617A4529B5EC1300A18AE9 /* BenificiaryAddDetailsView.swift */,
-				0C617A4729B5EC7200A18AE9 /* BenificiaryAddReviewView.swift */,
-				0C617A4329B5E3FD00A18AE9 /* SuccessAddBeneficiaryView.swift */,
-				0C617A4929B5F0D000A18AE9 /* TermAndConditionView.swift */,
+				0C47B61229B747F900513244 /* LandingPage */,
+				0C47B60F29B73EE500513244 /* AddRecipient */,
+				0C47B61729B7484900513244 /* Transfer */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,6 +349,7 @@
 		749B661E29B367A000B0A4A4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0C47B60D29B6EB9E00513244 /* RadioButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -457,8 +502,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7457C10C29B1B5C5006874D5 /* LaunchScreen.storyboard in Resources */,
-				0CE4827F29B5819E00A2FADC /* Transfer.storyboard in Resources */,
+				0CE4827F29B5819E00A2FADC /* AddRecipient.storyboard in Resources */,
 				7457C10929B1B5C5006874D5 /* Assets.xcassets in Resources */,
+				0C47B61429B7481100513244 /* TransferLandingPage.storyboard in Resources */,
+				0C47B61929B7487500513244 /* Transfer.storyboard in Resources */,
 				7457C10729B1B5C1006874D5 /* Main.storyboard in Resources */,
 				CA79D3E729B4979B00FDCF06 /* Home.storyboard in Resources */,
 			);
@@ -554,17 +601,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C617A4429B5E3FD00A18AE9 /* SuccessAddBeneficiaryView.swift in Sources */,
+				0C617A4429B5E3FD00A18AE9 /* AddRecipientSuccessView.swift in Sources */,
+				0C47B61B29B7488900513244 /* TransferView.swift in Sources */,
 				7457C10429B1B5C1006874D5 /* CustomerRegView.swift in Sources */,
-				0C617A4829B5EC7200A18AE9 /* BenificiaryAddReviewView.swift in Sources */,
-				0CE4828129B581B400A2FADC /* TransferView.swift in Sources */,
+				0C617A4829B5EC7200A18AE9 /* AddRecipientReviewDetailsView.swift in Sources */,
+				0C47B60E29B6EB9E00513244 /* RadioButton.swift in Sources */,
+				0C47B61D29B74AAD00513244 /* AddRecipientView.swift in Sources */,
 				747FF27D29B20D5E009AC232 /* EnterMobileNumberView.swift in Sources */,
 				7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */,
 				CA79D3E929B49D4500FDCF06 /* HomeView.swift in Sources */,
-				0C617A4A29B5F0D000A18AE9 /* TermAndConditionView.swift in Sources */,
-				0CE4828329B5836000A2FADC /* BenificiaryAddCountryView.swift in Sources */,
-				0C617A4629B5EC1300A18AE9 /* BenificiaryAddDetailsView.swift in Sources */,
+				0C617A4A29B5F0D000A18AE9 /* AddRecipientTermAndConditionView.swift in Sources */,
+				0CE4828329B5836000A2FADC /* AddRecipientCountryView.swift in Sources */,
+				0C617A4629B5EC1300A18AE9 /* AddRecipientAccountDetailsView.swift in Sources */,
+				0C47B61629B7482E00513244 /* TransferLandingPageView.swift in Sources */,
 				7457C10229B1B5C1006874D5 /* SceneDelegate.swift in Sources */,
+				0C47B61F29B74C3100513244 /* TransferEnterDataView.swift in Sources */,
+				0C47B61129B73FBB00513244 /* AddRecipientBankDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
