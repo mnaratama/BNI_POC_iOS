@@ -49,7 +49,7 @@ class HomepageView: UIViewController {
         mySpaceView.layer.shadowOpacity = 0.1
     }
     
-    @IBAction func settingTapped(_ sender: UIButton) {
+    @IBAction func manageTapped(_ sender: UIButton) {
     }
     
     @IBAction func mySpaceTapped(_ sender: UIButton) {

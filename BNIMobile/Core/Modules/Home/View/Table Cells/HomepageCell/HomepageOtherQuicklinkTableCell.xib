@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,19 +21,32 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLv-ur-6YG">
                         <rect key="frame" x="16" y="16" width="396" height="22"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTHER QUICKLINKS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRh-6A-sus">
-                                <rect key="frame" x="0.0" y="0.0" width="137" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR QUICKLINKS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRh-6A-sus">
+                                <rect key="frame" x="0.0" y="0.0" width="129" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhZ-UI-82M">
+                                <rect key="frame" x="326" y="-3" width="70" height="28.333333333333332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="9PQ-pK-09x"/>
+                                </constraints>
+                                <color key="tintColor" name="BNI Teal"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Manage">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="HhZ-UI-82M" firstAttribute="centerY" secondItem="JLv-ur-6YG" secondAttribute="centerY" id="0fC-0z-4AC"/>
                             <constraint firstAttribute="height" constant="22" id="BcF-GV-Qt4"/>
                             <constraint firstAttribute="bottom" secondItem="DRh-6A-sus" secondAttribute="bottom" id="NcX-f7-UhJ"/>
                             <constraint firstItem="DRh-6A-sus" firstAttribute="leading" secondItem="JLv-ur-6YG" secondAttribute="leading" id="RAo-1D-hiM"/>
                             <constraint firstItem="DRh-6A-sus" firstAttribute="top" secondItem="JLv-ur-6YG" secondAttribute="top" id="SoB-NT-q42"/>
+                            <constraint firstAttribute="trailing" secondItem="HhZ-UI-82M" secondAttribute="trailing" id="k5h-Lw-ZxZ"/>
                         </constraints>
                     </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0c2-YO-OaQ">
@@ -68,4 +82,9 @@
             <point key="canvasLocation" x="8.6956521739130448" y="72.991071428571431"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="BNI Teal">
+            <color red="0.0" green="0.40000000000000002" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
