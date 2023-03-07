@@ -15,6 +15,13 @@
 
 import UIKit
 
+enum VCConstants {
+    static let mainStoryboardName = "Main"
+    static let enterMobileNumberVC = "EnterMobileNumberVC"
+    static let congratulationsDoneVC = "CongratulationsDoneViewController"
+    static let congratulationsPointVC = "CongratulationsPointViewController"
+    static let enterCredentialVC = "EnterCredentialViewController"
+}
 
 class CustomerRegView: UIViewController {
     
