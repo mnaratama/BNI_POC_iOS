@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="65Y-kz-hzs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="65Y-kz-hzs">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,10 +34,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLD-0Q-i7I">
-                                <rect key="frame" x="16" y="460.33333333333331" width="361" height="59.999999999999943"/>
+                                <rect key="frame" x="16" y="460.33333333333331" width="361" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Srn-iD-Jgi"/>
+                                    <constraint firstAttribute="height" constant="48" id="Srn-iD-Jgi"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -82,26 +82,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84h-Q6-kzr">
-                                <rect key="frame" x="16" y="220" width="87" height="15"/>
+                                <rect key="frame" x="16" y="164" width="87" height="15"/>
                                 <color key="tintColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OlO-Je-DGe">
-                                <rect key="frame" x="20" y="259" width="353" height="18.666666666666686"/>
+                                <rect key="frame" x="20" y="203" width="353" height="18.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fel-ND-YfX">
-                                <rect key="frame" x="16" y="280.66666666666669" width="361" height="1"/>
+                                <rect key="frame" x="16" y="224.66666666666666" width="361" height="1"/>
                                 <color key="backgroundColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="2wI-6d-eve"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOZ-H2-wv3">
-                                <rect key="frame" x="16" y="287.66666666666669" width="361" height="43"/>
+                                <rect key="frame" x="16" y="231.66666666666666" width="361" height="42.999999999999972"/>
                                 <color key="tintColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">We will verify your number matches our records and a one-time-passcode will be sent to you. Please make sure it’s the number you previously registered with BNI Mobile Banking.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -109,10 +109,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyc-c2-vuf">
-                                <rect key="frame" x="16" y="710" width="361" height="60"/>
+                                <rect key="frame" x="16" y="722" width="361" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="pc3-aR-MtH"/>
+                                    <constraint firstAttribute="height" constant="48" id="pc3-aR-MtH"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -125,10 +125,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zX-PV-bJX">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="144"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Mobile Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGR-wd-6A0">
-                                        <rect key="frame" x="16" y="152" width="185.66666666666666" height="24"/>
+                                        <rect key="frame" x="16" y="96" width="185.66666666666666" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -138,7 +138,7 @@
                                 <constraints>
                                     <constraint firstItem="dGR-wd-6A0" firstAttribute="leading" secondItem="8zX-PV-bJX" secondAttribute="leading" constant="16" id="742-Vx-1bH"/>
                                     <constraint firstAttribute="bottom" secondItem="dGR-wd-6A0" secondAttribute="bottom" constant="24" id="Toq-DD-4Aa"/>
-                                    <constraint firstAttribute="height" constant="200" id="vdd-zD-bEY"/>
+                                    <constraint firstAttribute="height" constant="144" id="vdd-zD-bEY"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -183,10 +183,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="65Y-kz-hzs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AQy-Q1-lKR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AQy-Q1-lKR" customClass="NavigationBar" customModule="BNIMobile" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -206,10 +209,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hU0-V7-r1q">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="144"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYk-dJ-nKz">
-                                        <rect key="frame" x="16" y="152" width="89" height="24"/>
+                                        <rect key="frame" x="16" y="96" width="89" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -219,40 +222,40 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="nYk-dJ-nKz" secondAttribute="bottom" constant="24" id="Rbb-ML-K2I"/>
                                     <constraint firstItem="nYk-dJ-nKz" firstAttribute="leading" secondItem="hU0-V7-r1q" secondAttribute="leading" constant="16" id="V8l-df-CBz"/>
-                                    <constraint firstAttribute="height" constant="200" id="ghe-c0-rxF"/>
+                                    <constraint firstAttribute="height" constant="144" id="ghe-c0-rxF"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the OTP sent to [insert number]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ch-2h-ww8">
-                                <rect key="frame" x="16" y="220" width="213" height="15"/>
+                                <rect key="frame" x="16" y="164" width="213" height="15"/>
                                 <color key="tintColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G6R-6P-bwd">
-                                <rect key="frame" x="20" y="259" width="353" height="18.666666666666686"/>
+                                <rect key="frame" x="20" y="203" width="353" height="18.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEn-nG-uBd">
-                                <rect key="frame" x="16" y="280.66666666666669" width="361" height="1"/>
+                                <rect key="frame" x="16" y="224.66666666666666" width="361" height="1"/>
                                 <color key="backgroundColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="wvH-Sp-9eB"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 sec" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZT7-AM-Hbh">
-                                <rect key="frame" x="16.000000000000004" y="287.66666666666669" width="38.333333333333343" height="14.333333333333314"/>
+                                <rect key="frame" x="16.000000000000004" y="231.66666666666666" width="38.333333333333343" height="14.333333333333343"/>
                                 <color key="tintColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHq-Bt-bzc">
-                                <rect key="frame" x="16" y="675" width="361" height="60"/>
+                                <rect key="frame" x="16" y="687" width="361" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="mht-7W-2RE"/>
+                                    <constraint firstAttribute="height" constant="48" id="mht-7W-2RE"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -265,7 +268,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0v-jf-aZ8">
-                                <rect key="frame" x="283.33333333333331" y="280.66666666666669" width="93.666666666666686" height="28.333333333333314"/>
+                                <rect key="frame" x="283.33333333333331" y="224.66666666666666" width="93.666666666666686" height="28.333333333333343"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Resend OTP">
@@ -551,15 +554,15 @@ enjoy your BNI Mobile Banking app!</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter user id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4j0-DG-aXt">
-                                                <rect key="frame" x="10" y="24.333333333333314" width="333.66666666666669" height="48"/>
+                                                <rect key="frame" x="10" y="24.333333333333314" width="333.66666666666669" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="fYZ-Qt-uVp"/>
+                                                    <constraint firstAttribute="height" constant="40" id="fYZ-Qt-uVp"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oQ-0Y-5wj">
-                                                <rect key="frame" x="0.0" y="80" width="353.66666666666669" height="1"/>
+                                                <rect key="frame" x="0.0" y="72" width="353.66666666666669" height="1"/>
                                                 <color key="backgroundColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="MWk-aw-du9"/>
@@ -569,7 +572,7 @@ enjoy your BNI Mobile Banking app!</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User ID not found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjl-0w-R0e">
-                                                <rect key="frame" x="0.0" y="91" width="99.666666666666671" height="14.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="83" width="99.666666666666671" height="14.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -601,15 +604,15 @@ enjoy your BNI Mobile Banking app!</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FzI-1X-UWb">
-                                                <rect key="frame" x="10" y="24.333333333333371" width="333.66666666666669" height="48"/>
+                                                <rect key="frame" x="10" y="24.333333333333371" width="333.66666666666669" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="nmf-SE-Yf7"/>
+                                                    <constraint firstAttribute="height" constant="40" id="nmf-SE-Yf7"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoK-a9-Ocr">
-                                                <rect key="frame" x="0.0" y="80" width="353.66666666666669" height="1"/>
+                                                <rect key="frame" x="0.0" y="72" width="353.66666666666669" height="1"/>
                                                 <color key="backgroundColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="ZDo-2j-bh5"/>
@@ -619,7 +622,7 @@ enjoy your BNI Mobile Banking app!</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrG-hD-Yg5">
-                                                <rect key="frame" x="0.0" y="91" width="94.666666666666671" height="14.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="83" width="94.666666666666671" height="14.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

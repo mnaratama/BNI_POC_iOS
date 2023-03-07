@@ -38,14 +38,12 @@ class CustomerRegView: UIViewController {
                 print("Response JSON : \(responseJson)")
             }
         })
-        
     }
     
     @IBAction func buttonTappedToStart(_ sender: Any) {        
         guard let viewController = UIStoryboard(name: Constants.mainStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.enterMobileNumberVC) as? EnterMobileNumberView else {
             fatalError("Failed to load Main from EnterMobileNumberVC file")
         }
-            
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

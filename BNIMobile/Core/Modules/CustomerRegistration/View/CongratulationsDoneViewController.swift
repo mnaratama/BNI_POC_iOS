@@ -11,13 +11,10 @@ class CongratulationsDoneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         self.navigationController?.navigationBar.isHidden = true
     }
 
@@ -25,7 +22,6 @@ class CongratulationsDoneViewController: UIViewController {
         guard let viewController = UIStoryboard(name: VCConstants.mainStoryboardName, bundle: nil).instantiateViewController(withIdentifier: VCConstants.congratulationsPointVC) as? CongratulationsPointViewController else {
             fatalError("Failed to load Main from CongratulationsPointViewController file")
         }
-            
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 
