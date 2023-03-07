@@ -234,19 +234,36 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NGj-TZ-qzK">
-                                        <rect key="frame" x="75" y="-48" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_myspace_slider" translatesAutoresizingMaskIntoConstraints="NO" id="NGj-TZ-qzK">
+                                        <rect key="frame" x="183" y="12" width="24" height="4"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="WU5-01-QCW"/>
+                                            <constraint firstAttribute="height" constant="4" id="x0R-LV-kdQ"/>
+                                        </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1G3-fY-Bgf">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="64"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="mySpaceTapped:" destination="46W-5l-i7b" eventType="touchUpInside" id="J3L-zD-Mpu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="zwM-Om-GIx" firstAttribute="top" secondItem="9Ow-uo-gsl" secondAttribute="top" constant="20" id="3aF-rv-Tqj"/>
                                     <constraint firstItem="PRV-rq-lIZ" firstAttribute="leading" secondItem="zwM-Om-GIx" secondAttribute="trailing" constant="12" id="4hh-qu-YwY"/>
+                                    <constraint firstAttribute="bottom" secondItem="1G3-fY-Bgf" secondAttribute="bottom" id="5A6-Xk-go2"/>
+                                    <constraint firstItem="1G3-fY-Bgf" firstAttribute="leading" secondItem="9Ow-uo-gsl" secondAttribute="leading" id="902-nn-pDq"/>
                                     <constraint firstItem="zwM-Om-GIx" firstAttribute="leading" secondItem="9Ow-uo-gsl" secondAttribute="leading" constant="16" id="Arr-nV-jFa"/>
+                                    <constraint firstAttribute="trailing" secondItem="1G3-fY-Bgf" secondAttribute="trailing" id="Lwq-0Z-8Nu"/>
                                     <constraint firstAttribute="bottom" secondItem="zwM-Om-GIx" secondAttribute="bottom" constant="20" id="NVy-lS-0RB"/>
                                     <constraint firstAttribute="height" constant="64" id="bLo-JM-n1k"/>
+                                    <constraint firstItem="1G3-fY-Bgf" firstAttribute="leading" secondItem="9Ow-uo-gsl" secondAttribute="leading" id="d4V-9D-AOA"/>
+                                    <constraint firstItem="NGj-TZ-qzK" firstAttribute="top" secondItem="9Ow-uo-gsl" secondAttribute="top" constant="12" id="dUY-sD-mDt"/>
                                     <constraint firstItem="PRV-rq-lIZ" firstAttribute="centerY" secondItem="9Ow-uo-gsl" secondAttribute="centerY" id="hgG-Fd-EKN"/>
+                                    <constraint firstItem="NGj-TZ-qzK" firstAttribute="centerX" secondItem="9Ow-uo-gsl" secondAttribute="centerX" id="iHe-pa-gH7"/>
+                                    <constraint firstItem="1G3-fY-Bgf" firstAttribute="top" secondItem="9Ow-uo-gsl" secondAttribute="top" id="lXk-QF-SrB"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -273,6 +290,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="ic_tab_home" id="4Zv-rL-4Lj"/>
                     <navigationItem key="navigationItem" id="qrh-ta-6uO"/>
                     <connections>
+                        <outlet property="mySpaceView" destination="9Ow-uo-gsl" id="x8Q-X5-O5x"/>
                         <outlet property="nameLabel" destination="2Z4-Bv-yMH" id="JNV-BV-qde"/>
                         <outlet property="pointLabel" destination="11r-3E-dqz" id="WlU-HA-Sj0"/>
                         <outlet property="profileImg" destination="KP4-b2-lHc" id="aJg-c8-Dm2"/>
@@ -287,13 +305,79 @@
         <!--My Space View-->
         <scene sceneID="djA-lq-rci">
             <objects>
-                <viewController id="27r-yb-kKK" customClass="MySpaceView" customModule="BNIMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MySpace" id="27r-yb-kKK" customClass="MySpaceView" customModule="BNIMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KjE-LW-f2f">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AiM-Bu-I5h">
+                                <rect key="frame" x="0.0" y="47" width="390" height="64"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_myspace" translatesAutoresizingMaskIntoConstraints="NO" id="bEk-nm-s4W">
+                                        <rect key="frame" x="16" y="20" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="TXy-aQ-xXT"/>
+                                            <constraint firstAttribute="width" secondItem="bEk-nm-s4W" secondAttribute="height" multiplier="1:1" id="a1M-jE-vRB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bet-GS-bDy">
+                                        <rect key="frame" x="52" y="20" width="87" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_myspace_slider" translatesAutoresizingMaskIntoConstraints="NO" id="z8a-Fz-Iw9">
+                                        <rect key="frame" x="183" y="12" width="24" height="4"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="4Q8-ts-9RP"/>
+                                            <constraint firstAttribute="height" constant="4" id="Os9-43-hVP"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wf-y4-snc">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="64"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="mySpaceTapped:" destination="46W-5l-i7b" eventType="touchUpInside" id="s2d-lf-025"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="2LO-BJ-Ua3"/>
+                                    <constraint firstItem="bEk-nm-s4W" firstAttribute="top" secondItem="AiM-Bu-I5h" secondAttribute="top" constant="20" id="OdX-cB-Erm"/>
+                                    <constraint firstItem="3wf-y4-snc" firstAttribute="top" secondItem="AiM-Bu-I5h" secondAttribute="top" id="PXd-gv-FrH"/>
+                                    <constraint firstItem="z8a-Fz-Iw9" firstAttribute="centerX" secondItem="AiM-Bu-I5h" secondAttribute="centerX" id="S96-fy-esh"/>
+                                    <constraint firstAttribute="bottom" secondItem="3wf-y4-snc" secondAttribute="bottom" id="Upb-ao-PMC"/>
+                                    <constraint firstAttribute="bottom" secondItem="bEk-nm-s4W" secondAttribute="bottom" constant="20" id="Ur9-kz-Fvn"/>
+                                    <constraint firstItem="z8a-Fz-Iw9" firstAttribute="top" secondItem="AiM-Bu-I5h" secondAttribute="top" constant="12" id="WjM-J9-cme"/>
+                                    <constraint firstItem="3wf-y4-snc" firstAttribute="leading" secondItem="AiM-Bu-I5h" secondAttribute="leading" id="auX-aS-6C0"/>
+                                    <constraint firstItem="bet-GS-bDy" firstAttribute="leading" secondItem="bEk-nm-s4W" secondAttribute="trailing" constant="12" id="bbm-oe-FqY"/>
+                                    <constraint firstItem="bet-GS-bDy" firstAttribute="centerY" secondItem="AiM-Bu-I5h" secondAttribute="centerY" id="g5S-Rd-r1f"/>
+                                    <constraint firstItem="bEk-nm-s4W" firstAttribute="leading" secondItem="AiM-Bu-I5h" secondAttribute="leading" constant="16" id="uGg-LA-xBr"/>
+                                    <constraint firstItem="3wf-y4-snc" firstAttribute="leading" secondItem="AiM-Bu-I5h" secondAttribute="leading" id="v5M-aj-Kza"/>
+                                    <constraint firstAttribute="trailing" secondItem="3wf-y4-snc" secondAttribute="trailing" id="z7o-eV-Ska"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fMz-3Z-a99">
+                                <rect key="frame" x="0.0" y="111" width="390" height="699"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4FL-8t-orO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4FL-8t-orO" firstAttribute="bottom" secondItem="fMz-3Z-a99" secondAttribute="bottom" id="25u-xB-sdc"/>
+                            <constraint firstItem="4FL-8t-orO" firstAttribute="trailing" secondItem="fMz-3Z-a99" secondAttribute="trailing" id="4G1-on-SCD"/>
+                            <constraint firstItem="fMz-3Z-a99" firstAttribute="top" secondItem="AiM-Bu-I5h" secondAttribute="bottom" id="4r6-JG-sdY"/>
+                            <constraint firstItem="AiM-Bu-I5h" firstAttribute="top" secondItem="4FL-8t-orO" secondAttribute="top" id="DFm-xo-bax"/>
+                            <constraint firstItem="AiM-Bu-I5h" firstAttribute="leading" secondItem="4FL-8t-orO" secondAttribute="leading" id="GU4-fB-xwp"/>
+                            <constraint firstItem="AiM-Bu-I5h" firstAttribute="trailing" secondItem="4FL-8t-orO" secondAttribute="trailing" id="WHg-uK-RAg"/>
+                            <constraint firstItem="fMz-3Z-a99" firstAttribute="leading" secondItem="4FL-8t-orO" secondAttribute="leading" id="y7U-Kl-Uyn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="fMz-3Z-a99" id="IjB-Bi-jof"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEB-JQ-mcG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -378,6 +462,7 @@
     <resources>
         <image name="ic_bni_point" width="39" height="18"/>
         <image name="ic_myspace" width="24" height="24"/>
+        <image name="ic_myspace_slider" width="26.333333969116211" height="3.3333332538604736"/>
         <image name="ic_settings_black" width="24" height="24"/>
         <image name="ic_tab_help" width="24" height="24"/>
         <image name="ic_tab_home" width="24" height="24"/>
