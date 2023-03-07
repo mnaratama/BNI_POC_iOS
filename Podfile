@@ -31,8 +31,8 @@ post_install do |installer|
 	config.build_settings['PROVISIONING_PROFILE_SPECIFIER'] = ' '
         config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
         config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
-        config.build_settings[‘SWIFT_VERSION’] = ‘5.0’
-        config.build_settings[‘CODE_SIGN_STYLE’] = “Automatic”      
+        config.build_settings['SWIFT_VERSION'] = '5.0'
+        config.build_settings['CODE_SIGN_STYLE'] = “Automatic”      
       end
     end
 end
