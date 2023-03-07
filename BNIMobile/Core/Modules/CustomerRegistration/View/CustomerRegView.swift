@@ -33,6 +33,12 @@ class CustomerRegView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        WebAccessLayer.shared.getMetadata(uuid: "testID", completionHandler: {isSuccess, responseJson, _  in
+            if isSuccess {
+                print("Response JSON : \(responseJson)")
+            }
+        })
+        
     }
     
     @IBAction func buttonTappedToStart(_ sender: Any) {        

@@ -1,0 +1,934 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BC07276206D885092ED4A31 /* Pods_BNIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AF8BEA4437779214F08121 /* Pods_BNIMobile.framework */; };
+		6D18617980145072F808653C /* Pods_BNIMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E698197688DBE50548379716 /* Pods_BNIMobileTests.framework */; };
+		7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C0FF29B1B5C1006874D5 /* AppDelegate.swift */; };
+		7457C10229B1B5C1006874D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C10129B1B5C1006874D5 /* SceneDelegate.swift */; };
+		7457C10429B1B5C1006874D5 /* CustomerRegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C10329B1B5C1006874D5 /* CustomerRegView.swift */; };
+		7457C10729B1B5C1006874D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7457C10529B1B5C1006874D5 /* Main.storyboard */; };
+		7457C10929B1B5C5006874D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7457C10829B1B5C5006874D5 /* Assets.xcassets */; };
+		7457C10C29B1B5C5006874D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7457C10A29B1B5C5006874D5 /* LaunchScreen.storyboard */; };
+		7457C11729B1B5C5006874D5 /* BNIMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C11629B1B5C5006874D5 /* BNIMobileTests.swift */; };
+		7457C12129B1B5C5006874D5 /* BNIMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C12029B1B5C5006874D5 /* BNIMobileUITests.swift */; };
+		7457C12329B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C12229B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift */; };
+		747FF27D29B20D5E009AC232 /* EnterMobileNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747FF27C29B20D5E009AC232 /* EnterMobileNumberView.swift */; };
+		749B662B29B5EDD500B0A4A4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B662929B5EDD500B0A4A4 /* Request.swift */; };
+		749B662C29B5EDD500B0A4A4 /* NetworkAccessLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B662A29B5EDD500B0A4A4 /* NetworkAccessLayer.swift */; };
+		80347F2029B39CD700048831 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80347F1F29B39CD700048831 /* Logger.swift */; };
+		8085B94929B5B5C5000E2E22 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8085B94829B5B5C4000E2E22 /* Coordinator.swift */; };
+		8089435B29B6F8B4006B5555 /* CongratulationsDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */; };
+		8089435C29B6F8B4006B5555 /* EnterCredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */; };
+		8089435D29B6F8B4006B5555 /* CongratulationsPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435A29B6F8B4006B5555 /* CongratulationsPointViewController.swift */; };
+		C2FCCD806E8293C5DD249483 /* Pods_BNIMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338CAD3C4A0339FBDB92446B /* Pods_BNIMobileUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7457C11329B1B5C5006874D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7457C0F429B1B5C1006874D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7457C0FB29B1B5C1006874D5;
+			remoteInfo = BNIMobile;
+		};
+		7457C11D29B1B5C5006874D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7457C0F429B1B5C1006874D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7457C0FB29B1B5C1006874D5;
+			remoteInfo = BNIMobile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32B1DEC082ECBC362E51D9AE /* Pods-BNIMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		338CAD3C4A0339FBDB92446B /* Pods_BNIMobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B1D5717B2947FEF02006F57 /* Pods-BNIMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobile.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobile/Pods-BNIMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		689FED950A38C8A372004920 /* Pods-BNIMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileTests.release.xcconfig"; path = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		68AF8BEA4437779214F08121 /* Pods_BNIMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7457C0FC29B1B5C1006874D5 /* BNIMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BNIMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7457C0FF29B1B5C1006874D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7457C10129B1B5C1006874D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7457C10329B1B5C1006874D5 /* CustomerRegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRegView.swift; sourceTree = "<group>"; };
+		7457C10629B1B5C1006874D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7457C10829B1B5C5006874D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7457C10B29B1B5C5006874D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7457C10D29B1B5C5006874D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7457C11229B1B5C5006874D5 /* BNIMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BNIMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7457C11629B1B5C5006874D5 /* BNIMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIMobileTests.swift; sourceTree = "<group>"; };
+		7457C11C29B1B5C5006874D5 /* BNIMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BNIMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7457C12029B1B5C5006874D5 /* BNIMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIMobileUITests.swift; sourceTree = "<group>"; };
+		7457C12229B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIMobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		747FF27C29B20D5E009AC232 /* EnterMobileNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberView.swift; sourceTree = "<group>"; };
+		749B662929B5EDD500B0A4A4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		749B662A29B5EDD500B0A4A4 /* NetworkAccessLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAccessLayer.swift; sourceTree = "<group>"; };
+		80347F1F29B39CD700048831 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		8085B94829B5B5C4000E2E22 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = BNIMobile/Core/Utils/Logger/Coordinator.swift; sourceTree = SOURCE_ROOT; };
+		8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationsDoneViewController.swift; sourceTree = "<group>"; };
+		8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterCredentialViewController.swift; sourceTree = "<group>"; };
+		8089435A29B6F8B4006B5555 /* CongratulationsPointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationsPointViewController.swift; sourceTree = "<group>"; };
+=======
+		8085B94829B5B5C4000E2E22 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = BNIMobile/Core/Coordinators/Coordinator.swift; sourceTree = SOURCE_ROOT; };
+>>>>>>> 75904aca6fe3d9147a1ebd50cd78ac902c221b99
+		A0D1B923D4501D8290D729A3 /* Pods-BNIMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileUITests.release.xcconfig"; path = "Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E4D0B1FB41C2511E6D4B0380 /* Pods-BNIMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobile.release.xcconfig"; path = "Target Support Files/Pods-BNIMobile/Pods-BNIMobile.release.xcconfig"; sourceTree = "<group>"; };
+		E698197688DBE50548379716 /* Pods_BNIMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92283DD9E555B2D308A9AE7 /* Pods-BNIMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileUITests.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7457C0F929B1B5C1006874D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC07276206D885092ED4A31 /* Pods_BNIMobile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7457C10F29B1B5C5006874D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D18617980145072F808653C /* Pods_BNIMobileTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7457C11929B1B5C5006874D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2FCCD806E8293C5DD249483 /* Pods_BNIMobileUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20B05D2D509E22999247AF1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B1D5717B2947FEF02006F57 /* Pods-BNIMobile.debug.xcconfig */,
+				E4D0B1FB41C2511E6D4B0380 /* Pods-BNIMobile.release.xcconfig */,
+				32B1DEC082ECBC362E51D9AE /* Pods-BNIMobileTests.debug.xcconfig */,
+				689FED950A38C8A372004920 /* Pods-BNIMobileTests.release.xcconfig */,
+				E92283DD9E555B2D308A9AE7 /* Pods-BNIMobileUITests.debug.xcconfig */,
+				A0D1B923D4501D8290D729A3 /* Pods-BNIMobileUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		72C70FD209D3B43C3E459B38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68AF8BEA4437779214F08121 /* Pods_BNIMobile.framework */,
+				E698197688DBE50548379716 /* Pods_BNIMobileTests.framework */,
+				338CAD3C4A0339FBDB92446B /* Pods_BNIMobileUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7457C0F329B1B5C1006874D5 = {
+			isa = PBXGroup;
+			children = (
+				7457C0FE29B1B5C1006874D5 /* BNIMobile */,
+				7457C11529B1B5C5006874D5 /* BNIMobileTests */,
+				7457C11F29B1B5C5006874D5 /* BNIMobileUITests */,
+				7457C0FD29B1B5C1006874D5 /* Products */,
+				20B05D2D509E22999247AF1A /* Pods */,
+				72C70FD209D3B43C3E459B38 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7457C0FD29B1B5C1006874D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7457C0FC29B1B5C1006874D5 /* BNIMobile.app */,
+				7457C11229B1B5C5006874D5 /* BNIMobileTests.xctest */,
+				7457C11C29B1B5C5006874D5 /* BNIMobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7457C0FE29B1B5C1006874D5 /* BNIMobile */ = {
+			isa = PBXGroup;
+			children = (
+				749B661929B3669100B0A4A4 /* Config */,
+				749B661829B3365300B0A4A4 /* AppSettings */,
+				749B661A29B3670000B0A4A4 /* Core */,
+				7457C10A29B1B5C5006874D5 /* LaunchScreen.storyboard */,
+				7457C10829B1B5C5006874D5 /* Assets.xcassets */,
+			);
+			path = BNIMobile;
+			sourceTree = "<group>";
+		};
+		7457C11529B1B5C5006874D5 /* BNIMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				7457C11629B1B5C5006874D5 /* BNIMobileTests.swift */,
+			);
+			path = BNIMobileTests;
+			sourceTree = "<group>";
+		};
+		7457C11F29B1B5C5006874D5 /* BNIMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7457C12029B1B5C5006874D5 /* BNIMobileUITests.swift */,
+				7457C12229B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift */,
+			);
+			path = BNIMobileUITests;
+			sourceTree = "<group>";
+		};
+		747FF27929B20AFE009AC232 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7457C10529B1B5C1006874D5 /* Main.storyboard */,
+				8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */,
+				8089435A29B6F8B4006B5555 /* CongratulationsPointViewController.swift */,
+				8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */,
+				7457C10329B1B5C1006874D5 /* CustomerRegView.swift */,
+				747FF27C29B20D5E009AC232 /* EnterMobileNumberView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		747FF27A29B20B06009AC232 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		747FF27B29B20B3C009AC232 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		749B661829B3365300B0A4A4 /* AppSettings */ = {
+			isa = PBXGroup;
+			children = (
+				7457C0FF29B1B5C1006874D5 /* AppDelegate.swift */,
+				7457C10129B1B5C1006874D5 /* SceneDelegate.swift */,
+			);
+			path = AppSettings;
+			sourceTree = "<group>";
+		};
+		749B661929B3669100B0A4A4 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				7457C10D29B1B5C5006874D5 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		749B661A29B3670000B0A4A4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				749B661D29B3679600B0A4A4 /* BaseClasses */,
+				749B661F29B367A700B0A4A4 /* Coordinators */,
+				749B661B29B3670900B0A4A4 /* Modules */,
+				749B662829B5ED6000B0A4A4 /* Networking */,
+				749B661E29B367A000B0A4A4 /* Utils */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		749B661B29B3670900B0A4A4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				749B661C29B3672200B0A4A4 /* CustomerRegistration */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		749B661C29B3672200B0A4A4 /* CustomerRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				747FF27B29B20B3C009AC232 /* ViewModel */,
+				747FF27A29B20B06009AC232 /* Model */,
+				747FF27929B20AFE009AC232 /* View */,
+			);
+			path = CustomerRegistration;
+			sourceTree = "<group>";
+		};
+		749B661D29B3679600B0A4A4 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		749B661E29B367A000B0A4A4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				80347F1E29B39CB500048831 /* Logger */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		749B661F29B367A700B0A4A4 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				8085B94829B5B5C4000E2E22 /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		749B662829B5ED6000B0A4A4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				749B662A29B5EDD500B0A4A4 /* NetworkAccessLayer.swift */,
+				749B662929B5EDD500B0A4A4 /* Request.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		80347F1E29B39CB500048831 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				80347F1F29B39CD700048831 /* Logger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7457C0FB29B1B5C1006874D5 /* BNIMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7457C12629B1B5C5006874D5 /* Build configuration list for PBXNativeTarget "BNIMobile" */;
+			buildPhases = (
+				ECEE77553B8DF92B77396773 /* [CP] Check Pods Manifest.lock */,
+				7457C0F829B1B5C1006874D5 /* Sources */,
+				7457C0F929B1B5C1006874D5 /* Frameworks */,
+				7457C0FA29B1B5C1006874D5 /* Resources */,
+				F42C8672C2F8FDDDB0D6A829 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BNIMobile;
+			productName = BNIMobile;
+			productReference = 7457C0FC29B1B5C1006874D5 /* BNIMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7457C11129B1B5C5006874D5 /* BNIMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7457C12929B1B5C5006874D5 /* Build configuration list for PBXNativeTarget "BNIMobileTests" */;
+			buildPhases = (
+				509F269096250938496AF14B /* [CP] Check Pods Manifest.lock */,
+				7457C10E29B1B5C5006874D5 /* Sources */,
+				7457C10F29B1B5C5006874D5 /* Frameworks */,
+				7457C11029B1B5C5006874D5 /* Resources */,
+				A3F0EC2C1FECBA8E61276B7C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7457C11429B1B5C5006874D5 /* PBXTargetDependency */,
+			);
+			name = BNIMobileTests;
+			productName = BNIMobileTests;
+			productReference = 7457C11229B1B5C5006874D5 /* BNIMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7457C11B29B1B5C5006874D5 /* BNIMobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7457C12C29B1B5C5006874D5 /* Build configuration list for PBXNativeTarget "BNIMobileUITests" */;
+			buildPhases = (
+				AE40FED1BCB2F0C85D790103 /* [CP] Check Pods Manifest.lock */,
+				7457C11829B1B5C5006874D5 /* Sources */,
+				7457C11929B1B5C5006874D5 /* Frameworks */,
+				7457C11A29B1B5C5006874D5 /* Resources */,
+				EDF944AAD0DD28D03EF8D81A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7457C11E29B1B5C5006874D5 /* PBXTargetDependency */,
+			);
+			name = BNIMobileUITests;
+			productName = BNIMobileUITests;
+			productReference = 7457C11C29B1B5C5006874D5 /* BNIMobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7457C0F429B1B5C1006874D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					7457C0FB29B1B5C1006874D5 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					7457C11129B1B5C5006874D5 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 7457C0FB29B1B5C1006874D5;
+					};
+					7457C11B29B1B5C5006874D5 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 7457C0FB29B1B5C1006874D5;
+					};
+				};
+			};
+			buildConfigurationList = 7457C0F729B1B5C1006874D5 /* Build configuration list for PBXProject "BNIMobile" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7457C0F329B1B5C1006874D5;
+			productRefGroup = 7457C0FD29B1B5C1006874D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7457C0FB29B1B5C1006874D5 /* BNIMobile */,
+				7457C11129B1B5C5006874D5 /* BNIMobileTests */,
+				7457C11B29B1B5C5006874D5 /* BNIMobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7457C0FA29B1B5C1006874D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7457C10C29B1B5C5006874D5 /* LaunchScreen.storyboard in Resources */,
+				7457C10929B1B5C5006874D5 /* Assets.xcassets in Resources */,
+				7457C10729B1B5C1006874D5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7457C11029B1B5C5006874D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7457C11A29B1B5C5006874D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		509F269096250938496AF14B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BNIMobileTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3F0EC2C1FECBA8E61276B7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE40FED1BCB2F0C85D790103 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BNIMobileUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECEE77553B8DF92B77396773 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BNIMobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDF944AAD0DD28D03EF8D81A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F42C8672C2F8FDDDB0D6A829 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BNIMobile/Pods-BNIMobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BNIMobile/Pods-BNIMobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BNIMobile/Pods-BNIMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7457C0F829B1B5C1006874D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80347F2029B39CD700048831 /* Logger.swift in Sources */,
+				7457C10429B1B5C1006874D5 /* CustomerRegView.swift in Sources */,
+				8085B94929B5B5C5000E2E22 /* Coordinator.swift in Sources */,
+				747FF27D29B20D5E009AC232 /* EnterMobileNumberView.swift in Sources */,
+				749B662C29B5EDD500B0A4A4 /* NetworkAccessLayer.swift in Sources */,
+				749B662B29B5EDD500B0A4A4 /* Request.swift in Sources */,
+				7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */,
+				8089435B29B6F8B4006B5555 /* CongratulationsDoneViewController.swift in Sources */,
+				8089435D29B6F8B4006B5555 /* CongratulationsPointViewController.swift in Sources */,
+				8089435C29B6F8B4006B5555 /* EnterCredentialViewController.swift in Sources */,
+				7457C10229B1B5C1006874D5 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7457C10E29B1B5C5006874D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7457C11729B1B5C5006874D5 /* BNIMobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7457C11829B1B5C5006874D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7457C12329B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift in Sources */,
+				7457C12129B1B5C5006874D5 /* BNIMobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7457C11429B1B5C5006874D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7457C0FB29B1B5C1006874D5 /* BNIMobile */;
+			targetProxy = 7457C11329B1B5C5006874D5 /* PBXContainerItemProxy */;
+		};
+		7457C11E29B1B5C5006874D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7457C0FB29B1B5C1006874D5 /* BNIMobile */;
+			targetProxy = 7457C11D29B1B5C5006874D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7457C10529B1B5C1006874D5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7457C10629B1B5C1006874D5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7457C10A29B1B5C5006874D5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7457C10B29B1B5C5006874D5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7457C12429B1B5C5006874D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7457C12529B1B5C5006874D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7457C12729B1B5C5006874D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B1D5717B2947FEF02006F57 /* Pods-BNIMobile.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MY65R8DR6S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BNIMobile/Config/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.BNIMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7457C12829B1B5C5006874D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4D0B1FB41C2511E6D4B0380 /* Pods-BNIMobile.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MY65R8DR6S;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MY65R8DR6S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BNIMobile/Config/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.BNIMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = BNI_POC_APP_STORE;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		7457C12A29B1B5C5006874D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32B1DEC082ECBC362E51D9AE /* Pods-BNIMobileTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PP64RT7P8Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.BNIMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BNIMobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BNIMobile";
+			};
+			name = Debug;
+		};
+		7457C12B29B1B5C5006874D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 689FED950A38C8A372004920 /* Pods-BNIMobileTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PP64RT7P8Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.BNIMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BNIMobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BNIMobile";
+			};
+			name = Release;
+		};
+		7457C12D29B1B5C5006874D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E92283DD9E555B2D308A9AE7 /* Pods-BNIMobileUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PP64RT7P8Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.BNIMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BNIMobile;
+			};
+			name = Debug;
+		};
+		7457C12E29B1B5C5006874D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0D1B923D4501D8290D729A3 /* Pods-BNIMobileUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PP64RT7P8Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.BNIMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BNIMobile;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7457C0F729B1B5C1006874D5 /* Build configuration list for PBXProject "BNIMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7457C12429B1B5C5006874D5 /* Debug */,
+				7457C12529B1B5C5006874D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7457C12629B1B5C5006874D5 /* Build configuration list for PBXNativeTarget "BNIMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7457C12729B1B5C5006874D5 /* Debug */,
+				7457C12829B1B5C5006874D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7457C12929B1B5C5006874D5 /* Build configuration list for PBXNativeTarget "BNIMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7457C12A29B1B5C5006874D5 /* Debug */,
+				7457C12B29B1B5C5006874D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7457C12C29B1B5C5006874D5 /* Build configuration list for PBXNativeTarget "BNIMobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7457C12D29B1B5C5006874D5 /* Debug */,
+				7457C12E29B1B5C5006874D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7457C0F429B1B5C1006874D5 /* Project object */;
+}
