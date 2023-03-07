@@ -29,9 +29,10 @@ class HomepageView: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.register(UINib(nibName: "HomeQuicklinkTableCell", bundle: nil), forCellReuseIdentifier: "QuicklinkTableCell")
-        tableView.register(UINib(nibName: "HomeHeaderTableCell", bundle: nil), forCellReuseIdentifier: "HeaderTableCell")
-        tableView.register(UINib(nibName: "HomeRecentTransactionTableCell", bundle: nil), forCellReuseIdentifier: "RecentTransactionTableCell")
+        tableView.register(UINib(nibName: "HomepageHeaderTableCell", bundle: nil), forCellReuseIdentifier: "HomepageHeaderTableCell")
+        tableView.register(UINib(nibName: "HomepageOtherQuicklinkTableCell", bundle: nil), forCellReuseIdentifier: "HomepageOtherQuicklinkTableCell")
+        tableView.register(UINib(nibName: "HomepageDebitCardTableCell", bundle: nil), forCellReuseIdentifier: "HomepageDebitCardTableCell")
+        tableView.register(UINib(nibName: "HomepageCreditCardTableCell", bundle: nil), forCellReuseIdentifier: "HomepageCreditCardTableCell")
         
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.rowHeight = UITableView.automaticDimension
@@ -71,29 +72,32 @@ class HomepageView: UIViewController {
 extension HomepageView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderTableCell", for: indexPath) as! HomeHeaderTableCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HomepageHeaderTableCell", for: indexPath) as! HomepageHeaderTableCell
             return cell
         } else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "QuicklinkTableCell", for: indexPath) as! HomeQuicklinkTableCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HomepageOtherQuicklinkTableCell", for: indexPath) as! HomepageOtherQuicklinkTableCell
+            return cell
+        } else if indexPath.row == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HomepageDebitCardTableCell", for: indexPath) as! HomepageDebitCardTableCell
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "RecentTransactionTableCell", for: indexPath) as! HomeRecentTransactionTableCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HomepageCreditCardTableCell", for: indexPath) as! HomepageCreditCardTableCell
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 220
+            return 120
         } else if indexPath.row == 1 {
-            return 180
+            return 156
         } else {
-            return UITableView.automaticDimension
+            return 164
         }
     }
     

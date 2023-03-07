@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2314A09129B7447100C6F6D1 /* HomepageHeaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2314A09029B7447100C6F6D1 /* HomepageHeaderTableCell.swift */; };
+		2314A09329B7447D00C6F6D1 /* HomepageHeaderTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314A09229B7447D00C6F6D1 /* HomepageHeaderTableCell.xib */; };
+		2314A09529B7502500C6F6D1 /* HomepageOtherQuicklinkTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2314A09429B7502500C6F6D1 /* HomepageOtherQuicklinkTableCell.swift */; };
+		2314A09729B7503000C6F6D1 /* HomepageOtherQuicklinkTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314A09629B7503000C6F6D1 /* HomepageOtherQuicklinkTableCell.xib */; };
+		2314A09929B7542800C6F6D1 /* HomepageDebitCardTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2314A09829B7542800C6F6D1 /* HomepageDebitCardTableCell.swift */; };
+		2314A09B29B7543000C6F6D1 /* HomepageDebitCardTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314A09A29B7543000C6F6D1 /* HomepageDebitCardTableCell.xib */; };
+		2314A0A229B7570F00C6F6D1 /* HomepageDebitCardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2314A0A129B7570F00C6F6D1 /* HomepageDebitCardCollectionCell.swift */; };
+		2314A0A429B7571700C6F6D1 /* HomepageDebitCardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314A0A329B7571700C6F6D1 /* HomepageDebitCardCollectionCell.xib */; };
+		2314A0A629B7679B00C6F6D1 /* HomepageCreditCardTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2314A0A529B7679B00C6F6D1 /* HomepageCreditCardTableCell.swift */; };
+		2314A0A829B767AB00C6F6D1 /* HomepageCreditCardTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314A0A729B767AB00C6F6D1 /* HomepageCreditCardTableCell.xib */; };
+		2314A0AA29B767EF00C6F6D1 /* HomepageCreditCardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2314A0A929B767EF00C6F6D1 /* HomepageCreditCardCollectionCell.swift */; };
+		2314A0AC29B767FB00C6F6D1 /* HomepageCreditCardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314A0AB29B767FB00C6F6D1 /* HomepageCreditCardCollectionCell.xib */; };
 		2363ED6529B601F200295D40 /* HomeRecentTransactionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363ED6429B601F200295D40 /* HomeRecentTransactionTableCell.swift */; };
 		2363ED6729B6021100295D40 /* HomeRecentTransactionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2363ED6629B6021100295D40 /* HomeRecentTransactionTableCell.xib */; };
 		2363ED6929B6211E00295D40 /* HomeRecentTransactionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363ED6829B6211E00295D40 /* HomeRecentTransactionCollectionCell.swift */; };
@@ -66,6 +78,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2314A09029B7447100C6F6D1 /* HomepageHeaderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageHeaderTableCell.swift; sourceTree = "<group>"; };
+		2314A09229B7447D00C6F6D1 /* HomepageHeaderTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomepageHeaderTableCell.xib; sourceTree = "<group>"; };
+		2314A09429B7502500C6F6D1 /* HomepageOtherQuicklinkTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageOtherQuicklinkTableCell.swift; sourceTree = "<group>"; };
+		2314A09629B7503000C6F6D1 /* HomepageOtherQuicklinkTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomepageOtherQuicklinkTableCell.xib; sourceTree = "<group>"; };
+		2314A09829B7542800C6F6D1 /* HomepageDebitCardTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageDebitCardTableCell.swift; sourceTree = "<group>"; };
+		2314A09A29B7543000C6F6D1 /* HomepageDebitCardTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomepageDebitCardTableCell.xib; sourceTree = "<group>"; };
+		2314A0A129B7570F00C6F6D1 /* HomepageDebitCardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageDebitCardCollectionCell.swift; sourceTree = "<group>"; };
+		2314A0A329B7571700C6F6D1 /* HomepageDebitCardCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomepageDebitCardCollectionCell.xib; sourceTree = "<group>"; };
+		2314A0A529B7679B00C6F6D1 /* HomepageCreditCardTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageCreditCardTableCell.swift; sourceTree = "<group>"; };
+		2314A0A729B767AB00C6F6D1 /* HomepageCreditCardTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomepageCreditCardTableCell.xib; sourceTree = "<group>"; };
+		2314A0A929B767EF00C6F6D1 /* HomepageCreditCardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageCreditCardCollectionCell.swift; sourceTree = "<group>"; };
+		2314A0AB29B767FB00C6F6D1 /* HomepageCreditCardCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomepageCreditCardCollectionCell.xib; sourceTree = "<group>"; };
 		2363ED6429B601F200295D40 /* HomeRecentTransactionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentTransactionTableCell.swift; sourceTree = "<group>"; };
 		2363ED6629B6021100295D40 /* HomeRecentTransactionTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecentTransactionTableCell.xib; sourceTree = "<group>"; };
 		2363ED6829B6211E00295D40 /* HomeRecentTransactionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentTransactionCollectionCell.swift; sourceTree = "<group>"; };
@@ -158,9 +182,37 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2314A08F29B7442E00C6F6D1 /* HomepageCell */ = {
+			isa = PBXGroup;
+			children = (
+				2314A0A029B756A200C6F6D1 /* Child */,
+				2314A09029B7447100C6F6D1 /* HomepageHeaderTableCell.swift */,
+				2314A09229B7447D00C6F6D1 /* HomepageHeaderTableCell.xib */,
+				2314A09429B7502500C6F6D1 /* HomepageOtherQuicklinkTableCell.swift */,
+				2314A09629B7503000C6F6D1 /* HomepageOtherQuicklinkTableCell.xib */,
+				2314A09829B7542800C6F6D1 /* HomepageDebitCardTableCell.swift */,
+				2314A09A29B7543000C6F6D1 /* HomepageDebitCardTableCell.xib */,
+				2314A0A529B7679B00C6F6D1 /* HomepageCreditCardTableCell.swift */,
+				2314A0A729B767AB00C6F6D1 /* HomepageCreditCardTableCell.xib */,
+			);
+			path = HomepageCell;
+			sourceTree = "<group>";
+		};
+		2314A0A029B756A200C6F6D1 /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				2314A0A129B7570F00C6F6D1 /* HomepageDebitCardCollectionCell.swift */,
+				2314A0A329B7571700C6F6D1 /* HomepageDebitCardCollectionCell.xib */,
+				2314A0A929B767EF00C6F6D1 /* HomepageCreditCardCollectionCell.swift */,
+				2314A0AB29B767FB00C6F6D1 /* HomepageCreditCardCollectionCell.xib */,
+			);
+			path = Child;
+			sourceTree = "<group>";
+		};
 		2369A28B29B5863F0006C0C8 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2314A08F29B7442E00C6F6D1 /* HomepageCell */,
 				237BD96129B6F8F0003923D1 /* MySpace */,
 				237BD96029B6F8E4003923D1 /* HomeView */,
 			);
@@ -518,16 +570,22 @@
 				7457C10C29B1B5C5006874D5 /* LaunchScreen.storyboard in Resources */,
 				2369A29329B5A0E80006C0C8 /* HomeQuicklinkTableCell.xib in Resources */,
 				2369A29629B5AAF40006C0C8 /* HomeQuicklinksCollectionCell.xib in Resources */,
+				2314A0A829B767AB00C6F6D1 /* HomepageCreditCardTableCell.xib in Resources */,
+				2314A09329B7447D00C6F6D1 /* HomepageHeaderTableCell.xib in Resources */,
 				237BD95D29B6D234003923D1 /* HomeRecentTransactionHeaderCollectionCell.xib in Resources */,
 				2363ED6B29B6212800295D40 /* HomeRecentTransactionCollectionCell.xib in Resources */,
 				237BD96E29B7101C003923D1 /* MySpaceClaimRewardTableCell.xib in Resources */,
 				7457C10929B1B5C5006874D5 /* Assets.xcassets in Resources */,
+				2314A0AC29B767FB00C6F6D1 /* HomepageCreditCardCollectionCell.xib in Resources */,
 				237BD96529B6F916003923D1 /* MySpaceHeaderTableCell.xib in Resources */,
 				237BD96A29B6F9AD003923D1 /* MySpaceHeaderCollectionCell.xib in Resources */,
 				237BD97229B71268003923D1 /* MySpaceClaimRewardCollectionCell.xib in Resources */,
+				2314A09729B7503000C6F6D1 /* HomepageOtherQuicklinkTableCell.xib in Resources */,
 				7457C10729B1B5C1006874D5 /* Main.storyboard in Resources */,
 				CA79D3E729B4979B00FDCF06 /* Home.storyboard in Resources */,
 				2369A28F29B586D20006C0C8 /* HomeHeaderTableCell.xib in Resources */,
+				2314A0A429B7571700C6F6D1 /* HomepageDebitCardCollectionCell.xib in Resources */,
+				2314A09B29B7543000C6F6D1 /* HomepageDebitCardTableCell.xib in Resources */,
 				2363ED6729B6021100295D40 /* HomeRecentTransactionTableCell.xib in Resources */,
 				237BD95929B6C96F003923D1 /* HomeHeaderCollectionCell.xib in Resources */,
 			);
@@ -625,6 +683,7 @@
 			files = (
 				237BD97429B72696003923D1 /* HomepageView.swift in Sources */,
 				2369A29829B5AB000006C0C8 /* HomeQuicklinksCollectionCell.swift in Sources */,
+				2314A0A629B7679B00C6F6D1 /* HomepageCreditCardTableCell.swift in Sources */,
 				2369A29129B5A0E00006C0C8 /* HomeQuicklinkTableCell.swift in Sources */,
 				237BD95F29B6E7E8003923D1 /* MySpaceView.swift in Sources */,
 				237BD96C29B71012003923D1 /* MySpaceClaimRewardTableCell.swift in Sources */,
@@ -636,11 +695,16 @@
 				7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */,
 				237BD95729B6C960003923D1 /* HomeHeaderCollectionCell.swift in Sources */,
 				CA79D3E929B49D4500FDCF06 /* HomeView.swift in Sources */,
+				2314A09129B7447100C6F6D1 /* HomepageHeaderTableCell.swift in Sources */,
+				2314A09929B7542800C6F6D1 /* HomepageDebitCardTableCell.swift in Sources */,
+				2314A0AA29B767EF00C6F6D1 /* HomepageCreditCardCollectionCell.swift in Sources */,
 				237BD95B29B6D228003923D1 /* HomeRecentTransactionHeaderCollectionCell.swift in Sources */,
 				2363ED6529B601F200295D40 /* HomeRecentTransactionTableCell.swift in Sources */,
 				2369A28D29B586A70006C0C8 /* HomeHeaderTableCell.swift in Sources */,
+				2314A0A229B7570F00C6F6D1 /* HomepageDebitCardCollectionCell.swift in Sources */,
 				2363ED6929B6211E00295D40 /* HomeRecentTransactionCollectionCell.swift in Sources */,
 				7457C10229B1B5C1006874D5 /* SceneDelegate.swift in Sources */,
+				2314A09529B7502500C6F6D1 /* HomepageOtherQuicklinkTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
