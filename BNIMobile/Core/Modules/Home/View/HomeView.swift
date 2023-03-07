@@ -40,6 +40,23 @@ class HomeView: UIViewController {
     
     
     @IBAction func settingTapped(_ sender: UIButton) {
+        sheet()
+    }
+    
+    
+    func sheet() {
+        let presentingViewController = MySpaceView()
+        if #available(iOS 15.0, *) {
+            if let sheet = presentingViewController.sheetPresentationController{
+                sheet.detents = [.medium(), .large()]
+                sheet.largestUndimmedDetentIdentifier = .medium
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            }
+        } else {
+            presentingViewController.modalPresentationStyle = .pageSheet
+            presentingViewController.modalTransitionStyle = .coverVertical
+        }
+        present(presentingViewController, animated: true, completion: nil)
     }
 }
 

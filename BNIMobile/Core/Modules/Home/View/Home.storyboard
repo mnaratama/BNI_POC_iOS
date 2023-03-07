@@ -218,6 +218,37 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ow-uo-gsl">
+                                <rect key="frame" x="0.0" y="697" width="390" height="64"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_myspace" translatesAutoresizingMaskIntoConstraints="NO" id="zwM-Om-GIx">
+                                        <rect key="frame" x="16" y="20" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="9Mo-tv-R55"/>
+                                            <constraint firstAttribute="width" secondItem="zwM-Om-GIx" secondAttribute="height" multiplier="1:1" id="FIs-HE-Yx9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRV-rq-lIZ">
+                                        <rect key="frame" x="52" y="20" width="87" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NGj-TZ-qzK">
+                                        <rect key="frame" x="75" y="-48" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="zwM-Om-GIx" firstAttribute="top" secondItem="9Ow-uo-gsl" secondAttribute="top" constant="20" id="3aF-rv-Tqj"/>
+                                    <constraint firstItem="PRV-rq-lIZ" firstAttribute="leading" secondItem="zwM-Om-GIx" secondAttribute="trailing" constant="12" id="4hh-qu-YwY"/>
+                                    <constraint firstItem="zwM-Om-GIx" firstAttribute="leading" secondItem="9Ow-uo-gsl" secondAttribute="leading" constant="16" id="Arr-nV-jFa"/>
+                                    <constraint firstAttribute="bottom" secondItem="zwM-Om-GIx" secondAttribute="bottom" constant="20" id="NVy-lS-0RB"/>
+                                    <constraint firstAttribute="height" constant="64" id="bLo-JM-n1k"/>
+                                    <constraint firstItem="PRV-rq-lIZ" firstAttribute="centerY" secondItem="9Ow-uo-gsl" secondAttribute="centerY" id="hgG-Fd-EKN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nTd-Qp-BlU"/>
                         <color key="backgroundColor" red="0.89803921568627454" green="0.94901960784313721" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
@@ -225,6 +256,7 @@
                             <constraint firstItem="nTd-Qp-BlU" firstAttribute="trailing" secondItem="fn9-9w-KSH" secondAttribute="trailing" id="0Jp-Xl-s2l"/>
                             <constraint firstItem="nTd-Qp-BlU" firstAttribute="bottom" secondItem="R8J-Qg-uqn" secondAttribute="bottom" id="5jf-WE-ib2"/>
                             <constraint firstItem="R8J-Qg-uqn" firstAttribute="leading" secondItem="nTd-Qp-BlU" secondAttribute="leading" id="8q0-dI-GHP"/>
+                            <constraint firstItem="9Ow-uo-gsl" firstAttribute="leading" secondItem="nTd-Qp-BlU" secondAttribute="leading" id="9Pc-Cz-fVA"/>
                             <constraint firstItem="nTd-Qp-BlU" firstAttribute="trailing" secondItem="kxS-1S-TBi" secondAttribute="trailing" id="BIC-mZ-7Qy"/>
                             <constraint firstItem="fn9-9w-KSH" firstAttribute="top" secondItem="nTd-Qp-BlU" secondAttribute="top" constant="24" id="Cjv-Jb-HFV"/>
                             <constraint firstItem="fn9-9w-KSH" firstAttribute="leading" secondItem="nTd-Qp-BlU" secondAttribute="leading" constant="16" id="D7f-NM-B6J"/>
@@ -232,7 +264,9 @@
                             <constraint firstItem="lpt-EC-Sbf" firstAttribute="centerX" secondItem="hqY-zT-aOk" secondAttribute="centerX" id="MLk-RT-CZ3"/>
                             <constraint firstItem="kxS-1S-TBi" firstAttribute="leading" secondItem="nTd-Qp-BlU" secondAttribute="leading" id="Qed-I1-WPu"/>
                             <constraint firstItem="R8J-Qg-uqn" firstAttribute="top" secondItem="lpt-EC-Sbf" secondAttribute="bottom" constant="8" id="cH6-bP-NOH"/>
+                            <constraint firstItem="nTd-Qp-BlU" firstAttribute="trailing" secondItem="9Ow-uo-gsl" secondAttribute="trailing" id="csM-7z-yns"/>
                             <constraint firstItem="lpt-EC-Sbf" firstAttribute="top" secondItem="fn9-9w-KSH" secondAttribute="bottom" constant="12" id="mYF-QU-J9Y"/>
+                            <constraint firstItem="nTd-Qp-BlU" firstAttribute="bottom" secondItem="9Ow-uo-gsl" secondAttribute="bottom" id="n0T-BD-Q7f"/>
                             <constraint firstItem="nTd-Qp-BlU" firstAttribute="trailing" secondItem="R8J-Qg-uqn" secondAttribute="trailing" id="oi6-Yx-znr"/>
                         </constraints>
                     </view>
@@ -249,6 +283,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiP-29-dwM" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2631" y="-956"/>
+        </scene>
+        <!--My Space View-->
+        <scene sceneID="djA-lq-rci">
+            <objects>
+                <viewController id="27r-yb-kKK" customClass="MySpaceView" customModule="BNIMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KjE-LW-f2f">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4FL-8t-orO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEB-JQ-mcG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3362" y="-956"/>
         </scene>
         <!--Help-->
         <scene sceneID="Sz5-5L-j6N">
@@ -328,6 +377,7 @@
     </scenes>
     <resources>
         <image name="ic_bni_point" width="39" height="18"/>
+        <image name="ic_myspace" width="24" height="24"/>
         <image name="ic_settings_black" width="24" height="24"/>
         <image name="ic_tab_help" width="24" height="24"/>
         <image name="ic_tab_home" width="24" height="24"/>
