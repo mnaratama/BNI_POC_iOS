@@ -22,14 +22,14 @@ class HomeHeaderTableCell: UITableViewCell {
     }
     
     private func setupCollectionView(){
-//        collectionView.register(HomeQuicklinksCollectionCell.self, forCellWithReuseIdentifier: "QuicklinksCollectionCell")
+        collectionView.register(UINib(nibName: "HomeHeaderCollectionCell", bundle: .main), forCellWithReuseIdentifier: "HeaderCollectionCell")
         collectionView.delegate = self
         collectionView.dataSource = self
         
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = 16
         flowLayout.minimumInteritemSpacing = 0
-        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 80, bottom: 0, right: 16)
     }
     
     private func setupView(){
@@ -56,20 +56,18 @@ extension HomeHeaderTableCell{
 
 extension HomeHeaderTableCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items?.count ?? 0
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        if let cell: HomePageHeaderTabCollectionCell = collectionView.dequeueReusableCell(for: indexPath){
-//            cell.bind(image: items?[indexPath.row].image ?? "")
-//            return cell
-//        }
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeaderCollectionCell", for: indexPath) as! HomeHeaderCollectionCell
+        cell.bind()
+        return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: width, height: width / 2)
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 228, height: 144)
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         didSelectCell?(indexPath.row)

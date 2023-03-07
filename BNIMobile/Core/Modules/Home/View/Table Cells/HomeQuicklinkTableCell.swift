@@ -24,7 +24,6 @@ class HomeQuicklinkTableCell: UITableViewCell {
     
     private func setupCollectionView(){
         collectionView.register(UINib(nibName: "HomeQuicklinksCollectionCell", bundle: .main), forCellWithReuseIdentifier: "QuicklinksCollectionCell")
-
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.reloadData()
@@ -32,13 +31,12 @@ class HomeQuicklinkTableCell: UITableViewCell {
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
-//        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
     
     func bind(data: [HomeQuicklink]){
         items = data
         collectionView.reloadData()
-//        height = bottomLine ? 170.0 : 154.0
+        //        height = bottomLine ? 170.0 : 154.0
     }
 }
 
