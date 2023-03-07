@@ -11,18 +11,21 @@
 		6D18617980145072F808653C /* Pods_BNIMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E698197688DBE50548379716 /* Pods_BNIMobileTests.framework */; };
 		7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C0FF29B1B5C1006874D5 /* AppDelegate.swift */; };
 		7457C10229B1B5C1006874D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C10129B1B5C1006874D5 /* SceneDelegate.swift */; };
-		7457C10429B1B5C1006874D5 /* CustomerRegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C10329B1B5C1006874D5 /* CustomerRegView.swift */; };
+		7457C10429B1B5C1006874D5 /* NewUserLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C10329B1B5C1006874D5 /* NewUserLandingViewController.swift */; };
 		7457C10729B1B5C1006874D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7457C10529B1B5C1006874D5 /* Main.storyboard */; };
 		7457C10929B1B5C5006874D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7457C10829B1B5C5006874D5 /* Assets.xcassets */; };
 		7457C10C29B1B5C5006874D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7457C10A29B1B5C5006874D5 /* LaunchScreen.storyboard */; };
 		7457C11729B1B5C5006874D5 /* BNIMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C11629B1B5C5006874D5 /* BNIMobileTests.swift */; };
 		7457C12129B1B5C5006874D5 /* BNIMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C12029B1B5C5006874D5 /* BNIMobileUITests.swift */; };
 		7457C12329B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C12229B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift */; };
-		747FF27D29B20D5E009AC232 /* EnterMobileNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747FF27C29B20D5E009AC232 /* EnterMobileNumberView.swift */; };
+		747FF27D29B20D5E009AC232 /* EnterMobileNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747FF27C29B20D5E009AC232 /* EnterMobileNumberViewController.swift */; };
 		749B662B29B5EDD500B0A4A4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B662929B5EDD500B0A4A4 /* Request.swift */; };
 		749B662C29B5EDD500B0A4A4 /* NetworkAccessLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B662A29B5EDD500B0A4A4 /* NetworkAccessLayer.swift */; };
 		8008807229B7391D00580816 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807129B7391D00580816 /* Coordinator.swift */; };
 		8008807729B7398900580816 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807629B7398900580816 /* NavigationBar.swift */; };
+		8008807A29B753F100580816 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807929B753F100580816 /* BaseViewController.swift */; };
+		8008807D29B7558B00580816 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807C29B7558B00580816 /* Constant.swift */; };
+		8008807F29B7572A00580816 /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807E29B7572A00580816 /* OtpViewController.swift */; };
 		80347F2029B39CD700048831 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80347F1F29B39CD700048831 /* Logger.swift */; };
 		8089435B29B6F8B4006B5555 /* CongratulationsDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */; };
 		8089435C29B6F8B4006B5555 /* EnterCredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */; };
@@ -56,7 +59,7 @@
 		7457C0FC29B1B5C1006874D5 /* BNIMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BNIMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7457C0FF29B1B5C1006874D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7457C10129B1B5C1006874D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7457C10329B1B5C1006874D5 /* CustomerRegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRegView.swift; sourceTree = "<group>"; };
+		7457C10329B1B5C1006874D5 /* NewUserLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserLandingViewController.swift; sourceTree = "<group>"; };
 		7457C10629B1B5C1006874D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7457C10829B1B5C5006874D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7457C10B29B1B5C5006874D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,11 +69,14 @@
 		7457C11C29B1B5C5006874D5 /* BNIMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BNIMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7457C12029B1B5C5006874D5 /* BNIMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIMobileUITests.swift; sourceTree = "<group>"; };
 		7457C12229B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNIMobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		747FF27C29B20D5E009AC232 /* EnterMobileNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberView.swift; sourceTree = "<group>"; };
+		747FF27C29B20D5E009AC232 /* EnterMobileNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberViewController.swift; sourceTree = "<group>"; };
 		749B662929B5EDD500B0A4A4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		749B662A29B5EDD500B0A4A4 /* NetworkAccessLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAccessLayer.swift; sourceTree = "<group>"; };
 		8008807129B7391D00580816 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8008807629B7398900580816 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		8008807929B753F100580816 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8008807C29B7558B00580816 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		8008807E29B7572A00580816 /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
 		80347F1F29B39CD700048831 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationsDoneViewController.swift; sourceTree = "<group>"; };
 		8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterCredentialViewController.swift; sourceTree = "<group>"; };
@@ -187,11 +193,12 @@
 			isa = PBXGroup;
 			children = (
 				7457C10529B1B5C1006874D5 /* Main.storyboard */,
+				7457C10329B1B5C1006874D5 /* NewUserLandingViewController.swift */,
+				747FF27C29B20D5E009AC232 /* EnterMobileNumberViewController.swift */,
+				8008807E29B7572A00580816 /* OtpViewController.swift */,
+				8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */,
 				8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */,
 				8089435A29B6F8B4006B5555 /* CongratulationsPointViewController.swift */,
-				8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */,
-				7457C10329B1B5C1006874D5 /* CustomerRegView.swift */,
-				747FF27C29B20D5E009AC232 /* EnterMobileNumberView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,9 +237,9 @@
 		749B661A29B3670000B0A4A4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				749B661D29B3679600B0A4A4 /* BaseClasses */,
-				749B661F29B367A700B0A4A4 /* Coordinators */,
 				749B661B29B3670900B0A4A4 /* Modules */,
+				749B661F29B367A700B0A4A4 /* Coordinators */,
+				749B661D29B3679600B0A4A4 /* BaseClasses */,
 				749B662829B5ED6000B0A4A4 /* Networking */,
 				749B661E29B367A000B0A4A4 /* Utils */,
 			);
@@ -260,6 +267,7 @@
 		749B661D29B3679600B0A4A4 /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				8008807829B753D100580816 /* BaseViewController */,
 				8008807329B7393500580816 /* NavigationBar */,
 			);
 			path = BaseClasses;
@@ -268,6 +276,7 @@
 		749B661E29B367A000B0A4A4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8008807B29B7557700580816 /* Constants */,
 				80347F1E29B39CB500048831 /* Logger */,
 			);
 			path = Utils;
@@ -296,6 +305,22 @@
 				8008807629B7398900580816 /* NavigationBar.swift */,
 			);
 			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		8008807829B753D100580816 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8008807929B753F100580816 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		8008807B29B7557700580816 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8008807C29B7558B00580816 /* Constant.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		80347F1E29B39CB500048831 /* Logger */ = {
@@ -563,12 +588,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8008807A29B753F100580816 /* BaseViewController.swift in Sources */,
 				80347F2029B39CD700048831 /* Logger.swift in Sources */,
-				7457C10429B1B5C1006874D5 /* CustomerRegView.swift in Sources */,
-				747FF27D29B20D5E009AC232 /* EnterMobileNumberView.swift in Sources */,
+				7457C10429B1B5C1006874D5 /* NewUserLandingViewController.swift in Sources */,
+				747FF27D29B20D5E009AC232 /* EnterMobileNumberViewController.swift in Sources */,
 				749B662C29B5EDD500B0A4A4 /* NetworkAccessLayer.swift in Sources */,
+				8008807F29B7572A00580816 /* OtpViewController.swift in Sources */,
 				749B662B29B5EDD500B0A4A4 /* Request.swift in Sources */,
 				7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */,
+				8008807D29B7558B00580816 /* Constant.swift in Sources */,
 				8008807229B7391D00580816 /* Coordinator.swift in Sources */,
 				8089435B29B6F8B4006B5555 /* CongratulationsDoneViewController.swift in Sources */,
 				8089435D29B6F8B4006B5555 /* CongratulationsPointViewController.swift in Sources */,

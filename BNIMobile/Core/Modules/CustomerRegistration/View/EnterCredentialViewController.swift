@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EnterCredentialViewController: UIViewController {
+class EnterCredentialViewController: BaseViewController {
     
     @IBOutlet weak var vwToBG:UIView!
     @IBOutlet weak var stackVW:UIStackView!
@@ -24,7 +24,7 @@ class EnterCredentialViewController: UIViewController {
     }
 
     @IBAction func buttonNextTapped(_ sender: Any) {
-        guard let viewController = UIStoryboard(name: VCConstants.mainStoryboardName, bundle: nil).instantiateViewController(withIdentifier: VCConstants.congratulationsDoneVC) as? CongratulationsDoneViewController else {
+        guard let viewController = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.congratulationsDoneVC) as? CongratulationsDoneViewController else {
             fatalError("Failed to load Main from CongratulationsDoneViewController file")
         }
         self.navigationController?.pushViewController(viewController, animated: true)

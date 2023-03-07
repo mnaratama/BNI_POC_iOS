@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CongratulationsPointViewController: UIViewController {
+class CongratulationsPointViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
