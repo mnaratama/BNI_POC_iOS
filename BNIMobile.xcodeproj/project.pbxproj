@@ -26,6 +26,8 @@
 		8008807A29B753F100580816 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807929B753F100580816 /* BaseViewController.swift */; };
 		8008807D29B7558B00580816 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807C29B7558B00580816 /* Constant.swift */; };
 		8008807F29B7572A00580816 /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807E29B7572A00580816 /* OtpViewController.swift */; };
+		8008808129B7598100580816 /* EnterMobileNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008808029B7598100580816 /* EnterMobileNumberViewModel.swift */; };
+		8008808329B75E5300580816 /* MobileNumberResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008808229B75E5300580816 /* MobileNumberResponseModel.swift */; };
 		80347F2029B39CD700048831 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80347F1F29B39CD700048831 /* Logger.swift */; };
 		8089435B29B6F8B4006B5555 /* CongratulationsDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */; };
 		8089435C29B6F8B4006B5555 /* EnterCredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */; };
@@ -77,6 +79,8 @@
 		8008807929B753F100580816 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8008807C29B7558B00580816 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		8008807E29B7572A00580816 /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
+		8008808029B7598100580816 /* EnterMobileNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnterMobileNumberViewModel.swift; path = BNIMobile/Core/Modules/CustomerRegistration/View/EnterMobileNumberViewModel.swift; sourceTree = SOURCE_ROOT; };
+		8008808229B75E5300580816 /* MobileNumberResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MobileNumberResponseModel.swift; path = BNIMobile/Core/Modules/CustomerRegistration/View/MobileNumberResponseModel.swift; sourceTree = SOURCE_ROOT; };
 		80347F1F29B39CD700048831 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationsDoneViewController.swift; sourceTree = "<group>"; };
 		8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterCredentialViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 		747FF27A29B20B06009AC232 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8008808229B75E5300580816 /* MobileNumberResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 		747FF27B29B20B3C009AC232 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8008808029B7598100580816 /* EnterMobileNumberViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -593,6 +599,7 @@
 				7457C10429B1B5C1006874D5 /* NewUserLandingViewController.swift in Sources */,
 				747FF27D29B20D5E009AC232 /* EnterMobileNumberViewController.swift in Sources */,
 				749B662C29B5EDD500B0A4A4 /* NetworkAccessLayer.swift in Sources */,
+				8008808329B75E5300580816 /* MobileNumberResponseModel.swift in Sources */,
 				8008807F29B7572A00580816 /* OtpViewController.swift in Sources */,
 				749B662B29B5EDD500B0A4A4 /* Request.swift in Sources */,
 				7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */,
@@ -600,6 +607,7 @@
 				8008807229B7391D00580816 /* Coordinator.swift in Sources */,
 				8089435B29B6F8B4006B5555 /* CongratulationsDoneViewController.swift in Sources */,
 				8089435D29B6F8B4006B5555 /* CongratulationsPointViewController.swift in Sources */,
+				8008808129B7598100580816 /* EnterMobileNumberViewModel.swift in Sources */,
 				8089435C29B6F8B4006B5555 /* EnterCredentialViewController.swift in Sources */,
 				7457C10229B1B5C1006874D5 /* SceneDelegate.swift in Sources */,
 				8008807729B7398900580816 /* NavigationBar.swift in Sources */,
