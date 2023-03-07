@@ -22,18 +22,6 @@ class Coordinator {
         self.root = root
     }
 
-//    final func start(animated: Bool = true) {
-//        let viewController = CustomerRegView()
-//        firstVC = viewController
-//
-//        guard let firstVC = firstVC else {
-//            fatalError("To Start VC you must override CustomerRegView before")
-//        }
-//
-//        firstVC.coordinator = self
-//        show(viewController: firstVC, animated: animated)
-//    }
-
     func startInStack(at index: Int) {
         let viewController = setFirstViewController()
         firstVC = viewController
