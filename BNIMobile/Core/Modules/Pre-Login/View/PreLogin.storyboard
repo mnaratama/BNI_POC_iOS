@@ -53,7 +53,6 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="pressAndHoldButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xbs-wu-Xhb"/>
                                     <outletCollection property="gestureRecognizers" destination="Hsr-2p-IHl" appends="YES" id="KnU-Nb-kZh"/>
                                 </connections>
                             </button>
