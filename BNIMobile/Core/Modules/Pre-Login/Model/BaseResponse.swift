@@ -14,7 +14,6 @@
  */
 
 import Foundation
-import AKNetworking
 
 struct BaseResponse : Codable {
 	let success : Bool?
@@ -22,6 +21,8 @@ struct BaseResponse : Codable {
 	let message : String?
 	let error : Error?
 	let value : Value?
+    let data : String?
+    let userData: String?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -30,6 +31,8 @@ struct BaseResponse : Codable {
 		case message = "message"
 		case error = "error"
 		case value = "value"
+        case data = "data"
+        case userData = "userData"
 	}
 
 	init(from decoder: Decoder) throws {
@@ -39,5 +42,7 @@ struct BaseResponse : Codable {
 		message = try values.decodeIfPresent(String.self, forKey: .message)
 		error = try values.decodeIfPresent(Error.self, forKey: .error)
 		value = try values.decodeIfPresent(Value.self, forKey: .value)
+        data = try values.decodeIfPresent(String.self, forKey: .data)
+        userData = try values.decodeIfPresent(String.self, forKey: .userData)
 	}
 }
