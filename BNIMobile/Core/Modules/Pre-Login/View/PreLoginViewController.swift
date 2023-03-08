@@ -15,7 +15,7 @@
 
 import UIKit
 
-class PreLoginViewController: UIViewController {
+class PreLoginViewController: BaseViewController {
     
     @IBOutlet weak var balanceView: UIVisualEffectView!
     
