@@ -1,13 +1,13 @@
 //
-//  MySpaceClaimRewardTableCell.swift
+//  MySpaceDealsTableCell.swift
 //  BNIMobile
 //
-//  Created by Naratama on 07/03/23.
+//  Created by Naratama on 08/03/23.
 //
 
 import UIKit
 
-class MySpaceClaimRewardTableCell: UITableViewCell {
+class MySpaceDealsTableCell: UITableViewCell {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
@@ -36,14 +36,14 @@ class MySpaceClaimRewardTableCell: UITableViewCell {
     }
 }
 
-extension MySpaceClaimRewardTableCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension MySpaceDealsTableCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MySpaceClaimRewardCollectionCell", for: indexPath) as! MySpaceClaimRewardCollectionCell
-        cell.bind(image: "img_banner_example.png", title: "Ways to bank better based on your banking behaviour")
+        cell.bind(image: "img_banner_example_2.png", title: "Save IDR 10,000 when you purchase any iced drinks or cake")
         return cell
     }
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2369A5B929B87AC3009CC884 /* MySpaceDealsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369A5B829B87AC3009CC884 /* MySpaceDealsTableCell.swift */; };
+		2369A5BB29B87ACB009CC884 /* MySpaceDealsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2369A5BA29B87ACB009CC884 /* MySpaceDealsTableCell.xib */; };
 		5BC07276206D885092ED4A31 /* Pods_BNIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AF8BEA4437779214F08121 /* Pods_BNIMobile.framework */; };
 		6D18617980145072F808653C /* Pods_BNIMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E698197688DBE50548379716 /* Pods_BNIMobileTests.framework */; };
 		740CC3B929B85077000B3D44 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807629B7398900580816 /* NavigationBar.swift */; };
@@ -95,6 +97,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2369A5B829B87AC3009CC884 /* MySpaceDealsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpaceDealsTableCell.swift; sourceTree = "<group>"; };
+		2369A5BA29B87ACB009CC884 /* MySpaceDealsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySpaceDealsTableCell.xib; sourceTree = "<group>"; };
 		32B1DEC082ECBC362E51D9AE /* Pods-BNIMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		338CAD3C4A0339FBDB92446B /* Pods_BNIMobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B1D5717B2947FEF02006F57 /* Pods-BNIMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobile.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobile/Pods-BNIMobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -526,11 +530,13 @@
 		8008809F29B84DDB00580816 /* MySpace */ = {
 			isa = PBXGroup;
 			children = (
-				800880A029B84DDB00580816 /* MySpaceClaimRewardTableCell.xib */,
-				800880A129B84DDB00580816 /* MySpaceClaimRewardTableCell.swift */,
-				800880A229B84DDB00580816 /* MySpaceHeaderTableCell.swift */,
 				800880A329B84DDB00580816 /* Child */,
+				800880A129B84DDB00580816 /* MySpaceClaimRewardTableCell.swift */,
+				800880A029B84DDB00580816 /* MySpaceClaimRewardTableCell.xib */,
+				800880A229B84DDB00580816 /* MySpaceHeaderTableCell.swift */,
 				800880A829B84DDB00580816 /* MySpaceHeaderTableCell.xib */,
+				2369A5B829B87AC3009CC884 /* MySpaceDealsTableCell.swift */,
+				2369A5BA29B87ACB009CC884 /* MySpaceDealsTableCell.xib */,
 			);
 			path = MySpace;
 			sourceTree = "<group>";
@@ -698,6 +704,7 @@
 				7457C10C29B1B5C5006874D5 /* LaunchScreen.storyboard in Resources */,
 				800880C529B84DDB00580816 /* HomepageOtherQuicklinkTableCell.xib in Resources */,
 				800880E129B84DDB00580816 /* HomeRecentTransactionTableCell.xib in Resources */,
+				2369A5BB29B87ACB009CC884 /* MySpaceDealsTableCell.xib in Resources */,
 				800880C629B84DDB00580816 /* HomepageDebitCardCollectionCell.xib in Resources */,
 				7457C10929B1B5C5006874D5 /* Assets.xcassets in Resources */,
 				800880C729B84DDB00580816 /* HomepageCreditCardCollectionCell.xib in Resources */,
@@ -859,8 +866,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8008807A29B753F100580816 /* BaseViewController.swift in Sources */,
 				800880E229B84DDB00580816 /* MySpaceView.swift in Sources */,
+				2369A5B929B87AC3009CC884 /* MySpaceDealsTableCell.swift in Sources */,
 				800880BE29B84DDB00580816 /* HomeViewModel.swift in Sources */,
 				800880E529B84DDB00580816 /* HomepageView.swift in Sources */,
 				800880D929B84DDB00580816 /* HomeRecentTransactionCollectionCell.swift in Sources */,
@@ -895,10 +902,8 @@
 				8089435D29B6F8B4006B5555 /* CongratulationsPointViewController.swift in Sources */,
 				8089435C29B6F8B4006B5555 /* EnterCredentialViewController.swift in Sources */,
 				800880C829B84DDB00580816 /* HomepageDebitCardCollectionCell.swift in Sources */,
-				7457C10229B1B5C1006874D5 /* SceneDelegate.swift in Sources */,
 				800880CF29B84DDB00580816 /* MySpaceHeaderCollectionCell.swift in Sources */,
 				800880E029B84DDB00580816 /* HomeQuicklinksCollectionCell.swift in Sources */,
-				8008807729B7398900580816 /* NavigationBar.swift in Sources */,
 				800880D029B84DDB00580816 /* MySpaceClaimRewardCollectionCell.swift in Sources */,
 				800880C029B84DDB00580816 /* HomepageOtherQuicklinkTableCell.swift in Sources */,
 				800880E329B84DDB00580816 /* HomeView.swift in Sources */,

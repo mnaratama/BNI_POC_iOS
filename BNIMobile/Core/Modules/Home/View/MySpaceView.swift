@@ -24,6 +24,7 @@ class MySpaceView: UIViewController {
     private func setupTableView() {
         tableView.register(UINib(nibName: "MySpaceHeaderTableCell", bundle: nil), forCellReuseIdentifier: "MySpaceHeaderTableCell")
         tableView.register(UINib(nibName: "MySpaceClaimRewardTableCell", bundle: nil), forCellReuseIdentifier: "MySpaceClaimRewardTableCell")
+        tableView.register(UINib(nibName: "MySpaceDealsTableCell", bundle: nil), forCellReuseIdentifier: "MySpaceDealsTableCell")
         
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.rowHeight = UITableView.automaticDimension
@@ -43,13 +44,14 @@ extension MySpaceView: UITableViewDataSource, UITableViewDelegate {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MySpaceHeaderTableCell", for: indexPath) as! MySpaceHeaderTableCell
             return cell
-//        }
-        
-//        else if indexPath.row == 1 {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "QuicklinkTableCell", for: indexPath) as! HomeQuicklinkTableCell
-//            return cell
-        } else {
+        }
+        else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MySpaceClaimRewardTableCell", for: indexPath) as! MySpaceClaimRewardTableCell
+            cell.bind(title: "BNI Products to help you bank better")
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MySpaceDealsTableCell", for: indexPath) as! MySpaceDealsTableCell
+            cell.bind(title: "Special deals just for you!")
             return cell
         }
     }
@@ -57,14 +59,8 @@ extension MySpaceView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return 112
-//        } else if indexPath.row == 1 {
-//            return 180
         } else {
-            return 250
+            return 264
         }
     }
-    
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        delegate?.didSelectotherMaterial(index: indexPath.row)
-    //    }
 }
