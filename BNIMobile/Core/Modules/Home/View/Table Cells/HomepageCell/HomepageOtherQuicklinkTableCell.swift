@@ -7,11 +7,15 @@
 
 import UIKit
 
+protocol HomepageOtherQuicklinkTableCellCellDelegate: class {
+    func collectionView(collectionviewcell: HomeQuicklinksCollectionCell?, index: Int, didTappedInTableViewCell: HomepageOtherQuicklinkTableCell)
+}
+
 class HomepageOtherQuicklinkTableCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
-    var didSelectCell: ((Int)->Void)?
+    weak var cellDelegate: HomepageOtherQuicklinkTableCellCellDelegate?
     var items: [QuicklinkModel] = []
         
     override func awakeFromNib() {
@@ -53,6 +57,9 @@ extension HomepageOtherQuicklinkTableCell: UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didSelectCell?(indexPath.row)
+        if indexPath.row == 0 {
+            let cell = collectionView.cellForItem(at: indexPath) as? HomeQuicklinksCollectionCell
+            self.cellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
+        }
     }
 }

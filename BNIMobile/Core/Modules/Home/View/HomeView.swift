@@ -11,11 +11,7 @@ import UIKit
 class HomeView: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var profileLabel: UILabel!
-    @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var pointLabel: UILabel!
-    @IBOutlet weak var mySpaceView: UIView!
     
     enum Constants {
         static let homeStoryboardName = "Home"
@@ -25,7 +21,6 @@ class HomeView: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
-        setupView()
     }
     
     private func setupTableView() {
@@ -38,14 +33,6 @@ class HomeView: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.reloadData()
-    }
-    
-    private func setupView() {
-        mySpaceView.layer.cornerRadius = 10
-        mySpaceView.layer.shadowOffset = CGSize(width: 0,
-                                                height: -3.0)
-        mySpaceView.layer.shadowRadius = 3.5
-        mySpaceView.layer.shadowOpacity = 0.1
     }
     
     @IBAction func settingTapped(_ sender: UIButton) {

@@ -26,5 +26,5 @@ enum ViewControllerName {
     static let preLoginVC = "PreLoginViewController"
     static let rootNavigationVC = "RootNavigation"
     static let rootNavigationHomeVC = "RootNavigationHome"
-//    static let homeviewVC = "HomeView"
+    static let homeviewVC = "HomeView"
 }

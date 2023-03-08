@@ -84,10 +84,12 @@ extension HomepageView: UITableViewDataSource, UITableViewDelegate {
             return cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomepageOtherQuicklinkTableCell", for: indexPath) as! HomepageOtherQuicklinkTableCell
+            cell.cellDelegate = self
             cell.bind(data: homeViewModel.yourQuicklinkItems)
             return cell
         } else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomepageDebitCardTableCell", for: indexPath) as! HomepageDebitCardTableCell
+            cell.cellDelegate = self
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomepageCreditCardTableCell", for: indexPath) as! HomepageCreditCardTableCell
@@ -104,9 +106,21 @@ extension HomepageView: UITableViewDataSource, UITableViewDelegate {
             return 164
         }
     }
-    
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        delegate?.didSelectotherMaterial(index: indexPath.row)
-    //    }
 }
 
+extension HomepageView: HomepageDebitCardTableCellDelegate, HomepageOtherQuicklinkTableCellCellDelegate {
+    
+    // Navigate to AccountPage
+    func collectionView(collectionviewcell: HomepageDebitCardCollectionCell?, index: Int, didTappedInTableViewCell: HomepageDebitCardTableCell) {
+        guard let viewController = UIStoryboard(name: StoryboardName.home, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.homeviewVC) as? HomeView else {
+            fatalError("Failed to load Main from EnterMobileNumberVC file")
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    // Navigate to Quicklink
+    func collectionView(collectionviewcell: HomeQuicklinksCollectionCell?, index: Int, didTappedInTableViewCell: HomepageOtherQuicklinkTableCell) {
+        //TODO: Load EPIC4 Here
+    }
+    
+}

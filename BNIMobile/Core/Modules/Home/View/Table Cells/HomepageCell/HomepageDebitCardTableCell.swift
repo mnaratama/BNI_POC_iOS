@@ -7,11 +7,15 @@
 
 import UIKit
 
+protocol HomepageDebitCardTableCellDelegate: class {
+    func collectionView(collectionviewcell: HomepageDebitCardCollectionCell?, index: Int, didTappedInTableViewCell: HomepageDebitCardTableCell)
+}
+
 class HomepageDebitCardTableCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
-    var didSelectCell: ((Int)->Void)?
+    weak var cellDelegate: HomepageDebitCardTableCellDelegate?
         
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,7 +51,8 @@ extension HomepageDebitCardTableCell: UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didSelectCell?(indexPath.row)
+        let cell = collectionView.cellForItem(at: indexPath) as? HomepageDebitCardCollectionCell
+        self.cellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
     }
 }
 
