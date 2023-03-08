@@ -1,15 +1,13 @@
 //
-//  AddRecipientView.swift
+//  AddRecipientEnterPasswordView.swift
 //  BNIMobile
 //
-//  Created by admin on 07/03/23.
+//  Created by admin on 08/03/23.
 //
-
 
 import UIKit
 
-class AddRecipientView : UIViewController {
-    
+class AddRecipientEnterPasswordView : UIViewController {
     enum Constants {
         static let addRecipientStoryboardName = "AddRecipient"
         static let addRecipientCountryView = "AddRecipientCountryVC"
@@ -17,7 +15,7 @@ class AddRecipientView : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("AddRecipientTermAndConditionView")
+        print("AddRecipientEnterPasswordView")
     }
     
     

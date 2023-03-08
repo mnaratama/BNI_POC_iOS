@@ -10,18 +10,18 @@ import UIKit
 class AddRecipientReviewDetailsView : UIViewController {
     
     enum Constants {
-        static let mainStoryboardName = "Transfer"
-        static let successAddBeneficiaryVC = "SuccessAddBeneficiaryVC"
+        static let addRecipientStoryboardName = "AddRecipient"
+        static let addRecipientSuccessView = "AddRecipientSuccessVC"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Beneficiary Add Review View")
+        print("AddRecipientReviewDetailsView")
     }
     
     @IBAction func buttonNextTapped(_ sender: Any) {
-        guard let viewController = UIStoryboard(name: Constants.mainStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.successAddBeneficiaryVC) as? AddRecipientSuccessView else {
-            fatalError("Failed to load Transfer from SuccessAddBeneficiaryVC file")
+        guard let viewController = UIStoryboard(name: Constants.addRecipientStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.addRecipientSuccessView) as? AddRecipientSuccessView else {
+            fatalError("Failed to load Transfer from AddRecipientSuccessVC file")
         }
             
         self.navigationController?.pushViewController(viewController, animated: true)

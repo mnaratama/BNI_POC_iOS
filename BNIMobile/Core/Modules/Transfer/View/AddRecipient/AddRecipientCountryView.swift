@@ -10,18 +10,19 @@ import UIKit
 class AddRecipientCountryView : UIViewController {
     
     enum Constants {
-        static let beneficiaryAddDetailsVC = "Transfer"
+        static let addRecipientStoryboardName = "AddRecipient"
+        static let addRecipientAccountDetailsView = "AddRecipientAccountDetailsVC"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Beneficiary Add Country View")
+        print("AddRecipientCountryView")
     }
     
     
     @IBAction func buttonNextTapped(_ sender: Any) {
-        guard let viewController = UIStoryboard(name: Constants.beneficiaryAddDetailsVC, bundle: nil).instantiateViewController(withIdentifier: Constants.beneficiaryAddDetailsVC) as? AddRecipientAccountDetailsView else {
-            fatalError("Failed to load Transfer from BenificiaryAddDetailsVC file")
+        guard let viewController = UIStoryboard(name: Constants.addRecipientStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.addRecipientAccountDetailsView) as? AddRecipientAccountDetailsView else {
+            fatalError("Failed to load Transfer from AddRecipientAccountDetailsVC file")
         }
             
         self.navigationController?.pushViewController(viewController, animated: true)

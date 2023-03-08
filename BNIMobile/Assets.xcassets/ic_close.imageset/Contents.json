@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Radio-button.png",
+      "filename" : "Close.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Radio-button 1.png",
+      "filename" : "Close 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Radio-button 2.png",
+      "filename" : "Close 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
