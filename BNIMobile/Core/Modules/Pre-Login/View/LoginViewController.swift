@@ -28,4 +28,7 @@ class LoginViewController: BaseViewController {
         labelPswdError.isHidden = true
     }
 
+    @IBAction func buttonLoginTapped(_ sender: Any) {
+        //TO DO move to homescreen
+    }
 }

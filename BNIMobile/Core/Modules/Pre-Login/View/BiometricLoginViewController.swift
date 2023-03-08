@@ -19,7 +19,7 @@ class BiometricLoginViewController: BaseViewController {
 
     private func setUpLoginButton(){
         buttonLoginWithUserId.layer.borderWidth = 1.0
-        buttonLoginWithUserId.layer.borderColor = CGColor.init(red: 0, green: 102, blue: 133, alpha: 1)
+        buttonLoginWithUserId.layer.borderColor = CGColor.init(red: 0.0/255.0, green: 102.0/255.0, blue: 133.0/255.0, alpha: 1.0)
     }
     
     @IBAction func buttonLoginWithUserIdPressed(sender:Any){
