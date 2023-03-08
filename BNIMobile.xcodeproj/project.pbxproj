@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		5BC07276206D885092ED4A31 /* Pods_BNIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AF8BEA4437779214F08121 /* Pods_BNIMobile.framework */; };
 		6D18617980145072F808653C /* Pods_BNIMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E698197688DBE50548379716 /* Pods_BNIMobileTests.framework */; };
+		740CC3B929B85077000B3D44 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807629B7398900580816 /* NavigationBar.swift */; };
+		740CC3BA29B8515C000B3D44 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807929B753F100580816 /* BaseViewController.swift */; };
 		7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C0FF29B1B5C1006874D5 /* AppDelegate.swift */; };
-		7457C10229B1B5C1006874D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C10129B1B5C1006874D5 /* SceneDelegate.swift */; };
 		7457C10429B1B5C1006874D5 /* NewUserLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457C10329B1B5C1006874D5 /* NewUserLandingViewController.swift */; };
 		7457C10729B1B5C1006874D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7457C10529B1B5C1006874D5 /* Main.storyboard */; };
 		7457C10929B1B5C5006874D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7457C10829B1B5C5006874D5 /* Assets.xcassets */; };
@@ -21,9 +22,9 @@
 		747FF27D29B20D5E009AC232 /* EnterMobileNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747FF27C29B20D5E009AC232 /* EnterMobileNumberViewController.swift */; };
 		749B662B29B5EDD500B0A4A4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B662929B5EDD500B0A4A4 /* Request.swift */; };
 		749B662C29B5EDD500B0A4A4 /* NetworkAccessLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B662A29B5EDD500B0A4A4 /* NetworkAccessLayer.swift */; };
+		749B663229B7449300B0A4A4 /* PreLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749B663129B7449300B0A4A4 /* PreLogin.storyboard */; };
+		749B663429B7542F00B0A4A4 /* PreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B663329B7542F00B0A4A4 /* PreLoginViewController.swift */; };
 		8008807229B7391D00580816 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807129B7391D00580816 /* Coordinator.swift */; };
-		8008807729B7398900580816 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807629B7398900580816 /* NavigationBar.swift */; };
-		8008807A29B753F100580816 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807929B753F100580816 /* BaseViewController.swift */; };
 		8008807D29B7558B00580816 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807C29B7558B00580816 /* Constants.swift */; };
 		8008807F29B7572A00580816 /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807E29B7572A00580816 /* OtpViewController.swift */; };
 		8008808629B762E600580816 /* MobileNumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008808529B762E600580816 /* MobileNumberModel.swift */; };
@@ -101,7 +102,6 @@
 		68AF8BEA4437779214F08121 /* Pods_BNIMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7457C0FC29B1B5C1006874D5 /* BNIMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BNIMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7457C0FF29B1B5C1006874D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7457C10129B1B5C1006874D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7457C10329B1B5C1006874D5 /* NewUserLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserLandingViewController.swift; sourceTree = "<group>"; };
 		7457C10629B1B5C1006874D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7457C10829B1B5C5006874D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +115,8 @@
 		747FF27C29B20D5E009AC232 /* EnterMobileNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMobileNumberViewController.swift; sourceTree = "<group>"; };
 		749B662929B5EDD500B0A4A4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		749B662A29B5EDD500B0A4A4 /* NetworkAccessLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAccessLayer.swift; sourceTree = "<group>"; };
+		749B663129B7449300B0A4A4 /* PreLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreLogin.storyboard; sourceTree = "<group>"; };
+		749B663329B7542F00B0A4A4 /* PreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoginViewController.swift; sourceTree = "<group>"; };
 		8008807129B7391D00580816 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8008807629B7398900580816 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		8008807929B753F100580816 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -293,7 +295,6 @@
 			isa = PBXGroup;
 			children = (
 				7457C0FF29B1B5C1006874D5 /* AppDelegate.swift */,
-				7457C10129B1B5C1006874D5 /* SceneDelegate.swift */,
 			);
 			path = AppSettings;
 			sourceTree = "<group>";
@@ -321,6 +322,7 @@
 		749B661B29B3670900B0A4A4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				749B662D29B743F000B0A4A4 /* Pre-Login */,
 				749B661C29B3672200B0A4A4 /* CustomerRegistration */,
 				8008808A29B84DDB00580816 /* Home */,
 			);
@@ -370,6 +372,39 @@
 				749B662929B5EDD500B0A4A4 /* Request.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		749B662D29B743F000B0A4A4 /* Pre-Login */ = {
+			isa = PBXGroup;
+			children = (
+				749B663029B7441B00B0A4A4 /* View */,
+				749B662F29B7441300B0A4A4 /* Model */,
+				749B662E29B7440B00B0A4A4 /* ViewModel */,
+			);
+			path = "Pre-Login";
+			sourceTree = "<group>";
+		};
+		749B662E29B7440B00B0A4A4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		749B662F29B7441300B0A4A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		749B663029B7441B00B0A4A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				749B663129B7449300B0A4A4 /* PreLogin.storyboard */,
+				749B663329B7542F00B0A4A4 /* PreLoginViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8008807329B7393500580816 /* NavigationBar */ = {
@@ -669,6 +704,7 @@
 				800880D329B84DDB00580816 /* MySpaceHeaderTableCell.xib in Resources */,
 				800880DE29B84DDB00580816 /* HomeRecentTransactionHeaderCollectionCell.xib in Resources */,
 				800880D229B84DDB00580816 /* MySpaceClaimRewardCollectionCell.xib in Resources */,
+				749B663229B7449300B0A4A4 /* PreLogin.storyboard in Resources */,
 				7457C10729B1B5C1006874D5 /* Main.storyboard in Resources */,
 				800880C229B84DDB00580816 /* HomepageDebitCardTableCell.xib in Resources */,
 				800880DC29B84DDB00580816 /* HomeRecentTransactionCollectionCell.xib in Resources */,
@@ -828,6 +864,7 @@
 				800880BE29B84DDB00580816 /* HomeViewModel.swift in Sources */,
 				800880E529B84DDB00580816 /* HomepageView.swift in Sources */,
 				800880D929B84DDB00580816 /* HomeRecentTransactionCollectionCell.swift in Sources */,
+				740CC3B929B85077000B3D44 /* NavigationBar.swift in Sources */,
 				80347F2029B39CD700048831 /* Logger.swift in Sources */,
 				800880CD29B84DDB00580816 /* MySpaceClaimRewardTableCell.swift in Sources */,
 				8008808829B7632700580816 /* MobileNumberViewModel.swift in Sources */,
@@ -840,6 +877,8 @@
 				749B662C29B5EDD500B0A4A4 /* NetworkAccessLayer.swift in Sources */,
 				8008807F29B7572A00580816 /* OtpViewController.swift in Sources */,
 				800880E629B84DDB00580816 /* QuicklinksView.swift in Sources */,
+				740CC3BA29B8515C000B3D44 /* BaseViewController.swift in Sources */,
+				749B663429B7542F00B0A4A4 /* PreLoginViewController.swift in Sources */,
 				749B662B29B5EDD500B0A4A4 /* Request.swift in Sources */,
 				7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */,
 				800880CB29B84DDB00580816 /* HomepageHeaderTableCell.swift in Sources */,
