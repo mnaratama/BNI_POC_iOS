@@ -305,6 +305,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yjy-af-6Cg"/>
+                    <connections>
+                        <outlet property="nextButton" destination="OHq-Bt-bzc" id="tSQ-UW-Q0U"/>
+                        <outlet property="textField" destination="G6R-6P-bwd" id="Eoj-ff-ES4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnv-Os-XbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -418,6 +422,9 @@ enjoy your BNI Mobile Banking app!</string>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="CloseButtonAction:" destination="Xdk-R6-ihc" eventType="touchUpInside" id="PPN-ep-uBC"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="point" translatesAutoresizingMaskIntoConstraints="NO" id="uAw-y5-bEt">
                                 <rect key="frame" x="157.33333333333334" y="173.66666666666666" width="78.333333333333343" height="78.666666666666657"/>
@@ -612,7 +619,7 @@ enjoy your BNI Mobile Banking app!</string>
                                                     <constraint firstAttribute="height" constant="48" id="nmf-SE-Yf7"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoK-a9-Ocr">
                                                 <rect key="frame" x="0.0" y="80" width="353.66666666666669" height="1"/>
@@ -703,7 +710,10 @@ enjoy your BNI Mobile Banking app!</string>
                     <connections>
                         <outlet property="lblPswdError" destination="KrG-hD-Yg5" id="5ge-yl-XfH"/>
                         <outlet property="lblUrerIdError" destination="Pjl-0w-R0e" id="RYn-ks-teQ"/>
+                        <outlet property="nextButton" destination="X9Z-tl-b9v" id="bi6-Rg-M81"/>
+                        <outlet property="passwordTextField" destination="FzI-1X-UWb" id="D79-gb-L2k"/>
                         <outlet property="stackVW" destination="1PJ-9m-pAq" id="y8Y-op-OMs"/>
+                        <outlet property="userIdTextField" destination="4j0-DG-aXt" id="tJe-7Q-OvL"/>
                         <outlet property="vwToBG" destination="34F-iC-SlM" id="s82-VL-LaX"/>
                     </connections>
                 </viewController>
