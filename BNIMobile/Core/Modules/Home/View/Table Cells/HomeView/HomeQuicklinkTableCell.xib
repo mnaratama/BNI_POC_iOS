@@ -19,10 +19,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="280"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="Wuf-L5-2bN">
-                        <rect key="frame" x="40" y="76" width="240" height="128"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Sn-1Y-n1u">
                         <rect key="frame" x="16" y="8" width="288" height="252"/>
                         <subviews>
@@ -266,28 +262,34 @@
                             <constraint firstAttribute="trailing" secondItem="uho-E1-xRT" secondAttribute="trailing" id="mJv-tB-xhq"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_circle_chevron_up" translatesAutoresizingMaskIntoConstraints="NO" id="Vv3-L0-xDD">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcN-36-nl0">
                         <rect key="frame" x="148" y="248" width="24" height="24"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="24" id="hET-uf-vbd"/>
-                            <constraint firstAttribute="width" secondItem="Vv3-L0-xDD" secondAttribute="height" multiplier="1:1" id="tAx-oh-HDJ"/>
+                            <constraint firstAttribute="height" constant="24" id="Psd-zo-o4K"/>
+                            <constraint firstAttribute="width" secondItem="TcN-36-nl0" secondAttribute="height" multiplier="1:1" id="a61-Ip-OdJ"/>
                         </constraints>
-                    </imageView>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="ic_circle_chevron_up"/>
+                        <connections>
+                            <action selector="circleTapped:" destination="kdY-Vx-PB6" eventType="touchUpInside" id="SlS-r8-Ohp"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Vv3-L0-xDD" secondAttribute="bottom" constant="8" id="9Zd-IK-jdv"/>
+                    <constraint firstAttribute="bottom" secondItem="TcN-36-nl0" secondAttribute="bottom" constant="8" id="7xq-ft-ZjX"/>
+                    <constraint firstItem="TcN-36-nl0" firstAttribute="top" relation="lessThanOrEqual" secondItem="rVI-Mg-chU" secondAttribute="top" constant="248" id="H60-hM-gQb"/>
                     <constraint firstItem="8Sn-1Y-n1u" firstAttribute="top" secondItem="rVI-Mg-chU" secondAttribute="top" constant="8" id="LaK-hA-1v0"/>
-                    <constraint firstItem="Vv3-L0-xDD" firstAttribute="centerX" secondItem="rVI-Mg-chU" secondAttribute="centerX" id="RbQ-yc-axc"/>
                     <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="8Sn-1Y-n1u" secondAttribute="bottom" constant="20" id="U0x-Sj-az0"/>
                     <constraint firstAttribute="trailing" secondItem="8Sn-1Y-n1u" secondAttribute="trailing" constant="16" id="rcA-U5-uEA"/>
+                    <constraint firstItem="TcN-36-nl0" firstAttribute="centerX" secondItem="rVI-Mg-chU" secondAttribute="centerX" id="tUd-hi-vWX"/>
                     <constraint firstItem="8Sn-1Y-n1u" firstAttribute="leading" secondItem="rVI-Mg-chU" secondAttribute="leading" constant="16" id="zMf-gD-aJL"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="9l0-Jf-cGD"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="circleImg" destination="Vv3-L0-xDD" id="6Lp-Kd-DiE"/>
+                <outlet property="circleImg" destination="TcN-36-nl0" id="V5g-QT-aKH"/>
                 <outlet property="collectionView" destination="uho-E1-xRT" id="MKJ-gr-hEd"/>
                 <outlet property="flowLayout" destination="63N-gE-r7Z" id="04p-dT-a4W"/>
                 <outlet property="viewQuicklink" destination="8Sn-1Y-n1u" id="sG2-NC-wot"/>
@@ -301,7 +303,6 @@
         <image name="ic_optimize_cashflow" width="40" height="40"/>
         <image name="ic_qr_code" width="40" height="40"/>
         <image name="ic_tapcash" width="58" height="40"/>
-        <image name="image" width="128" height="128"/>
         <namedColor name="BNI Teal">
             <color red="0.0" green="0.40000000000000002" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

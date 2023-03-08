@@ -11,7 +11,7 @@ class HomeQuicklinkTableCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var viewQuicklink: UIView!
-    @IBOutlet weak var circleImg: UIImageView!
+    @IBOutlet weak var circleImg: UIButton!
     
     var items: [HomeQuicklink]?
     var didSelectCell: ((Int)->Void)?
@@ -51,6 +51,9 @@ class HomeQuicklinkTableCell: UITableViewCell {
     @IBAction func manageTapped(_ sender: UIButton) {
     }
     
+    @IBAction func circleTapped(_ sender: UIButton) {
+    }
+    
 }
 
 extension HomeQuicklinkTableCell{
@@ -73,7 +76,7 @@ extension HomeQuicklinkTableCell: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width/4, height: 120)
+        return CGSize(width: UIScreen.main.bounds.width/4, height: 100)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

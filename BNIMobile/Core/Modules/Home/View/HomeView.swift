@@ -67,7 +67,7 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate, UITabBarDelegate
         if indexPath.row == 0 {
             return 220
         } else if indexPath.row == 1 {
-            return 180
+            return 256
         } else {
             return UITableView.automaticDimension
         }
