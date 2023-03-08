@@ -18,8 +18,8 @@ import UIKit
 class NewUserLandingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        WebAccessLayer.shared.getMetadata(uuid: "testID", completionHandler: {isSuccess, responseJson, _  in
+        let mobileNumber = UserDefaults.standard.string(forKey: "mobileNumber") ?? ""
+        NetworkAccessLayer.shared.verifyAccount(mobileNumber: mobileNumber, completionHandler: {isSuccess, responseJson, _  in
             if isSuccess {
                 print("Response JSON : \(responseJson)")
             }
