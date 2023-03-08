@@ -68,13 +68,8 @@ extension HomeRecentTransactionTableCell: UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        switch kind {
-        case UICollectionView.elementKindSectionHeader:
-            let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "RecentTransactionHeaderCollectionCell", for: indexPath) as! HomeRecentTransactionHeaderCollectionCell
-            return sectionHeader
-        default:
-            assert(false, "Unexpected element kind")
-        }
+        let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "RecentTransactionHeaderCollectionCell", for: indexPath) as! HomeRecentTransactionHeaderCollectionCell
+        return sectionHeader
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -37,23 +37,8 @@ class HomeView: UIViewController {
         tableView.reloadData()
     }
     
-    @IBAction func settingTapped(_ sender: UIButton) {
-    }
-    
-    @IBAction func mySpaceTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: Constants.homeStoryboardName, bundle: nil)
-        let presentingViewController = storyboard.instantiateViewController(withIdentifier: "MySpace")
-        if #available(iOS 15.0, *) {
-            if let sheet = presentingViewController.sheetPresentationController{
-                sheet.detents = [.medium(), .large()]
-                sheet.largestUndimmedDetentIdentifier = .medium
-                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
-            }
-        } else {
-            presentingViewController.modalPresentationStyle = .pageSheet
-            presentingViewController.modalTransitionStyle = .coverVertical
-        }
-        present(presentingViewController, animated: true, completion: nil)
+    @IBAction func backTapped(_ sender: UIButton) {
+        self.dismiss(animated: false, completion: nil)
     }
     
     
