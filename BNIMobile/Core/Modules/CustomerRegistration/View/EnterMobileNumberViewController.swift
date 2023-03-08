@@ -15,7 +15,7 @@
 
 import UIKit
 
-class EnterMobileNumberView: UIViewController, UITextFieldDelegate {
+class EnterMobileNumberViewController: BaseViewController, UITextFieldDelegate {
     
     enum Constants {
         static let colorBNITeal = "BNI Teal"
@@ -40,14 +40,6 @@ class EnterMobileNumberView: UIViewController, UITextFieldDelegate {
         textField.keyboardType = .numberPad
         textField.delegate = self
         textField.addTarget(self, action: #selector(updatedValue(textField:)), for: .editingChanged)
-        
-        // To dismiss the keyboad when user taps outside
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
-        self.view.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
-        textField.resignFirstResponder()
     }
 
     /// method to enable / disable the next button
@@ -58,7 +50,7 @@ class EnterMobileNumberView: UIViewController, UITextFieldDelegate {
     
     /// called each time user enters a value in the textFiled, Validation should happen here
     @objc func updatedValue(textField: UITextField) {
-        guard let valueString = textField.text else {
+        guard let _ = textField.text else {
             return
         }
 
@@ -69,10 +61,17 @@ class EnterMobileNumberView: UIViewController, UITextFieldDelegate {
 
     /// called when the keyboard gets dismissed,  any additional validation should happen here
     func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let enteredText = textField.text else {
+        guard let _ = textField.text else {
             return
         }
         self.nextButton(shouldEnable: true)
         //TODO: save the data if required here
+    }
+    
+    @IBAction func buttonDoneTapped(_ sender: Any) {
+        guard let viewController = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.OtpViewController) as? OtpViewController else {
+            fatalError("Failed to load Main from CongratulationsPointViewController file")
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

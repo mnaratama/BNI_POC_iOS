@@ -15,24 +15,22 @@
 
 import UIKit
 
-
-class CustomerRegView: UIViewController {
-    
-    enum Constants {
-        static let mainStoryboardName = "Main"
-        static let enterMobileNumberVC = "EnterMobileNumberVC"
-    }
+class NewUserLandingViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        WebAccessLayer.shared.getMetadata(uuid: "testID", completionHandler: {isSuccess, responseJson, _  in
+            if isSuccess {
+                print("Response JSON : \(responseJson)")
+            }
+        })
     }
     
     @IBAction func buttonTappedToStart(_ sender: Any) {        
-        guard let viewController = UIStoryboard(name: Constants.mainStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.enterMobileNumberVC) as? EnterMobileNumberView else {
+        guard let viewController = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.enterMobileNumberVC) as? EnterMobileNumberViewController else {
             fatalError("Failed to load Main from EnterMobileNumberVC file")
         }
-            
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

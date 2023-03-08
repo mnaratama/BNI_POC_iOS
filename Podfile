@@ -5,7 +5,7 @@ inhibit_all_warnings!
 use_frameworks!
 
 def import_pods
-    #pod 'AKNetworking',  :git => 'git@INMBZP4112.in.dst.ibm.com:apple-coc-frameworks-private/aknetworking.git', :commit => '6dcaaa0b'
+    pod 'AKNetworking',  :git => 'git@github.com:maverick-poc/maverick-ibm-AKNetworking.git'
 end
 
  platform :ios, '13.0'
@@ -28,6 +28,11 @@ post_install do |installer|
         config.build_settings['SWIFT_VERSION'] = '5.0'
         config.build_settings['ENABLE_BITCODE'] = 'NO'
 	config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+	config.build_settings['PROVISIONING_PROFILE_SPECIFIER'] = ' '
+        config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+        config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
+        config.build_settings['SWIFT_VERSION'] = '5.0'
+        config.build_settings['CODE_SIGN_STYLE'] = “Automatic”      
       end
     end
 end

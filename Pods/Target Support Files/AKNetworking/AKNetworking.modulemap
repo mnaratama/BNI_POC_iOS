@@ -1,0 +1,6 @@
+framework module AKNetworking {
+  umbrella header "AKNetworking-umbrella.h"
+
+  export *
+  module * { export * }
+}
