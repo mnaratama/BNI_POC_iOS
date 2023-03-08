@@ -17,9 +17,9 @@ class HomeQuicklinksCollectionCell: UICollectionViewCell {
         backgroundColor = .clear
     }
     
-    func bind(){
-        quicklinkLabel.text = "Top up & payment"
-        imgView.image = UIImage(named: "ic_optimize_cashflow")
+    func bind(image: String, title: String){
+        imgView.image = UIImage(named: image)
+        quicklinkLabel.text = title
     }
 }
 

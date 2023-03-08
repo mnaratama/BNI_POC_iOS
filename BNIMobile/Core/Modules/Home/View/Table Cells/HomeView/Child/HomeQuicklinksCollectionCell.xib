@@ -17,13 +17,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="66" height="84"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" image="GradientSilver" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-FU-eVv">
-                        <rect key="frame" x="17" y="6" width="32" height="32"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prX-0J-xud">
+                        <rect key="frame" x="0.0" y="0.0" width="66" height="42"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" verticalCompressionResistancePriority="755" image="GradientSilver" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-FU-eVv">
+                                <rect key="frame" x="17" y="5" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="8L4-Q4-gfo"/>
+                                    <constraint firstAttribute="width" secondItem="d2X-FU-eVv" secondAttribute="height" multiplier="1:1" id="Q0m-dw-3iV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="32" id="8L4-Q4-gfo"/>
-                            <constraint firstAttribute="width" secondItem="d2X-FU-eVv" secondAttribute="height" multiplier="1:1" id="Q0m-dw-3iV"/>
+                            <constraint firstItem="d2X-FU-eVv" firstAttribute="centerY" secondItem="prX-0J-xud" secondAttribute="centerY" id="KRn-Db-X2E"/>
+                            <constraint firstAttribute="height" constant="42" id="dGL-lR-00A"/>
+                            <constraint firstItem="d2X-FU-eVv" firstAttribute="centerX" secondItem="prX-0J-xud" secondAttribute="centerX" id="wfa-B7-3eP"/>
                         </constraints>
-                    </imageView>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3z-2G-3Nd">
                         <rect key="frame" x="0.0" y="42" width="66" height="14.333333333333336"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -32,13 +43,13 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="d2X-FU-eVv" secondAttribute="trailing" constant="16" id="5vB-KH-tfA"/>
-                    <constraint firstItem="H3z-2G-3Nd" firstAttribute="top" secondItem="d2X-FU-eVv" secondAttribute="bottom" constant="4" id="CbA-87-T47"/>
                     <constraint firstItem="H3z-2G-3Nd" firstAttribute="leading" secondItem="F2S-vP-Atm" secondAttribute="leading" id="M1G-kV-ptD"/>
-                    <constraint firstItem="d2X-FU-eVv" firstAttribute="leading" secondItem="F2S-vP-Atm" secondAttribute="leading" constant="17" id="T6f-VN-TRy"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="H3z-2G-3Nd" secondAttribute="bottom" constant="4" id="TUd-rx-wfM"/>
-                    <constraint firstItem="d2X-FU-eVv" firstAttribute="top" secondItem="F2S-vP-Atm" secondAttribute="top" constant="6" id="Uo6-QE-OKR"/>
                     <constraint firstAttribute="trailing" secondItem="H3z-2G-3Nd" secondAttribute="trailing" id="YpA-Di-KtX"/>
+                    <constraint firstItem="prX-0J-xud" firstAttribute="leading" secondItem="F2S-vP-Atm" secondAttribute="leading" id="ZrF-SK-ubD"/>
+                    <constraint firstItem="prX-0J-xud" firstAttribute="top" secondItem="F2S-vP-Atm" secondAttribute="top" id="hsT-nD-RPS"/>
+                    <constraint firstAttribute="trailing" secondItem="prX-0J-xud" secondAttribute="trailing" id="u6I-OQ-6W3"/>
+                    <constraint firstItem="H3z-2G-3Nd" firstAttribute="top" secondItem="prX-0J-xud" secondAttribute="bottom" id="xXw-xk-WPc"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="81" height="81"/>

@@ -55,7 +55,7 @@ extension HomeQuicklinkTableCell: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuicklinksCollectionCell", for: indexPath) as! HomeQuicklinksCollectionCell
-        cell.bind()
+//        cell.bind(image: <#T##String#>, title: <#T##String#>)
         return cell
     }
     

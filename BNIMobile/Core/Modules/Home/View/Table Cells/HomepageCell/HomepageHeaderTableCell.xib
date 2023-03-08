@@ -21,7 +21,7 @@
                         <rect key="frame" x="16" y="10" width="288" height="100"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nyu-29-1Q4">
-                                <rect key="frame" x="16" y="8" width="256" height="84"/>
+                                <rect key="frame" x="16" y="8" width="256" height="92"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FgP-Ik-7aB">
                                     <size key="itemSize" width="128" height="128"/>
@@ -36,7 +36,7 @@
                             <constraint firstAttribute="height" constant="100" id="KMT-sB-hfi"/>
                             <constraint firstAttribute="trailing" secondItem="nyu-29-1Q4" secondAttribute="trailing" constant="16" id="LWZ-Sv-AY5"/>
                             <constraint firstItem="nyu-29-1Q4" firstAttribute="top" secondItem="iYH-Ho-Vsa" secondAttribute="top" constant="8" id="Rju-wd-Bpw"/>
-                            <constraint firstAttribute="bottom" secondItem="nyu-29-1Q4" secondAttribute="bottom" constant="8" id="XLa-o9-Q4F"/>
+                            <constraint firstAttribute="bottom" secondItem="nyu-29-1Q4" secondAttribute="bottom" id="XLa-o9-Q4F"/>
                             <constraint firstItem="nyu-29-1Q4" firstAttribute="leading" secondItem="iYH-Ho-Vsa" secondAttribute="leading" constant="16" id="me6-ck-Ode"/>
                         </constraints>
                     </view>

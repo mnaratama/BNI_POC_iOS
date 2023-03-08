@@ -17,6 +17,8 @@ class HomepageView: UIViewController {
     @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var mySpaceView: UIView!
     
+    var homeViewModel = HomeViewModel()
+    
     enum Constants {
         static let homeStoryboardName = "Home"
     }
@@ -78,9 +80,11 @@ extension HomepageView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomepageHeaderTableCell", for: indexPath) as! HomepageHeaderTableCell
+            cell.bind(data: homeViewModel.homepageQuicklinkItems)
             return cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomepageOtherQuicklinkTableCell", for: indexPath) as! HomepageOtherQuicklinkTableCell
+            cell.bind(data: homeViewModel.yourQuicklinkItems)
             return cell
         } else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomepageDebitCardTableCell", for: indexPath) as! HomepageDebitCardTableCell
@@ -93,7 +97,7 @@ extension HomepageView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 120
+            return 112
         } else if indexPath.row == 1 {
             return 156
         } else {

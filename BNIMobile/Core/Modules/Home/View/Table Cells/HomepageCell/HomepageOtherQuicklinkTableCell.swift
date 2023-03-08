@@ -12,6 +12,7 @@ class HomepageOtherQuicklinkTableCell: UITableViewCell {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     var didSelectCell: ((Int)->Void)?
+    var items: [QuicklinkModel] = []
         
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,16 +30,21 @@ class HomepageOtherQuicklinkTableCell: UITableViewCell {
         flowLayout.minimumInteritemSpacing = 0
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
+    
+    func bind(data: [QuicklinkModel]){
+        items = data
+        collectionView.reloadData()
+    }
 }
 
 extension HomepageOtherQuicklinkTableCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuicklinksCollectionCell", for: indexPath) as! HomeQuicklinksCollectionCell
-        cell.bind()
+        cell.bind(image: items[indexPath.row].image ?? "", title: items[indexPath.row].title ?? "")
         return cell
     }
     
