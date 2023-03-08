@@ -28,6 +28,8 @@ class EnterMobileNumberViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var textField: UITextField!
     
+    var mobileNumber: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextField()
@@ -50,13 +52,14 @@ class EnterMobileNumberViewController: BaseViewController, UITextFieldDelegate {
     
     /// called each time user enters a value in the textFiled, Validation should happen here
     @objc func updatedValue(textField: UITextField) {
-        guard let _ = textField.text else {
+        guard let valueEntered = textField.text else {
             return
         }
 
     //TODO: Validate the entered data here and enable the button
         
         self.nextButton(shouldEnable: true)
+        mobileNumber = valueEntered
     }
 
     /// called when the keyboard gets dismissed,  any additional validation should happen here
@@ -69,6 +72,13 @@ class EnterMobileNumberViewController: BaseViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonDoneTapped(_ sender: Any) {
+        UserDefaults.standard.set(self.mobileNumber, forKey: "MobileNumber")
+        NetworkAccessLayer.shared.generateOTP(mobileNumber: self.mobileNumber, completionHandler: {isSuccess, baseResponse, _  in
+            if isSuccess, let baseResponse = baseResponse {
+                print("Response JSON : \(baseResponse)")
+            }
+        })
+
         guard let viewController = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.OtpViewController) as? OtpViewController else {
             fatalError("Failed to load Main from CongratulationsPointViewController file")
         }
