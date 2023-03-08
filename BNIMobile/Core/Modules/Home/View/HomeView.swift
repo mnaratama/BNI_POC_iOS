@@ -12,6 +12,7 @@ class HomeView: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pointLabel: UILabel!
+    @IBOutlet weak var tabBar: UITabBar!
     
     enum Constants {
         static let homeStoryboardName = "Home"
@@ -24,6 +25,7 @@ class HomeView: UIViewController {
     }
     
     private func setupTableView() {
+        tabBar.delegate = self
         tableView.register(UINib(nibName: "HomeQuicklinkTableCell", bundle: nil), forCellReuseIdentifier: "QuicklinkTableCell")
         tableView.register(UINib(nibName: "HomeHeaderTableCell", bundle: nil), forCellReuseIdentifier: "HeaderTableCell")
         tableView.register(UINib(nibName: "HomeRecentTransactionTableCell", bundle: nil), forCellReuseIdentifier: "RecentTransactionTableCell")
@@ -53,9 +55,11 @@ class HomeView: UIViewController {
         }
         present(presentingViewController, animated: true, completion: nil)
     }
+    
+    
 }
 
-extension HomeView: UITableViewDataSource, UITableViewDelegate {
+extension HomeView: UITableViewDataSource, UITableViewDelegate, UITabBarDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -82,6 +86,10 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate {
         } else {
             return UITableView.automaticDimension
         }
+    }
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        self.dismiss(animated: false, completion: nil)
     }
     
     //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

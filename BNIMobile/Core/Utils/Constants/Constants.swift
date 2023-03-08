@@ -27,4 +27,5 @@ enum ViewControllerName {
     static let rootNavigationVC = "RootNavigation"
     static let rootNavigationHomeVC = "RootNavigationHome"
     static let homeviewVC = "HomeView"
+    static let tabBarVC = "tabBarController"
 }
