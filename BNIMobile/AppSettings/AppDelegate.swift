@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let hasCustomerRegistred = UserDefaults.standard.bool(forKey: "hasCustomerRegistered")
         
         if hasCustomerRegistred {
-            guard let preLoginVC = UIStoryboard(name: StoryboardName.preLogin, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.preLoginVC) as? PreLoginViewController else {
+            guard let preLoginVC = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.rootNavigationVC) as? UINavigationController else {
                 fatalError("Failed to load PreLogin from PreLoginViewController file")
             }
             rootVC = preLoginVC
