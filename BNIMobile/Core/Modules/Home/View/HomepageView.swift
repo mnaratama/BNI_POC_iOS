@@ -18,6 +18,7 @@ class HomepageView: UIViewController {
     @IBOutlet weak var mySpaceView: UIView!
     
     var homeViewModel = HomeViewModel()
+    var selectedIndex = -1
     
     enum Constants {
         static let homeStoryboardName = "Home"
@@ -97,11 +98,44 @@ extension HomepageView: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    //    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    //        if indexPath.row == selectedIndex{
+    //            selectedIndex = -1
+    //        }else{
+    //            selectedIndex = indexPath.row
+    //        }
+    //        tableView.reloadData()
+    //    }
+    
+//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        if indexPath.row == selectedIndex
+//        {
+//            return 75
+//        }else{
+//            return 45
+//        }
+//    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 1 {
+            if selectedIndex == -1 {
+                selectedIndex = 1
+            }else{
+                selectedIndex = -1
+            }
+            tableView.reloadData()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return 112
         } else if indexPath.row == 1 {
-            return 156
+            if selectedIndex == -1 {
+                return 156
+            }else{
+                return 256
+            }
         } else {
             return 164
         }

@@ -10,6 +10,8 @@ import UIKit
 class HomeQuicklinkTableCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var viewQuicklink: UIView!
+    @IBOutlet weak var circleImg: UIImageView!
     
     var items: [HomeQuicklink]?
     var didSelectCell: ((Int)->Void)?
@@ -18,8 +20,8 @@ class HomeQuicklinkTableCell: UITableViewCell {
         super.awakeFromNib()
         
         selectionStyle = .none
-        backgroundColor = .white
         setupCollectionView()
+        setupView()
     }
     
     private func setupCollectionView(){
@@ -33,11 +35,22 @@ class HomeQuicklinkTableCell: UITableViewCell {
         flowLayout.minimumInteritemSpacing = 0
     }
     
+    private func setupView(){
+        viewQuicklink.layer.shadowOffset = CGSize(width: 0.3,
+                                                  height: 0.7)
+        viewQuicklink.layer.shadowRadius = 1.3
+        viewQuicklink.layer.shadowOpacity = 0.08
+        viewQuicklink.layer.cornerRadius = 8
+    }
+    
     func bind(data: [HomeQuicklink]){
         items = data
         collectionView.reloadData()
-        //        height = bottomLine ? 170.0 : 154.0
     }
+    
+    @IBAction func manageTapped(_ sender: UIButton) {
+    }
+    
 }
 
 extension HomeQuicklinkTableCell{
