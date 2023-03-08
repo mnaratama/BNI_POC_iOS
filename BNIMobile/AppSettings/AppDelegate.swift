@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Configure rootview based on Customer Registration Status
         chooseRootViewController()
-        
+        print("test")   
         return true
     }
     
