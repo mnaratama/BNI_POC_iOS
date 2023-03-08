@@ -33,7 +33,7 @@ class EnterCredentialViewController: BaseViewController {
     
     func userDefaultsToSaveCustomerRegStatus() {
         //TODO: can be removed once we have the API inplace to determine this status
-        var userDefaults = UserDefaults.standard
+        let userDefaults = UserDefaults.standard
         userDefaults.set(true, forKey: "hasCustomerRegistered")
     }
     
