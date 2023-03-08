@@ -19,6 +19,9 @@ class CongratulationsPointViewController: BaseViewController {
     }
 
     @IBAction func CloseButtonAction(_ sender: Any) {
-        //TODO: Load EPIC3 Here
+        guard let viewController = UIStoryboard(name: StoryboardName.home, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.tabBarVC) as? UITabBarController else {
+            fatalError("Failed to load Main from EnterMobileNumberVC file")
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
