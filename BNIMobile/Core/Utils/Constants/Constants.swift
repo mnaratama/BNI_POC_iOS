@@ -10,6 +10,7 @@ import Foundation
 enum StoryboardName {
     static let main = "Main"
     static let preLogin = "PreLogin"
+    static let home = "Home"
     static let enterMobileNumberVC = "EnterMobileNumberVC"
     static let congratulationsDoneVC = "CongratulationsDoneViewController"
     static let congratulationsPointVC = "CongratulationsPointViewController"
@@ -24,5 +25,6 @@ enum ViewControllerName {
     static let OtpViewController = "OtpViewController"
     static let preLoginVC = "PreLoginViewController"
     static let rootNavigationVC = "RootNavigation"
-    
+    static let rootNavigationHomeVC = "RootNavigationHome"
+    static let homeviewVC = "HomeView"
 }

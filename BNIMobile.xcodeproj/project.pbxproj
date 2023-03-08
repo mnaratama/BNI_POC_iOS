@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2369A5B929B87AC3009CC884 /* MySpaceDealsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369A5B829B87AC3009CC884 /* MySpaceDealsTableCell.swift */; };
+		2369A5BB29B87ACB009CC884 /* MySpaceDealsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2369A5BA29B87ACB009CC884 /* MySpaceDealsTableCell.xib */; };
 		5BC07276206D885092ED4A31 /* Pods_BNIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AF8BEA4437779214F08121 /* Pods_BNIMobile.framework */; };
 		6D18617980145072F808653C /* Pods_BNIMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E698197688DBE50548379716 /* Pods_BNIMobileTests.framework */; };
 		740CC3B929B85077000B3D44 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807629B7398900580816 /* NavigationBar.swift */; };
@@ -29,6 +31,47 @@
 		8008807F29B7572A00580816 /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807E29B7572A00580816 /* OtpViewController.swift */; };
 		8008808629B762E600580816 /* MobileNumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008808529B762E600580816 /* MobileNumberModel.swift */; };
 		8008808829B7632700580816 /* MobileNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008808729B7632700580816 /* MobileNumberViewModel.swift */; };
+		800880BE29B84DDB00580816 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008808C29B84DDB00580816 /* HomeViewModel.swift */; };
+		800880BF29B84DDB00580816 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008808E29B84DDB00580816 /* HomeModel.swift */; };
+		800880C029B84DDB00580816 /* HomepageOtherQuicklinkTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008809229B84DDB00580816 /* HomepageOtherQuicklinkTableCell.swift */; };
+		800880C129B84DDB00580816 /* HomepageDebitCardTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008809329B84DDB00580816 /* HomepageDebitCardTableCell.swift */; };
+		800880C229B84DDB00580816 /* HomepageDebitCardTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8008809429B84DDB00580816 /* HomepageDebitCardTableCell.xib */; };
+		800880C329B84DDB00580816 /* HomepageCreditCardTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008809529B84DDB00580816 /* HomepageCreditCardTableCell.swift */; };
+		800880C429B84DDB00580816 /* HomepageHeaderTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8008809629B84DDB00580816 /* HomepageHeaderTableCell.xib */; };
+		800880C529B84DDB00580816 /* HomepageOtherQuicklinkTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8008809729B84DDB00580816 /* HomepageOtherQuicklinkTableCell.xib */; };
+		800880C629B84DDB00580816 /* HomepageDebitCardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8008809929B84DDB00580816 /* HomepageDebitCardCollectionCell.xib */; };
+		800880C729B84DDB00580816 /* HomepageCreditCardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8008809A29B84DDB00580816 /* HomepageCreditCardCollectionCell.xib */; };
+		800880C829B84DDB00580816 /* HomepageDebitCardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008809B29B84DDB00580816 /* HomepageDebitCardCollectionCell.swift */; };
+		800880C929B84DDB00580816 /* HomepageCreditCardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008809C29B84DDB00580816 /* HomepageCreditCardCollectionCell.swift */; };
+		800880CA29B84DDB00580816 /* HomepageCreditCardTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8008809D29B84DDB00580816 /* HomepageCreditCardTableCell.xib */; };
+		800880CB29B84DDB00580816 /* HomepageHeaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008809E29B84DDB00580816 /* HomepageHeaderTableCell.swift */; };
+		800880CC29B84DDB00580816 /* MySpaceClaimRewardTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800880A029B84DDB00580816 /* MySpaceClaimRewardTableCell.xib */; };
+		800880CD29B84DDB00580816 /* MySpaceClaimRewardTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880A129B84DDB00580816 /* MySpaceClaimRewardTableCell.swift */; };
+		800880CE29B84DDB00580816 /* MySpaceHeaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880A229B84DDB00580816 /* MySpaceHeaderTableCell.swift */; };
+		800880CF29B84DDB00580816 /* MySpaceHeaderCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880A429B84DDB00580816 /* MySpaceHeaderCollectionCell.swift */; };
+		800880D029B84DDB00580816 /* MySpaceClaimRewardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880A529B84DDB00580816 /* MySpaceClaimRewardCollectionCell.swift */; };
+		800880D129B84DDB00580816 /* MySpaceHeaderCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800880A629B84DDB00580816 /* MySpaceHeaderCollectionCell.xib */; };
+		800880D229B84DDB00580816 /* MySpaceClaimRewardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800880A729B84DDB00580816 /* MySpaceClaimRewardCollectionCell.xib */; };
+		800880D329B84DDB00580816 /* MySpaceHeaderTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800880A829B84DDB00580816 /* MySpaceHeaderTableCell.xib */; };
+		800880D429B84DDB00580816 /* HomeRecentTransactionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880AA29B84DDB00580816 /* HomeRecentTransactionTableCell.swift */; };
+		800880D529B84DDB00580816 /* HomeHeaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880AB29B84DDB00580816 /* HomeHeaderTableCell.swift */; };
+		800880D629B84DDB00580816 /* HomeQuicklinkTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800880AC29B84DDB00580816 /* HomeQuicklinkTableCell.xib */; };
+		800880D729B84DDB00580816 /* HomeQuicklinkTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880AD29B84DDB00580816 /* HomeQuicklinkTableCell.swift */; };
+		800880D829B84DDB00580816 /* HomeHeaderTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800880AE29B84DDB00580816 /* HomeHeaderTableCell.xib */; };
+		800880D929B84DDB00580816 /* HomeRecentTransactionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880B029B84DDB00580816 /* HomeRecentTransactionCollectionCell.swift */; };
+		800880DA29B84DDB00580816 /* HomeRecentTransactionHeaderCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880B129B84DDB00580816 /* HomeRecentTransactionHeaderCollectionCell.swift */; };
+		800880DB29B84DDB00580816 /* HomeHeaderCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800880B229B84DDB00580816 /* HomeHeaderCollectionCell.xib */; };
+		800880DC29B84DDB00580816 /* HomeRecentTransactionCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800880B329B84DDB00580816 /* HomeRecentTransactionCollectionCell.xib */; };
+		800880DD29B84DDB00580816 /* HomeHeaderCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880B429B84DDB00580816 /* HomeHeaderCollectionCell.swift */; };
+		800880DE29B84DDB00580816 /* HomeRecentTransactionHeaderCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800880B529B84DDB00580816 /* HomeRecentTransactionHeaderCollectionCell.xib */; };
+		800880DF29B84DDB00580816 /* HomeQuicklinksCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800880B629B84DDB00580816 /* HomeQuicklinksCollectionCell.xib */; };
+		800880E029B84DDB00580816 /* HomeQuicklinksCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880B729B84DDB00580816 /* HomeQuicklinksCollectionCell.swift */; };
+		800880E129B84DDB00580816 /* HomeRecentTransactionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 800880B829B84DDB00580816 /* HomeRecentTransactionTableCell.xib */; };
+		800880E229B84DDB00580816 /* MySpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880B929B84DDB00580816 /* MySpaceView.swift */; };
+		800880E329B84DDB00580816 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880BA29B84DDB00580816 /* HomeView.swift */; };
+		800880E429B84DDB00580816 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800880BB29B84DDB00580816 /* Home.storyboard */; };
+		800880E529B84DDB00580816 /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880BC29B84DDB00580816 /* HomepageView.swift */; };
+		800880E629B84DDB00580816 /* QuicklinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880BD29B84DDB00580816 /* QuicklinksView.swift */; };
 		80347F2029B39CD700048831 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80347F1F29B39CD700048831 /* Logger.swift */; };
 		8089435B29B6F8B4006B5555 /* CongratulationsDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */; };
 		8089435C29B6F8B4006B5555 /* EnterCredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */; };
@@ -54,6 +97,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2369A5B829B87AC3009CC884 /* MySpaceDealsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpaceDealsTableCell.swift; sourceTree = "<group>"; };
+		2369A5BA29B87ACB009CC884 /* MySpaceDealsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySpaceDealsTableCell.xib; sourceTree = "<group>"; };
 		32B1DEC082ECBC362E51D9AE /* Pods-BNIMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		338CAD3C4A0339FBDB92446B /* Pods_BNIMobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B1D5717B2947FEF02006F57 /* Pods-BNIMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobile.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobile/Pods-BNIMobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +128,47 @@
 		8008807E29B7572A00580816 /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
 		8008808529B762E600580816 /* MobileNumberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNumberModel.swift; sourceTree = "<group>"; };
 		8008808729B7632700580816 /* MobileNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MobileNumberViewModel.swift; path = BNIMobile/Core/Modules/CustomerRegistration/ViewModel/MobileNumberViewModel.swift; sourceTree = SOURCE_ROOT; };
+		8008808C29B84DDB00580816 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8008808E29B84DDB00580816 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		8008809229B84DDB00580816 /* HomepageOtherQuicklinkTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageOtherQuicklinkTableCell.swift; sourceTree = "<group>"; };
+		8008809329B84DDB00580816 /* HomepageDebitCardTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageDebitCardTableCell.swift; sourceTree = "<group>"; };
+		8008809429B84DDB00580816 /* HomepageDebitCardTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomepageDebitCardTableCell.xib; sourceTree = "<group>"; };
+		8008809529B84DDB00580816 /* HomepageCreditCardTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageCreditCardTableCell.swift; sourceTree = "<group>"; };
+		8008809629B84DDB00580816 /* HomepageHeaderTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomepageHeaderTableCell.xib; sourceTree = "<group>"; };
+		8008809729B84DDB00580816 /* HomepageOtherQuicklinkTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomepageOtherQuicklinkTableCell.xib; sourceTree = "<group>"; };
+		8008809929B84DDB00580816 /* HomepageDebitCardCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomepageDebitCardCollectionCell.xib; sourceTree = "<group>"; };
+		8008809A29B84DDB00580816 /* HomepageCreditCardCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomepageCreditCardCollectionCell.xib; sourceTree = "<group>"; };
+		8008809B29B84DDB00580816 /* HomepageDebitCardCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageDebitCardCollectionCell.swift; sourceTree = "<group>"; };
+		8008809C29B84DDB00580816 /* HomepageCreditCardCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageCreditCardCollectionCell.swift; sourceTree = "<group>"; };
+		8008809D29B84DDB00580816 /* HomepageCreditCardTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomepageCreditCardTableCell.xib; sourceTree = "<group>"; };
+		8008809E29B84DDB00580816 /* HomepageHeaderTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageHeaderTableCell.swift; sourceTree = "<group>"; };
+		800880A029B84DDB00580816 /* MySpaceClaimRewardTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySpaceClaimRewardTableCell.xib; sourceTree = "<group>"; };
+		800880A129B84DDB00580816 /* MySpaceClaimRewardTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySpaceClaimRewardTableCell.swift; sourceTree = "<group>"; };
+		800880A229B84DDB00580816 /* MySpaceHeaderTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySpaceHeaderTableCell.swift; sourceTree = "<group>"; };
+		800880A429B84DDB00580816 /* MySpaceHeaderCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySpaceHeaderCollectionCell.swift; sourceTree = "<group>"; };
+		800880A529B84DDB00580816 /* MySpaceClaimRewardCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySpaceClaimRewardCollectionCell.swift; sourceTree = "<group>"; };
+		800880A629B84DDB00580816 /* MySpaceHeaderCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySpaceHeaderCollectionCell.xib; sourceTree = "<group>"; };
+		800880A729B84DDB00580816 /* MySpaceClaimRewardCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySpaceClaimRewardCollectionCell.xib; sourceTree = "<group>"; };
+		800880A829B84DDB00580816 /* MySpaceHeaderTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySpaceHeaderTableCell.xib; sourceTree = "<group>"; };
+		800880AA29B84DDB00580816 /* HomeRecentTransactionTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRecentTransactionTableCell.swift; sourceTree = "<group>"; };
+		800880AB29B84DDB00580816 /* HomeHeaderTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderTableCell.swift; sourceTree = "<group>"; };
+		800880AC29B84DDB00580816 /* HomeQuicklinkTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeQuicklinkTableCell.xib; sourceTree = "<group>"; };
+		800880AD29B84DDB00580816 /* HomeQuicklinkTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeQuicklinkTableCell.swift; sourceTree = "<group>"; };
+		800880AE29B84DDB00580816 /* HomeHeaderTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderTableCell.xib; sourceTree = "<group>"; };
+		800880B029B84DDB00580816 /* HomeRecentTransactionCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRecentTransactionCollectionCell.swift; sourceTree = "<group>"; };
+		800880B129B84DDB00580816 /* HomeRecentTransactionHeaderCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRecentTransactionHeaderCollectionCell.swift; sourceTree = "<group>"; };
+		800880B229B84DDB00580816 /* HomeHeaderCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderCollectionCell.xib; sourceTree = "<group>"; };
+		800880B329B84DDB00580816 /* HomeRecentTransactionCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeRecentTransactionCollectionCell.xib; sourceTree = "<group>"; };
+		800880B429B84DDB00580816 /* HomeHeaderCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderCollectionCell.swift; sourceTree = "<group>"; };
+		800880B529B84DDB00580816 /* HomeRecentTransactionHeaderCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeRecentTransactionHeaderCollectionCell.xib; sourceTree = "<group>"; };
+		800880B629B84DDB00580816 /* HomeQuicklinksCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeQuicklinksCollectionCell.xib; sourceTree = "<group>"; };
+		800880B729B84DDB00580816 /* HomeQuicklinksCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeQuicklinksCollectionCell.swift; sourceTree = "<group>"; };
+		800880B829B84DDB00580816 /* HomeRecentTransactionTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeRecentTransactionTableCell.xib; sourceTree = "<group>"; };
+		800880B929B84DDB00580816 /* MySpaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySpaceView.swift; sourceTree = "<group>"; };
+		800880BA29B84DDB00580816 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		800880BB29B84DDB00580816 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		800880BC29B84DDB00580816 /* HomepageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
+		800880BD29B84DDB00580816 /* QuicklinksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuicklinksView.swift; sourceTree = "<group>"; };
 		80347F1F29B39CD700048831 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationsDoneViewController.swift; sourceTree = "<group>"; };
 		8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterCredentialViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +328,7 @@
 			children = (
 				749B662D29B743F000B0A4A4 /* Pre-Login */,
 				749B661C29B3672200B0A4A4 /* CustomerRegistration */,
+				8008808A29B84DDB00580816 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -364,6 +451,136 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		8008808A29B84DDB00580816 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8008808B29B84DDB00580816 /* ViewModel */,
+				8008808D29B84DDB00580816 /* Model */,
+				8008808F29B84DDB00580816 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8008808B29B84DDB00580816 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8008808C29B84DDB00580816 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8008808D29B84DDB00580816 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8008808E29B84DDB00580816 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8008808F29B84DDB00580816 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8008809029B84DDB00580816 /* Table Cells */,
+				800880B929B84DDB00580816 /* MySpaceView.swift */,
+				800880BA29B84DDB00580816 /* HomeView.swift */,
+				800880BB29B84DDB00580816 /* Home.storyboard */,
+				800880BC29B84DDB00580816 /* HomepageView.swift */,
+				800880BD29B84DDB00580816 /* QuicklinksView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8008809029B84DDB00580816 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8008809129B84DDB00580816 /* HomepageCell */,
+				8008809F29B84DDB00580816 /* MySpace */,
+				800880A929B84DDB00580816 /* HomeView */,
+			);
+			path = "Table Cells";
+			sourceTree = "<group>";
+		};
+		8008809129B84DDB00580816 /* HomepageCell */ = {
+			isa = PBXGroup;
+			children = (
+				8008809229B84DDB00580816 /* HomepageOtherQuicklinkTableCell.swift */,
+				8008809329B84DDB00580816 /* HomepageDebitCardTableCell.swift */,
+				8008809429B84DDB00580816 /* HomepageDebitCardTableCell.xib */,
+				8008809529B84DDB00580816 /* HomepageCreditCardTableCell.swift */,
+				8008809629B84DDB00580816 /* HomepageHeaderTableCell.xib */,
+				8008809729B84DDB00580816 /* HomepageOtherQuicklinkTableCell.xib */,
+				8008809829B84DDB00580816 /* Child */,
+				8008809D29B84DDB00580816 /* HomepageCreditCardTableCell.xib */,
+				8008809E29B84DDB00580816 /* HomepageHeaderTableCell.swift */,
+			);
+			path = HomepageCell;
+			sourceTree = "<group>";
+		};
+		8008809829B84DDB00580816 /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				8008809929B84DDB00580816 /* HomepageDebitCardCollectionCell.xib */,
+				8008809A29B84DDB00580816 /* HomepageCreditCardCollectionCell.xib */,
+				8008809B29B84DDB00580816 /* HomepageDebitCardCollectionCell.swift */,
+				8008809C29B84DDB00580816 /* HomepageCreditCardCollectionCell.swift */,
+			);
+			path = Child;
+			sourceTree = "<group>";
+		};
+		8008809F29B84DDB00580816 /* MySpace */ = {
+			isa = PBXGroup;
+			children = (
+				800880A329B84DDB00580816 /* Child */,
+				800880A129B84DDB00580816 /* MySpaceClaimRewardTableCell.swift */,
+				800880A029B84DDB00580816 /* MySpaceClaimRewardTableCell.xib */,
+				800880A229B84DDB00580816 /* MySpaceHeaderTableCell.swift */,
+				800880A829B84DDB00580816 /* MySpaceHeaderTableCell.xib */,
+				2369A5B829B87AC3009CC884 /* MySpaceDealsTableCell.swift */,
+				2369A5BA29B87ACB009CC884 /* MySpaceDealsTableCell.xib */,
+			);
+			path = MySpace;
+			sourceTree = "<group>";
+		};
+		800880A329B84DDB00580816 /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				800880A429B84DDB00580816 /* MySpaceHeaderCollectionCell.swift */,
+				800880A529B84DDB00580816 /* MySpaceClaimRewardCollectionCell.swift */,
+				800880A629B84DDB00580816 /* MySpaceHeaderCollectionCell.xib */,
+				800880A729B84DDB00580816 /* MySpaceClaimRewardCollectionCell.xib */,
+			);
+			path = Child;
+			sourceTree = "<group>";
+		};
+		800880A929B84DDB00580816 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				800880AA29B84DDB00580816 /* HomeRecentTransactionTableCell.swift */,
+				800880AB29B84DDB00580816 /* HomeHeaderTableCell.swift */,
+				800880AC29B84DDB00580816 /* HomeQuicklinkTableCell.xib */,
+				800880AD29B84DDB00580816 /* HomeQuicklinkTableCell.swift */,
+				800880AE29B84DDB00580816 /* HomeHeaderTableCell.xib */,
+				800880AF29B84DDB00580816 /* Child */,
+				800880B829B84DDB00580816 /* HomeRecentTransactionTableCell.xib */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		800880AF29B84DDB00580816 /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				800880B029B84DDB00580816 /* HomeRecentTransactionCollectionCell.swift */,
+				800880B129B84DDB00580816 /* HomeRecentTransactionHeaderCollectionCell.swift */,
+				800880B229B84DDB00580816 /* HomeHeaderCollectionCell.xib */,
+				800880B329B84DDB00580816 /* HomeRecentTransactionCollectionCell.xib */,
+				800880B429B84DDB00580816 /* HomeHeaderCollectionCell.swift */,
+				800880B529B84DDB00580816 /* HomeRecentTransactionHeaderCollectionCell.xib */,
+				800880B629B84DDB00580816 /* HomeQuicklinksCollectionCell.xib */,
+				800880B729B84DDB00580816 /* HomeQuicklinksCollectionCell.swift */,
+			);
+			path = Child;
+			sourceTree = "<group>";
+		};
 		80347F1E29B39CB500048831 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,10 +699,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800880E429B84DDB00580816 /* Home.storyboard in Resources */,
+				800880D129B84DDB00580816 /* MySpaceHeaderCollectionCell.xib in Resources */,
 				7457C10C29B1B5C5006874D5 /* LaunchScreen.storyboard in Resources */,
+				800880C529B84DDB00580816 /* HomepageOtherQuicklinkTableCell.xib in Resources */,
+				800880E129B84DDB00580816 /* HomeRecentTransactionTableCell.xib in Resources */,
+				2369A5BB29B87ACB009CC884 /* MySpaceDealsTableCell.xib in Resources */,
+				800880C629B84DDB00580816 /* HomepageDebitCardCollectionCell.xib in Resources */,
 				7457C10929B1B5C5006874D5 /* Assets.xcassets in Resources */,
+				800880C729B84DDB00580816 /* HomepageCreditCardCollectionCell.xib in Resources */,
+				800880D329B84DDB00580816 /* MySpaceHeaderTableCell.xib in Resources */,
+				800880DE29B84DDB00580816 /* HomeRecentTransactionHeaderCollectionCell.xib in Resources */,
+				800880D229B84DDB00580816 /* MySpaceClaimRewardCollectionCell.xib in Resources */,
 				749B663229B7449300B0A4A4 /* PreLogin.storyboard in Resources */,
 				7457C10729B1B5C1006874D5 /* Main.storyboard in Resources */,
+				800880C229B84DDB00580816 /* HomepageDebitCardTableCell.xib in Resources */,
+				800880DC29B84DDB00580816 /* HomeRecentTransactionCollectionCell.xib in Resources */,
+				800880CC29B84DDB00580816 /* MySpaceClaimRewardTableCell.xib in Resources */,
+				800880DB29B84DDB00580816 /* HomeHeaderCollectionCell.xib in Resources */,
+				800880D629B84DDB00580816 /* HomeQuicklinkTableCell.xib in Resources */,
+				800880DF29B84DDB00580816 /* HomeQuicklinksCollectionCell.xib in Resources */,
+				800880CA29B84DDB00580816 /* HomepageCreditCardTableCell.xib in Resources */,
+				800880C429B84DDB00580816 /* HomepageHeaderTableCell.xib in Resources */,
+				800880D829B84DDB00580816 /* HomeHeaderTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,23 +866,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800880E229B84DDB00580816 /* MySpaceView.swift in Sources */,
+				2369A5B929B87AC3009CC884 /* MySpaceDealsTableCell.swift in Sources */,
+				800880BE29B84DDB00580816 /* HomeViewModel.swift in Sources */,
+				800880E529B84DDB00580816 /* HomepageView.swift in Sources */,
+				800880D929B84DDB00580816 /* HomeRecentTransactionCollectionCell.swift in Sources */,
 				740CC3B929B85077000B3D44 /* NavigationBar.swift in Sources */,
 				80347F2029B39CD700048831 /* Logger.swift in Sources */,
+				800880CD29B84DDB00580816 /* MySpaceClaimRewardTableCell.swift in Sources */,
 				8008808829B7632700580816 /* MobileNumberViewModel.swift in Sources */,
+				800880BF29B84DDB00580816 /* HomeModel.swift in Sources */,
+				800880C329B84DDB00580816 /* HomepageCreditCardTableCell.swift in Sources */,
+				800880DD29B84DDB00580816 /* HomeHeaderCollectionCell.swift in Sources */,
 				7457C10429B1B5C1006874D5 /* NewUserLandingViewController.swift in Sources */,
 				747FF27D29B20D5E009AC232 /* EnterMobileNumberViewController.swift in Sources */,
+				800880D429B84DDB00580816 /* HomeRecentTransactionTableCell.swift in Sources */,
 				749B662C29B5EDD500B0A4A4 /* NetworkAccessLayer.swift in Sources */,
 				8008807F29B7572A00580816 /* OtpViewController.swift in Sources */,
+				800880E629B84DDB00580816 /* QuicklinksView.swift in Sources */,
 				740CC3BA29B8515C000B3D44 /* BaseViewController.swift in Sources */,
 				749B663429B7542F00B0A4A4 /* PreLoginViewController.swift in Sources */,
 				749B662B29B5EDD500B0A4A4 /* Request.swift in Sources */,
 				7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */,
+				800880CB29B84DDB00580816 /* HomepageHeaderTableCell.swift in Sources */,
 				8008807D29B7558B00580816 /* Constants.swift in Sources */,
 				8008807229B7391D00580816 /* Coordinator.swift in Sources */,
 				8008808629B762E600580816 /* MobileNumberModel.swift in Sources */,
+				800880D529B84DDB00580816 /* HomeHeaderTableCell.swift in Sources */,
+				800880D729B84DDB00580816 /* HomeQuicklinkTableCell.swift in Sources */,
+				800880CE29B84DDB00580816 /* MySpaceHeaderTableCell.swift in Sources */,
+				800880C129B84DDB00580816 /* HomepageDebitCardTableCell.swift in Sources */,
+				800880C929B84DDB00580816 /* HomepageCreditCardCollectionCell.swift in Sources */,
 				8089435B29B6F8B4006B5555 /* CongratulationsDoneViewController.swift in Sources */,
+				800880DA29B84DDB00580816 /* HomeRecentTransactionHeaderCollectionCell.swift in Sources */,
 				8089435D29B6F8B4006B5555 /* CongratulationsPointViewController.swift in Sources */,
 				8089435C29B6F8B4006B5555 /* EnterCredentialViewController.swift in Sources */,
+				800880C829B84DDB00580816 /* HomepageDebitCardCollectionCell.swift in Sources */,
+				800880CF29B84DDB00580816 /* MySpaceHeaderCollectionCell.swift in Sources */,
+				800880E029B84DDB00580816 /* HomeQuicklinksCollectionCell.swift in Sources */,
+				800880D029B84DDB00580816 /* MySpaceClaimRewardCollectionCell.swift in Sources */,
+				800880C029B84DDB00580816 /* HomepageOtherQuicklinkTableCell.swift in Sources */,
+				800880E329B84DDB00580816 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,6 +1093,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -870,6 +1131,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "img_header_gradient_myspace.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "img_header_gradient_myspace@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "img_header_gradient_myspace@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

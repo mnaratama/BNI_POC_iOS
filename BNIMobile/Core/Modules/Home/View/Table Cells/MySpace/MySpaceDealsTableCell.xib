@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MySpaceDealsTableCell" id="FKc-0p-acV" customClass="MySpaceDealsTableCell" customModule="BNIMobile" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="304"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="FKc-0p-acV" id="k7k-ac-lve">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="304"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fb1-Kw-nux">
+                        <rect key="frame" x="16" y="16" width="396" height="22"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BNI Products to help you bank better" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrZ-Hv-iSI">
+                                <rect key="frame" x="0.0" y="0.0" width="248" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mrZ-Hv-iSI" firstAttribute="top" secondItem="Fb1-Kw-nux" secondAttribute="top" id="3g0-fy-fqN"/>
+                            <constraint firstAttribute="bottom" secondItem="mrZ-Hv-iSI" secondAttribute="bottom" id="4wP-Px-mEj"/>
+                            <constraint firstAttribute="height" constant="22" id="9Kf-eF-28A"/>
+                            <constraint firstItem="mrZ-Hv-iSI" firstAttribute="leading" secondItem="Fb1-Kw-nux" secondAttribute="leading" id="UFO-Gj-DSw"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Vrk-Cx-WUh">
+                        <rect key="frame" x="0.0" y="54" width="420" height="216"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="216" id="Lgz-sn-yTI"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Syh-tw-eTw">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_dot_slider" translatesAutoresizingMaskIntoConstraints="NO" id="nnu-QC-WpT">
+                        <rect key="frame" x="183" y="280" width="54" height="8"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="8" id="7MT-eZ-KcP"/>
+                            <constraint firstAttribute="width" constant="54" id="fIa-Xi-sdh"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Vrk-Cx-WUh" firstAttribute="top" secondItem="Fb1-Kw-nux" secondAttribute="bottom" constant="16" id="G7D-lb-PGx"/>
+                    <constraint firstItem="Fb1-Kw-nux" firstAttribute="leading" secondItem="k7k-ac-lve" secondAttribute="leading" constant="16" id="KWP-DG-W4q"/>
+                    <constraint firstAttribute="bottom" secondItem="Vrk-Cx-WUh" secondAttribute="bottom" constant="16" id="TlS-Jj-Lrh"/>
+                    <constraint firstItem="Vrk-Cx-WUh" firstAttribute="leading" secondItem="k7k-ac-lve" secondAttribute="leading" id="Uv7-b7-jma"/>
+                    <constraint firstAttribute="trailing" secondItem="Vrk-Cx-WUh" secondAttribute="trailing" id="Zh4-ef-43c"/>
+                    <constraint firstItem="nnu-QC-WpT" firstAttribute="centerX" secondItem="k7k-ac-lve" secondAttribute="centerX" id="cSP-Fn-dEl"/>
+                    <constraint firstAttribute="bottom" secondItem="nnu-QC-WpT" secondAttribute="bottom" id="dkI-QL-yo7"/>
+                    <constraint firstItem="Fb1-Kw-nux" firstAttribute="top" secondItem="k7k-ac-lve" secondAttribute="top" constant="16" id="hxu-Ks-zjt"/>
+                    <constraint firstAttribute="trailing" secondItem="Fb1-Kw-nux" secondAttribute="trailing" constant="8" id="uJ0-JA-YYx"/>
+                    <constraint firstItem="nnu-QC-WpT" firstAttribute="top" secondItem="Vrk-Cx-WUh" secondAttribute="bottom" constant="10" id="yP4-RL-AF0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="7ju-jC-Vv0"/>
+            <connections>
+                <outlet property="collectionView" destination="Vrk-Cx-WUh" id="hgO-4Z-OJT"/>
+                <outlet property="flowLayout" destination="Syh-tw-eTw" id="zUD-JJ-fQL"/>
+                <outlet property="headerLabel" destination="mrZ-Hv-iSI" id="iIT-0e-TPu"/>
+            </connections>
+            <point key="canvasLocation" x="8.6956521739130448" y="72.991071428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img_dot_slider" width="54" height="8"/>
+    </resources>
+</document>
