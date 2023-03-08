@@ -26,7 +26,7 @@ enum Request {
         switch self {
             
         case .getMetadata(_):
-            request = DataSourceManager.request(.GET, "/getMetadata", parameters: nil, encoding: .json, headers: self.headers)
+            request = DataSourceManager.request(.GET, "/api/v1/generateotp", parameters: nil, encoding: .json, headers: self.headers)
         }
             // log the response
             request.responseString { (urlRequest, urlResponse, string, error) -> Void in
