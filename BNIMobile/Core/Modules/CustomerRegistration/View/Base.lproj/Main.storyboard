@@ -40,6 +40,7 @@
                                     <constraint firstAttribute="height" constant="48" id="Srn-iD-Jgi"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Let’s get started">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
@@ -115,6 +116,7 @@
                                     <constraint firstAttribute="height" constant="48" id="pc3-aR-MtH"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
@@ -257,6 +259,7 @@
                                     <constraint firstAttribute="height" constant="48" id="mht-7W-2RE"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
@@ -322,17 +325,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="congratulation_BG_1st" translatesAutoresizingMaskIntoConstraints="NO" id="zwf-9F-kRE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="congratulation_BG_1st" translatesAutoresizingMaskIntoConstraints="NO" id="zwf-9F-kRE">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl_image" translatesAutoresizingMaskIntoConstraints="NO" id="nn2-vb-O8W">
-                                <rect key="frame" x="39.333333333333343" y="119.66666666666666" width="314.33333333333326" height="314.33333333333337"/>
+                                <rect key="frame" x="46" y="132.66666666666666" width="301.33333333333331" height="301.33333333333337"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nn2-vb-O8W" secondAttribute="height" id="nOd-bC-Zzl"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqa-9D-dJX">
-                                <rect key="frame" x="39.333333333333343" y="464.33333333333331" width="314.33333333333326" height="40.666666666666686"/>
+                                <rect key="frame" x="40" y="464.33333333333331" width="313" height="40.666666666666686"/>
                                 <string key="text">Congratulations, you’re all set to
 enjoy your BNI Mobile Banking app!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -354,6 +357,7 @@ enjoy your BNI Mobile Banking app!</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="hGU-wp-RsN"/>
                                 </constraints>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
@@ -367,26 +371,25 @@ enjoy your BNI Mobile Banking app!</string>
                         <viewLayoutGuide key="safeArea" id="eyD-bw-AL1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eyD-bw-AL1" firstAttribute="trailing" secondItem="zwf-9F-kRE" secondAttribute="trailing" id="1jI-Fb-hng"/>
-                            <constraint firstAttribute="bottom" secondItem="zwf-9F-kRE" secondAttribute="bottom" id="2nR-U3-DXf"/>
+                            <constraint firstItem="Zqa-9D-dJX" firstAttribute="leading" secondItem="eyD-bw-AL1" secondAttribute="leading" constant="40" id="1vv-dm-RJ7"/>
+                            <constraint firstAttribute="trailing" secondItem="zwf-9F-kRE" secondAttribute="trailing" id="3pV-V6-4Nm"/>
                             <constraint firstItem="lN4-KR-c94" firstAttribute="height" secondItem="A6J-HX-LkZ" secondAttribute="height" multiplier="0.3" id="6ve-lc-UI4"/>
                             <constraint firstItem="eyD-bw-AL1" firstAttribute="trailing" secondItem="A6J-HX-LkZ" secondAttribute="trailing" constant="16" id="CWO-Qm-8fn"/>
                             <constraint firstItem="Jup-EB-11Q" firstAttribute="centerY" secondItem="A6J-HX-LkZ" secondAttribute="centerY" id="ESF-Af-lGX"/>
                             <constraint firstItem="Zqa-9D-dJX" firstAttribute="top" secondItem="nn2-vb-O8W" secondAttribute="bottom" multiplier="1.07" id="IPN-9m-QXh"/>
-                            <constraint firstItem="nn2-vb-O8W" firstAttribute="centerY" secondItem="zwf-9F-kRE" secondAttribute="centerY" multiplier="0.65" id="Ll6-So-joJ"/>
+                            <constraint firstItem="nn2-vb-O8W" firstAttribute="centerX" secondItem="zwf-9F-kRE" secondAttribute="centerX" id="LbP-VN-wNz"/>
                             <constraint firstItem="Jup-EB-11Q" firstAttribute="width" secondItem="A6J-HX-LkZ" secondAttribute="width" id="QuA-4K-zaa"/>
-                            <constraint firstItem="nn2-vb-O8W" firstAttribute="centerX" secondItem="zwf-9F-kRE" secondAttribute="centerX" id="R3T-nh-p9B"/>
                             <constraint firstItem="A6J-HX-LkZ" firstAttribute="leading" secondItem="eyD-bw-AL1" secondAttribute="leading" constant="16" id="SDI-eG-P9y"/>
-                            <constraint firstItem="Zqa-9D-dJX" firstAttribute="width" secondItem="zwf-9F-kRE" secondAttribute="width" multiplier="0.8" id="XZE-kN-TlO"/>
+                            <constraint firstItem="zwf-9F-kRE" firstAttribute="leading" secondItem="3h8-zN-f9d" secondAttribute="leading" id="bBG-TW-95b"/>
+                            <constraint firstItem="zwf-9F-kRE" firstAttribute="top" secondItem="nn2-vb-O8W" secondAttribute="bottom" constant="-434" id="cA9-eF-AQu"/>
                             <constraint firstItem="eyD-bw-AL1" firstAttribute="bottom" secondItem="A6J-HX-LkZ" secondAttribute="bottom" constant="48" id="cOL-JF-O47"/>
+                            <constraint firstAttribute="bottom" secondItem="zwf-9F-kRE" secondAttribute="bottom" id="fF1-ij-3HM"/>
                             <constraint firstItem="Jup-EB-11Q" firstAttribute="height" secondItem="A6J-HX-LkZ" secondAttribute="height" id="hCF-RK-Kl2"/>
                             <constraint firstItem="Jup-EB-11Q" firstAttribute="centerX" secondItem="A6J-HX-LkZ" secondAttribute="centerX" id="jMp-SJ-GH2"/>
+                            <constraint firstItem="eyD-bw-AL1" firstAttribute="trailing" secondItem="Zqa-9D-dJX" secondAttribute="trailing" constant="40" id="k5U-MA-oiE"/>
                             <constraint firstItem="lN4-KR-c94" firstAttribute="trailing" secondItem="A6J-HX-LkZ" secondAttribute="trailing" constant="-20" id="pug-ci-nwg"/>
                             <constraint firstItem="lN4-KR-c94" firstAttribute="centerY" secondItem="A6J-HX-LkZ" secondAttribute="centerY" id="qAg-I0-n7l"/>
-                            <constraint firstItem="zwf-9F-kRE" firstAttribute="top" secondItem="3h8-zN-f9d" secondAttribute="top" id="wcm-ig-tUV"/>
-                            <constraint firstItem="Zqa-9D-dJX" firstAttribute="centerX" secondItem="zwf-9F-kRE" secondAttribute="centerX" id="wfR-YB-MAE"/>
-                            <constraint firstItem="nn2-vb-O8W" firstAttribute="width" secondItem="zwf-9F-kRE" secondAttribute="width" multiplier="0.8" id="xHk-Gl-af9"/>
-                            <constraint firstItem="zwf-9F-kRE" firstAttribute="leading" secondItem="eyD-bw-AL1" secondAttribute="leading" id="xbH-xS-2ve"/>
+                            <constraint firstItem="zwf-9F-kRE" firstAttribute="top" secondItem="3h8-zN-f9d" secondAttribute="top" id="xbu-6O-7Fp"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -402,10 +405,10 @@ enjoy your BNI Mobile Banking app!</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="congratulation_BG_1st" translatesAutoresizingMaskIntoConstraints="NO" id="B8E-p0-zGU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="congratulation_BG_1st" translatesAutoresizingMaskIntoConstraints="NO" id="B8E-p0-zGU">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="congratulation_BG_2nd" translatesAutoresizingMaskIntoConstraints="NO" id="qZV-Ci-wI6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="congratulation_BG_2nd" translatesAutoresizingMaskIntoConstraints="NO" id="qZV-Ci-wI6">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="oBg-5m-Rle">
@@ -427,19 +430,19 @@ enjoy your BNI Mobile Banking app!</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="point" translatesAutoresizingMaskIntoConstraints="NO" id="uAw-y5-bEt">
-                                <rect key="frame" x="157.33333333333334" y="173.66666666666666" width="78.333333333333343" height="78.666666666666657"/>
+                                <rect key="frame" x="161" y="173.66666666666666" width="71" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uAw-y5-bEt" secondAttribute="height" id="3vE-Tf-sAv"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="27n-R1-gJp">
-                                <rect key="frame" x="39.333333333333343" y="252.33333333333334" width="314.33333333333326" height="50.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <rect key="frame" x="40" y="244.66666666666663" width="313" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6X-sc-l0b">
-                                <rect key="frame" x="111.66666666666669" y="327" width="170" height="33.666666666666686"/>
+                                <rect key="frame" x="111.66666666666669" y="316" width="170" height="33.666666666666686"/>
                                 <string key="text">You’ve earned 
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -447,13 +450,13 @@ enjoy your BNI Mobile Banking app!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8qk-3q-6m2">
-                                <rect key="frame" x="141" y="364" width="111.33333333333331" height="50.333333333333314"/>
+                                <rect key="frame" x="141" y="353.33333333333331" width="111.33333333333331" height="50.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="textColor" red="0.8980392157" green="0.32549019610000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="points" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vwl-u6-BvG">
-                                <rect key="frame" x="171.66666666666666" y="414.33333333333331" width="49.666666666666657" height="21.666666666666686"/>
+                                <rect key="frame" x="171.66666666666666" y="403.66666666666669" width="49.666666666666657" height="21.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.8980392157" green="0.32549019610000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -473,6 +476,7 @@ enjoy your BNI Mobile Banking app!</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="3iq-Ws-Tqz"/>
                                 </constraints>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Take me to my homepage">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
@@ -486,41 +490,40 @@ enjoy your BNI Mobile Banking app!</string>
                         <viewLayoutGuide key="safeArea" id="3ud-Qm-Kre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="B8E-p0-zGU" secondAttribute="bottom" id="0uK-xR-YB8"/>
-                            <constraint firstItem="qZV-Ci-wI6" firstAttribute="centerX" secondItem="B8E-p0-zGU" secondAttribute="centerX" id="3Ml-EB-aMj"/>
                             <constraint firstItem="8qk-3q-6m2" firstAttribute="centerX" secondItem="v6X-sc-l0b" secondAttribute="centerX" id="3sH-rl-bJV"/>
-                            <constraint firstItem="qZV-Ci-wI6" firstAttribute="centerY" secondItem="B8E-p0-zGU" secondAttribute="centerY" id="5DB-zD-sO0"/>
                             <constraint firstItem="oBg-5m-Rle" firstAttribute="centerX" secondItem="Ulc-5r-a4L" secondAttribute="centerX" id="5QI-Ff-j7F"/>
-                            <constraint firstItem="27n-R1-gJp" firstAttribute="width" secondItem="B8E-p0-zGU" secondAttribute="width" multiplier="0.8" id="6Eg-Cu-LJT"/>
+                            <constraint firstItem="27n-R1-gJp" firstAttribute="leading" secondItem="3ud-Qm-Kre" secondAttribute="leading" constant="40" id="5v4-IS-oiL"/>
                             <constraint firstItem="8sT-Xt-BA9" firstAttribute="centerY" secondItem="ge2-Mu-or6" secondAttribute="centerY" id="6Ro-hk-qd9"/>
                             <constraint firstItem="8qk-3q-6m2" firstAttribute="bottom" secondItem="Vwl-u6-BvG" secondAttribute="top" id="9Da-8l-tMD"/>
                             <constraint firstItem="ge2-Mu-or6" firstAttribute="leading" secondItem="3ud-Qm-Kre" secondAttribute="leading" constant="16" id="ALH-z3-7hf"/>
                             <constraint firstItem="Vwl-u6-BvG" firstAttribute="centerX" secondItem="8qk-3q-6m2" secondAttribute="centerX" id="Atc-vQ-Qle"/>
-                            <constraint firstItem="B8E-p0-zGU" firstAttribute="leading" secondItem="3ud-Qm-Kre" secondAttribute="leading" id="Bm9-dt-oxv"/>
-                            <constraint firstItem="qZV-Ci-wI6" firstAttribute="width" secondItem="B8E-p0-zGU" secondAttribute="width" id="DI2-3k-AZI"/>
                             <constraint firstItem="vbz-IH-7Ur" firstAttribute="width" secondItem="ge2-Mu-or6" secondAttribute="width" id="EfZ-t8-66d"/>
                             <constraint firstItem="vbz-IH-7Ur" firstAttribute="centerX" secondItem="ge2-Mu-or6" secondAttribute="centerX" id="EmQ-jx-5V4"/>
+                            <constraint firstItem="B8E-p0-zGU" firstAttribute="leading" secondItem="6Qf-MU-9kH" secondAttribute="leading" id="F0a-08-sDa"/>
                             <constraint firstItem="8sT-Xt-BA9" firstAttribute="height" secondItem="ge2-Mu-or6" secondAttribute="height" multiplier="0.3" id="FzD-Ce-fhJ"/>
-                            <constraint firstItem="B8E-p0-zGU" firstAttribute="top" secondItem="6Qf-MU-9kH" secondAttribute="top" id="GFp-Fn-4m1"/>
+                            <constraint firstItem="qZV-Ci-wI6" firstAttribute="trailing" secondItem="3ud-Qm-Kre" secondAttribute="trailing" id="HBl-0x-t4d"/>
                             <constraint firstItem="v6X-sc-l0b" firstAttribute="top" secondItem="27n-R1-gJp" secondAttribute="bottom" multiplier="1.08" id="Igv-SN-5Hm"/>
+                            <constraint firstItem="qZV-Ci-wI6" firstAttribute="top" secondItem="6Qf-MU-9kH" secondAttribute="top" id="KTM-Mp-4Y8"/>
+                            <constraint firstItem="qZV-Ci-wI6" firstAttribute="leading" secondItem="3ud-Qm-Kre" secondAttribute="leading" id="Nwn-R6-Jv6"/>
+                            <constraint firstItem="uAw-y5-bEt" firstAttribute="top" secondItem="Ulc-5r-a4L" secondAttribute="bottom" constant="54.666666666666657" id="P2h-DR-PMH"/>
                             <constraint firstItem="Ulc-5r-a4L" firstAttribute="top" secondItem="6Qf-MU-9kH" secondAttribute="top" constant="59" id="Rkl-QB-tNq"/>
                             <constraint firstItem="oBg-5m-Rle" firstAttribute="centerY" secondItem="Ulc-5r-a4L" secondAttribute="centerY" multiplier="0.8" id="Tpj-OL-FG4"/>
                             <constraint firstItem="qZV-Ci-wI6" firstAttribute="trailing" secondItem="Ulc-5r-a4L" secondAttribute="trailing" constant="20" id="Wow-VW-Hff"/>
-                            <constraint firstItem="3ud-Qm-Kre" firstAttribute="trailing" secondItem="B8E-p0-zGU" secondAttribute="trailing" id="bjR-G5-Aat"/>
-                            <constraint firstItem="uAw-y5-bEt" firstAttribute="width" secondItem="B8E-p0-zGU" secondAttribute="width" multiplier="0.2" id="dQ3-4Y-YkW"/>
-                            <constraint firstItem="qZV-Ci-wI6" firstAttribute="height" secondItem="B8E-p0-zGU" secondAttribute="height" id="fky-fW-reU"/>
+                            <constraint firstItem="uAw-y5-bEt" firstAttribute="centerX" secondItem="qZV-Ci-wI6" secondAttribute="centerX" id="bqv-sD-xFt"/>
                             <constraint firstItem="27n-R1-gJp" firstAttribute="top" secondItem="uAw-y5-bEt" secondAttribute="bottom" id="gRh-Bt-FxL"/>
                             <constraint firstItem="3ud-Qm-Kre" firstAttribute="trailing" secondItem="ge2-Mu-or6" secondAttribute="trailing" constant="16" id="hkt-87-FJS"/>
                             <constraint firstItem="8qk-3q-6m2" firstAttribute="top" secondItem="v6X-sc-l0b" secondAttribute="bottom" multiplier="1.01" id="hpU-as-VMs"/>
-                            <constraint firstItem="uAw-y5-bEt" firstAttribute="centerX" secondItem="B8E-p0-zGU" secondAttribute="centerX" id="jUd-09-BSa"/>
+                            <constraint firstItem="3ud-Qm-Kre" firstAttribute="trailing" secondItem="27n-R1-gJp" secondAttribute="trailing" constant="40" id="jgj-Eh-ZZy"/>
+                            <constraint firstItem="B8E-p0-zGU" firstAttribute="top" secondItem="6Qf-MU-9kH" secondAttribute="top" id="jnS-q1-VcY"/>
                             <constraint firstItem="vbz-IH-7Ur" firstAttribute="height" secondItem="ge2-Mu-or6" secondAttribute="height" id="mNY-zf-YeO"/>
                             <constraint firstItem="8sT-Xt-BA9" firstAttribute="trailing" secondItem="ge2-Mu-or6" secondAttribute="trailing" constant="-20" id="mpi-sT-GeU"/>
-                            <constraint firstItem="27n-R1-gJp" firstAttribute="centerX" secondItem="B8E-p0-zGU" secondAttribute="centerX" id="ms1-43-m3w"/>
                             <constraint firstItem="vbz-IH-7Ur" firstAttribute="centerY" secondItem="ge2-Mu-or6" secondAttribute="centerY" id="qZh-C4-Icm"/>
                             <constraint firstItem="Ulc-5r-a4L" firstAttribute="width" secondItem="oBg-5m-Rle" secondAttribute="width" multiplier="2" id="sXr-ho-tWs"/>
                             <constraint firstItem="v6X-sc-l0b" firstAttribute="centerX" secondItem="27n-R1-gJp" secondAttribute="centerX" id="t5Z-7R-yq8"/>
+                            <constraint firstAttribute="bottom" secondItem="qZV-Ci-wI6" secondAttribute="bottom" id="tzi-Bf-cbK"/>
                             <constraint firstItem="3ud-Qm-Kre" firstAttribute="bottom" secondItem="ge2-Mu-or6" secondAttribute="bottom" constant="48" id="ueY-Nq-ssH"/>
-                            <constraint firstItem="uAw-y5-bEt" firstAttribute="centerY" secondItem="B8E-p0-zGU" secondAttribute="centerY" multiplier="0.5" id="xxm-R8-kpg"/>
+                            <constraint firstAttribute="bottom" secondItem="B8E-p0-zGU" secondAttribute="bottom" id="uuM-fu-GD5"/>
+                            <constraint firstAttribute="trailing" secondItem="B8E-p0-zGU" secondAttribute="trailing" id="yPM-UW-XuP"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -677,6 +680,7 @@ enjoy your BNI Mobile Banking app!</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="1Yx-gP-QUg"/>
                                 </constraints>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
