@@ -78,6 +78,7 @@
 		800880E529B84DDB00580816 /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880BC29B84DDB00580816 /* HomepageView.swift */; };
 		800880E629B84DDB00580816 /* QuicklinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880BD29B84DDB00580816 /* QuicklinksView.swift */; };
 		80347F2029B39CD700048831 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80347F1F29B39CD700048831 /* Logger.swift */; };
+		8080500F29B9070A00AD6FCF /* BaseControlls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8080500E29B9070A00AD6FCF /* BaseControlls.swift */; };
 		8089435B29B6F8B4006B5555 /* CongratulationsDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */; };
 		8089435C29B6F8B4006B5555 /* EnterCredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */; };
 		8089435D29B6F8B4006B5555 /* CongratulationsPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435A29B6F8B4006B5555 /* CongratulationsPointViewController.swift */; };
@@ -180,6 +181,7 @@
 		800880BC29B84DDB00580816 /* HomepageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
 		800880BD29B84DDB00580816 /* QuicklinksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuicklinksView.swift; sourceTree = "<group>"; };
 		80347F1F29B39CD700048831 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		8080500E29B9070A00AD6FCF /* BaseControlls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseControlls.swift; sourceTree = "<group>"; };
 		8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationsDoneViewController.swift; sourceTree = "<group>"; };
 		8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterCredentialViewController.swift; sourceTree = "<group>"; };
 		8089435A29B6F8B4006B5555 /* CongratulationsPointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationsPointViewController.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 			children = (
 				8008807829B753D100580816 /* BaseViewController */,
 				8008807329B7393500580816 /* NavigationBar */,
+				8080500E29B9070A00AD6FCF /* BaseControlls.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -904,6 +907,7 @@
 				749B663429B7542F00B0A4A4 /* PreLoginViewController.swift in Sources */,
 				749B662B29B5EDD500B0A4A4 /* Request.swift in Sources */,
 				7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */,
+				8080500F29B9070A00AD6FCF /* BaseControlls.swift in Sources */,
 				800880CB29B84DDB00580816 /* HomepageHeaderTableCell.swift in Sources */,
 				8008807D29B7558B00580816 /* Constants.swift in Sources */,
 				8008807229B7391D00580816 /* Coordinator.swift in Sources */,
