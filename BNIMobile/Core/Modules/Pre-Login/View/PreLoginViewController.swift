@@ -26,5 +26,11 @@ class PreLoginViewController: UIViewController {
         
     }
     
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        guard let viewController = UIStoryboard(name: StoryboardName.preLogin, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.biometricLoginVC) as? BiometricLoginViewController else {
+            fatalError("Failed to load Main from CongratulationsPointViewController file")
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
