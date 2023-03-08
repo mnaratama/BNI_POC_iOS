@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MySpaceHeaderCollectionCell" id="jOv-cG-amd" customClass="MySpaceHeaderCollectionCell" customModule="BNIMobile" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rcq-vk-ZTE">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="90"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSb-3a-DEg">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="91"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_header_gradient_myspace" translatesAutoresizingMaskIntoConstraints="NO" id="gns-a3-dah">
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="91"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gns-a3-dah" firstAttribute="leading" secondItem="KSb-3a-DEg" secondAttribute="leading" id="5ln-YO-Tmf"/>
+                            <constraint firstAttribute="trailing" secondItem="gns-a3-dah" secondAttribute="trailing" id="81s-lo-FjF"/>
+                            <constraint firstItem="gns-a3-dah" firstAttribute="top" secondItem="KSb-3a-DEg" secondAttribute="top" id="K1w-Wa-L0f"/>
+                            <constraint firstAttribute="bottom" secondItem="gns-a3-dah" secondAttribute="bottom" id="d5o-aV-XLe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="KSb-3a-DEg" secondAttribute="trailing" id="N5R-qy-B6i"/>
+                    <constraint firstItem="KSb-3a-DEg" firstAttribute="leading" secondItem="rcq-vk-ZTE" secondAttribute="leading" id="aeN-M4-Def"/>
+                    <constraint firstItem="KSb-3a-DEg" firstAttribute="top" secondItem="rcq-vk-ZTE" secondAttribute="top" id="pxT-t2-QXT"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <point key="canvasLocation" x="-20" y="72"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="img_header_gradient_myspace" width="363" height="91"/>
+    </resources>
+</document>
