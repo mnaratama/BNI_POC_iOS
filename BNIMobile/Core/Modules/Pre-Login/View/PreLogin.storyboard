@@ -17,111 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView hidden="YES" opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYN-gf-59o">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pRt-nj-PIs">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="gCK-Si-9Fk">
-                                            <rect key="frame" x="220.66666666666663" y="151" width="156.33333333333337" height="105.66666666666669"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saving Taplus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCn-mB-PD2">
-                                            <rect key="frame" x="42.000000000000007" y="173.66666666666666" width="104.66666666666669" height="20.333333333333343"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDR 104,287,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yy7-eE-X50">
-                                            <rect key="frame" x="42" y="201.66666666666666" width="144.33333333333334" height="21.666666666666657"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENT TRANSACTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNa-yK-GGM">
-                                            <rect key="frame" x="41.999999999999986" y="316.66666666666669" width="184.66666666666663" height="20.333333333333314"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="msn-II-gUH">
-                                            <rect key="frame" x="42" y="367" width="311" height="101"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gb-3a-hhZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="311" height="20.333333333333332"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BI Fast Arini" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM1-Tz-fM3">
-                                                            <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="20.333333333333332"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-IDR 3,532,795" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZA-qO-8dv">
-                                                            <rect key="frame" x="89.666666666666643" y="0.0" width="221.33333333333337" height="20.333333333333332"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.85490196080000003" green="0.1176470588" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7E-I5-D8S">
-                                                    <rect key="frame" x="0.0" y="40.333333333333314" width="311" height="20.333333333333329"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BI Fast Arini" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8X-Pl-y06">
-                                                            <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="20.333333333333332"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-IDR 3,532,795" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE3-qd-762">
-                                                            <rect key="frame" x="89.666666666666643" y="0.0" width="221.33333333333337" height="20.333333333333332"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.85490196080000003" green="0.1176470588" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4y-m6-TOk">
-                                                    <rect key="frame" x="0.0" y="80.666666666666686" width="311" height="20.333333333333329"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BI Fast Arini" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPv-8b-ddI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="20.333333333333332"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-IDR 3,532,795" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J64-Re-6yB">
-                                                            <rect key="frame" x="89.666666666666643" y="0.0" width="221.33333333333337" height="20.333333333333332"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.85490196080000003" green="0.1176470588" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="msn-II-gUH" firstAttribute="top" secondItem="jNa-yK-GGM" secondAttribute="bottom" constant="30" id="Gep-HE-GiW"/>
-                                        <constraint firstItem="yy7-eE-X50" firstAttribute="top" secondItem="CCn-mB-PD2" secondAttribute="bottom" constant="7.6666666666666572" id="Jfl-Rf-oS4"/>
-                                        <constraint firstItem="CCn-mB-PD2" firstAttribute="centerY" secondItem="gCK-Si-9Fk" secondAttribute="centerY" constant="-20" id="dhz-gu-mD4"/>
-                                        <constraint firstItem="msn-II-gUH" firstAttribute="leading" secondItem="jNa-yK-GGM" secondAttribute="leading" id="eU2-xH-hiM"/>
-                                        <constraint firstItem="yy7-eE-X50" firstAttribute="leading" secondItem="CCn-mB-PD2" secondAttribute="leading" id="ehm-LN-M2u"/>
-                                        <constraint firstAttribute="trailing" secondItem="gCK-Si-9Fk" secondAttribute="trailing" constant="16" id="hc9-MX-iT4"/>
-                                        <constraint firstAttribute="trailing" secondItem="msn-II-gUH" secondAttribute="trailing" constant="40" id="iNn-Ft-6vL"/>
-                                        <constraint firstItem="jNa-yK-GGM" firstAttribute="leading" secondItem="yy7-eE-X50" secondAttribute="leading" id="r4D-vo-D7M"/>
-                                        <constraint firstItem="jNa-yK-GGM" firstAttribute="top" secondItem="gCK-Si-9Fk" secondAttribute="bottom" constant="60" id="s6x-0t-Z0b"/>
-                                        <constraint firstItem="CCn-mB-PD2" firstAttribute="leading" secondItem="pRt-nj-PIs" secondAttribute="leading" constant="42" id="vfs-Du-WhB"/>
-                                        <constraint firstItem="gCK-Si-9Fk" firstAttribute="top" secondItem="pRt-nj-PIs" secondAttribute="top" constant="151" id="x9L-fq-P8Q"/>
-                                    </constraints>
-                                </view>
-                                <gestureRecognizers/>
-                                <blurEffect style="light"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ZBA-Np-cA5" appends="YES" id="pbG-KP-ehv"/>
-                                </connections>
-                            </visualEffectView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userCreationBG" translatesAutoresizingMaskIntoConstraints="NO" id="y9x-Xw-eod">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
@@ -248,6 +143,111 @@
                                 <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
+                            <visualEffectView hidden="YES" opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYN-gf-59o">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pRt-nj-PIs">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="gCK-Si-9Fk">
+                                            <rect key="frame" x="220.66666666666663" y="151" width="156.33333333333337" height="105.66666666666669"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saving Taplus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCn-mB-PD2">
+                                            <rect key="frame" x="42.000000000000007" y="173.66666666666666" width="104.66666666666669" height="20.333333333333343"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDR 104,287,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yy7-eE-X50">
+                                            <rect key="frame" x="42" y="201.66666666666666" width="144.33333333333334" height="21.666666666666657"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENT TRANSACTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNa-yK-GGM">
+                                            <rect key="frame" x="41.999999999999986" y="316.66666666666669" width="184.66666666666663" height="20.333333333333314"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="msn-II-gUH">
+                                            <rect key="frame" x="42" y="367" width="311" height="101"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gb-3a-hhZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="311" height="20.333333333333332"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BI Fast Arini" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM1-Tz-fM3">
+                                                            <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-IDR 3,532,795" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZA-qO-8dv">
+                                                            <rect key="frame" x="89.666666666666643" y="0.0" width="221.33333333333337" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.85490196080000003" green="0.1176470588" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7E-I5-D8S">
+                                                    <rect key="frame" x="0.0" y="40.333333333333314" width="311" height="20.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BI Fast Arini" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8X-Pl-y06">
+                                                            <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-IDR 3,532,795" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE3-qd-762">
+                                                            <rect key="frame" x="89.666666666666643" y="0.0" width="221.33333333333337" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.85490196080000003" green="0.1176470588" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4y-m6-TOk">
+                                                    <rect key="frame" x="0.0" y="80.666666666666686" width="311" height="20.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BI Fast Arini" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPv-8b-ddI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-IDR 3,532,795" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J64-Re-6yB">
+                                                            <rect key="frame" x="89.666666666666643" y="0.0" width="221.33333333333337" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.85490196080000003" green="0.1176470588" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="msn-II-gUH" firstAttribute="top" secondItem="jNa-yK-GGM" secondAttribute="bottom" constant="30" id="Gep-HE-GiW"/>
+                                        <constraint firstItem="yy7-eE-X50" firstAttribute="top" secondItem="CCn-mB-PD2" secondAttribute="bottom" constant="7.6666666666666572" id="Jfl-Rf-oS4"/>
+                                        <constraint firstItem="CCn-mB-PD2" firstAttribute="centerY" secondItem="gCK-Si-9Fk" secondAttribute="centerY" constant="-20" id="dhz-gu-mD4"/>
+                                        <constraint firstItem="msn-II-gUH" firstAttribute="leading" secondItem="jNa-yK-GGM" secondAttribute="leading" id="eU2-xH-hiM"/>
+                                        <constraint firstItem="yy7-eE-X50" firstAttribute="leading" secondItem="CCn-mB-PD2" secondAttribute="leading" id="ehm-LN-M2u"/>
+                                        <constraint firstAttribute="trailing" secondItem="gCK-Si-9Fk" secondAttribute="trailing" constant="16" id="hc9-MX-iT4"/>
+                                        <constraint firstAttribute="trailing" secondItem="msn-II-gUH" secondAttribute="trailing" constant="40" id="iNn-Ft-6vL"/>
+                                        <constraint firstItem="jNa-yK-GGM" firstAttribute="leading" secondItem="yy7-eE-X50" secondAttribute="leading" id="r4D-vo-D7M"/>
+                                        <constraint firstItem="jNa-yK-GGM" firstAttribute="top" secondItem="gCK-Si-9Fk" secondAttribute="bottom" constant="60" id="s6x-0t-Z0b"/>
+                                        <constraint firstItem="CCn-mB-PD2" firstAttribute="leading" secondItem="pRt-nj-PIs" secondAttribute="leading" constant="42" id="vfs-Du-WhB"/>
+                                        <constraint firstItem="gCK-Si-9Fk" firstAttribute="top" secondItem="pRt-nj-PIs" secondAttribute="top" constant="151" id="x9L-fq-P8Q"/>
+                                    </constraints>
+                                </view>
+                                <gestureRecognizers/>
+                                <blurEffect style="light"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ZBA-Np-cA5" appends="YES" id="pbG-KP-ehv"/>
+                                </connections>
+                            </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -643,7 +643,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQy-Yc-fGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-882" y="-20"/>
+            <point key="canvasLocation" x="-737" y="-2"/>
         </scene>
     </scenes>
     <resources>
