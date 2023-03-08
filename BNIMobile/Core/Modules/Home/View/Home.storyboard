@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Tjr-hs-Ruo">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="qix-ya-KPi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootNavigationHome" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="qix-ya-KPi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IR5-kL-p8r">
                         <autoresizingMask key="autoresizingMask"/>
@@ -31,7 +31,7 @@
         <!--Home-->
         <scene sceneID="NNj-lF-Aem">
             <objects>
-                <viewController id="46W-5l-i7b" customClass="HomepageView" customModule="BNIMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomepageView" id="46W-5l-i7b" customClass="HomepageView" customModule="BNIMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hqY-zT-aOk">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
