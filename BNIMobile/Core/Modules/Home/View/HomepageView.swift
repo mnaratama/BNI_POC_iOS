@@ -115,7 +115,8 @@ extension HomepageView: HomepageDebitCardTableCellDelegate, HomepageOtherQuickli
         guard let viewController = UIStoryboard(name: StoryboardName.home, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.homeviewVC) as? HomeView else {
             fatalError("Failed to load Main from EnterMobileNumberVC file")
         }
-        self.navigationController?.pushViewController(viewController, animated: true)
+        viewController.modalPresentationStyle = .overFullScreen
+        self.present(viewController, animated: false)
     }
     
     // Navigate to Quicklink

@@ -416,7 +416,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="oK9-fj-d6N">
             <objects>
-                <tabBarController id="wW7-cL-6Rx" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" id="wW7-cL-6Rx" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="VRn-gx-4Qm"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ap6-K5-3Bo">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
@@ -456,7 +456,7 @@
             </objects>
             <point key="canvasLocation" x="2631" y="964"/>
         </scene>
-        <!--Home-->
+        <!--Home View-->
         <scene sceneID="lDW-GX-2yp">
             <objects>
                 <viewController storyboardIdentifier="HomeView" id="9Vl-tZ-6cj" customClass="HomeView" customModule="BNIMobile" customModuleProvider="target" sceneMemberID="viewController">
@@ -597,28 +597,42 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83t-Ok-TSj">
+                                <rect key="frame" x="0.0" y="761" width="390" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="Home" image="ic_tab_home" id="Wda-4r-ER6"/>
+                                    <tabBarItem title="Lifestyle" image="ic_tab_store" id="Pga-HW-zkW"/>
+                                    <tabBarItem title="Help" image="ic_tab_help" id="du2-hN-8l0"/>
+                                    <tabBarItem title="More" image="ic_tab_menu" id="BaK-wJ-V5f"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X4A-OM-IFq"/>
                         <color key="backgroundColor" red="0.8980392157" green="0.94901960780000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2ba-YN-VeQ" firstAttribute="leading" secondItem="X4A-OM-IFq" secondAttribute="leading" id="2e7-mD-2mM"/>
+                            <constraint firstItem="X4A-OM-IFq" firstAttribute="bottom" secondItem="83t-Ok-TSj" secondAttribute="bottom" id="3Sc-Rg-jCM"/>
                             <constraint firstItem="0T1-ej-lXs" firstAttribute="centerX" secondItem="C4q-de-W0l" secondAttribute="centerX" id="GC3-b6-IjB"/>
                             <constraint firstItem="0T1-ej-lXs" firstAttribute="top" secondItem="xwU-s7-PY4" secondAttribute="bottom" constant="12" id="Ht5-4c-Lh4"/>
+                            <constraint firstItem="83t-Ok-TSj" firstAttribute="leading" secondItem="X4A-OM-IFq" secondAttribute="leading" id="MBq-G2-R1r"/>
                             <constraint firstItem="X4A-OM-IFq" firstAttribute="bottom" secondItem="ENC-U6-sMQ" secondAttribute="bottom" id="PGR-Zc-K9Z"/>
                             <constraint firstItem="xwU-s7-PY4" firstAttribute="top" secondItem="X4A-OM-IFq" secondAttribute="top" constant="24" id="Vfg-4o-VM3"/>
+                            <constraint firstItem="83t-Ok-TSj" firstAttribute="trailing" secondItem="X4A-OM-IFq" secondAttribute="trailing" id="W7X-dZ-qby"/>
                             <constraint firstItem="ENC-U6-sMQ" firstAttribute="top" secondItem="0T1-ej-lXs" secondAttribute="bottom" constant="8" id="bT8-Xk-KBe"/>
                             <constraint firstItem="X4A-OM-IFq" firstAttribute="trailing" secondItem="2ba-YN-VeQ" secondAttribute="trailing" id="fPn-0l-g0N"/>
                             <constraint firstItem="ENC-U6-sMQ" firstAttribute="leading" secondItem="X4A-OM-IFq" secondAttribute="leading" id="iEb-tr-OUh"/>
                             <constraint firstItem="xwU-s7-PY4" firstAttribute="leading" secondItem="X4A-OM-IFq" secondAttribute="leading" constant="16" id="mms-X5-1o1"/>
                             <constraint firstItem="X4A-OM-IFq" firstAttribute="trailing" secondItem="ENC-U6-sMQ" secondAttribute="trailing" id="mz6-TS-Od5"/>
+                            <constraint firstItem="2ba-YN-VeQ" firstAttribute="top" secondItem="C4q-de-W0l" secondAttribute="bottom" constant="-128" id="psU-3Z-lY3"/>
                             <constraint firstItem="X4A-OM-IFq" firstAttribute="trailing" secondItem="xwU-s7-PY4" secondAttribute="trailing" id="se0-qD-MTF"/>
                             <constraint firstAttribute="bottom" secondItem="2ba-YN-VeQ" secondAttribute="bottom" id="waq-fc-9Tu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="ic_tab_home" id="zWH-Qd-KOt"/>
                     <navigationItem key="navigationItem" id="RPg-fn-7Fr"/>
                     <connections>
                         <outlet property="pointLabel" destination="ENw-5J-wdJ" id="fiZ-A3-Zb8"/>
+                        <outlet property="tabBar" destination="83t-Ok-TSj" id="B8g-d1-baB"/>
                         <outlet property="tableView" destination="ENC-U6-sMQ" id="2Gc-la-Tk1"/>
                     </connections>
                 </viewController>
