@@ -13,6 +13,5 @@ class HomeRecentTransactionHeaderCollectionCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        backgroundColor = .clear
     }
 }
