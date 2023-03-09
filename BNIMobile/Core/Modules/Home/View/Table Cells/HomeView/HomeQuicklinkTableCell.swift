@@ -11,9 +11,10 @@ class HomeQuicklinkTableCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var viewQuicklink: UIView!
-    @IBOutlet weak var circleImg: UIButton!
+    @IBOutlet weak var stackView: UIView!
+    @IBOutlet weak var buttonImg: UIImageView!
     
-    var items: [HomeQuicklink]?
+    var items: [QuicklinkModel] = []
     var didSelectCell: ((Int)->Void)?
     
     override func awakeFromNib() {
@@ -31,7 +32,7 @@ class HomeQuicklinkTableCell: UITableViewCell {
         collectionView.reloadData()
         
         flowLayout.scrollDirection = .horizontal
-        flowLayout.minimumLineSpacing = 0
+        flowLayout.minimumLineSpacing = 10
         flowLayout.minimumInteritemSpacing = 0
     }
     
@@ -43,15 +44,19 @@ class HomeQuicklinkTableCell: UITableViewCell {
         viewQuicklink.layer.cornerRadius = 8
     }
     
-    func bind(data: [HomeQuicklink]){
+    func bind(data: [QuicklinkModel], selected: Int){
         items = data
         collectionView.reloadData()
+        if selected == 1 {
+            buttonImg.image = UIImage(named: "ic_circle_chevron_up")
+            stackView.isHidden = false
+        } else {
+            buttonImg.image = UIImage(named: "ic_circle_chevron_bottom")
+            stackView.isHidden = true
+        }
     }
     
     @IBAction func manageTapped(_ sender: UIButton) {
-    }
-    
-    @IBAction func circleTapped(_ sender: UIButton) {
     }
     
 }
@@ -66,17 +71,17 @@ extension HomeQuicklinkTableCell{
 
 extension HomeQuicklinkTableCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuicklinksCollectionCell", for: indexPath) as! HomeQuicklinksCollectionCell
-//        cell.bind(image: <#T##String#>, title: <#T##String#>)
+        cell.bind(image: items[indexPath.row].image ?? "", title: items[indexPath.row].title ?? "")
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width/4, height: 100)
+        return CGSize(width: 75, height: 83)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -20,10 +20,6 @@ class HomepageView: UIViewController {
     var homeViewModel = HomeViewModel()
     var selectedIndex = -1
     
-    enum Constants {
-        static let homeStoryboardName = "Home"
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,7 +52,7 @@ class HomepageView: UIViewController {
     }
     
     @IBAction func mySpaceTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: Constants.homeStoryboardName, bundle: nil)
+        let storyboard = UIStoryboard(name: StoryboardName.home, bundle: nil)
         let presentingViewController = storyboard.instantiateViewController(withIdentifier: "MySpace")
         if #available(iOS 15.0, *) {
             if let sheet = presentingViewController.sheetPresentationController{
@@ -97,24 +93,6 @@ extension HomepageView: UITableViewDataSource, UITableViewDelegate {
             return cell
         }
     }
-    
-    //    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    //        if indexPath.row == selectedIndex{
-    //            selectedIndex = -1
-    //        }else{
-    //            selectedIndex = indexPath.row
-    //        }
-    //        tableView.reloadData()
-    //    }
-    
-//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        if indexPath.row == selectedIndex
-//        {
-//            return 75
-//        }else{
-//            return 45
-//        }
-//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 1 {

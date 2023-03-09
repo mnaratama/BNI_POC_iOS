@@ -11,10 +11,6 @@ class MySpaceView: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    enum Constants {
-        static let homeStoryboardName = "Home"
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -23,10 +23,10 @@
                         <rect key="frame" x="16" y="8" width="288" height="252"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="uho-E1-xRT">
-                                <rect key="frame" x="0.0" y="134" width="288" height="118"/>
+                                <rect key="frame" x="0.0" y="134" width="288" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="xlA-Zl-lUW"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="xlA-Zl-lUW"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="63N-gE-r7Z">
                                     <size key="itemSize" width="128" height="128"/>
@@ -249,6 +249,13 @@
                                     <constraint firstAttribute="height" constant="88" id="Bgz-d5-V2f"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_circle_chevron_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="qRa-hC-cOB">
+                                <rect key="frame" x="132" y="236" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="3sT-Im-Txy"/>
+                                    <constraint firstAttribute="width" secondItem="qRa-hC-cOB" secondAttribute="height" multiplier="1:1" id="ec9-Wr-0pd"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -256,52 +263,41 @@
                             <constraint firstItem="Vja-dP-M7k" firstAttribute="top" secondItem="XVC-0B-av1" secondAttribute="bottom" constant="8" id="3wP-Mv-sYR"/>
                             <constraint firstItem="uho-E1-xRT" firstAttribute="top" secondItem="Vja-dP-M7k" secondAttribute="bottom" constant="8" id="5WG-jj-L3C"/>
                             <constraint firstAttribute="trailing" secondItem="Vja-dP-M7k" secondAttribute="trailing" constant="10" id="EOn-hq-yqB"/>
+                            <constraint firstItem="qRa-hC-cOB" firstAttribute="top" relation="lessThanOrEqual" secondItem="8Sn-1Y-n1u" secondAttribute="top" constant="256" id="JTF-KK-paT"/>
+                            <constraint firstItem="qRa-hC-cOB" firstAttribute="centerX" secondItem="8Sn-1Y-n1u" secondAttribute="centerX" id="MOQ-Yb-0Zt"/>
                             <constraint firstItem="Vja-dP-M7k" firstAttribute="leading" secondItem="8Sn-1Y-n1u" secondAttribute="leading" constant="10" id="MRj-I2-uYU"/>
-                            <constraint firstAttribute="bottom" secondItem="uho-E1-xRT" secondAttribute="bottom" id="OB4-eY-ftn"/>
+                            <constraint firstAttribute="bottom" secondItem="qRa-hC-cOB" secondAttribute="bottom" constant="-8" id="PRd-Go-h96"/>
                             <constraint firstItem="XVC-0B-av1" firstAttribute="top" secondItem="8Sn-1Y-n1u" secondAttribute="top" constant="8" id="Qlt-P3-v1f"/>
                             <constraint firstItem="uho-E1-xRT" firstAttribute="leading" secondItem="8Sn-1Y-n1u" secondAttribute="leading" id="fGX-g8-b4J"/>
                             <constraint firstAttribute="height" constant="252" id="hQg-7k-Zap"/>
                             <constraint firstAttribute="trailing" secondItem="XVC-0B-av1" secondAttribute="trailing" constant="16" id="i46-u7-z7v"/>
                             <constraint firstAttribute="trailing" secondItem="uho-E1-xRT" secondAttribute="trailing" id="mJv-tB-xhq"/>
+                            <constraint firstAttribute="bottom" secondItem="uho-E1-xRT" secondAttribute="bottom" constant="18" id="wig-vr-EXG"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcN-36-nl0">
-                        <rect key="frame" x="148" y="248" width="24" height="24"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="24" id="Psd-zo-o4K"/>
-                            <constraint firstAttribute="width" secondItem="TcN-36-nl0" secondAttribute="height" multiplier="1:1" id="a61-Ip-OdJ"/>
-                        </constraints>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" image="ic_circle_chevron_up"/>
-                        <connections>
-                            <action selector="circleTapped:" destination="kdY-Vx-PB6" eventType="touchUpInside" id="SlS-r8-Ohp"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="TcN-36-nl0" secondAttribute="bottom" constant="8" id="7xq-ft-ZjX"/>
-                    <constraint firstItem="TcN-36-nl0" firstAttribute="top" relation="lessThanOrEqual" secondItem="rVI-Mg-chU" secondAttribute="top" constant="248" id="H60-hM-gQb"/>
                     <constraint firstItem="8Sn-1Y-n1u" firstAttribute="top" secondItem="rVI-Mg-chU" secondAttribute="top" constant="8" id="LaK-hA-1v0"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8Sn-1Y-n1u" secondAttribute="bottom" constant="20" id="U0x-Sj-az0"/>
                     <constraint firstAttribute="trailing" secondItem="8Sn-1Y-n1u" secondAttribute="trailing" constant="16" id="rcA-U5-uEA"/>
-                    <constraint firstItem="TcN-36-nl0" firstAttribute="centerX" secondItem="rVI-Mg-chU" secondAttribute="centerX" id="tUd-hi-vWX"/>
                     <constraint firstItem="8Sn-1Y-n1u" firstAttribute="leading" secondItem="rVI-Mg-chU" secondAttribute="leading" constant="16" id="zMf-gD-aJL"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="9l0-Jf-cGD"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="circleImg" destination="TcN-36-nl0" id="V5g-QT-aKH"/>
+                <outlet property="buttonImg" destination="qRa-hC-cOB" id="1Da-tS-1WV"/>
                 <outlet property="collectionView" destination="uho-E1-xRT" id="MKJ-gr-hEd"/>
                 <outlet property="flowLayout" destination="63N-gE-r7Z" id="04p-dT-a4W"/>
+                <outlet property="stackView" destination="Vja-dP-M7k" id="qEM-xI-QGb"/>
                 <outlet property="viewQuicklink" destination="8Sn-1Y-n1u" id="sG2-NC-wot"/>
             </connections>
             <point key="canvasLocation" x="8.6956521739130448" y="72.991071428571431"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_circle_chevron_up" width="24" height="24"/>
+        <image name="ic_circle_chevron_bottom" width="24" height="24"/>
         <image name="ic_mobile_add" width="40" height="40"/>
         <image name="ic_optimize_cashflow" width="40" height="40"/>
         <image name="ic_qr_code" width="40" height="40"/>

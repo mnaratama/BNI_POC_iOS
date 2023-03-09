@@ -14,9 +14,8 @@ class HomeView: UIViewController {
     @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var tabBar: UITabBar!
     
-    enum Constants {
-        static let homeStoryboardName = "Home"
-    }
+    var homeViewModel = HomeViewModel()
+    var selectedIndex = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +55,7 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate, UITabBarDelegate
             return cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuicklinkTableCell", for: indexPath) as! HomeQuicklinkTableCell
+            cell.bind(data: homeViewModel.yourQuicklinkItems, selected: selectedIndex)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "RecentTransactionTableCell", for: indexPath) as! HomeRecentTransactionTableCell
@@ -67,17 +67,28 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate, UITabBarDelegate
         if indexPath.row == 0 {
             return 220
         } else if indexPath.row == 1 {
-            return 256
+            if selectedIndex == -1 {
+                return 132
+            }else{
+                return 256
+            }
         } else {
             return UITableView.automaticDimension
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 1 {
+            if selectedIndex == -1 {
+                selectedIndex = 1
+            }else{
+                selectedIndex = -1
+            }
+            tableView.reloadData()
         }
     }
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         self.dismiss(animated: false, completion: nil)
     }
-    
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        delegate?.didSelectotherMaterial(index: indexPath.row)
-    //    }
 }
