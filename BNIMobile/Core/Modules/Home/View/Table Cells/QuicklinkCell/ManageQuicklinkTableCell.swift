@@ -14,9 +14,11 @@ protocol ManageQuicklinkTableCellDelegate: class {
 class ManageQuicklinkTableCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var lineView: UIView!
     
     weak var cellDelegate: ManageQuicklinkTableCellDelegate?
     var items: [QuicklinkModel] = []
+    var selectedItems = true
         
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,8 +37,10 @@ class ManageQuicklinkTableCell: UITableViewCell {
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
     
-    func bind(data: [QuicklinkModel]){
+    func bind(data: [QuicklinkModel], selected: Bool){
         items = data
+        selectedItems = selected
+        lineView.isHidden = !selected
         collectionView.reloadData()
     }
 }
@@ -48,7 +52,7 @@ extension ManageQuicklinkTableCell: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ManageQuicklinkCollectionCell", for: indexPath) as! ManageQuicklinkCollectionCell
-        cell.bind(image: items[indexPath.row].image ?? "", title: items[indexPath.row].title ?? "")
+        cell.bind(image: items[indexPath.row].image ?? "", title: items[indexPath.row].title ?? "", selected: selectedItems)
         return cell
     }
     

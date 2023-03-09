@@ -39,11 +39,11 @@ extension QuicklinksView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ManageQuicklinkTableCell", for: indexPath) as! ManageQuicklinkTableCell
-            cell.bind(data: homeViewModel.yourQuicklinkItems)
+            cell.bind(data: homeViewModel.yourQuicklinkItems, selected: true)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ManageQuicklinkTableCell", for: indexPath) as! ManageQuicklinkTableCell
-            cell.bind(data: homeViewModel.availableQuicklinkItems)
+            cell.bind(data: homeViewModel.availableQuicklinkItems, selected: false)
             return cell
         }
     }
@@ -52,7 +52,7 @@ extension QuicklinksView: UITableViewDataSource, UITableViewDelegate {
         if indexPath.row == 0 {
             return 208
         } else {
-            return 192
+            return 128
         }
     }
 }

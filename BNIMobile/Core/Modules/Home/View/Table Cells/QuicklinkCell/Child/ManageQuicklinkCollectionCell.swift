@@ -19,9 +19,11 @@ class ManageQuicklinkCollectionCell: UICollectionViewCell {
         backgroundColor = .clear
     }
     
-    func bind(image: String, title: String){
+    func bind(image: String, title: String, selected: Bool){
         imgView.image = UIImage(named: image)
         quicklinkLabel.text = title
-//        imgClose.image = UIImage(named: image)
+        
+        self.imgClose.isHidden = title.isEmpty ? true : false
+        self.imgClose.image = selected ? UIImage(named: "ic_close_filled") : UIImage(named: "ic_add_filled")
     }
 }

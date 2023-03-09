@@ -50,6 +50,7 @@
             <connections>
                 <outlet property="collectionView" destination="PXo-EP-9sU" id="DHu-WW-zOV"/>
                 <outlet property="flowLayout" destination="xII-ou-3Vu" id="kqy-kb-G9j"/>
+                <outlet property="lineView" destination="d5P-ad-0Xb" id="LJ4-z9-e3W"/>
             </connections>
             <point key="canvasLocation" x="8.6956521739130448" y="72.991071428571431"/>
         </tableViewCell>
