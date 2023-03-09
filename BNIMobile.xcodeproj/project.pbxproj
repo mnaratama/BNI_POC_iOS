@@ -29,6 +29,12 @@
 		0CC3A6F129B9932500F51D48 /* Mpin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F029B9932500F51D48 /* Mpin.storyboard */; };
 		0CC3A6F229B9932500F51D48 /* Mpin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F029B9932500F51D48 /* Mpin.storyboard */; };
 		0CC3A6F329B9932500F51D48 /* Mpin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F029B9932500F51D48 /* Mpin.storyboard */; };
+		0CC3A6F629B9956B00F51D48 /* LandingPageModalBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F529B9956B00F51D48 /* LandingPageModalBottomView.swift */; };
+		0CC3A6F729B9956B00F51D48 /* LandingPageModalBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F529B9956B00F51D48 /* LandingPageModalBottomView.swift */; };
+		0CC3A6F829B9956B00F51D48 /* LandingPageModalBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F529B9956B00F51D48 /* LandingPageModalBottomView.swift */; };
+		0CC3A6FA29B99ED400F51D48 /* TransferRecurringModalBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F929B99ED400F51D48 /* TransferRecurringModalBottomView.swift */; };
+		0CC3A6FB29B99ED400F51D48 /* TransferRecurringModalBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F929B99ED400F51D48 /* TransferRecurringModalBottomView.swift */; };
+		0CC3A6FC29B99ED400F51D48 /* TransferRecurringModalBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F929B99ED400F51D48 /* TransferRecurringModalBottomView.swift */; };
 		0CE4827F29B5819E00A2FADC /* AddRecipient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4827E29B5819E00A2FADC /* AddRecipient.storyboard */; };
 		0CE4828329B5836000A2FADC /* AddRecipientCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4828229B5836000A2FADC /* AddRecipientCountryView.swift */; };
 		5BC07276206D885092ED4A31 /* Pods_BNIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AF8BEA4437779214F08121 /* Pods_BNIMobile.framework */; };
@@ -86,6 +92,8 @@
 		0C8957A529B8DA33007098CA /* TransferConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferConfirmView.swift; sourceTree = "<group>"; };
 		0C8957A729B8DA5A007098CA /* TransferReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferReviewView.swift; sourceTree = "<group>"; };
 		0CC3A6F029B9932500F51D48 /* Mpin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Mpin.storyboard; path = "../../../../../../../../../Downloads/maverick-poc-ios-app-dev-vicky/BNIMobile/Core/Modules/Transfer/View/Mpin.storyboard"; sourceTree = "<group>"; };
+		0CC3A6F529B9956B00F51D48 /* LandingPageModalBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageModalBottomView.swift; sourceTree = "<group>"; };
+		0CC3A6F929B99ED400F51D48 /* TransferRecurringModalBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRecurringModalBottomView.swift; sourceTree = "<group>"; };
 		0CE4827E29B5819E00A2FADC /* AddRecipient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipient.storyboard; sourceTree = "<group>"; };
 		0CE4828229B5836000A2FADC /* AddRecipientCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientCountryView.swift; sourceTree = "<group>"; };
 		32B1DEC082ECBC362E51D9AE /* Pods-BNIMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +172,7 @@
 			children = (
 				0C47B61329B7481100513244 /* LandingPage.storyboard */,
 				0C47B61529B7482E00513244 /* LandingPageView.swift */,
+				0CC3A6F529B9956B00F51D48 /* LandingPageModalBottomView.swift */,
 			);
 			path = LandingPage;
 			sourceTree = "<group>";
@@ -177,6 +186,7 @@
 				0C8957A529B8DA33007098CA /* TransferConfirmView.swift */,
 				0C8957A729B8DA5A007098CA /* TransferReviewView.swift */,
 				0C7DD42729B8AD7E00FFDF0F /* TransferSuccessView.swift */,
+				0CC3A6F929B99ED400F51D48 /* TransferRecurringModalBottomView.swift */,
 				0C7DD42929B8ADA200FFDF0F /* TransferRecurringSuccessView.swift */,
 			);
 			path = Transfer;
@@ -643,6 +653,7 @@
 				0C8957A829B8DA5A007098CA /* TransferReviewView.swift in Sources */,
 				0C47B61B29B7488900513244 /* TransferView.swift in Sources */,
 				0C7DD42429B8A0F600FFDF0F /* AddRecipientEnterPasswordView.swift in Sources */,
+				0CC3A6FA29B99ED400F51D48 /* TransferRecurringModalBottomView.swift in Sources */,
 				7457C10429B1B5C1006874D5 /* CustomerRegView.swift in Sources */,
 				0C617A4829B5EC7200A18AE9 /* AddRecipientReviewDetailsView.swift in Sources */,
 				0C47B60E29B6EB9E00513244 /* RadioButton.swift in Sources */,
@@ -658,6 +669,7 @@
 				0C7DD42A29B8ADA200FFDF0F /* TransferRecurringSuccessView.swift in Sources */,
 				0C47B61629B7482E00513244 /* LandingPageView.swift in Sources */,
 				7457C10229B1B5C1006874D5 /* SceneDelegate.swift in Sources */,
+				0CC3A6F629B9956B00F51D48 /* LandingPageModalBottomView.swift in Sources */,
 				0C47B61F29B74C3100513244 /* TransferEnterDataView.swift in Sources */,
 				0C7DD42C29B8D23A00FFDF0F /* MpinView.swift in Sources */,
 				0C47B61129B73FBB00513244 /* AddRecipientBankDetailsView.swift in Sources */,
@@ -668,6 +680,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC3A6FB29B99ED400F51D48 /* TransferRecurringModalBottomView.swift in Sources */,
+				0CC3A6F729B9956B00F51D48 /* LandingPageModalBottomView.swift in Sources */,
 				7457C11729B1B5C5006874D5 /* BNIMobileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,8 +690,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC3A6FC29B99ED400F51D48 /* TransferRecurringModalBottomView.swift in Sources */,
 				7457C12329B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift in Sources */,
 				7457C12129B1B5C5006874D5 /* BNIMobileUITests.swift in Sources */,
+				0CC3A6F829B9956B00F51D48 /* LandingPageModalBottomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
