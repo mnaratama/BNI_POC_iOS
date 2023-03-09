@@ -110,6 +110,10 @@ extension HomeView: HomeQuicklinkTableCellDelegate {
     // Navigate to Quicklink
     func collectionView(collectionviewcell: HomeQuicklinksCollectionCell?, index: Int, didTappedInTableViewCell: HomeQuicklinkTableCell) {
         //TODO: Load EPIC4 Here
+        guard let viewController = UIStoryboard(name: StoryboardName.landingPage, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.landingPageVC) as? LandingPageView else {
+            fatalError("Failed to load Main from CongratulationsPointViewController file")
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     // Navigate to Quicklink
