@@ -71,8 +71,10 @@ extension PreLoginViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ViewControllerName.transactionCell, for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: ViewControllerName.transactionCell, for: indexPath) as! TransactionTableViewCell
+      
+        cell.amount.text = transactions[indexPath.row].amount?.description
+        cell.payee.text = transactions[indexPath.row].transactionType
         return cell
     }
 }

@@ -171,18 +171,18 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fRS-9L-ZDn">
-                                            <rect key="frame" x="42" y="357" width="335" height="445"/>
+                                            <rect key="frame" x="22" y="357" width="355" height="445"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <prototypes>
                                                 <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionTableViewCell" rowHeight="86" id="nYF-T4-coE" customClass="TransactionTableViewCell" customModule="BNIMobile" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="50" width="335" height="86"/>
+                                                    <rect key="frame" x="0.0" y="50" width="355" height="86"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nYF-T4-coE" id="mlh-lQ-dir">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="86"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="86"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecN-Lo-vTR">
-                                                                <rect key="frame" x="20" y="11" width="295" height="64"/>
+                                                                <rect key="frame" x="20" y="11" width="315" height="64"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BI Fast Arini" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgp-LH-nU8">
                                                                         <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="64"/>
@@ -191,7 +191,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-IDR 3,532,795" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO8-EX-6t2">
-                                                                        <rect key="frame" x="89.666666666666671" y="0.0" width="205.33333333333331" height="64"/>
+                                                                        <rect key="frame" x="89.666666666666671" y="0.0" width="225.33333333333331" height="64"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="0.85490196080000003" green="0.1176470588" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -201,9 +201,9 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailingMargin" secondItem="ecN-Lo-vTR" secondAttribute="trailing" id="HtI-e9-2dn"/>
+                                                            <constraint firstItem="ecN-Lo-vTR" firstAttribute="centerX" secondItem="mlh-lQ-dir" secondAttribute="centerX" id="1YV-7L-Ucg"/>
                                                             <constraint firstAttribute="bottomMargin" secondItem="ecN-Lo-vTR" secondAttribute="bottom" id="MSZ-gR-Wx5"/>
-                                                            <constraint firstItem="ecN-Lo-vTR" firstAttribute="leading" secondItem="mlh-lQ-dir" secondAttribute="leadingMargin" id="hw4-Oj-NYC"/>
+                                                            <constraint firstItem="ecN-Lo-vTR" firstAttribute="width" secondItem="mlh-lQ-dir" secondAttribute="width" multiplier="0.887324" id="jPP-RH-993"/>
                                                             <constraint firstItem="ecN-Lo-vTR" firstAttribute="top" secondItem="mlh-lQ-dir" secondAttribute="topMargin" id="wca-aP-Zkz"/>
                                                         </constraints>
                                                     </tableViewCellContentView>
@@ -225,7 +225,7 @@
                                         <constraint firstItem="fRS-9L-ZDn" firstAttribute="top" secondItem="jNa-yK-GGM" secondAttribute="bottom" constant="20" id="Dgi-eX-r9o"/>
                                         <constraint firstAttribute="trailing" secondItem="fRS-9L-ZDn" secondAttribute="trailing" constant="16" id="I6f-LP-ljq"/>
                                         <constraint firstItem="yy7-eE-X50" firstAttribute="top" secondItem="CCn-mB-PD2" secondAttribute="bottom" constant="7.6666666666666572" id="Jfl-Rf-oS4"/>
-                                        <constraint firstItem="fRS-9L-ZDn" firstAttribute="leading" secondItem="jNa-yK-GGM" secondAttribute="leading" id="L3L-CU-nvc"/>
+                                        <constraint firstItem="fRS-9L-ZDn" firstAttribute="leading" secondItem="jNa-yK-GGM" secondAttribute="leading" constant="-20" id="L3L-CU-nvc"/>
                                         <constraint firstAttribute="bottom" secondItem="fRS-9L-ZDn" secondAttribute="bottom" constant="50" id="Vm2-ES-tkV"/>
                                         <constraint firstItem="CCn-mB-PD2" firstAttribute="centerY" secondItem="gCK-Si-9Fk" secondAttribute="centerY" constant="-20" id="dhz-gu-mD4"/>
                                         <constraint firstItem="yy7-eE-X50" firstAttribute="leading" secondItem="CCn-mB-PD2" secondAttribute="leading" id="ehm-LN-M2u"/>
