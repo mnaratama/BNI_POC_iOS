@@ -19,7 +19,6 @@ struct QuicklinkModel {
     }
 }
 
-
 //Homepage
 struct AccountListBaseModel : Codable {
     let success : Bool?
