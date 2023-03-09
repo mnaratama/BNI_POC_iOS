@@ -29,6 +29,7 @@ class NetworkAccessLayer: NSObject {
     
     private override init() {}
     
+    
     func parse(response: JSON) -> BaseResponse? {
         let mainDict = response.object as? Dictionary<String, AnyObject>
         if let eMainDict = mainDict {
@@ -37,6 +38,22 @@ class NetworkAccessLayer: NSObject {
                     let basereponse = try JSONDecoder().decode(BaseResponse.self, from: jsonData)
                     return basereponse
                 } catch {
+                    print(error)
+                    return nil
+                }
+            }
+        }
+        return nil
+    }
+    
+    func decodeToModel<T: Codable>(response: JSON) -> T? {
+        let mainDict = response.object as? Dictionary<String, AnyObject>
+        if let eMainDict = mainDict {
+            if let jsonData = try? JSONSerialization.data(withJSONObject: eMainDict, options: .sortedKeys) {
+
+                do {
+                    return try JSONDecoder().decode(T.self, from: jsonData)
+                } catch (let error) {
                     print(error)
                     return nil
                 }
@@ -86,6 +103,21 @@ class NetworkAccessLayer: NSObject {
             if error == nil {
                 print("verifyCredentials response: \(json)")
                 if let baseResponse = self.parse(response: json) {
+                    completionHandler(true, baseResponse, nil)
+                }
+            } else {
+                completionHandler(false, nil, error)
+            }
+        }
+
+    }
+    
+    func getAccountBalance(accounrNo: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: AccountBalanceBaseModel?, _: NSError?) -> Void) {
+        DataSourceManager.baseURLString = "https://api.digi46.id/maverick/acn/core/"
+        Request.getAccountNumber(accountNumber: "userId").execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
+            if error == nil {
+                print("get account number response: \(json)")
+                if let baseResponse:AccountBalanceBaseModel = self.decodeToModel(response: json) {
                     completionHandler(true, baseResponse, nil)
                 }
             } else {

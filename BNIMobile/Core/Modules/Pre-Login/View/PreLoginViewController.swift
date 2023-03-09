@@ -21,6 +21,12 @@ class PreLoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NetworkAccessLayer.shared.getAccountBalance(accounrNo: "", completionHandler: { isSuccess, baseResponse, _  in
+            if isSuccess, let baseResponse = baseResponse, baseResponse.message == "success" {
+//                let data = baseResponse.content?.current_balance
+//                print("xxxxxxxxx", data)
+            }
+        })
     }
     
     @IBAction func longPressForBalance(_ sender: Any) {
