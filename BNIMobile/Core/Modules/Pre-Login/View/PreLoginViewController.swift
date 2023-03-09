@@ -17,9 +17,12 @@ import UIKit
 
 class PreLoginViewController: BaseViewController {
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var currentBalance: UILabel!
     @IBOutlet weak var balanceView: UIVisualEffectView!
     
+    var transactions:[TransactionRecent] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         getAccountBalance()
@@ -53,13 +56,23 @@ class PreLoginViewController: BaseViewController {
 
 extension PreLoginViewController {
     func getAccountBalance(){
-        NetworkAccessLayer.shared.getAccountBalance(accounrNo: "", completionHandler: { [weak self] isSuccess, baseResponse, _  in
-            if isSuccess, let baseResponse = baseResponse, baseResponse.message == "success" {
-                let data = baseResponse.content?.current_balance
-                DispatchQueue.main.async {
-                    self?.currentBalance.text = String(data ?? 10000)
-                }
+        NetworkAccessLayer.shared.getAccountBalance(accounrNo: "000001", completionHandler: { isSuccess,baseResponse,_ in
+            if let baseResponse = baseResponse, baseResponse.status == 200 {
+                self.transactions =  baseResponse.transactions ?? []
+                self.tableView.reloadData()
             }
         })
+    }
+}
+
+extension PreLoginViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return transactions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ViewControllerName.transactionCell, for: indexPath)
+        
+        return cell
     }
 }

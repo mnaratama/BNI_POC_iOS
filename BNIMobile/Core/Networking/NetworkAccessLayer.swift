@@ -96,12 +96,12 @@ class NetworkAccessLayer: NSObject {
 
     }
     
-    func getAccountBalance(accounrNo: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: AccountBalanceBaseModel?, _: NSError?) -> Void) {
-        DataSourceManager.baseURLString = "https://api.digi46.id/maverick/acn/core/"
-        Request.getAccountNumber(accountNumber: "userId").execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
+    func getAccountBalance(accounrNo: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: AccountTransaction?, _: NSError?) -> Void) {
+        DataSourceManager.baseURLString = "https://accountservice-mavipoc-accountservice.apps.mavipoc-pb.duh8.p1.openshiftapps.com/"
+        Request.getAccountNumber(accountNumber: accounrNo).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
             if error == nil {
                 print("get account number response: \(json)")
-                if let baseResponse:AccountBalanceBaseModel = self.decodeToModel(response: json) {
+                if let baseResponse:AccountTransaction = self.decodeToModel(response: json) {
                     completionHandler(true, baseResponse, nil)
                 }
             } else {

@@ -123,12 +123,15 @@
 		800880E529B84DDB00580816 /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880BC29B84DDB00580816 /* HomepageView.swift */; };
 		800880E629B84DDB00580816 /* QuicklinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800880BD29B84DDB00580816 /* QuicklinksView.swift */; };
 		80347F2029B39CD700048831 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80347F1F29B39CD700048831 /* Logger.swift */; };
+		80696CAC29BA281000C003C9 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80696CAB29BA281000C003C9 /* TransactionTableViewCell.swift */; };
+		80696CAF29BA326C00C003C9 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80696CAD29BA326C00C003C9 /* Content.swift */; };
+		80696CB029BA326C00C003C9 /* AccountBalanceBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80696CAE29BA326C00C003C9 /* AccountBalanceBaseModel.swift */; };
+		80696CB729BA349E00C003C9 /* TransactionRecent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80696CB529BA349E00C003C9 /* TransactionRecent.swift */; };
+		80696CB829BA349E00C003C9 /* AccountTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80696CB629BA349E00C003C9 /* AccountTransaction.swift */; };
 		8080500F29B9070A00AD6FCF /* BaseControlls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8080500E29B9070A00AD6FCF /* BaseControlls.swift */; };
 		8089435B29B6F8B4006B5555 /* CongratulationsDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */; };
 		8089435C29B6F8B4006B5555 /* EnterCredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */; };
 		8089435D29B6F8B4006B5555 /* CongratulationsPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8089435A29B6F8B4006B5555 /* CongratulationsPointViewController.swift */; };
-		80CDBCC129B9A7FD003BC060 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDBCBF29B9A7FD003BC060 /* Content.swift */; };
-		80CDBCC229B9A7FD003BC060 /* AccountBalanceBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDBCC029B9A7FD003BC060 /* AccountBalanceBaseModel.swift */; };
 		C2FCCD806E8293C5DD249483 /* Pods_BNIMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 338CAD3C4A0339FBDB92446B /* Pods_BNIMobileUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -267,12 +270,15 @@
 		800880BC29B84DDB00580816 /* HomepageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
 		800880BD29B84DDB00580816 /* QuicklinksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuicklinksView.swift; sourceTree = "<group>"; };
 		80347F1F29B39CD700048831 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		80696CAB29BA281000C003C9 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		80696CAD29BA326C00C003C9 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		80696CAE29BA326C00C003C9 /* AccountBalanceBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBalanceBaseModel.swift; sourceTree = "<group>"; };
+		80696CB529BA349E00C003C9 /* TransactionRecent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRecent.swift; sourceTree = "<group>"; };
+		80696CB629BA349E00C003C9 /* AccountTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTransaction.swift; sourceTree = "<group>"; };
 		8080500E29B9070A00AD6FCF /* BaseControlls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseControlls.swift; sourceTree = "<group>"; };
 		8089435829B6F8B4006B5555 /* CongratulationsDoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationsDoneViewController.swift; sourceTree = "<group>"; };
 		8089435929B6F8B4006B5555 /* EnterCredentialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterCredentialViewController.swift; sourceTree = "<group>"; };
 		8089435A29B6F8B4006B5555 /* CongratulationsPointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationsPointViewController.swift; sourceTree = "<group>"; };
-		80CDBCBF29B9A7FD003BC060 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
-		80CDBCC029B9A7FD003BC060 /* AccountBalanceBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBalanceBaseModel.swift; sourceTree = "<group>"; };
 		A0D1B923D4501D8290D729A3 /* Pods-BNIMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileUITests.release.xcconfig"; path = "Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E4D0B1FB41C2511E6D4B0380 /* Pods-BNIMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobile.release.xcconfig"; path = "Target Support Files/Pods-BNIMobile/Pods-BNIMobile.release.xcconfig"; sourceTree = "<group>"; };
 		E698197688DBE50548379716 /* Pods_BNIMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -632,7 +638,7 @@
 		749B662F29B7441300B0A4A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				80CDBCBE29B9A7C9003BC060 /* AccountBalance */,
+				80CDBCBE29B9A7C9003BC060 /* AccountBal */,
 				740CC3C329B8A6AF000B3D44 /* BaseResponse.swift */,
 				740CC3C129B8A6AF000B3D44 /* Error.swift */,
 				740CC3C229B8A6AF000B3D44 /* Value.swift */,
@@ -647,6 +653,7 @@
 				749B663329B7542F00B0A4A4 /* PreLoginViewController.swift */,
 				6F8BEC0729B8D0EA00E5D798 /* BiometricLoginViewController.swift */,
 				6F8BEC0829B8D0EA00E5D798 /* LoginViewController.swift */,
+				80696CAB29BA281000C003C9 /* TransactionTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -839,13 +846,15 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
-		80CDBCBE29B9A7C9003BC060 /* AccountBalance */ = {
+		80CDBCBE29B9A7C9003BC060 /* AccountBal */ = {
 			isa = PBXGroup;
 			children = (
-				80CDBCC029B9A7FD003BC060 /* AccountBalanceBaseModel.swift */,
-				80CDBCBF29B9A7FD003BC060 /* Content.swift */,
+				80696CB629BA349E00C003C9 /* AccountTransaction.swift */,
+				80696CB529BA349E00C003C9 /* TransactionRecent.swift */,
+				80696CAE29BA326C00C003C9 /* AccountBalanceBaseModel.swift */,
+				80696CAD29BA326C00C003C9 /* Content.swift */,
 			);
-			path = AccountBalance;
+			path = AccountBal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1145,6 +1154,7 @@
 				0C617A4829B5EC7200A18AE9 /* AddRecipientReviewDetailsView.swift in Sources */,
 				0C47B60E29B6EB9E00513244 /* RadioButton.swift in Sources */,
 				0C095D9029B9FAC40015651E /* Recurring.swift in Sources */,
+				80696CB029BA326C00C003C9 /* AccountBalanceBaseModel.swift in Sources */,
 				0C47B61D29B74AAD00513244 /* AddRecipientView.swift in Sources */,
 				0CC3A70329B9BE2000F51D48 /* LandingPageModalTableViewCell.swift in Sources */,
 				747FF27D29B20D5E009AC232 /* EnterMobileNumberViewController.swift in Sources */,
@@ -1173,10 +1183,11 @@
 				800880CD29B84DDB00580816 /* MySpaceClaimRewardTableCell.swift in Sources */,
 				8008808829B7632700580816 /* MobileNumberViewModel.swift in Sources */,
 				6F8BEC0929B8D0EA00E5D798 /* BiometricLoginViewController.swift in Sources */,
-				80CDBCC229B9A7FD003BC060 /* AccountBalanceBaseModel.swift in Sources */,
 				800880BF29B84DDB00580816 /* HomeModel.swift in Sources */,
 				800880C329B84DDB00580816 /* HomepageCreditCardTableCell.swift in Sources */,
+				80696CAC29BA281000C003C9 /* TransactionTableViewCell.swift in Sources */,
 				800880DD29B84DDB00580816 /* HomeHeaderCollectionCell.swift in Sources */,
+				80696CB829BA349E00C003C9 /* AccountTransaction.swift in Sources */,
 				7457C10429B1B5C1006874D5 /* NewUserLandingViewController.swift in Sources */,
 				747FF27D29B20D5E009AC232 /* EnterMobileNumberViewController.swift in Sources */,
 				800880D429B84DDB00580816 /* HomeRecentTransactionTableCell.swift in Sources */,
@@ -1194,12 +1205,12 @@
 				6F8BEC0A29B8D0EA00E5D798 /* LoginViewController.swift in Sources */,
 				8008808629B762E600580816 /* MobileNumberModel.swift in Sources */,
 				740CC3C529B8A6AF000B3D44 /* Value.swift in Sources */,
+				80696CB729BA349E00C003C9 /* TransactionRecent.swift in Sources */,
 				800880D529B84DDB00580816 /* HomeHeaderTableCell.swift in Sources */,
 				800880D729B84DDB00580816 /* HomeQuicklinkTableCell.swift in Sources */,
 				800880CE29B84DDB00580816 /* MySpaceHeaderTableCell.swift in Sources */,
 				800880C129B84DDB00580816 /* HomepageDebitCardTableCell.swift in Sources */,
 				740CC3C629B8A6AF000B3D44 /* BaseResponse.swift in Sources */,
-				80CDBCC129B9A7FD003BC060 /* Content.swift in Sources */,
 				800880C929B84DDB00580816 /* HomepageCreditCardCollectionCell.swift in Sources */,
 				8089435B29B6F8B4006B5555 /* CongratulationsDoneViewController.swift in Sources */,
 				2399803D29B98D3B005458D6 /* ManageQuicklinkTableCell.swift in Sources */,
@@ -1216,6 +1227,7 @@
 				740CC3C429B8A6AF000B3D44 /* Error.swift in Sources */,
 				2399804729B9E2D6005458D6 /* Extension.swift in Sources */,
 				800880E329B84DDB00580816 /* HomeView.swift in Sources */,
+				80696CAF29BA326C00C003C9 /* Content.swift in Sources */,
 				76BDBDE829B9D67E0001C287 /* Keychain+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
