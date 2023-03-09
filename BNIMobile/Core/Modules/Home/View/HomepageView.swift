@@ -26,6 +26,11 @@ class HomepageView: UIViewController {
         setupView()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     private func setupTableView() {
         tableView.register(UINib(nibName: "HomepageHeaderTableCell", bundle: nil), forCellReuseIdentifier: "HomepageHeaderTableCell")
         tableView.register(UINib(nibName: "HomepageOtherQuicklinkTableCell", bundle: nil), forCellReuseIdentifier: "HomepageOtherQuicklinkTableCell")
