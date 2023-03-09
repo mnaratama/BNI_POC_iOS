@@ -511,6 +511,9 @@
                                             <constraint firstAttribute="bottom" secondItem="6sJ-Kd-k9W" secondAttribute="bottom" id="ja8-0w-P2n"/>
                                             <constraint firstItem="6sJ-Kd-k9W" firstAttribute="top" secondItem="TUW-W9-vKn" secondAttribute="top" id="zoO-kb-AEk"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="UR0-nS-P5c" appends="YES" id="BXw-G0-hfm"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -525,9 +528,6 @@
                                     <constraint firstItem="wND-10-Yih" firstAttribute="leading" secondItem="rvR-uq-6O3" secondAttribute="leading" constant="16" id="hgA-pH-vPG"/>
                                     <constraint firstAttribute="trailing" secondItem="TUW-W9-vKn" secondAttribute="trailing" constant="16" id="xBs-6d-z1h"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="UR0-nS-P5c" appends="YES" id="6Kn-lM-dcr"/>
-                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gl4-8r-e0l"/>
@@ -550,7 +550,8 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btZ-FL-eYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="UR0-nS-P5c">
                     <connections>
-                        <action selector="buttonNextTapped:" destination="I2P-L8-jjg" id="EUy-aB-Fqb"/>
+                        <action selector="buttonMakeTransferTapped:" destination="I2P-L8-jjg" id="0Fu-yJ-LTh"/>
+                        <outlet property="delegate" destination="TUW-W9-vKn" id="tIT-KU-haJ"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

@@ -24,7 +24,11 @@
 		0C7DD42829B8AD7E00FFDF0F /* TransferSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7DD42729B8AD7E00FFDF0F /* TransferSuccessView.swift */; };
 		0C7DD42A29B8ADA200FFDF0F /* TransferRecurringSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7DD42929B8ADA200FFDF0F /* TransferRecurringSuccessView.swift */; };
 		0C7DD42C29B8D23A00FFDF0F /* MpinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7DD42B29B8D23A00FFDF0F /* MpinView.swift */; };
-		0C7DD42E29B8D27800FFDF0F /* Mpin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7DD42D29B8D27800FFDF0F /* Mpin.storyboard */; };
+		0C8957A629B8DA33007098CA /* TransferConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8957A529B8DA33007098CA /* TransferConfirmView.swift */; };
+		0C8957A829B8DA5A007098CA /* TransferReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8957A729B8DA5A007098CA /* TransferReviewView.swift */; };
+		0CC3A6F129B9932500F51D48 /* Mpin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F029B9932500F51D48 /* Mpin.storyboard */; };
+		0CC3A6F229B9932500F51D48 /* Mpin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F029B9932500F51D48 /* Mpin.storyboard */; };
+		0CC3A6F329B9932500F51D48 /* Mpin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F029B9932500F51D48 /* Mpin.storyboard */; };
 		0CE4827F29B5819E00A2FADC /* AddRecipient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4827E29B5819E00A2FADC /* AddRecipient.storyboard */; };
 		0CE4828329B5836000A2FADC /* AddRecipientCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4828229B5836000A2FADC /* AddRecipientCountryView.swift */; };
 		5BC07276206D885092ED4A31 /* Pods_BNIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AF8BEA4437779214F08121 /* Pods_BNIMobile.framework */; };
@@ -79,7 +83,9 @@
 		0C7DD42729B8AD7E00FFDF0F /* TransferSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferSuccessView.swift; sourceTree = "<group>"; };
 		0C7DD42929B8ADA200FFDF0F /* TransferRecurringSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRecurringSuccessView.swift; sourceTree = "<group>"; };
 		0C7DD42B29B8D23A00FFDF0F /* MpinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MpinView.swift; sourceTree = "<group>"; };
-		0C7DD42D29B8D27800FFDF0F /* Mpin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mpin.storyboard; sourceTree = "<group>"; };
+		0C8957A529B8DA33007098CA /* TransferConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferConfirmView.swift; sourceTree = "<group>"; };
+		0C8957A729B8DA5A007098CA /* TransferReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferReviewView.swift; sourceTree = "<group>"; };
+		0CC3A6F029B9932500F51D48 /* Mpin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Mpin.storyboard; path = "../../../../../../../../../Downloads/maverick-poc-ios-app-dev-vicky/BNIMobile/Core/Modules/Transfer/View/Mpin.storyboard"; sourceTree = "<group>"; };
 		0CE4827E29B5819E00A2FADC /* AddRecipient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipient.storyboard; sourceTree = "<group>"; };
 		0CE4828229B5836000A2FADC /* AddRecipientCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientCountryView.swift; sourceTree = "<group>"; };
 		32B1DEC082ECBC362E51D9AE /* Pods-BNIMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,10 +174,21 @@
 				0C47B61829B7487500513244 /* Transfer.storyboard */,
 				0C47B61A29B7488900513244 /* TransferView.swift */,
 				0C47B61E29B74C3100513244 /* TransferEnterDataView.swift */,
+				0C8957A529B8DA33007098CA /* TransferConfirmView.swift */,
+				0C8957A729B8DA5A007098CA /* TransferReviewView.swift */,
 				0C7DD42729B8AD7E00FFDF0F /* TransferSuccessView.swift */,
 				0C7DD42929B8ADA200FFDF0F /* TransferRecurringSuccessView.swift */,
 			);
 			path = Transfer;
+			sourceTree = "<group>";
+		};
+		0C8957A929B9923F007098CA /* Mpin */ = {
+			isa = PBXGroup;
+			children = (
+				0CC3A6F029B9932500F51D48 /* Mpin.storyboard */,
+				0C7DD42B29B8D23A00FFDF0F /* MpinView.swift */,
+			);
+			path = Mpin;
 			sourceTree = "<group>";
 		};
 		0CE4827A29B5806A00A2FADC /* Transfer */ = {
@@ -201,11 +218,10 @@
 		0CE4827D29B5817B00A2FADC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C8957A929B9923F007098CA /* Mpin */,
 				0C47B61229B747F900513244 /* LandingPage */,
 				0C47B60F29B73EE500513244 /* AddRecipient */,
 				0C47B61729B7484900513244 /* Transfer */,
-				0C7DD42D29B8D27800FFDF0F /* Mpin.storyboard */,
-				0C7DD42B29B8D23A00FFDF0F /* MpinView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -521,7 +537,7 @@
 			files = (
 				7457C10C29B1B5C5006874D5 /* LaunchScreen.storyboard in Resources */,
 				0CE4827F29B5819E00A2FADC /* AddRecipient.storyboard in Resources */,
-				0C7DD42E29B8D27800FFDF0F /* Mpin.storyboard in Resources */,
+				0CC3A6F129B9932500F51D48 /* Mpin.storyboard in Resources */,
 				7457C10929B1B5C5006874D5 /* Assets.xcassets in Resources */,
 				0C47B61429B7481100513244 /* LandingPage.storyboard in Resources */,
 				0C47B61929B7487500513244 /* Transfer.storyboard in Resources */,
@@ -534,6 +550,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC3A6F229B9932500F51D48 /* Mpin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +558,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC3A6F329B9932500F51D48 /* Mpin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +640,7 @@
 			files = (
 				0C7DD42829B8AD7E00FFDF0F /* TransferSuccessView.swift in Sources */,
 				0C617A4429B5E3FD00A18AE9 /* AddRecipientSuccessView.swift in Sources */,
+				0C8957A829B8DA5A007098CA /* TransferReviewView.swift in Sources */,
 				0C47B61B29B7488900513244 /* TransferView.swift in Sources */,
 				0C7DD42429B8A0F600FFDF0F /* AddRecipientEnterPasswordView.swift in Sources */,
 				7457C10429B1B5C1006874D5 /* CustomerRegView.swift in Sources */,
@@ -632,6 +651,7 @@
 				7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */,
 				0C7DD42629B8AB3900FFDF0F /* Extension.swift in Sources */,
 				CA79D3E929B49D4500FDCF06 /* HomeView.swift in Sources */,
+				0C8957A629B8DA33007098CA /* TransferConfirmView.swift in Sources */,
 				0C617A4A29B5F0D000A18AE9 /* AddRecipientTermAndConditionView.swift in Sources */,
 				0CE4828329B5836000A2FADC /* AddRecipientCountryView.swift in Sources */,
 				0C617A4629B5EC1300A18AE9 /* AddRecipientAccountDetailsView.swift in Sources */,

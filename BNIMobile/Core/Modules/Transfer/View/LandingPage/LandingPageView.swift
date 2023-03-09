@@ -27,4 +27,5 @@ class LandingPageView : UIViewController {
 
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
 }
