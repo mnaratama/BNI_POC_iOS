@@ -23,10 +23,16 @@ class EnterCredentialViewController: BaseViewController, UITextFieldDelegate {
         setupTextField()
         hideErrorLabel()
         enableNextButton()
+        self.setCustomBackButton(imgName: "close", target: self, selector: #selector(backAction))
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+    }
+    
+    @objc func backAction() {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     /// Configures the text filed and adds the tap gesture
