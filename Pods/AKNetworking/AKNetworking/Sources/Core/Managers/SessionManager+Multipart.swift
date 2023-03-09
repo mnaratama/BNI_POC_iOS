@@ -27,11 +27,11 @@ extension SessionManager {
      - parameter parameters: Parameters for the request. This parameter is optional and defaults to nil.
      - parameter encoding:   Encoding that should be used on this request. This parameter is optional and defaults to JSON.
      - parameter headers:    HTTP Headers for the request. This parameter is optional and defaults to nil.
-     
+     - parameter encodingFlag: Flag to say FIle to be encoded or not
      - returns: a Request object that represents this request.
      */
     
-    func multipartUploadRequest(urlString: String, parameters: [String: AnyObject]?, headers: [String: String]? = nil, closure: @escaping (_ error: String, _ progressStatus: String) -> Void ) -> Request? {
+    func multipartUploadRequest(urlString: String, parameters: [String: AnyObject]?, headers: [String: String]? = nil, encodingFlag: Bool? = nil, closure: @escaping (_ error: String, _ progressStatus: String) -> Void ) -> Request? {
         
         self.uploadProgressClosure = closure
         
@@ -79,7 +79,7 @@ extension SessionManager {
         
         let encoding = ParameterEncoding.multipart
         
-        return uploadRequest(urlRequest: encoding.encodeRequest(urlRequest as URLRequest, parameters: parameters) as NSURLRequest)
+        return uploadRequest(urlRequest: encoding.encodeRequest(urlRequest as URLRequest, parameters: parameters, encodingFlag: encodingFlag) as NSURLRequest)
     }
     
 }

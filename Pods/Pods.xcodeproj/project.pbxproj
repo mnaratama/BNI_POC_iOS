@@ -7,117 +7,227 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14A31675AB7F92607B869990F09F1CCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		40ED4C3A0E0288EB7734DA84F13FF033 /* Pods-BNIMobileUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAFBC7AA7A4FCDECA9279FC99247FF3 /* Pods-BNIMobileUITests-dummy.m */; };
-		4830C3208FE9D815AE38FDADC88C5902 /* Pods-BNIMobileUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 250F2479AD043CADFE61E2FF07C2CF7A /* Pods-BNIMobileUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EE0E063C5E9BEA0CDC3741C0ABF4E2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		C2568033C4CFB23EF90F828411CD3044 /* Pods-BNIMobile-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B83A06872496886BF23E4BE48ABAB05 /* Pods-BNIMobile-dummy.m */; };
-		D1B70C927CC3C8F9B8C29729670DF845 /* Pods-BNIMobileTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 493B36EEAFD14E1773A17955B03FE1AE /* Pods-BNIMobileTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0A0EA05372568A9E06979559A76D8E1 /* Pods-BNIMobile-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F63F026778BD4A87F207B592496C110 /* Pods-BNIMobile-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAACF5345F57BB8B3C673944680A8CB9 /* Pods-BNIMobileTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FED86428385483C3FC12149ED73D0FB /* Pods-BNIMobileTests-dummy.m */; };
-		FF6BE47644150233BBE1863BADDCB381 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		03FB4B811E30DC47EE8727B3E5D2D2AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1049C031A88B5477659ECB1C162B5FB0 /* StubURLHTTPProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4244E98029EA1262E28A037AB40640 /* StubURLHTTPProtocol.swift */; };
+		135CE665943F7B98BC317DE6C2B34534 /* JSON+Others.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544551D5B2482E10E840A6AEC89770AE /* JSON+Others.swift */; };
+		164A97DB9240119B42945F08669337CA /* SessionManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB8AEFE59FCCC265636C6F5D2AD4E80 /* SessionManagerDelegate.swift */; };
+		1790D33CAC91049BCB1C2D972E307D7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		21371AAE8EA646C65F7760E367D34CB6 /* JSON+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A74909A5CAB88BDA52B6044070299E7 /* JSON+Date.swift */; };
+		258A477B5C5CC9AAB644EBC14F5CE34E /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32395CE2CA9BD15F16758425A63E2B /* Global.swift */; };
+		297063F2D6ADDCA9992E53E56E6C118E /* AKRequestLogging+ServerLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DD4594D708F3054730D53EE864E5F4 /* AKRequestLogging+ServerLog.swift */; };
+		2DC594E54189F497E03DD05DE1B0D245 /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67329012A9D50A00D036A2F4BEC774A6 /* MimeType.swift */; };
+		2EB157D2D84A9B4CB10F800A4FA63C8E /* Pods-BNIMobileTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 985D1686D3D31F2754214DA05D190FDC /* Pods-BNIMobileTests-dummy.m */; };
+		3F12C85FD5CCC80AE1E52A226F3E069B /* DataSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6CCC043487F3B6637C77235F79151A /* DataSourceManager.swift */; };
+		4350C003A307FA9CD94BF6A57ED999A2 /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1135A71126CADE75350BCD6161F6BD /* DataCache.swift */; };
+		4575A8C971B9F24A0075955FE1D7DCED /* LocalServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7423FA1C1FCDF98FCFB3B5A0778FE7A4 /* LocalServer.swift */; };
+		49F5C5935CFC35B403B8F7233C66F41C /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850CA162046956E423DE547D462D8949 /* JSON.swift */; };
+		4A582F94DED2CCE8C45FABB2F92C6A2C /* AKNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D0026872F87FE444BBCE9EFCBE0D41 /* AKNetworking-dummy.m */; };
+		4A5EDF9CF3C0FE5EA2F71EE04ECBD5AE /* Pods-BNIMobile-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2BC749228DCAF8896E263DA20E27FA6 /* Pods-BNIMobile-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53EC626F2A2AB88F503C2563EC189D23 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D394C1C1019FACC729933DC58DF5D6 /* Enums.swift */; };
+		55AFCDFD6207BEBCA6AC146A77A189C8 /* RequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8EA5710397CD691145D2227DEA4C2 /* RequestDelegate.swift */; };
+		5793425886ABFCBF49E804EC19C490D8 /* DataSourceManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8BE34831A9C0729CE2F98ADEBBCCFE /* DataSourceManager+Extensions.swift */; };
+		6A54A595871175E7268DC35BD38341AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6D3681DE8B87CC58C6F058FA240C390E /* ServerPolicyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E48794FB507B8B2198B29414484B5 /* ServerPolicyManager.swift */; };
+		82D2C2718542E9A752EA51E47748A3BD /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E632078E4F5F9ED8A4E20EFE85F92B /* Response.swift */; };
+		879F4C17D4E61024E6CF9763B4C3F42A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09ED546ABB8F26420876E089360635B /* Request.swift */; };
+		9EC6F9B13F9A3E22B7EB8293F758EF45 /* AKReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89B0358EB5A3EF1623401C53190026 /* AKReachability.swift */; };
+		A3345950776BC8D0280F616B03B3E03C /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93172A24F5EE035FDA15C61710590C14 /* ResponseValidator.swift */; };
+		A6F4AFB03651DD3F4EEE183410EEC6A1 /* Pods-BNIMobileTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CD62DCD1368167504F8572613894AC /* Pods-BNIMobileTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B236AF218EA7AAECB4F9896077A6CCF5 /* NSCacheBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF0C395B0F76A836BB865409D91BC64 /* NSCacheBase.swift */; };
+		C4994211A2F49D86F1B1C21AAAB41336 /* LocalServerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A87A31B69CDFD7521B474B1E16768A /* LocalServerDelegate.swift */; };
+		CB06BFA7A569E9FDAAB10F588A6E6456 /* UIImageView+ImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E382B65E57ADE4103B965AF3447B4 /* UIImageView+ImageCaching.swift */; };
+		D3DC905ACFB0249E5319115DFDC359DA /* AKNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B2AE8EF459905CAF9FF117332C23D79 /* AKNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD5917D1CA73E2440AD4D9F0E56B838E /* SessionManager+Multipart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2330872EAB70D67182462FFEE6CD5 /* SessionManager+Multipart.swift */; };
+		DDE17A717B730991B4E43FBCF3255C1E /* Pods-BNIMobileUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE7EB171330EE24DBC85544359E4B0E /* Pods-BNIMobileUITests-dummy.m */; };
+		ED7E6B00F43424B412C8848A6DD5DE3E /* Pods-BNIMobileUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA411249640E2CCBEC80D30F7A5DC466 /* Pods-BNIMobileUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE96C0DD2E333CBA6C7CAFC85A71F5FC /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405F2C241A10A2FE8EB2431D75C4D5B4 /* SessionManager.swift */; };
+		F029A41AF40AFD3D44A98DE6E999A4CC /* Pods-BNIMobile-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E9C5921BB9E5EC54BC9D6667B9179F /* Pods-BNIMobile-dummy.m */; };
+		F2797B846A120280EA95FD324FF0A5F2 /* AKRequestLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB083B074CD4B7288608320FB8F16EF /* AKRequestLogging.swift */; };
+		F7ACA9EB909CBDA2E8EDBA30A17A35C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		FA506A68097445B578A5BE0A212CD53A /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297AE90E9C08D3FF734ACC05D4AB8C9F /* String+Base64.swift */; };
+		FB321993D2AC46EBE5FEB246C2AFC19C /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35650491921BE39913AFC666D5549D65 /* CacheManager.swift */; };
+		FBF9F5C9E0AF3033FD3C41C2F194BF11 /* JSON+Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953EEF224440AF1E3B58CD201CC473EF /* JSON+Number.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		11836EA8C51B835A5DA58752F25F9643 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0711ED88575B7370859CD1B8432B8BF;
+			remoteInfo = AKNetworking;
+		};
+		2D6EDAEFBA4CF05CD3645F1C72DC9A02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0711ED88575B7370859CD1B8432B8BF;
+			remoteInfo = AKNetworking;
+		};
+		EA13C411DC52C8FDAEE5DBB46B570BFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0711ED88575B7370859CD1B8432B8BF;
+			remoteInfo = AKNetworking;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		1B83A06872496886BF23E4BE48ABAB05 /* Pods-BNIMobile-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BNIMobile-dummy.m"; sourceTree = "<group>"; };
-		1DAFBC7AA7A4FCDECA9279FC99247FF3 /* Pods-BNIMobileUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BNIMobileUITests-dummy.m"; sourceTree = "<group>"; };
-		250F2479AD043CADFE61E2FF07C2CF7A /* Pods-BNIMobileUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BNIMobileUITests-umbrella.h"; sourceTree = "<group>"; };
-		2E7CA325F96322A5A42D2EA53437C14F /* Pods-BNIMobile-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobile-acknowledgements.plist"; sourceTree = "<group>"; };
-		33EBF1BACB6F46FBCB61D60FCEAE47F5 /* Pods-BNIMobileUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobileUITests-Info.plist"; sourceTree = "<group>"; };
-		3B89EC9F478BE345DE6AFBEB6C93D1B8 /* Pods-BNIMobileTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BNIMobileTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3F9578051AE4DCE7E8CFD349A1EB02D7 /* Pods-BNIMobileTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobileTests-Info.plist"; sourceTree = "<group>"; };
-		48617B15ED4940C39F19145E348085D0 /* Pods-BNIMobileTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobileTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		493B36EEAFD14E1773A17955B03FE1AE /* Pods-BNIMobileTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BNIMobileTests-umbrella.h"; sourceTree = "<group>"; };
-		4B2FD032FF28A1C18986DD616835397B /* Pods-BNIMobileUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobileUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4FED86428385483C3FC12149ED73D0FB /* Pods-BNIMobileTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BNIMobileTests-dummy.m"; sourceTree = "<group>"; };
-		51B9D8AB9700CFE014ACD2D4D5D54162 /* Pods-BNIMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobile.release.xcconfig"; sourceTree = "<group>"; };
-		5694BE35833101EAF93E9F1BB1494154 /* Pods-BNIMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		00A099DA1795CC356791A58D8D493695 /* Pods-BNIMobileUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobileUITests-Info.plist"; sourceTree = "<group>"; };
+		04B727FB58D9A3CFA72E58AE1D6D4464 /* Pods-BNIMobileTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BNIMobileTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		05993F35167913BF3267803AEA57F821 /* Pods-BNIMobile.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BNIMobile.modulemap"; sourceTree = "<group>"; };
+		0C2E48794FB507B8B2198B29414484B5 /* ServerPolicyManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerPolicyManager.swift; path = AKNetworking/Sources/Core/Managers/ServerPolicyManager.swift; sourceTree = "<group>"; };
+		0E1E382B65E57ADE4103B965AF3447B4 /* UIImageView+ImageCaching.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+ImageCaching.swift"; path = "AKNetworking/Sources/Helpers/UIImageView+ImageCaching.swift"; sourceTree = "<group>"; };
+		166C6BC6AA1B8CE1000FDFF09069D6A8 /* Pods-BNIMobileTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobileTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1EB57CF0AA46E3EA3ED5F83ADE357106 /* Pods-BNIMobileUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BNIMobileUITests.modulemap"; sourceTree = "<group>"; };
+		297AE90E9C08D3FF734ACC05D4AB8C9F /* String+Base64.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Base64.swift"; path = "AKNetworking/Sources/Helpers/String+Base64.swift"; sourceTree = "<group>"; };
+		2B2AE8EF459905CAF9FF117332C23D79 /* AKNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AKNetworking-umbrella.h"; sourceTree = "<group>"; };
+		32D0026872F87FE444BBCE9EFCBE0D41 /* AKNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AKNetworking-dummy.m"; sourceTree = "<group>"; };
+		35650491921BE39913AFC666D5549D65 /* CacheManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheManager.swift; path = AKNetworking/Sources/Core/Managers/CacheManager.swift; sourceTree = "<group>"; };
+		38CD62DCD1368167504F8572613894AC /* Pods-BNIMobileTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BNIMobileTests-umbrella.h"; sourceTree = "<group>"; };
+		3C4244E98029EA1262E28A037AB40640 /* StubURLHTTPProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StubURLHTTPProtocol.swift; path = AKNetworking/Sources/Core/Serializers/StubURLHTTPProtocol.swift; sourceTree = "<group>"; };
+		3ECB8DB69DF530A4F366DE6B74C012A3 /* Pods-BNIMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		405F2C241A10A2FE8EB2431D75C4D5B4 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = AKNetworking/Sources/Core/Managers/SessionManager.swift; sourceTree = "<group>"; };
+		41DD4594D708F3054730D53EE864E5F4 /* AKRequestLogging+ServerLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AKRequestLogging+ServerLog.swift"; path = "AKNetworking/Sources/Core/Logging/AKRequestLogging+ServerLog.swift"; sourceTree = "<group>"; };
+		42B492CD81F37209A8854EE8CA2B9A45 /* AKNetworking */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AKNetworking; path = AKNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C2330872EAB70D67182462FFEE6CD5 /* SessionManager+Multipart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SessionManager+Multipart.swift"; path = "AKNetworking/Sources/Core/Managers/SessionManager+Multipart.swift"; sourceTree = "<group>"; };
+		42C9D5796D80150DB782CC2F8AEE6BAE /* Pods-BNIMobile-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobile-Info.plist"; sourceTree = "<group>"; };
+		4A74909A5CAB88BDA52B6044070299E7 /* JSON+Date.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSON+Date.swift"; path = "AKNetworking/Sources/Core/Serializers/JSON+Date.swift"; sourceTree = "<group>"; };
+		4AC8EA5710397CD691145D2227DEA4C2 /* RequestDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestDelegate.swift; path = AKNetworking/Sources/Core/Serializers/RequestDelegate.swift; sourceTree = "<group>"; };
+		4D6CCC043487F3B6637C77235F79151A /* DataSourceManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataSourceManager.swift; path = AKNetworking/Sources/Core/Managers/DataSourceManager.swift; sourceTree = "<group>"; };
+		50A43357FF666BED88DAE4B6D2F6547E /* Pods-BNIMobileUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BNIMobileUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		544551D5B2482E10E840A6AEC89770AE /* JSON+Others.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSON+Others.swift"; path = "AKNetworking/Sources/Core/Serializers/JSON+Others.swift"; sourceTree = "<group>"; };
+		5448522E7656F3A532A171F940EA8FC6 /* Pods-BNIMobile-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BNIMobile-frameworks.sh"; sourceTree = "<group>"; };
 		570F32157296728E7D85F2EB86208BB7 /* Pods-BNIMobileUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BNIMobileUITests"; path = Pods_BNIMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58BB104DCDBE25DBA494366B6513015A /* Pods-BNIMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5A32F415ABF85F781F311D6F075D9ADE /* Pods-BNIMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		5F8BE34831A9C0729CE2F98ADEBBCCFE /* DataSourceManager+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DataSourceManager+Extensions.swift"; path = "AKNetworking/Sources/Core/Managers/DataSourceManager+Extensions.swift"; sourceTree = "<group>"; };
+		61D36D8EF800180EA8402B0D3F827EC3 /* AKNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AKNetworking.debug.xcconfig; sourceTree = "<group>"; };
 		66E7A90098D3B86172A21310774EB67A /* Pods-BNIMobileTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BNIMobileTests"; path = Pods_BNIMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F63F026778BD4A87F207B592496C110 /* Pods-BNIMobile-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BNIMobile-umbrella.h"; sourceTree = "<group>"; };
+		67329012A9D50A00D036A2F4BEC774A6 /* MimeType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MimeType.swift; path = AKNetworking/Sources/Core/Managers/MimeType.swift; sourceTree = "<group>"; };
+		67DDB476DD209764443B9CD4D0E89ED3 /* AKNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AKNetworking.modulemap; sourceTree = "<group>"; };
+		71AA65FA9BC619868E1A7D1288134AEE /* Pods-BNIMobile-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobile-acknowledgements.plist"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7F7DCA75D66716225BC1F93CAF72FE6D /* Pods-BNIMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobileTests.release.xcconfig"; sourceTree = "<group>"; };
-		820311F100B61F6D55BD3B9BF07099A8 /* Pods-BNIMobileUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BNIMobileUITests.modulemap"; sourceTree = "<group>"; };
-		925EB509FACC37724169E400F5A1AB80 /* Pods-BNIMobileTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BNIMobileTests.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3289768687BBCCCA319722848D5924B /* Pods-BNIMobile.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BNIMobile.modulemap"; sourceTree = "<group>"; };
-		AC2E40E0E38765F0AAB0745620648ECD /* Pods-BNIMobile-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobile-Info.plist"; sourceTree = "<group>"; };
-		C6534AC4D1A68E225B8BAE45E0ACFA97 /* Pods-BNIMobile-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BNIMobile-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D14BEFEB733BA2EDBCA82F8423CB872B /* Pods-BNIMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E7B75CD46A320C33DB7DC4B441ECC453 /* Pods_BNIMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0D7B6F4E57EB6CB901F8EAD422E6722 /* Pods-BNIMobileUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BNIMobileUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7423FA1C1FCDF98FCFB3B5A0778FE7A4 /* LocalServer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalServer.swift; path = AKNetworking/Sources/Core/LocalServer/LocalServer.swift; sourceTree = "<group>"; };
+		7CB8AEFE59FCCC265636C6F5D2AD4E80 /* SessionManagerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManagerDelegate.swift; path = AKNetworking/Sources/Core/Managers/SessionManagerDelegate.swift; sourceTree = "<group>"; };
+		7F5126330974968E5F77D1869EB34915 /* Pods-BNIMobileTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobileTests-Info.plist"; sourceTree = "<group>"; };
+		850CA162046956E423DE547D462D8949 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = AKNetworking/Sources/Core/Serializers/JSON.swift; sourceTree = "<group>"; };
+		87039DFF0051D3488BF22D534139339A /* Pods-BNIMobileTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BNIMobileTests.modulemap"; sourceTree = "<group>"; };
+		873F4720971C0AF75219C147D581A501 /* Pods-BNIMobileTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BNIMobileTests-frameworks.sh"; sourceTree = "<group>"; };
+		93172A24F5EE035FDA15C61710590C14 /* ResponseValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseValidator.swift; path = AKNetworking/Sources/Core/Serializers/ResponseValidator.swift; sourceTree = "<group>"; };
+		953EEF224440AF1E3B58CD201CC473EF /* JSON+Number.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSON+Number.swift"; path = "AKNetworking/Sources/Core/Serializers/JSON+Number.swift"; sourceTree = "<group>"; };
+		96D7559C48DFC02A5E4518E1CB8A4D34 /* AKNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AKNetworking-prefix.pch"; sourceTree = "<group>"; };
+		97337436FCDBD3B013E0B4D43837F8B8 /* AKNetworking-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AKNetworking-Info.plist"; sourceTree = "<group>"; };
+		985D1686D3D31F2754214DA05D190FDC /* Pods-BNIMobileTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BNIMobileTests-dummy.m"; sourceTree = "<group>"; };
+		9A1135A71126CADE75350BCD6161F6BD /* DataCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataCache.swift; path = AKNetworking/Sources/Core/Cache/DataCache.swift; sourceTree = "<group>"; };
+		9CB083B074CD4B7288608320FB8F16EF /* AKRequestLogging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AKRequestLogging.swift; path = AKNetworking/Sources/Core/Logging/AKRequestLogging.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A65F455D96CDD32D7EFBE2C14B1D894E /* Pods-BNIMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		B2BC749228DCAF8896E263DA20E27FA6 /* Pods-BNIMobile-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BNIMobile-umbrella.h"; sourceTree = "<group>"; };
+		B4E9C5921BB9E5EC54BC9D6667B9179F /* Pods-BNIMobile-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BNIMobile-dummy.m"; sourceTree = "<group>"; };
+		BB6715EB913DDE64026F53B6C58A2CF8 /* Pods-BNIMobileUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobileUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BC32395CE2CA9BD15F16758425A63E2B /* Global.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Global.swift; path = AKNetworking/Sources/Helpers/Global.swift; sourceTree = "<group>"; };
+		D0A87A31B69CDFD7521B474B1E16768A /* LocalServerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalServerDelegate.swift; path = AKNetworking/Sources/Core/LocalServer/LocalServerDelegate.swift; sourceTree = "<group>"; };
+		D62D66C8D9D7E0612211BDE29BD280AE /* Pods-BNIMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D93EDFDF021BE28429F0463225D52E9F /* Pods-BNIMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DA411249640E2CCBEC80D30F7A5DC466 /* Pods-BNIMobileUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BNIMobileUITests-umbrella.h"; sourceTree = "<group>"; };
+		E09ED546ABB8F26420876E089360635B /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = AKNetworking/Sources/Core/Serializers/Request.swift; sourceTree = "<group>"; };
+		E1D394C1C1019FACC729933DC58DF5D6 /* Enums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enums.swift; path = AKNetworking/Sources/Core/Managers/Enums.swift; sourceTree = "<group>"; };
+		E7B75CD46A320C33DB7DC4B441ECC453 /* Pods-BNIMobile */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BNIMobile"; path = Pods_BNIMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8D8032C5F835C927C628405B1C74D00 /* Pods-BNIMobileUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BNIMobileUITests-frameworks.sh"; sourceTree = "<group>"; };
+		ECC28291795E844EBA0B3DC9503D0E58 /* Pods-BNIMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobile.release.xcconfig"; sourceTree = "<group>"; };
+		ECF0C395B0F76A836BB865409D91BC64 /* NSCacheBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSCacheBase.swift; path = AKNetworking/Sources/Core/Cache/NSCacheBase.swift; sourceTree = "<group>"; };
+		EF89B0358EB5A3EF1623401C53190026 /* AKReachability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AKReachability.swift; path = AKNetworking/Sources/Helpers/AKReachability.swift; sourceTree = "<group>"; };
+		F62D653CDA8E6EF77B24CAC14940ED82 /* Pods-BNIMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9E06B61A65A88A2609963F93610812E /* AKNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AKNetworking.release.xcconfig; sourceTree = "<group>"; };
+		F9E632078E4F5F9ED8A4E20EFE85F92B /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = AKNetworking/Sources/Core/Serializers/Response.swift; sourceTree = "<group>"; };
+		FAE7EB171330EE24DBC85544359E4B0E /* Pods-BNIMobileUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BNIMobileUITests-dummy.m"; sourceTree = "<group>"; };
+		FED01E2E67967804275593D85C145C4D /* Pods-BNIMobile-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BNIMobile-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1EAAF02988C189136E88C1072F978ED3 /* Frameworks */ = {
+		0B729C583D70B0BAE7AC10035AF0FEAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF6BE47644150233BBE1863BADDCB381 /* Foundation.framework in Frameworks */,
+				1790D33CAC91049BCB1C2D972E307D7F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A83A7522DF1207A5FCDE5C8D75032DB9 /* Frameworks */ = {
+		27AA45DDEC097CFCC6DBF9D64BA13119 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EE0E063C5E9BEA0CDC3741C0ABF4E2A /* Foundation.framework in Frameworks */,
+				6A54A595871175E7268DC35BD38341AD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C61466E4B0BA10FA07AB2B745CCAF705 /* Frameworks */ = {
+		77655E2F0303580C0DDE922F2025ABAC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14A31675AB7F92607B869990F09F1CCF /* Foundation.framework in Frameworks */,
+				F7ACA9EB909CBDA2E8EDBA30A17A35C8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F39FB22CF6559159D16FEFBCE0583868 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03FB4B811E30DC47EE8727B3E5D2D2AC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		097AF607B2F12947A8615A3252AC2039 /* Pods-BNIMobile */ = {
+		1E61C0A7FCF34624F447AE953C3C4997 /* Pods-BNIMobileTests */ = {
 			isa = PBXGroup;
 			children = (
-				A3289768687BBCCCA319722848D5924B /* Pods-BNIMobile.modulemap */,
-				C6534AC4D1A68E225B8BAE45E0ACFA97 /* Pods-BNIMobile-acknowledgements.markdown */,
-				2E7CA325F96322A5A42D2EA53437C14F /* Pods-BNIMobile-acknowledgements.plist */,
-				1B83A06872496886BF23E4BE48ABAB05 /* Pods-BNIMobile-dummy.m */,
-				AC2E40E0E38765F0AAB0745620648ECD /* Pods-BNIMobile-Info.plist */,
-				6F63F026778BD4A87F207B592496C110 /* Pods-BNIMobile-umbrella.h */,
-				5A32F415ABF85F781F311D6F075D9ADE /* Pods-BNIMobile.debug.xcconfig */,
-				51B9D8AB9700CFE014ACD2D4D5D54162 /* Pods-BNIMobile.release.xcconfig */,
+				87039DFF0051D3488BF22D534139339A /* Pods-BNIMobileTests.modulemap */,
+				04B727FB58D9A3CFA72E58AE1D6D4464 /* Pods-BNIMobileTests-acknowledgements.markdown */,
+				166C6BC6AA1B8CE1000FDFF09069D6A8 /* Pods-BNIMobileTests-acknowledgements.plist */,
+				985D1686D3D31F2754214DA05D190FDC /* Pods-BNIMobileTests-dummy.m */,
+				873F4720971C0AF75219C147D581A501 /* Pods-BNIMobileTests-frameworks.sh */,
+				7F5126330974968E5F77D1869EB34915 /* Pods-BNIMobileTests-Info.plist */,
+				38CD62DCD1368167504F8572613894AC /* Pods-BNIMobileTests-umbrella.h */,
+				D62D66C8D9D7E0612211BDE29BD280AE /* Pods-BNIMobileTests.debug.xcconfig */,
+				A65F455D96CDD32D7EFBE2C14B1D894E /* Pods-BNIMobileTests.release.xcconfig */,
 			);
-			name = "Pods-BNIMobile";
-			path = "Target Support Files/Pods-BNIMobile";
+			name = "Pods-BNIMobileTests";
+			path = "Target Support Files/Pods-BNIMobileTests";
 			sourceTree = "<group>";
 		};
-		33F33D407EF83BD751AC61781E1A7516 /* Products */ = {
+		315C199132F8287BE91D2499E26C8F42 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E7B75CD46A320C33DB7DC4B441ECC453 /* Pods_BNIMobile.framework */,
-				66E7A90098D3B86172A21310774EB67A /* Pods-BNIMobileTests */,
-				570F32157296728E7D85F2EB86208BB7 /* Pods-BNIMobileUITests */,
+				9E54A3CE53F4CC758A122C9239FF0EE0 /* Pods-BNIMobile */,
+				1E61C0A7FCF34624F447AE953C3C4997 /* Pods-BNIMobileTests */,
+				F110BA9D42A8C55E8AD2E4474F98F9B6 /* Pods-BNIMobileUITests */,
 			);
-			name = Products;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		448B847C1DF028CC2AD4F15C8ABA4613 /* Pods-BNIMobileUITests */ = {
+		3B854AAD04716D25500F0C60B357C1B8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				820311F100B61F6D55BD3B9BF07099A8 /* Pods-BNIMobileUITests.modulemap */,
-				F0D7B6F4E57EB6CB901F8EAD422E6722 /* Pods-BNIMobileUITests-acknowledgements.markdown */,
-				4B2FD032FF28A1C18986DD616835397B /* Pods-BNIMobileUITests-acknowledgements.plist */,
-				1DAFBC7AA7A4FCDECA9279FC99247FF3 /* Pods-BNIMobileUITests-dummy.m */,
-				33EBF1BACB6F46FBCB61D60FCEAE47F5 /* Pods-BNIMobileUITests-Info.plist */,
-				250F2479AD043CADFE61E2FF07C2CF7A /* Pods-BNIMobileUITests-umbrella.h */,
-				5694BE35833101EAF93E9F1BB1494154 /* Pods-BNIMobileUITests.debug.xcconfig */,
-				D14BEFEB733BA2EDBCA82F8423CB872B /* Pods-BNIMobileUITests.release.xcconfig */,
+				597C7DF0C5D894DA1147F90EC6A1A915 /* AKNetworking */,
 			);
-			name = "Pods-BNIMobileUITests";
-			path = "Target Support Files/Pods-BNIMobileUITests";
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		559B53B113DC70F38086719D650CB7A2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				67DDB476DD209764443B9CD4D0E89ED3 /* AKNetworking.modulemap */,
+				32D0026872F87FE444BBCE9EFCBE0D41 /* AKNetworking-dummy.m */,
+				97337436FCDBD3B013E0B4D43837F8B8 /* AKNetworking-Info.plist */,
+				96D7559C48DFC02A5E4518E1CB8A4D34 /* AKNetworking-prefix.pch */,
+				2B2AE8EF459905CAF9FF117332C23D79 /* AKNetworking-umbrella.h */,
+				61D36D8EF800180EA8402B0D3F827EC3 /* AKNetworking.debug.xcconfig */,
+				F9E06B61A65A88A2609963F93610812E /* AKNetworking.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AKNetworking";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -128,20 +238,69 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		9612A9B0AB0A50E3A7751857C1FA783C /* Pods-BNIMobileTests */ = {
+		597C7DF0C5D894DA1147F90EC6A1A915 /* AKNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				925EB509FACC37724169E400F5A1AB80 /* Pods-BNIMobileTests.modulemap */,
-				3B89EC9F478BE345DE6AFBEB6C93D1B8 /* Pods-BNIMobileTests-acknowledgements.markdown */,
-				48617B15ED4940C39F19145E348085D0 /* Pods-BNIMobileTests-acknowledgements.plist */,
-				4FED86428385483C3FC12149ED73D0FB /* Pods-BNIMobileTests-dummy.m */,
-				3F9578051AE4DCE7E8CFD349A1EB02D7 /* Pods-BNIMobileTests-Info.plist */,
-				493B36EEAFD14E1773A17955B03FE1AE /* Pods-BNIMobileTests-umbrella.h */,
-				58BB104DCDBE25DBA494366B6513015A /* Pods-BNIMobileTests.debug.xcconfig */,
-				7F7DCA75D66716225BC1F93CAF72FE6D /* Pods-BNIMobileTests.release.xcconfig */,
+				EF89B0358EB5A3EF1623401C53190026 /* AKReachability.swift */,
+				9CB083B074CD4B7288608320FB8F16EF /* AKRequestLogging.swift */,
+				41DD4594D708F3054730D53EE864E5F4 /* AKRequestLogging+ServerLog.swift */,
+				35650491921BE39913AFC666D5549D65 /* CacheManager.swift */,
+				9A1135A71126CADE75350BCD6161F6BD /* DataCache.swift */,
+				4D6CCC043487F3B6637C77235F79151A /* DataSourceManager.swift */,
+				5F8BE34831A9C0729CE2F98ADEBBCCFE /* DataSourceManager+Extensions.swift */,
+				E1D394C1C1019FACC729933DC58DF5D6 /* Enums.swift */,
+				BC32395CE2CA9BD15F16758425A63E2B /* Global.swift */,
+				850CA162046956E423DE547D462D8949 /* JSON.swift */,
+				4A74909A5CAB88BDA52B6044070299E7 /* JSON+Date.swift */,
+				953EEF224440AF1E3B58CD201CC473EF /* JSON+Number.swift */,
+				544551D5B2482E10E840A6AEC89770AE /* JSON+Others.swift */,
+				7423FA1C1FCDF98FCFB3B5A0778FE7A4 /* LocalServer.swift */,
+				D0A87A31B69CDFD7521B474B1E16768A /* LocalServerDelegate.swift */,
+				67329012A9D50A00D036A2F4BEC774A6 /* MimeType.swift */,
+				ECF0C395B0F76A836BB865409D91BC64 /* NSCacheBase.swift */,
+				E09ED546ABB8F26420876E089360635B /* Request.swift */,
+				4AC8EA5710397CD691145D2227DEA4C2 /* RequestDelegate.swift */,
+				F9E632078E4F5F9ED8A4E20EFE85F92B /* Response.swift */,
+				93172A24F5EE035FDA15C61710590C14 /* ResponseValidator.swift */,
+				0C2E48794FB507B8B2198B29414484B5 /* ServerPolicyManager.swift */,
+				405F2C241A10A2FE8EB2431D75C4D5B4 /* SessionManager.swift */,
+				42C2330872EAB70D67182462FFEE6CD5 /* SessionManager+Multipart.swift */,
+				7CB8AEFE59FCCC265636C6F5D2AD4E80 /* SessionManagerDelegate.swift */,
+				297AE90E9C08D3FF734ACC05D4AB8C9F /* String+Base64.swift */,
+				3C4244E98029EA1262E28A037AB40640 /* StubURLHTTPProtocol.swift */,
+				0E1E382B65E57ADE4103B965AF3447B4 /* UIImageView+ImageCaching.swift */,
+				559B53B113DC70F38086719D650CB7A2 /* Support Files */,
 			);
-			name = "Pods-BNIMobileTests";
-			path = "Target Support Files/Pods-BNIMobileTests";
+			name = AKNetworking;
+			path = AKNetworking;
+			sourceTree = "<group>";
+		};
+		7EA772039AEE1B4C2642505B2558BB73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42B492CD81F37209A8854EE8CA2B9A45 /* AKNetworking */,
+				E7B75CD46A320C33DB7DC4B441ECC453 /* Pods-BNIMobile */,
+				66E7A90098D3B86172A21310774EB67A /* Pods-BNIMobileTests */,
+				570F32157296728E7D85F2EB86208BB7 /* Pods-BNIMobileUITests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E54A3CE53F4CC758A122C9239FF0EE0 /* Pods-BNIMobile */ = {
+			isa = PBXGroup;
+			children = (
+				05993F35167913BF3267803AEA57F821 /* Pods-BNIMobile.modulemap */,
+				FED01E2E67967804275593D85C145C4D /* Pods-BNIMobile-acknowledgements.markdown */,
+				71AA65FA9BC619868E1A7D1288134AEE /* Pods-BNIMobile-acknowledgements.plist */,
+				B4E9C5921BB9E5EC54BC9D6667B9179F /* Pods-BNIMobile-dummy.m */,
+				5448522E7656F3A532A171F940EA8FC6 /* Pods-BNIMobile-frameworks.sh */,
+				42C9D5796D80150DB782CC2F8AEE6BAE /* Pods-BNIMobile-Info.plist */,
+				B2BC749228DCAF8896E263DA20E27FA6 /* Pods-BNIMobile-umbrella.h */,
+				3ECB8DB69DF530A4F366DE6B74C012A3 /* Pods-BNIMobile.debug.xcconfig */,
+				ECC28291795E844EBA0B3DC9503D0E58 /* Pods-BNIMobile.release.xcconfig */,
+			);
+			name = "Pods-BNIMobile";
+			path = "Target Support Files/Pods-BNIMobile";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -149,19 +308,10 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				33F33D407EF83BD751AC61781E1A7516 /* Products */,
-				D1BCEF9D1B469B05A05883EFAC8A7D2D /* Targets Support Files */,
+				3B854AAD04716D25500F0C60B357C1B8 /* Pods */,
+				7EA772039AEE1B4C2642505B2558BB73 /* Products */,
+				315C199132F8287BE91D2499E26C8F42 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D1BCEF9D1B469B05A05883EFAC8A7D2D /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				097AF607B2F12947A8615A3252AC2039 /* Pods-BNIMobile */,
-				9612A9B0AB0A50E3A7751857C1FA783C /* Pods-BNIMobileTests */,
-				448B847C1DF028CC2AD4F15C8ABA4613 /* Pods-BNIMobileUITests */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -172,30 +322,55 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F110BA9D42A8C55E8AD2E4474F98F9B6 /* Pods-BNIMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1EB57CF0AA46E3EA3ED5F83ADE357106 /* Pods-BNIMobileUITests.modulemap */,
+				50A43357FF666BED88DAE4B6D2F6547E /* Pods-BNIMobileUITests-acknowledgements.markdown */,
+				BB6715EB913DDE64026F53B6C58A2CF8 /* Pods-BNIMobileUITests-acknowledgements.plist */,
+				FAE7EB171330EE24DBC85544359E4B0E /* Pods-BNIMobileUITests-dummy.m */,
+				E8D8032C5F835C927C628405B1C74D00 /* Pods-BNIMobileUITests-frameworks.sh */,
+				00A099DA1795CC356791A58D8D493695 /* Pods-BNIMobileUITests-Info.plist */,
+				DA411249640E2CCBEC80D30F7A5DC466 /* Pods-BNIMobileUITests-umbrella.h */,
+				F62D653CDA8E6EF77B24CAC14940ED82 /* Pods-BNIMobileUITests.debug.xcconfig */,
+				D93EDFDF021BE28429F0463225D52E9F /* Pods-BNIMobileUITests.release.xcconfig */,
+			);
+			name = "Pods-BNIMobileUITests";
+			path = "Target Support Files/Pods-BNIMobileUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		26B65A5602EAEE0FE6115A513E6D3DFD /* Headers */ = {
+		42A6AE6DB848843EDA9284836372FCEE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1B70C927CC3C8F9B8C29729670DF845 /* Pods-BNIMobileTests-umbrella.h in Headers */,
+				4A5EDF9CF3C0FE5EA2F71EE04ECBD5AE /* Pods-BNIMobile-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B0E9467E9C06A400B0B09DC119C08345 /* Headers */ = {
+		89B4D87F15AF1349E5C78617CA27209E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4830C3208FE9D815AE38FDADC88C5902 /* Pods-BNIMobileUITests-umbrella.h in Headers */,
+				ED7E6B00F43424B412C8848A6DD5DE3E /* Pods-BNIMobileUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB5879A55DF5C43C0DB3EAD4F8C8D976 /* Headers */ = {
+		A9AB6C8F86A8C56282613C4B7BC2908C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0A0EA05372568A9E06979559A76D8E1 /* Pods-BNIMobile-umbrella.h in Headers */,
+				A6F4AFB03651DD3F4EEE183410EEC6A1 /* Pods-BNIMobileTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9BD2A152D2BF0E6AFD2EAF169D796F5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3DC905ACFB0249E5319115DFDC359DA /* AKNetworking-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,52 +379,73 @@
 /* Begin PBXNativeTarget section */
 		7DB1CCC2058BC4E4BFB2FA08A9A42EA5 /* Pods-BNIMobileUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D95A7CE423DB1B23F4D5AD4E0974F6D /* Build configuration list for PBXNativeTarget "Pods-BNIMobileUITests" */;
+			buildConfigurationList = 728943245D62557DA1724B1FB5F4537A /* Build configuration list for PBXNativeTarget "Pods-BNIMobileUITests" */;
 			buildPhases = (
-				B0E9467E9C06A400B0B09DC119C08345 /* Headers */,
-				37889FAA82967CD7506FC9CC22292EEE /* Sources */,
-				1EAAF02988C189136E88C1072F978ED3 /* Frameworks */,
-				A478D455C5FBB9687FF6C83813835F56 /* Resources */,
+				89B4D87F15AF1349E5C78617CA27209E /* Headers */,
+				46E12F6CFC5A15CCC4433B21AF7B992B /* Sources */,
+				27AA45DDEC097CFCC6DBF9D64BA13119 /* Frameworks */,
+				D0E41EC458F126D9C1AC880B8DCF06F4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9A3FFF9F4282ACEA46CBDBA3459562D3 /* PBXTargetDependency */,
 			);
 			name = "Pods-BNIMobileUITests";
 			productName = Pods_BNIMobileUITests;
 			productReference = 570F32157296728E7D85F2EB86208BB7 /* Pods-BNIMobileUITests */;
 			productType = "com.apple.product-type.framework";
 		};
-		E05A586B5E5AA95F8839269583605E8B /* Pods-BNIMobile */ = {
+		D0711ED88575B7370859CD1B8432B8BF /* AKNetworking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 736892E9E20429E4AF5BA94A96226760 /* Build configuration list for PBXNativeTarget "Pods-BNIMobile" */;
+			buildConfigurationList = 7B859FB13E7F4CCE3E60476C99FF44AD /* Build configuration list for PBXNativeTarget "AKNetworking" */;
 			buildPhases = (
-				BB5879A55DF5C43C0DB3EAD4F8C8D976 /* Headers */,
-				739556BEC86BD1B320AA55A8A9F42083 /* Sources */,
-				A83A7522DF1207A5FCDE5C8D75032DB9 /* Frameworks */,
-				55500EDD88AB12AD836152F6FA005C10 /* Resources */,
+				D9BD2A152D2BF0E6AFD2EAF169D796F5 /* Headers */,
+				BD952ECC3EC68C9C209380B69D764BDF /* Sources */,
+				77655E2F0303580C0DDE922F2025ABAC /* Frameworks */,
+				B8489CFC0F7EE1E501D7176FF990C9CF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = AKNetworking;
+			productName = AKNetworking;
+			productReference = 42B492CD81F37209A8854EE8CA2B9A45 /* AKNetworking */;
+			productType = "com.apple.product-type.framework";
+		};
+		E05A586B5E5AA95F8839269583605E8B /* Pods-BNIMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F316E70FC3CAC6FE1248C1F4D4760EF /* Build configuration list for PBXNativeTarget "Pods-BNIMobile" */;
+			buildPhases = (
+				42A6AE6DB848843EDA9284836372FCEE /* Headers */,
+				3421B83830FA632BE35CEF00359E4446 /* Sources */,
+				0B729C583D70B0BAE7AC10035AF0FEAA /* Frameworks */,
+				955D4FBB1520DBCD7DA94BADC3C17187 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EED48CCC3B5D5E736727531C98E21915 /* PBXTargetDependency */,
+			);
 			name = "Pods-BNIMobile";
 			productName = Pods_BNIMobile;
-			productReference = E7B75CD46A320C33DB7DC4B441ECC453 /* Pods_BNIMobile.framework */;
+			productReference = E7B75CD46A320C33DB7DC4B441ECC453 /* Pods-BNIMobile */;
 			productType = "com.apple.product-type.framework";
 		};
 		E2F8CF67D326FFA3CB050FF39259C9EB /* Pods-BNIMobileTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24F7916528D5F8F680A56EBF3B19D308 /* Build configuration list for PBXNativeTarget "Pods-BNIMobileTests" */;
+			buildConfigurationList = EEAB9D211F0DEDF7D6825B11AB1C24F2 /* Build configuration list for PBXNativeTarget "Pods-BNIMobileTests" */;
 			buildPhases = (
-				26B65A5602EAEE0FE6115A513E6D3DFD /* Headers */,
-				746268DD89C50DDE9F747AF0C52624FE /* Sources */,
-				C61466E4B0BA10FA07AB2B745CCAF705 /* Frameworks */,
-				0D691BCA132D9478454D05A434DC900D /* Resources */,
+				A9AB6C8F86A8C56282613C4B7BC2908C /* Headers */,
+				E81AD894F8A262ED647F44DBC01CB78A /* Sources */,
+				F39FB22CF6559159D16FEFBCE0583868 /* Frameworks */,
+				848667DA7B30CBC022A2D15F534D8F61 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7AD2F7662085450043A8A67E29205CE5 /* PBXTargetDependency */,
 			);
 			name = "Pods-BNIMobileTests";
 			productName = Pods_BNIMobileTests;
@@ -274,10 +470,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 33F33D407EF83BD751AC61781E1A7516 /* Products */;
+			productRefGroup = 7EA772039AEE1B4C2642505B2558BB73 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D0711ED88575B7370859CD1B8432B8BF /* AKNetworking */,
 				E05A586B5E5AA95F8839269583605E8B /* Pods-BNIMobile */,
 				E2F8CF67D326FFA3CB050FF39259C9EB /* Pods-BNIMobileTests */,
 				7DB1CCC2058BC4E4BFB2FA08A9A42EA5 /* Pods-BNIMobileUITests */,
@@ -286,21 +483,28 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0D691BCA132D9478454D05A434DC900D /* Resources */ = {
+		848667DA7B30CBC022A2D15F534D8F61 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55500EDD88AB12AD836152F6FA005C10 /* Resources */ = {
+		955D4FBB1520DBCD7DA94BADC3C17187 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A478D455C5FBB9687FF6C83813835F56 /* Resources */ = {
+		B8489CFC0F7EE1E501D7176FF990C9CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E41EC458F126D9C1AC880B8DCF06F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -310,49 +514,109 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		37889FAA82967CD7506FC9CC22292EEE /* Sources */ = {
+		3421B83830FA632BE35CEF00359E4446 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40ED4C3A0E0288EB7734DA84F13FF033 /* Pods-BNIMobileUITests-dummy.m in Sources */,
+				F029A41AF40AFD3D44A98DE6E999A4CC /* Pods-BNIMobile-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		739556BEC86BD1B320AA55A8A9F42083 /* Sources */ = {
+		46E12F6CFC5A15CCC4433B21AF7B992B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2568033C4CFB23EF90F828411CD3044 /* Pods-BNIMobile-dummy.m in Sources */,
+				DDE17A717B730991B4E43FBCF3255C1E /* Pods-BNIMobileUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		746268DD89C50DDE9F747AF0C52624FE /* Sources */ = {
+		BD952ECC3EC68C9C209380B69D764BDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAACF5345F57BB8B3C673944680A8CB9 /* Pods-BNIMobileTests-dummy.m in Sources */,
+				4A582F94DED2CCE8C45FABB2F92C6A2C /* AKNetworking-dummy.m in Sources */,
+				9EC6F9B13F9A3E22B7EB8293F758EF45 /* AKReachability.swift in Sources */,
+				F2797B846A120280EA95FD324FF0A5F2 /* AKRequestLogging.swift in Sources */,
+				297063F2D6ADDCA9992E53E56E6C118E /* AKRequestLogging+ServerLog.swift in Sources */,
+				FB321993D2AC46EBE5FEB246C2AFC19C /* CacheManager.swift in Sources */,
+				4350C003A307FA9CD94BF6A57ED999A2 /* DataCache.swift in Sources */,
+				3F12C85FD5CCC80AE1E52A226F3E069B /* DataSourceManager.swift in Sources */,
+				5793425886ABFCBF49E804EC19C490D8 /* DataSourceManager+Extensions.swift in Sources */,
+				53EC626F2A2AB88F503C2563EC189D23 /* Enums.swift in Sources */,
+				258A477B5C5CC9AAB644EBC14F5CE34E /* Global.swift in Sources */,
+				49F5C5935CFC35B403B8F7233C66F41C /* JSON.swift in Sources */,
+				21371AAE8EA646C65F7760E367D34CB6 /* JSON+Date.swift in Sources */,
+				FBF9F5C9E0AF3033FD3C41C2F194BF11 /* JSON+Number.swift in Sources */,
+				135CE665943F7B98BC317DE6C2B34534 /* JSON+Others.swift in Sources */,
+				4575A8C971B9F24A0075955FE1D7DCED /* LocalServer.swift in Sources */,
+				C4994211A2F49D86F1B1C21AAAB41336 /* LocalServerDelegate.swift in Sources */,
+				2DC594E54189F497E03DD05DE1B0D245 /* MimeType.swift in Sources */,
+				B236AF218EA7AAECB4F9896077A6CCF5 /* NSCacheBase.swift in Sources */,
+				879F4C17D4E61024E6CF9763B4C3F42A /* Request.swift in Sources */,
+				55AFCDFD6207BEBCA6AC146A77A189C8 /* RequestDelegate.swift in Sources */,
+				82D2C2718542E9A752EA51E47748A3BD /* Response.swift in Sources */,
+				A3345950776BC8D0280F616B03B3E03C /* ResponseValidator.swift in Sources */,
+				6D3681DE8B87CC58C6F058FA240C390E /* ServerPolicyManager.swift in Sources */,
+				EE96C0DD2E333CBA6C7CAFC85A71F5FC /* SessionManager.swift in Sources */,
+				DD5917D1CA73E2440AD4D9F0E56B838E /* SessionManager+Multipart.swift in Sources */,
+				164A97DB9240119B42945F08669337CA /* SessionManagerDelegate.swift in Sources */,
+				FA506A68097445B578A5BE0A212CD53A /* String+Base64.swift in Sources */,
+				1049C031A88B5477659ECB1C162B5FB0 /* StubURLHTTPProtocol.swift in Sources */,
+				CB06BFA7A569E9FDAAB10F588A6E6456 /* UIImageView+ImageCaching.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E81AD894F8A262ED647F44DBC01CB78A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EB157D2D84A9B4CB10F800A4FA63C8E /* Pods-BNIMobileTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7AD2F7662085450043A8A67E29205CE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AKNetworking;
+			target = D0711ED88575B7370859CD1B8432B8BF /* AKNetworking */;
+			targetProxy = 11836EA8C51B835A5DA58752F25F9643 /* PBXContainerItemProxy */;
+		};
+		9A3FFF9F4282ACEA46CBDBA3459562D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AKNetworking;
+			target = D0711ED88575B7370859CD1B8432B8BF /* AKNetworking */;
+			targetProxy = 2D6EDAEFBA4CF05CD3645F1C72DC9A02 /* PBXContainerItemProxy */;
+		};
+		EED48CCC3B5D5E736727531C98E21915 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AKNetworking;
+			target = D0711ED88575B7370859CD1B8432B8BF /* AKNetworking */;
+			targetProxy = EA13C411DC52C8FDAEE5DBB46B570BFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		2F4E50B099731B7B8A8068B6B61F8E12 /* Release */ = {
+		53DA0F5D11BFDC1CB3AAC0DA75F85D71 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F7DCA75D66716225BC1F93CAF72FE6D /* Pods-BNIMobileTests.release.xcconfig */;
+			baseConfigurationReference = D93EDFDF021BE28429F0463225D52E9F /* Pods-BNIMobileUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -361,12 +625,13 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = " ";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -377,15 +642,18 @@
 			};
 			name = Release;
 		};
-		32D440FFC464E223589CD25BDF4A57C6 /* Debug */ = {
+		85A10CEBE91FC729767596B27EADB6DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A32F415ABF85F781F311D6F075D9ADE /* Pods-BNIMobile.debug.xcconfig */;
+			baseConfigurationReference = 3ECB8DB69DF530A4F366DE6B74C012A3 /* Pods-BNIMobile.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -407,6 +675,7 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = " ";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -415,85 +684,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		53DAD471AAE4FDD772CE0D5D2B389FD6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58BB104DCDBE25DBA494366B6513015A /* Pods-BNIMobileTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		774A887F144791248A3EADD7D2E2C436 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51B9D8AB9700CFE014ACD2D4D5D54162 /* Pods-BNIMobile.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-BNIMobile/Pods-BNIMobile-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BNIMobile/Pods-BNIMobile.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -561,6 +751,93 @@
 			};
 			name = Debug;
 		};
+		9319D111E548D3BF6806220648048EBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D62D66C8D9D7E0612211BDE29BD280AE /* Pods-BNIMobileTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = " ";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9C24E8BADD4530066B12EEC4357BB7D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECC28291795E844EBA0B3DC9503D0E58 /* Pods-BNIMobile.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-BNIMobile/Pods-BNIMobile-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BNIMobile/Pods-BNIMobile.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = " ";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -623,15 +900,18 @@
 			};
 			name = Release;
 		};
-		EAA5D9802CDF98256E7832AFF131E681 /* Debug */ = {
+		AA20340F28370A7DEC3F715806051347 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5694BE35833101EAF93E9F1BB1494154 /* Pods-BNIMobileUITests.debug.xcconfig */;
+			baseConfigurationReference = F62D653CDA8E6EF77B24CAC14940ED82 /* Pods-BNIMobileUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -653,6 +933,7 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = " ";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -662,22 +943,25 @@
 			};
 			name = Debug;
 		};
-		FA057AC7F80D9ED635C2625FE757DAA7 /* Release */ = {
+		D76A9FB3591A46479DA557C5B5828F57 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D14BEFEB733BA2EDBCA82F8423CB872B /* Pods-BNIMobileUITests.release.xcconfig */;
+			baseConfigurationReference = A65F455D96CDD32D7EFBE2C14B1D894E /* Pods-BNIMobileTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -686,12 +970,13 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BNIMobileUITests/Pods-BNIMobileUITests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = " ";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -702,27 +987,90 @@
 			};
 			name = Release;
 		};
+		EA959F8B329913578B19813F602566C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9E06B61A65A88A2609963F93610812E /* AKNetworking.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/AKNetworking/AKNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AKNetworking/AKNetworking-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AKNetworking/AKNetworking.modulemap";
+				PRODUCT_MODULE_NAME = AKNetworking;
+				PRODUCT_NAME = AKNetworking;
+				PROVISIONING_PROFILE_SPECIFIER = " ";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F95ACDA79DD7FC8372434C9A3E51AB4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61D36D8EF800180EA8402B0D3F827EC3 /* AKNetworking.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/AKNetworking/AKNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AKNetworking/AKNetworking-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AKNetworking/AKNetworking.modulemap";
+				PRODUCT_MODULE_NAME = AKNetworking;
+				PRODUCT_NAME = AKNetworking;
+				PROVISIONING_PROFILE_SPECIFIER = " ";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		24F7916528D5F8F680A56EBF3B19D308 /* Build configuration list for PBXNativeTarget "Pods-BNIMobileTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				53DAD471AAE4FDD772CE0D5D2B389FD6 /* Debug */,
-				2F4E50B099731B7B8A8068B6B61F8E12 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D95A7CE423DB1B23F4D5AD4E0974F6D /* Build configuration list for PBXNativeTarget "Pods-BNIMobileUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EAA5D9802CDF98256E7832AFF131E681 /* Debug */,
-				FA057AC7F80D9ED635C2625FE757DAA7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -732,11 +1080,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		736892E9E20429E4AF5BA94A96226760 /* Build configuration list for PBXNativeTarget "Pods-BNIMobile" */ = {
+		728943245D62557DA1724B1FB5F4537A /* Build configuration list for PBXNativeTarget "Pods-BNIMobileUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				32D440FFC464E223589CD25BDF4A57C6 /* Debug */,
-				774A887F144791248A3EADD7D2E2C436 /* Release */,
+				AA20340F28370A7DEC3F715806051347 /* Debug */,
+				53DA0F5D11BFDC1CB3AAC0DA75F85D71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B859FB13E7F4CCE3E60476C99FF44AD /* Build configuration list for PBXNativeTarget "AKNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F95ACDA79DD7FC8372434C9A3E51AB4F /* Debug */,
+				EA959F8B329913578B19813F602566C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F316E70FC3CAC6FE1248C1F4D4760EF /* Build configuration list for PBXNativeTarget "Pods-BNIMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85A10CEBE91FC729767596B27EADB6DA /* Debug */,
+				9C24E8BADD4530066B12EEC4357BB7D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEAB9D211F0DEDF7D6825B11AB1C24F2 /* Build configuration list for PBXNativeTarget "Pods-BNIMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9319D111E548D3BF6806220648048EBA /* Debug */,
+				D76A9FB3591A46479DA557C5B5828F57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -37,8 +37,8 @@ Cache control
 - MaxAgeExpired:	Max Age Expired(0)
 */
 public enum RequestCacheControl: String {
-    case cachePublic = "public"
-    case cachePrivate = "private"
+    case `public` = "public"
+    case `private` = "private"
     case noCache = "no-cache"
     case noStore = "no-store"
     case maxAgeNonExpired = "max-age=31536000"

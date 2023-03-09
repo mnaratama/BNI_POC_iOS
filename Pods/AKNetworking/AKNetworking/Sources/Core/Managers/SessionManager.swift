@@ -77,14 +77,13 @@ public class SessionManager {
     var password: String?
     var cacheControl: RequestCacheControl?
     var responseValidator: ResponseValidator?
-    static var sessionConfiguration: SessionConfiguration = .sessionDefault
+    static var sessionConfiguration: SessionConfiguration = .default
     static var enableRequestCacche: Bool = true
     static var enableURLCache: Bool = true
     
     var cachePolicy: NSURLRequest.CachePolicy = NSURLRequest.CachePolicy.useProtocolCachePolicy
     
-    /// Since AKNetworking provides a built-in class `LocalServer` which conforms to LocalServerDelegate, which can be initilised in the local scope in the host application. Making this property weak will immediately deallocates the property.
-    /// Therefore it has been left unresolved. 
+    /// Since AKNetworking provides a built-in class `LocalServer` which conforms to LocalServerDelegate, which can be initilised in the local scope in the host application. Making this property weak will immediately deallocate the property.
     public var localServerDelegate: LocalServerDelegate?
     
     var uploadProgressClosure: (_ error: String, _ progressStatus: String) -> Void
@@ -189,11 +188,10 @@ public class SessionManager {
         }
         
         // add headers if needed and don't already exist
-        for (key, value) in self.headers {
+        _ = self.headers.map { (key, value) -> Void in
             if mutableURLRequest?.value(forHTTPHeaderField: key) == nil {
                 mutableURLRequest?.setValue(value, forHTTPHeaderField: key)
             }
-            
         }
         
         mutableURLRequest?.cachePolicy = self.cachePolicy
@@ -226,7 +224,9 @@ public class SessionManager {
         
         // resume it
         task.resume()
-        AKRequestLogging.instance.saveRequestLogString(request)
+        if DataSourceManager.sharedInstance.shouldLog {
+            AKRequestLogging.instance.saveRequestLogString(request)
+        }
         
         // Building the default validator if it's necessary.
         if let validator = self.responseValidator {
@@ -270,10 +270,11 @@ public class SessionManager {
         
         // resume task
         task.resume()
-        
-        if AKRequestLogging.instance.shouldLogRequestsToConsole || AKRequestLogging.instance.shouldLogRequestsToFile {
-            
-            AKRequestLogging.instance.saveRequestLogString(request)
+        if DataSourceManager.sharedInstance.shouldLog {
+            if AKRequestLogging.instance.shouldLogRequestsToConsole || AKRequestLogging.instance.shouldLogRequestsToFile {
+                
+                AKRequestLogging.instance.saveRequestLogString(request)
+            }
         }
         
         return request
@@ -301,7 +302,6 @@ public class SessionManager {
      - parameter parameters: Parameters for the request. This parameter is optional and defaults to nil.
      - parameter encoding:   Encoding that should be used on this request. This parameter is optional and defaults to JSON.
      - parameter headers:    HTTP Headers for the request. This parameter is optional and defaults to nil.
-     
      - returns: a Request object that represents this request
      */
     func request(_ method: Method, _ urlString: String, parameters: [String: AnyObject]? = nil,
@@ -314,9 +314,11 @@ public class SessionManager {
             return components.joined(separator: "/")
         }
         
-        var URL = Foundation.URL(string: urlString)
+        let newString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        
+        var URL = Foundation.URL(string: newString)
         if URL?.host == nil, let baseURLString = self.baseURLString {
-            URL = Foundation.URL(string: relativeURLString(urlString), relativeTo: Foundation.URL(string: baseURLString)!)!
+            URL = Foundation.URL(string: relativeURLString(newString), relativeTo: Foundation.URL(string: baseURLString)!)!
         }
         
         let urlRequest = NSMutableURLRequest(url: URL!)

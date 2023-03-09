@@ -1,6 +1,6 @@
 {
   "name": "AKNetworking",
-  "version": "1.5.0",
+  "version": "2.1.0",
   "summary": "Networking is an easy to use high level abstraction library for making networking requests for iOS.",
   "homepage": "http://assemblykit.w3ibm.mybluemix.net/",
   "documentation_url": "http://assemblykit.w3ibm.mybluemix.net",
@@ -14,11 +14,10 @@
   "authors": "IBM",
   "source": {
     "git": "git@INMBZP4112.in.dst.ibm.com:apple-coc-frameworks-private/aknetworking.git",
-    "branch": "feature/swiftlint_39_5.3",
-    "tag": "RELEASE-1.5.0"
+    "tag": "RELEASE-2.1.0"
   },
   "platforms": {
-    "ios": "12.0"
+    "ios": "13.0"
   },
   "source_files": "AKNetworking/Sources/**/*.{h,m,swift}",
   "exclude_files": "AKNetworking/Resources/Supporting Files/Info.plist",

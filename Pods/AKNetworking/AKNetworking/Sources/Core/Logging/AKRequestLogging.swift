@@ -63,7 +63,7 @@ public class AKRequestLogging {
         
         var path = fileSystem[0]
         path += "/\(AKNetworkingLofFolder)"
-
+        
         let fileManager = FileManager.default
         if !fileManager.fileExists(atPath: path) {
             do {
@@ -119,6 +119,7 @@ public class AKRequestLogging {
     }
     
     private func appendStringToLogFile(_ str: String) {
+        
         let filePath = self.pathForLog()
         let fileManager = FileManager.default
         let dataToWrite = str.data(using: String.Encoding.utf8)
@@ -127,11 +128,13 @@ public class AKRequestLogging {
             self.saveStringToFile(withPath: filePath, andString: "")
         }
         
-        let fileHandle = FileHandle(forWritingAtPath: filePath)
+        guard let fileHandle = FileHandle(forWritingAtPath: filePath) else {
+            return
+        }
         
-        fileHandle?.seekToEndOfFile()
-        fileHandle?.write(dataToWrite!)
-        fileHandle?.closeFile()
+        fileHandle.seekToEndOfFile()
+        fileHandle.write(dataToWrite!)
+        fileHandle.closeFile()
     }
     
     // **************************************************
@@ -151,7 +154,7 @@ public class AKRequestLogging {
         let filePath = self.pathForLog()
         
         if fileManager.fileExists(atPath: filePath) {
-            _ = try? fileManager.removeItem(atPath: filePath)
+             _ = try? fileManager.removeItem(atPath: filePath)
         }
         
     }
@@ -180,15 +183,6 @@ public class AKRequestLogging {
     public func saveLogFile() {
         if shouldLogRequestsToFile {
             _ = self.attributesOfLogFile()
-            
-            /*
-             if let fileSize = (attributes?[FileAttributeKey.size] as AnyObject).doubleValue) {
-             if ( fileSize >= AKNetworkingMaxLogFileSize){
-             self.deleteLogFile()
-             }
-             
-             }*/
-            
             self.appendStringToLogFile("\n\(self.logString)")
         }
         
@@ -226,7 +220,7 @@ extension AKRequestLogging {
     // **************************************************
     
     private func getURLStringForPrinting(_ urlFromRequest: URL?) -> String? {
-        var urlString: String?
+        var urlString: String? 
         
         if let url = urlFromRequest {
             urlString = url.description
@@ -264,6 +258,7 @@ extension AKRequestLogging {
     // **************************************************
     
     internal func saveRequestLogString(_ request: Request) {
+        
         if shouldLogRequestsToFile || shouldLogRequestsToConsole {
             var logString = "\(AKLogRequest)\n"
             
@@ -289,7 +284,10 @@ extension AKRequestLogging {
             }
             
             logString.append("\(AKLogSeparator)\n")
-            self.saveLogString(logString)
+            
+            if DataSourceManager.sharedInstance.shouldLog {
+                self.saveLogString(logString)
+            }
         }
         
     }
@@ -329,7 +327,9 @@ extension AKRequestLogging {
             
             logString.append("\(AKLogSeparator)\n")
             
-            self.saveLogString(logString)
+            if DataSourceManager.sharedInstance.shouldLog {
+                self.saveLogString(logString)
+            }
         }
         
     }
