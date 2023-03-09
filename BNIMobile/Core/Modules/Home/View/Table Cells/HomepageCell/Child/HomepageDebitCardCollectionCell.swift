@@ -20,13 +20,15 @@ class HomepageDebitCardCollectionCell: UICollectionViewCell {
         backgroundColor = .clear
     }
     
-    func bind(){
+    func bind(cardName: String, cardNominal: String){
         cardView.layer.cornerRadius = 8
-        
         cardView.layer.shadowOffset = CGSize(width: 0.2,
                                              height: 0.7)
         cardView.layer.shadowRadius = 1.3
         cardView.layer.shadowOpacity = 0.3
         imgView.image = UIImage(named: "img_card_green")
+        
+        cardNameLabel.text = cardName
+        cardNominalLabel.text = cardNominal
     }
 }

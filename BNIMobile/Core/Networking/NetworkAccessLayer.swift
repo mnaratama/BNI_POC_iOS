@@ -109,4 +109,35 @@ class NetworkAccessLayer: NSObject {
         }
 
     }
+    
+    func getAccountCIF(cifNo: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: AccountListBaseModel?, _: NSError?) -> Void) {
+        DataSourceManager.baseURLString = "https://accountservice-mavipoc-accountservice.apps.mavipoc-pb.duh8.p1.openshiftapps.com/api/v1/"
+        Request.getAccountCif(cif: "userId").execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
+            if error == nil {
+                print("get account number response: \(json)")
+                if let baseResponse:AccountListBaseModel = self.decodeToModel(response: json) {
+                    completionHandler(true, baseResponse, nil)
+                }
+            } else {
+                completionHandler(false, nil, error)
+            }
+        }
+
+    }
+    
+    func getAccountTransaction(accountNo: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: TransactionBaseModel?, _: NSError?) -> Void) {
+        DataSourceManager.baseURLString = "https://accountservice-mavipoc-accountservice.apps.mavipoc-pb.duh8.p1.openshiftapps.com/api/v1/"
+        Request.getAccountTransaction(accountNumber: "userId").execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
+            if error == nil {
+                print("get account number response: \(json)")
+                if let baseResponse:TransactionBaseModel = self.decodeToModel(response: json) {
+                    completionHandler(true, baseResponse, nil)
+                }
+            } else {
+                completionHandler(false, nil, error)
+            }
+        }
+    }
+    
+  
 }

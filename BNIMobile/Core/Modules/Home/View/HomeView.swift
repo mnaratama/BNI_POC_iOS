@@ -24,6 +24,7 @@ class HomeView: UIViewController {
     }
     
     private func setupTableView() {
+        setupNetwork()
         tabBar.delegate = self
         tableView.register(UINib(nibName: "HomeQuicklinkTableCell", bundle: nil), forCellReuseIdentifier: "QuicklinkTableCell")
         tableView.register(UINib(nibName: "HomeHeaderTableCell", bundle: nil), forCellReuseIdentifier: "HeaderTableCell")
@@ -34,6 +35,15 @@ class HomeView: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.reloadData()
+    }
+    
+    private func setupNetwork() {
+        NetworkAccessLayer.shared.getAccountTransaction(accountNo: "", completionHandler: { [self] isSuccess, baseResponse, _  in
+            if isSuccess, let baseResponse = baseResponse, baseResponse.status == 200 {
+                homeViewModel.transactionList = baseResponse.transactions
+                tableView.reloadData()
+            }
+        })
     }
     
     @IBAction func backTapped(_ sender: UIButton) {
@@ -60,6 +70,7 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate, UITabBarDelegate
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "RecentTransactionTableCell", for: indexPath) as! HomeRecentTransactionTableCell
+            cell.bind(data: homeViewModel.transactionList ?? [])
             return cell
         }
     }
