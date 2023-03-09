@@ -327,6 +327,7 @@
                     <connections>
                         <outlet property="enterOTPLabel" destination="1ch-2h-ww8" id="npb-jw-xDK"/>
                         <outlet property="nextButton" destination="OHq-Bt-bzc" id="tSQ-UW-Q0U"/>
+                        <outlet property="resendOTPButton" destination="Z0v-jf-aZ8" id="LtQ-eS-PgE"/>
                         <outlet property="textField" destination="G6R-6P-bwd" id="Eoj-ff-ES4"/>
                         <outlet property="warningLabel" destination="ZT7-AM-Hbh" id="z0Q-cF-iBY"/>
                         <outlet property="warningView" destination="sQe-11-WZr" id="dYu-WL-I9k"/>

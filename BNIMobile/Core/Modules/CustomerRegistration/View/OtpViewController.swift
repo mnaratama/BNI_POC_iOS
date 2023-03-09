@@ -14,13 +14,17 @@ class OtpViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var warningView: UIView!
     @IBOutlet weak var enterOTPLabel: UILabel!
+    @IBOutlet weak var resendOTPButton: UIButton!
     
     var otp: String = ""
+    var timer: Timer?
+    var counter = 30
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         nextButton(shouldEnable: false)
         configureWarningLabel(showWarning: false)
+        self.performSelector(onMainThread: #selector(setTimer), with: nil, waitUntilDone: true)
     }
 
     override func viewDidLoad() {
@@ -29,6 +33,22 @@ class OtpViewController: BaseViewController, UITextFieldDelegate {
         setupEnterOTPText()
         nextButton(shouldEnable: false)
         configureWarningLabel(showWarning: false)
+    }
+    
+    @objc func setTimer() {
+        resendOTPButton.isEnabled = false
+        counter = 30
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateOTPTimerLabel), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateOTPTimerLabel() {
+        if counter > 0 {
+            counter -= 1
+        } else {
+            resendOTPButton.isEnabled = true
+            timer?.invalidate()
+        }
+        warningLabel.text = "\(counter) sec"
     }
     
     func setupEnterOTPText() {
@@ -110,13 +130,13 @@ class OtpViewController: BaseViewController, UITextFieldDelegate {
         self.configureWarningLabel(showWarning: false)
         self.nextButton(shouldEnable: false)
         self.textField.text = ""
-        // Start the timer here also
-        
         if let mobileNumber = UserDefaults.standard.string(forKey: "MobileNumber") {
             NetworkAccessLayer.shared.generateOTP(mobileNumber: mobileNumber, completionHandler: {isSuccess, baseResponse, _  in
                 if isSuccess, let baseResponse = baseResponse {
                     print("resendButtonTapped \n Response JSON : \(baseResponse)")
                 }
+                // start the tcount down imer
+                self.performSelector(onMainThread: #selector(self.setTimer), with: nil, waitUntilDone: true)
             })
         }
     }
