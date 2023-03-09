@@ -17,26 +17,41 @@ class LandingPageModalBottomView : UIViewController {
         static let transferEnterDataView = "TransferEnterDataVC"
     }
     
+    var transferViewModel = TransferViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         recipientTableView.delegate = self
         recipientTableView.dataSource = self
         print("LandingPageModalBottomView")
+        setupNetwork()
     }
     
     @IBAction func buttonMakeTransferTapped(_ sender: Any) {
         print("buttonTapped")
         
     }
+    
+    private func setupNetwork() {
+        NetworkAccessLayer.shared.getRecieverAll(cifNo: "", completionHandler: { [self] isSuccess, baseResponse, _  in
+            if isSuccess, let baseResponse = baseResponse, baseResponse.status == 200 {
+                transferViewModel.receiversList = baseResponse.receivers
+                recipientTableView.reloadData()
+            }
+        })
+    }
 }
 
 extension LandingPageModalBottomView : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return transferViewModel.receiversList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipientCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipientCell", for: indexPath) as! LandingPageModalTableViewCell
+        let bankNamesLabel = "\(transferViewModel.receiversList?[indexPath.row].receiverBankName ?? "") | \(transferViewModel.receiversList?[indexPath.row].receiverAcNumber ?? "")"
+        let countryNamesLabel = "\(transferViewModel.receiversList?[indexPath.row].receiverCountryName ?? "") - \(transferViewModel.receiversList?[indexPath.row].payerBaseCurrency ?? "")"
+        cell.bind(recipient: transferViewModel.receiversList?[indexPath.row].receiverName ?? "", bankNames: bankNamesLabel, countryNames: countryNamesLabel)
         return cell
     }
     

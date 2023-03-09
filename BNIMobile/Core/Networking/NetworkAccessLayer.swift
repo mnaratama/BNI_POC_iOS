@@ -140,5 +140,19 @@ class NetworkAccessLayer: NSObject {
         }
     }
     
+    func getRecieverAll(cifNo: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: ReceiverList?, _: NSError?) -> Void) {
+        DataSourceManager.baseURLString = "https://paymentservice-mavipoc-payment-service.apps.mavipoc-pb.duh8.p1.openshiftapps.com/api/v1/"
+        Request.getRecieverAll(cif: "cif").execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
+            if error == nil {
+                print("get account number response: \(json)")
+                if let baseResponse:ReceiverList = self.decodeToModel(response: json) {
+                    completionHandler(true, baseResponse, nil)
+                }
+            } else {
+                completionHandler(false, nil, error)
+            }
+        }
+    }
+    
   
 }

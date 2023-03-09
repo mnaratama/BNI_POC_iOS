@@ -25,6 +25,7 @@ enum Request {
     case getAccountNumber(accountNumber: String)
     case getAccountCif(cif: String)
     case getAccountTransaction(accountNumber: String)
+    case getRecieverAll(cif: String)
     
     func execute() -> AKNetworking.Request {
         let request: AKNetworking.Request
@@ -57,6 +58,10 @@ enum Request {
             
         case .getAccountTransaction(accountNumber: let accountNumber):
             request = DataSourceManager.request(.GET, "account/transaction?accountNo=\(accountNumber)", parameters: nil, headers: self.headers)
+            
+        case .getRecieverAll(cif: _):
+            request = DataSourceManager.request(.GET, "receiver/all?cif=CIF-00000", parameters: nil, headers: self.headers)
+            
         }
         // log the response
         request.responseString { (urlRequest, urlResponse, string, error) -> Void in

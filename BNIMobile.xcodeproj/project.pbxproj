@@ -47,6 +47,7 @@
 		0CE4828329B5836000A2FADC /* AddRecipientCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4828229B5836000A2FADC /* AddRecipientCountryView.swift */; };
 		2369A5B929B87AC3009CC884 /* MySpaceDealsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369A5B829B87AC3009CC884 /* MySpaceDealsTableCell.swift */; };
 		2369A5BB29B87ACB009CC884 /* MySpaceDealsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2369A5BA29B87ACB009CC884 /* MySpaceDealsTableCell.xib */; };
+		237BEBF129BA370D00353104 /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237BEBF029BA370D00353104 /* TransferViewModel.swift */; };
 		2399803D29B98D3B005458D6 /* ManageQuicklinkTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399803C29B98D3B005458D6 /* ManageQuicklinkTableCell.swift */; };
 		2399803F29B98D4F005458D6 /* ManageQuicklinkTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2399803E29B98D4F005458D6 /* ManageQuicklinkTableCell.xib */; };
 		2399804229B992F2005458D6 /* ManageQuicklinkCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399804129B992F2005458D6 /* ManageQuicklinkCollectionCell.swift */; };
@@ -184,6 +185,7 @@
 		0CE4828229B5836000A2FADC /* AddRecipientCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientCountryView.swift; sourceTree = "<group>"; };
 		2369A5B829B87AC3009CC884 /* MySpaceDealsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpaceDealsTableCell.swift; sourceTree = "<group>"; };
 		2369A5BA29B87ACB009CC884 /* MySpaceDealsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySpaceDealsTableCell.xib; sourceTree = "<group>"; };
+		237BEBF029BA370D00353104 /* TransferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModel.swift; sourceTree = "<group>"; };
 		2399803C29B98D3B005458D6 /* ManageQuicklinkTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageQuicklinkTableCell.swift; sourceTree = "<group>"; };
 		2399803E29B98D4F005458D6 /* ManageQuicklinkTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageQuicklinkTableCell.xib; sourceTree = "<group>"; };
 		2399804129B992F2005458D6 /* ManageQuicklinkCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageQuicklinkCollectionCell.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 		0CE4827B29B5816200A2FADC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				237BEBF029BA370D00353104 /* TransferViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1169,6 +1172,7 @@
 				800880E529B84DDB00580816 /* HomepageView.swift in Sources */,
 				800880D929B84DDB00580816 /* HomeRecentTransactionCollectionCell.swift in Sources */,
 				740CC3B929B85077000B3D44 /* NavigationBar.swift in Sources */,
+				237BEBF129BA370D00353104 /* TransferViewModel.swift in Sources */,
 				80347F2029B39CD700048831 /* Logger.swift in Sources */,
 				800880CD29B84DDB00580816 /* MySpaceClaimRewardTableCell.swift in Sources */,
 				8008808829B7632700580816 /* MobileNumberViewModel.swift in Sources */,
