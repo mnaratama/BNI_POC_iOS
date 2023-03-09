@@ -41,7 +41,6 @@ class OtpViewController: BaseViewController, UITextFieldDelegate {
     
     @objc func updateOTPTimerLabel() {
         if counter > 0 {
-            print("\(counter) seconds to the end of the world")
             counter -= 1
         } else {
             timer?.invalidate()
