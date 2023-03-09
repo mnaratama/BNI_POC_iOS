@@ -29,7 +29,7 @@ class MpinView: BaseViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         nextButton(shouldEnable: false)
         configureWarningLabel(showWarning: false)
-        self.performSelector(onMainThread: #selector(setTimer), with: nil, waitUntilDone: true)
+       // self.performSelector(onMainThread: #selector(setTimer), with: nil, waitUntilDone: true)
     }
 
     override func viewDidLoad() {
@@ -103,11 +103,13 @@ class MpinView: BaseViewController, UITextFieldDelegate {
     func configureWarningLabel(showWarning: Bool) {
         configureWarningBorderView(showWarning: showWarning)
         if showWarning {
-            self.warningLabel.text = "Wrong OTP"
+            self.warningLabel.text = "Wrong MPIN"
             self.warningLabel.textColor = UIColor.red
+            self.warningLabel.isHidden = false
         } else {
-            self.warningLabel.text = "30 sec"
-            self.warningLabel.textColor = UIColor.lightGray
+            self.warningLabel.text = ""
+            self.warningLabel.textColor = UIColor.clear
+            self.warningLabel.isHidden = true
         }
     }
         
@@ -142,7 +144,7 @@ class MpinView: BaseViewController, UITextFieldDelegate {
                     print("resendButtonTapped \n Response JSON : \(baseResponse)")
                 }
                 // start the tcount down imer
-                self.performSelector(onMainThread: #selector(self.setTimer), with: nil, waitUntilDone: true)
+                    //self.performSelector(onMainThread: #selector(self.setTimer), with: nil, waitUntilDone: true)
             })
         }
     }

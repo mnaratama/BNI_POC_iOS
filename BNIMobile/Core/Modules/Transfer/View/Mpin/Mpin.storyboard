@@ -391,6 +391,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="yb2-Tz-8Fs" secondAttribute="trailing" id="5TU-ph-kf5"/>
                                                     <constraint firstAttribute="trailing" secondItem="yb2-Tz-8Fs" secondAttribute="trailing" id="6Is-uE-8Hi"/>
@@ -411,11 +412,13 @@
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJb-IV-Mgj">
                                                                         <rect key="frame" x="0.0" y="15.333333333333327" width="289" height="19.333333333333329"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstItem="KJb-IV-Mgj" firstAttribute="centerY" secondItem="8xf-Ou-Yz6" secondAttribute="centerY" id="Fkp-bs-kCd"/>
                                                                     <constraint firstItem="KJb-IV-Mgj" firstAttribute="leading" secondItem="8xf-Ou-Yz6" secondAttribute="leading" id="Mhf-gF-rA2"/>
@@ -433,6 +436,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                 </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstItem="OYK-c9-fGY" firstAttribute="top" secondItem="0NY-hp-Rqz" secondAttribute="top" constant="12" id="AcY-KF-hdq"/>
                                                                     <constraint firstAttribute="width" constant="40" id="F0s-1O-PPc"/>
@@ -440,9 +444,10 @@
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="gPt-CI-n1C" firstAttribute="top" secondItem="1e8-g3-FOB" secondAttribute="top" id="CPa-Hn-Ha3"/>
                                                     <constraint firstAttribute="bottom" secondItem="gPt-CI-n1C" secondAttribute="bottom" id="YYu-J5-rpM"/>
@@ -451,6 +456,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="5uW-Xk-Bas" firstAttribute="top" secondItem="1og-Mm-Fji" secondAttribute="top" id="gAQ-4q-ZZJ"/>
                                         </constraints>
@@ -511,7 +517,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="nextButtonTapped:" destination="ObV-Pc-KgP" eventType="touchUpInside" id="Rey-e4-Tmg"/>
+                                    <action selector="buttonSubmitTapped:" destination="ObV-Pc-KgP" eventType="touchUpInside" id="wNK-Ih-fsX"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLC-CO-tFg">
