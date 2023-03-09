@@ -96,6 +96,21 @@ class NetworkAccessLayer: NSObject {
 
     }
     
+    func getUserData(userId: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: BaseResponse?, _: NSError?) -> Void) {
+        DataSourceManager.baseURLString = "https://productservice-mavipoc-ps.apps.mavipoc-pb.duh8.p1.openshiftapps.com"
+        Request.getUserData(userId: userId).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
+            if error == nil {
+                print("getUserData response: \(json)")
+                if let baseResponse:BaseResponse = self.decodeToModel(response: json) {
+                    completionHandler(true, baseResponse, nil)
+                }
+            } else {
+                completionHandler(false, nil, error)
+            }
+        }
+
+    }
+    
     func getAccountBalance(accounrNo: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: AccountTransaction?, _: NSError?) -> Void) {
         DataSourceManager.baseURLString = "https://accountservice-mavipoc-accountservice.apps.mavipoc-pb.duh8.p1.openshiftapps.com/"
         Request.getAccountNumber(accountNumber: accounrNo).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in

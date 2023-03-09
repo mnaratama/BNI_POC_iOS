@@ -55,11 +55,17 @@ class PreLoginViewController: BaseViewController {
 }
 
 extension PreLoginViewController {
-    func getAccountBalance(){
-        NetworkAccessLayer.shared.getAccountBalance(accounrNo: "000001", completionHandler: { isSuccess,baseResponse,_ in
-            if let baseResponse = baseResponse, baseResponse.status == 200 {
-                self.transactions =  baseResponse.transactions ?? []
-                self.tableView.reloadData()
+    func getAccountBalance() {
+        let storedCredentials = Keychain.readStoredCredentialsFromKeychain()
+        let username = storedCredentials?["username"] as? String ?? ""
+        NetworkAccessLayer.shared.getUserData(userId: username, completionHandler: { isSuccess, baseResponse, _ in
+            if let baseResponse = baseResponse, baseResponse.responsestatuscode == 200, let accountNumber = baseResponse.userData?.accountno {
+                NetworkAccessLayer.shared.getAccountBalance(accounrNo: accountNumber, completionHandler: { isSuccess, baseResponse, _ in
+                    if let baseResponse = baseResponse, baseResponse.status == 200 {
+                        self.transactions =  baseResponse.transactions ?? []
+                        self.tableView.reloadData()
+                    }
+                })
             }
         })
     }
