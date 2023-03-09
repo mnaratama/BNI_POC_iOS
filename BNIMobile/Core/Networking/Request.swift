@@ -22,6 +22,7 @@ enum Request {
     case generateOTP(mobileNumber: String)
     case validateOTP(otp: String)
     case verifyCredentials(userId: String, password: String)
+    case getAccountNumber(accountNumber: String)
     
     func execute() -> AKNetworking.Request {
         let request: AKNetworking.Request
@@ -45,6 +46,9 @@ enum Request {
             parameters["password"] = "bnipassword" as AnyObject
 
             request = DataSourceManager.request(.POST, "/api/v1/verifyCredentials", parameters: parameters, headers: self.headers)
+            
+        case .getAccountNumber(accountNumber: _):
+            request = DataSourceManager.request(.GET, "balance-info?account-num=000000", parameters: nil, headers: self.headers)
         }
         // log the response
         request.responseString { (urlRequest, urlResponse, string, error) -> Void in
