@@ -41,12 +41,12 @@
 		7F7DCA75D66716225BC1F93CAF72FE6D /* Pods-BNIMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		820311F100B61F6D55BD3B9BF07099A8 /* Pods-BNIMobileUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BNIMobileUITests.modulemap"; sourceTree = "<group>"; };
 		925EB509FACC37724169E400F5A1AB80 /* Pods-BNIMobileTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BNIMobileTests.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3289768687BBCCCA319722848D5924B /* Pods-BNIMobile.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BNIMobile.modulemap"; sourceTree = "<group>"; };
 		AC2E40E0E38765F0AAB0745620648ECD /* Pods-BNIMobile-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BNIMobile-Info.plist"; sourceTree = "<group>"; };
 		C6534AC4D1A68E225B8BAE45E0ACFA97 /* Pods-BNIMobile-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BNIMobile-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D14BEFEB733BA2EDBCA82F8423CB872B /* Pods-BNIMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BNIMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E7B75CD46A320C33DB7DC4B441ECC453 /* Pods-BNIMobile */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BNIMobile"; path = Pods_BNIMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B75CD46A320C33DB7DC4B441ECC453 /* Pods_BNIMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNIMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0D7B6F4E57EB6CB901F8EAD422E6722 /* Pods-BNIMobileUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BNIMobileUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,7 +97,7 @@
 		33F33D407EF83BD751AC61781E1A7516 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E7B75CD46A320C33DB7DC4B441ECC453 /* Pods-BNIMobile */,
+				E7B75CD46A320C33DB7DC4B441ECC453 /* Pods_BNIMobile.framework */,
 				66E7A90098D3B86172A21310774EB67A /* Pods-BNIMobileTests */,
 				570F32157296728E7D85F2EB86208BB7 /* Pods-BNIMobileUITests */,
 			);
@@ -235,7 +235,7 @@
 			);
 			name = "Pods-BNIMobile";
 			productName = Pods_BNIMobile;
-			productReference = E7B75CD46A320C33DB7DC4B441ECC453 /* Pods-BNIMobile */;
+			productReference = E7B75CD46A320C33DB7DC4B441ECC453 /* Pods_BNIMobile.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E2F8CF67D326FFA3CB050FF39259C9EB /* Pods-BNIMobileTests */ = {

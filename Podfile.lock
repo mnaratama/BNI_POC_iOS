@@ -1,3 +1,21 @@
-PODFILE CHECKSUM: 11e89a3dc5d105bdee35ccb862a90fecc90d6159
+PODS:
+  - AKNetworking (1.5.0)
+
+DEPENDENCIES:
+  - "AKNetworking (from `git@github.com:maverick-poc/maverick-ibm-AKNetworking.git`)"
+
+EXTERNAL SOURCES:
+  AKNetworking:
+    :git: "git@github.com:maverick-poc/maverick-ibm-AKNetworking.git"
+
+CHECKOUT OPTIONS:
+  AKNetworking:
+    :commit: a1cb1496b9aed2552d13fa032858dcd7f37671bf
+    :git: "git@github.com:maverick-poc/maverick-ibm-AKNetworking.git"
+
+SPEC CHECKSUMS:
+  AKNetworking: 1d6d9dc65c2609e8f84e72cbc249295bc8167d56
+
+PODFILE CHECKSUM: 23716a9d1afaebede8979ca5ab429fb826680d77
 
 COCOAPODS: 1.12.0
