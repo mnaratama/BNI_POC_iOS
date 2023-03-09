@@ -49,11 +49,24 @@ class HomepageView: UIViewController {
     }
     
     @IBAction func manageTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: StoryboardName.home, bundle: nil)
+        let presentingViewController = storyboard.instantiateViewController(withIdentifier: ViewControllerName.quicklinksVC)
+        if #available(iOS 15.0, *) {
+            if let sheet = presentingViewController.sheetPresentationController{
+                sheet.detents = [.medium(), .large()]
+                sheet.largestUndimmedDetentIdentifier = .medium
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            }
+        } else {
+            presentingViewController.modalPresentationStyle = .pageSheet
+            presentingViewController.modalTransitionStyle = .coverVertical
+        }
+        present(presentingViewController, animated: true, completion: nil)
     }
     
     @IBAction func mySpaceTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: StoryboardName.home, bundle: nil)
-        let presentingViewController = storyboard.instantiateViewController(withIdentifier: "MySpace")
+        let presentingViewController = storyboard.instantiateViewController(withIdentifier: ViewControllerName.myspaceVC)
         if #available(iOS 15.0, *) {
             if let sheet = presentingViewController.sheetPresentationController{
                 sheet.detents = [.medium(), .large()]

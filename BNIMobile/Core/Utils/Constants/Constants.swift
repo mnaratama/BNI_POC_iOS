@@ -31,4 +31,6 @@ enum ViewControllerName {
     static let preLoginRootNavigation = "PreLoginRootNavigation"
     static let biometricLoginVC = "BiometricLoginViewController"
     static let loginVC = "LoginViewController"
+    static let myspaceVC = "MySpace"
+    static let quicklinksVC = "QuicklinksView"
 }
