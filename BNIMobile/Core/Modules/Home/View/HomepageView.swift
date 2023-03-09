@@ -126,15 +126,18 @@ extension HomepageView: HomepageDebitCardTableCellDelegate, HomepageOtherQuickli
     // Navigate to AccountPage
     func collectionView(collectionviewcell: HomepageDebitCardCollectionCell?, index: Int, didTappedInTableViewCell: HomepageDebitCardTableCell) {
         guard let viewController = UIStoryboard(name: StoryboardName.home, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.homeviewVC) as? HomeView else {
-            fatalError("Failed to load Main from EnterMobileNumberVC file")
+            fatalError("Failed to load Main from CongratulationsPointViewController file")
         }
-        viewController.modalPresentationStyle = .overFullScreen
-        self.present(viewController, animated: false)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     // Navigate to Quicklink
     func collectionView(collectionviewcell: HomeQuicklinksCollectionCell?, index: Int, didTappedInTableViewCell: HomepageOtherQuicklinkTableCell) {
         //TODO: Load EPIC4 Here
+        guard let viewController = UIStoryboard(name: StoryboardName.landingPage, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.landingPageVC) as? LandingPageView else {
+            fatalError("Failed to load Main from CongratulationsPointViewController file")
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     // Navigate to Quicklink
