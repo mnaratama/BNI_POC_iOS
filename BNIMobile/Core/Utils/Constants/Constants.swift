@@ -33,4 +33,6 @@ enum ViewControllerName {
     static let loginVC = "LoginViewController"
     static let myspaceVC = "MySpace"
     static let quicklinksVC = "QuicklinksView"
+    static let transactionCell = "TransactionTableViewCell"
+    
 }
