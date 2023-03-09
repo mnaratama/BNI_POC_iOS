@@ -71,6 +71,7 @@ class NetworkAccessLayer: NSObject {
     func validateOTP(otp: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: BaseResponse?, _: NSError?) -> Void){
         Request.validateOTP(otp: otp).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
             if error == nil {
+                print("validateOTP response: \(json)")
                 if let baseResponse:BaseResponse = self.decodeToModel(response: json) {
                     completionHandler(true, baseResponse, nil)
                 }

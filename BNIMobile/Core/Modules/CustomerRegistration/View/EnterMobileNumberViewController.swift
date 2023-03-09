@@ -66,9 +66,13 @@ class EnterMobileNumberViewController: BaseViewController, UITextFieldDelegate {
         
         let newString = ((textField.text ?? "") as NSString).replacingCharacters(in: range, with: string)
         // enable next button only if the number is entered, disable if the number is cleared
-        self.nextButton(shouldEnable: !newString.isEmpty)
+        self.nextButton(shouldEnable: !newString.isEmpty && newString.count >= 10)
 
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = "+62"
     }
     
     // MARK: - Button action
@@ -81,7 +85,7 @@ class EnterMobileNumberViewController: BaseViewController, UITextFieldDelegate {
         })
 
         guard let viewController = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.OtpViewController) as? OtpViewController else {
-            fatalError("Failed to load Main from CongratulationsPointViewController file")
+            fatalError("Failed to load Main from OtpViewController file")
         }
         self.navigationController?.pushViewController(viewController, animated: true)
     }
