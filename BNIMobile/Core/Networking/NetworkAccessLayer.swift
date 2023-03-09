@@ -69,8 +69,10 @@ class NetworkAccessLayer: NSObject {
     }
     
     func validateOTP(otp: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: BaseResponse?, _: NSError?) -> Void){
+        DataSourceManager.baseURLString = "https://otp-mavipoc-otp.apps.mavipoc-pb.duh8.p1.openshiftapps.com"
         Request.validateOTP(otp: otp).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
             if error == nil {
+                
                 print("validateOTP response: \(json)")
                 if let baseResponse:BaseResponse = self.decodeToModel(response: json) {
                     completionHandler(true, baseResponse, nil)
