@@ -13,7 +13,7 @@ class MpinView: BaseViewController, UITextFieldDelegate {
         static let transferSuccessView = "TransferSuccessVC"
     }
     
-    
+    var transferConfirmationViewModel: TransferConfirmationViewModel?
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var warningLabel: UILabel!
@@ -126,7 +126,7 @@ class MpinView: BaseViewController, UITextFieldDelegate {
                 guard let viewController = UIStoryboard(name: Constants.transferStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.transferSuccessView) as? TransferSuccessView else {
                     fatalError("Failed to load Transfer from MpinView file")
                 }
-
+                viewController.transferConfirmationViewModel = self.transferConfirmationViewModel
                 self.navigationController?.pushViewController(viewController, animated: true)
             } else {
                 self.configureWarningLabel(showWarning: true)

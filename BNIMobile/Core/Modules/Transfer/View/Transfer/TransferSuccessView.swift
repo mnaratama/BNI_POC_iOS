@@ -9,6 +9,11 @@ import UIKit
 
 class TransferSuccessView : UIViewController {
     
+    @IBOutlet weak var amountLabel: UILabel!
+    
+    @IBOutlet weak var recipientNameLabel: UILabel!
+    
+    
     enum Constants {
         static let transferStoryboardName = "Transfer"
         static let transferRecurringSuccessView = "TransferRecurringSuccessVC"
@@ -18,10 +23,12 @@ class TransferSuccessView : UIViewController {
 
     }
     
-    
+    var transferConfirmationViewModel: TransferConfirmationViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         print("TransferSuccessView")
+        self.amountLabel.text = "\(self.transferConfirmationViewModel?.currencyConversion?.destinationAmount ?? 0.00)"
+        self.recipientNameLabel.text = self.transferConfirmationViewModel?.receiver?.receiverName ?? ""
     }
     
     @IBAction func setUpButtonTapped(_ sender: Any) {

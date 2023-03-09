@@ -67,7 +67,7 @@ class TransferReviewView : UIViewController {
         guard let viewController = UIStoryboard(name: Constants.mPinStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.mPinView) as? MpinView else {
             fatalError("Failed to load Transfer from TransferReviewView file")
         }
-
+        viewController.transferConfirmationViewModel = self.transferConfirmationViewModel
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     

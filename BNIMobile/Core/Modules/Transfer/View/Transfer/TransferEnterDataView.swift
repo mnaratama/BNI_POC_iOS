@@ -96,7 +96,7 @@ class TransferEnterDataView : UIViewController, UITextFieldDelegate {
         transferConfirmViewModel.receiver = recepient
         transferConfirmViewModel.chargeType = self.chargeType
         currencyConverter.sourceCurrencyCode = recepient?.payerBaseCurrencySymbol ?? ""
-        currencyConverter.destinationCurrencyCode = recepient?.receiverCurrencySymbol ?? ""
+        currencyConverter.destinationCurrencyCode = "EUR"
         transferConfirmViewModel.currencyConversion = currencyConverter
         viewController.transferConfirmationModel = transferConfirmViewModel
         

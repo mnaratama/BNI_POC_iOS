@@ -138,7 +138,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtJ-Tj-V6K">
-                                <rect key="frame" x="0.0" y="175.33333333333337" width="378" height="651"/>
+                                <rect key="frame" x="0.0" y="175.33333333333337" width="378" height="650.99999999999989"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exY-0O-i1z">
                                         <rect key="frame" x="0.0" y="0.0" width="378" height="651"/>
@@ -2658,6 +2658,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i3h-b8-X0F"/>
+                    <connections>
+                        <outlet property="amountLabel" destination="Tfs-yj-bhk" id="llZ-fX-LJL"/>
+                        <outlet property="recipientNameLabel" destination="hDw-yV-7GB" id="H3V-Sw-UKf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4x-N1-EPU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="YPY-hr-sFJ">
