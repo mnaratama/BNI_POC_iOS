@@ -50,8 +50,9 @@ enum Request {
 
             request = DataSourceManager.request(.POST, "/api/v1/verifyCredentials", parameters: parameters, headers: self.headers)
             
-        case .getAccountNumber(accountNumber: _):
-            request = DataSourceManager.request(.GET, "balance-info?account-num=000000", parameters: nil, headers: self.headers)
+        case .getAccountNumber(accountNumber: let accountNumber):
+            let url = "api/v1/account/balance?accountNo=" + accountNumber
+            request = DataSourceManager.request(.GET, url, parameters: nil, headers: self.headers)
             
         case .getAccountCif(cif: _):
             request = DataSourceManager.request(.GET, "account/all?cif=CIF-00001", parameters: nil, headers: self.headers)

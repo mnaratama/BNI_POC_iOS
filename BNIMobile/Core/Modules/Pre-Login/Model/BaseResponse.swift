@@ -23,6 +23,7 @@ struct BaseResponse : Codable {
 	let value : Value?
     let data : String?
     let userData: String?
+    let accountName: String?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -33,6 +34,7 @@ struct BaseResponse : Codable {
 		case value = "value"
         case data = "data"
         case userData = "userData"
+        case accountName = "accountName"
 	}
 
 	init(from decoder: Decoder) throws {
@@ -44,6 +46,7 @@ struct BaseResponse : Codable {
 		value = try values.decodeIfPresent(Value.self, forKey: .value)
         data = try values.decodeIfPresent(String.self, forKey: .data)
         userData = try values.decodeIfPresent(String.self, forKey: .userData)
+        accountName = try values.decodeIfPresent(String.self, forKey: .accountName)
 	}
     
     func encode(to encoder: Encoder) throws {
