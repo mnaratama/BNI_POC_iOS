@@ -27,4 +27,9 @@ class TransferEnterDataView : UIViewController {
 
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

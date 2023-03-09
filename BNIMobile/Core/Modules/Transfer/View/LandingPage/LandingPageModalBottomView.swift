@@ -19,16 +19,14 @@ class LandingPageModalBottomView : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        recipientTableView.delegate = self
+        recipientTableView.dataSource = self
         print("LandingPageModalBottomView")
     }
     
     @IBAction func buttonMakeTransferTapped(_ sender: Any) {
         print("buttonTapped")
-        guard let viewController = UIStoryboard(name: Constants.transferStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.transferEnterDataView) as? TransferEnterDataView else {
-            fatalError("Failed to load Transfer from LandingPageVC file")
-        }
-
-        self.navigationController?.pushViewController(viewController, animated: true)
+        
     }
 }
 
@@ -40,5 +38,13 @@ extension LandingPageModalBottomView : UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipientCell", for: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewController = UIStoryboard(name: Constants.transferStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.transferEnterDataView) as? TransferEnterDataView else {
+            fatalError("Failed to load Transfer from LandingPageVC file")
+        }
+
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

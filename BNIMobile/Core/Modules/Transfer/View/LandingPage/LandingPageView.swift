@@ -11,6 +11,9 @@ class LandingPageView : UIViewController {
     enum Constants {
         static let transferStoryboardName = "Transfer"
         static let transferEnterDataView = "TransferEnterDataVC"
+        static let landingPageStoryboardName = "LandingPage"
+        static let landingPageModalBottomView = "LandingPageModalBottomVC"
+
     }
     
     
@@ -28,8 +31,8 @@ class LandingPageView : UIViewController {
     
     @IBAction func buttonMakeTransferTapped(_ sender: Any) {
         print("buttonTapped")
-        guard let viewController = UIStoryboard(name: Constants.transferStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.transferEnterDataView) as? TransferEnterDataView else {
-            fatalError("Failed to load Transfer from LandingPageVC file")
+        guard let viewController = UIStoryboard(name: Constants.landingPageStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.landingPageModalBottomView) as? LandingPageModalBottomView else {
+            fatalError("Failed to load landingPageModalBottomView from LandingPageView file")
         }
 
         self.navigationController?.pushViewController(viewController, animated: true)
