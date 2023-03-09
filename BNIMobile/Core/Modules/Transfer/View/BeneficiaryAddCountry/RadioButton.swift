@@ -7,24 +7,27 @@
 
 import UIKit
 
-class RadioButton: UIButton {
+class RadioButton: UIImageView {
     // Images
     let checkedImage = UIImage(named: "ic_radio_button")! as UIImage
     let uncheckedImage = UIImage(named: "ic_radio_button_outline_blank")! as UIImage
+    
     
     // Bool property
     var isChecked: Bool = false {
         didSet {
             if isChecked == true {
-                self.setImage(checkedImage, for: UIControl.State.normal)
+                self.image = checkedImage
             } else {
-                self.setImage(uncheckedImage, for: UIControl.State.normal)
+                self.image = uncheckedImage
             }
         }
     }
         
     override func awakeFromNib() {
-        self.addTarget(self, action:#selector(buttonClicked(sender:)), for: UIControl.Event.touchUpInside)
+        self.isUserInteractionEnabled = true
+        var gesture = UITapGestureRecognizer(target: self, action: #selector(buttonClicked(sender:)))
+        self.addGestureRecognizer(gesture)
         self.isChecked = false
     }
         

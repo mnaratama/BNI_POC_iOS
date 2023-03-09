@@ -10,9 +10,6 @@ import UIKit
 class LandingPageModalTableViewCell : UITableViewCell {
     
     @IBOutlet weak var recipientName: UILabel!
-    
     @IBOutlet weak var bankNamesWithAccountNumber: UILabel!
-    
-    
     @IBOutlet weak var countryNamesWithCurrency: UILabel!
 }

@@ -138,7 +138,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtJ-Tj-V6K">
-                                <rect key="frame" x="0.0" y="175.33333333333337" width="378" height="650.99999999999989"/>
+                                <rect key="frame" x="0.0" y="175.33333333333337" width="378" height="651"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exY-0O-i1z">
                                         <rect key="frame" x="0.0" y="0.0" width="378" height="651"/>
@@ -501,7 +501,7 @@
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPZ-5z-uUt">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="44" height="80"/>
                                                                                 <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radio_button_outline_blank" translatesAutoresizingMaskIntoConstraints="NO" id="iaV-29-slN">
+                                                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radio_button_outline_blank" translatesAutoresizingMaskIntoConstraints="NO" id="iaV-29-slN">
                                                                                         <rect key="frame" x="21" y="16" width="15" height="15"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="width" secondItem="iaV-29-slN" secondAttribute="height" multiplier="1:1" id="grE-CK-U2H"/>
@@ -563,7 +563,7 @@
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tis-NN-riV">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="44" height="80"/>
                                                                                 <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radio_button_outline_blank" translatesAutoresizingMaskIntoConstraints="NO" id="K27-ze-tG0">
+                                                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_radio_button_outline_blank" translatesAutoresizingMaskIntoConstraints="NO" id="K27-ze-tG0">
                                                                                         <rect key="frame" x="21" y="16" width="15" height="15"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="15" id="chj-2D-rmC"/>
@@ -811,6 +811,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="YlP-ba-otI"/>
                     <size key="freeformSize" width="378" height="1000"/>
+                    <connections>
+                        <outlet property="beneficiaryRadioButton" destination="iaV-29-slN" id="SQM-1J-rMx"/>
+                        <outlet property="guaranteedRadioButton" destination="K27-ze-tG0" id="h9S-rs-agR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g85-l1-uUs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="CDu-BC-S4j">
@@ -1247,8 +1251,9 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MoU-f6-m2m">
                                                                 <rect key="frame" x="0.0" y="0.0" width="44" height="52"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="uSi-1e-MbS">
-                                                                        <rect key="frame" x="21" y="16" width="15" height="15"/>
+                                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uSi-1e-MbS">
+                                                                        <rect key="frame" x="21" y="17.666666666666664" width="15" height="12.000000000000004"/>
+                                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="uSi-1e-MbS" secondAttribute="height" multiplier="1:1" id="9nv-4l-h2Q"/>
                                                                             <constraint firstAttribute="height" constant="15" id="zhE-JG-cpP"/>
@@ -1456,8 +1461,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RtU-9o-SrW">
                                         <rect key="frame" x="16" y="34" width="346" height="20"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="bls-22-KTg">
-                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bls-22-KTg">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="20" height="17.000000000000004"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="0zr-ud-v6b"/>
                                                     <constraint firstAttribute="width" secondItem="bls-22-KTg" secondAttribute="height" multiplier="1:1" id="M1c-3V-Gax"/>
@@ -1590,6 +1596,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="65r-wP-iTv"/>
                     <size key="freeformSize" width="378" height="1000"/>
+                    <connections>
+                        <outlet property="tcButton" destination="bls-22-KTg" id="pCP-xL-UeI"/>
+                        <outlet property="usePoinButton" destination="uSi-1e-MbS" id="3WC-bC-eMx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOU-7K-b6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="MTr-Cc-AGo">
@@ -2913,8 +2923,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0X-Py-NB7">
                                         <rect key="frame" x="16" y="36" width="361" height="38"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="oz6-0N-4cj">
-                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oz6-0N-4cj">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="20" height="17.000000000000004"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="FfV-Lx-Gbn"/>
                                                     <constraint firstAttribute="width" secondItem="oz6-0N-4cj" secondAttribute="height" multiplier="1:1" id="iG2-7G-AhS"/>
@@ -3438,11 +3449,11 @@
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="ic_bni_point" width="39" height="18"/>
-        <image name="ic_checkbox" width="5.3333334922790527" height="5.3333334922790527"/>
         <image name="ic_radio_button_outline_blank" width="6.6666665077209473" height="6.6666665077209473"/>
         <image name="img_avatar_transfer" width="10.666666984558105" height="10.666666984558105"/>
         <image name="img_card" width="45.666667938232422" height="29.666666030883789"/>
         <image name="img_checkmark" width="24" height="24"/>
+        <image name="square" catalog="system" width="128" height="114"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="BNI Teal">
             <color red="0.0" green="0.40000000000000002" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

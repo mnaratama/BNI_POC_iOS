@@ -16,7 +16,6 @@ class LandingPageView : UIViewController {
 
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("LandingPageView")

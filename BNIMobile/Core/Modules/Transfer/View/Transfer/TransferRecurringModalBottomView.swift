@@ -21,7 +21,29 @@ class TransferRecurringModalBottomView : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("TransferRecurringModalBottomView")
+//        setupGestureRecognizer()
+
     }
+    
+//    func setupGestureRecognizer(){
+//        let usePoinGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(usePoinSelector(tapGestureRecognizer:)))
+//        usePoinButton.addGestureRecognizer(usePoinGestureRecognizer)
+//
+//    }
+    
+//    @objc func usePoinSelector(tapGestureRecognizer: UITapGestureRecognizer){
+//        print("tapped")
+//        let tappedImage = tapGestureRecognizer.view as! UIImageView
+//        if(isCheckedPoin){
+//            tappedImage.image = UIImage(systemName:  "square")! as UIImage
+//            isCheckedPoin = false
+//        }
+//        else {
+//            tappedImage.image = UIImage(systemName: "checkmark.square")! as UIImage
+//            isCheckedPoin = true
+//        }
+//    }
+
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

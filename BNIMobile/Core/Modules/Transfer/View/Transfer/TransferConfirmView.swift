@@ -13,10 +13,51 @@ class TransferConfirmView : UIViewController {
         static let transferReviewView = "TransferReviewVC"
     }
     
+    var isCheckedPoin = false
+    var isCheckedTC = false
+    
+    @IBOutlet weak var usePoinButton: UIImageView!
+    
+    @IBOutlet weak var tcButton: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("TransferConfirmView")
+        setupGestureRecognizer()
+    }
+    
+    func setupGestureRecognizer(){
+        let usePoinGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(usePoinSelector(tapGestureRecognizer:)))
+        usePoinButton.addGestureRecognizer(usePoinGestureRecognizer)
+        
+        let tcGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tcSelector(tapGestureRecognizer:)))
+        tcButton.addGestureRecognizer(tcGestureRecognizer)
+    }
+    
+    @objc func usePoinSelector(tapGestureRecognizer: UITapGestureRecognizer){
+        print("tapped")
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        if(isCheckedPoin){
+            tappedImage.image = UIImage(systemName:  "square")! as UIImage
+            isCheckedPoin = false
+        }
+        else {
+            tappedImage.image = UIImage(systemName: "checkmark.square")! as UIImage
+            isCheckedPoin = true
+        }
+    }
+    
+    @objc func tcSelector(tapGestureRecognizer: UITapGestureRecognizer){
+        print("tapped")
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        if(isCheckedTC){
+            tappedImage.image = UIImage(systemName:  "square")! as UIImage
+            isCheckedTC = false
+        }
+        else {
+            tappedImage.image = UIImage(systemName: "checkmark.square")! as UIImage
+            isCheckedTC = true
+        }
     }
     
     @IBAction func buttonProceedTapped(_ sender: Any) {
