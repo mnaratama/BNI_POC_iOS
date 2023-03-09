@@ -22,7 +22,7 @@ struct BaseResponse : Codable {
 	let error : BNIError?
 	let value : Value?
     let data : String?
-    let userData: String?
+    let userData: UserData?
     let accountName: String?
 
 	enum CodingKeys: String, CodingKey {
@@ -45,7 +45,7 @@ struct BaseResponse : Codable {
 		error = try values.decodeIfPresent(BNIError.self, forKey: .error)
 		value = try values.decodeIfPresent(Value.self, forKey: .value)
         data = try values.decodeIfPresent(String.self, forKey: .data)
-        userData = try values.decodeIfPresent(String.self, forKey: .userData)
+        userData = try values.decodeIfPresent(UserData.self, forKey: .userData)
         accountName = try values.decodeIfPresent(String.self, forKey: .accountName)
 	}
     

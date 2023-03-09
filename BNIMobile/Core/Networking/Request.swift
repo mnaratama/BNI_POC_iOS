@@ -22,6 +22,7 @@ enum Request {
     case generateOTP(mobileNumber: String)
     case validateOTP(otp: String)
     case verifyCredentials(userId: String, password: String)
+    case getUserData(userId: String)
     case getAccountNumber(accountNumber: String)
     case getAccountCif(cif: String)
     case getAccountTransaction(accountNumber: String)
@@ -50,6 +51,11 @@ enum Request {
 
             request = DataSourceManager.request(.POST, "/api/v1/verifyCredentials", parameters: parameters, headers: self.headers)
             
+        case .getUserData(userId: let userId):
+            var headers = self.headers
+            headers["userId"] = userId
+            request = DataSourceManager.request(.GET, "/api/v1/getUserData", parameters: nil, headers: headers)
+
         case .getAccountNumber(accountNumber: let accountNumber):
             let url = "api/v1/account/balance?accountNo=" + accountNumber
             request = DataSourceManager.request(.GET, url, parameters: nil, headers: self.headers)
