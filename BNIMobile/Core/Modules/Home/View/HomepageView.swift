@@ -24,6 +24,19 @@ class HomepageView: UIViewController {
         
         setupTableView()
         setupView()
+        NetworkAccessLayer.shared.getAccountCIF(cifNo: "", completionHandler: { isSuccess, baseResponse, _  in
+            if isSuccess, let baseResponse = baseResponse, baseResponse.message == "success" {
+//                let data = baseResponse.content?.current_balance
+                print("xxxxxxxxx")
+            }
+        })
+        
+        NetworkAccessLayer.shared.getAccountTransaction(accountNo: "", completionHandler: { isSuccess, baseResponse, _  in
+            if isSuccess, let baseResponse = baseResponse, baseResponse.message == "success" {
+//                let data = baseResponse.content?.current_balance
+                print("xxxxxxxxx")
+            }
+        })
     }
     
     override func viewDidLayoutSubviews() {
