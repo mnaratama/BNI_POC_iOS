@@ -416,6 +416,21 @@
             </objects>
             <point key="canvasLocation" x="2632" y="-306"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vor-BG-WBV">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="Xck-JP-Q9G" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kfs-gi-oLF">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9Vl-tZ-6cj" kind="relationship" relationship="rootViewController" id="LpU-dt-Qk4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GDp-hV-7dJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3357" y="-306"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oK9-fj-d6N">
             <objects>
@@ -648,6 +663,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="RPg-fn-7Fr"/>
                     <connections>
+                        <outlet property="nominalLabel" destination="0T1-ej-lXs" id="Xq1-ML-P5D"/>
                         <outlet property="pointLabel" destination="ENw-5J-wdJ" id="fiZ-A3-Zb8"/>
                         <outlet property="tabBar" destination="83t-Ok-TSj" id="B8g-d1-baB"/>
                         <outlet property="tableView" destination="ENC-U6-sMQ" id="2Gc-la-Tk1"/>

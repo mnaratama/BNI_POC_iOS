@@ -56,7 +56,7 @@ enum Request {
             request = DataSourceManager.request(.GET, "account/all?cif=CIF-00001", parameters: nil, headers: self.headers)
             
         case .getAccountTransaction(accountNumber: let accountNumber):
-            request = DataSourceManager.request(.GET, "account/transaction?accountNo=000001", parameters: nil, headers: self.headers)
+            request = DataSourceManager.request(.GET, "account/transaction?accountNo=\(accountNumber)", parameters: nil, headers: self.headers)
         }
         // log the response
         request.responseString { (urlRequest, urlResponse, string, error) -> Void in
