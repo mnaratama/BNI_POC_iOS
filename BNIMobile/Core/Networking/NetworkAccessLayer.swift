@@ -29,23 +29,6 @@ class NetworkAccessLayer: NSObject {
     
     private override init() {}
     
-    
-    func parse(response: JSON) -> BaseResponse? {
-        let mainDict = response.object as? Dictionary<String, AnyObject>
-        if let eMainDict = mainDict {
-            if let jsonData = try? JSONSerialization.data(withJSONObject: eMainDict, options: .sortedKeys) {
-                do {
-                    let basereponse = try JSONDecoder().decode(BaseResponse.self, from: jsonData)
-                    return basereponse
-                } catch {
-                    print(error)
-                    return nil
-                }
-            }
-        }
-        return nil
-    }
-    
     func decodeToModel<T: Codable>(response: JSON) -> T? {
         let mainDict = response.object as? Dictionary<String, AnyObject>
         if let eMainDict = mainDict {
@@ -76,7 +59,7 @@ class NetworkAccessLayer: NSObject {
     func generateOTP(mobileNumber : String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: BaseResponse?, _: NSError?) -> Void){
         Request.generateOTP(mobileNumber: mobileNumber).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
             if error == nil {
-                if let baseResponse = self.parse(response: json) {
+                if let baseResponse:BaseResponse = self.decodeToModel(response: json) {
                     completionHandler(true, baseResponse, nil)
                 }
             } else {
@@ -88,7 +71,7 @@ class NetworkAccessLayer: NSObject {
     func validateOTP(otp: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: BaseResponse?, _: NSError?) -> Void){
         Request.validateOTP(otp: otp).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
             if error == nil {
-                if let baseResponse = self.parse(response: json) {
+                if let baseResponse:BaseResponse = self.decodeToModel(response: json) {
                     completionHandler(true, baseResponse, nil)
                 }
             } else {
@@ -102,7 +85,7 @@ class NetworkAccessLayer: NSObject {
         Request.verifyCredentials(userId: userId, password: password).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
             if error == nil {
                 print("verifyCredentials response: \(json)")
-                if let baseResponse = self.parse(response: json) {
+                if let baseResponse:BaseResponse = self.decodeToModel(response: json) {
                     completionHandler(true, baseResponse, nil)
                 }
             } else {
