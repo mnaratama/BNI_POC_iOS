@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension Double {
     var nonTrailingZero: String {
@@ -87,5 +88,16 @@ extension Int {
     var asCountDownFormat: String{
         let str = String(self)
         return str.count > 1 ? str : "0\(str)"
+    }
+}
+
+extension UIDevice {
+    func isJailBroken() -> Bool {
+        let cydiaPath = "/Applications/Cydia.app"
+        let aptPath = "/private/var/lib/apt/"
+        if FileManager.default.fileExists(atPath: cydiaPath) || FileManager.default.fileExists(atPath: aptPath) {
+            return true
+        }
+        return false
     }
 }

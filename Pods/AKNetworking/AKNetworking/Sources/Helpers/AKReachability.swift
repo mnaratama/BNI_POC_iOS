@@ -45,6 +45,7 @@ Enum with the possible status of the internet connection monitored by
 AKReachability
 */
 public enum AKReachabilityStatus {
+    
     case notReachable
     case reachableViaWWan
     case reachableViaWifi
@@ -52,11 +53,11 @@ public enum AKReachabilityStatus {
     public var description: String {
         switch self {
         case .reachableViaWWan:
-                return "ReachableViaWWan"
+            return "ReachableViaWWan"
         case .reachableViaWifi:
-                return "ReachableViaWifi"
+            return "ReachableViaWifi"
         case .notReachable:
-                return "NotReachable"
+            return "NotReachable"
         }
         
     }
@@ -148,10 +149,9 @@ public class AKReachability {
     
     private static func createReachabilityWithHost(_ host: String) -> SCNetworkReachability? {
         let hostToReach = host
-        
-        guard let networkReachability = withUnsafePointer(to: hostToReach, {_ in 
+        var host = hostToReach
+        guard let networkReachability = withUnsafePointer(to: &host, {_ in
             SCNetworkReachabilityCreateWithName(nil, hostToReach)
-            
         }) else {
             return nil
         }
@@ -183,11 +183,11 @@ public class AKReachability {
     private static func isReachableFromStatus(_ status: AKReachabilityStatus) -> Bool {
         switch status {
         case .reachableViaWifi:
-                return true
+            return true
         case .reachableViaWWan:
-                return true
+            return true
         default:
-                return false
+            return false
         }
         
     }
@@ -207,6 +207,19 @@ public class AKReachability {
                 selfInstance.reachabilityClosure?(selfInstance.isReachable,
                                                   selfInstance.reachabilityStatus)
             })
+    }
+    
+    private func getReachabilityFlags() -> SCNetworkReachabilityFlags? {
+        guard let reachability = scNetworkReachability else {
+            return nil
+        }
+        
+        var flags = SCNetworkReachabilityFlags()
+        if !SCNetworkReachabilityGetFlags(reachability, &flags) {
+            return nil
+        }
+        
+        return flags
     }
 
 // **************************************************
@@ -239,9 +252,12 @@ public class AKReachability {
                 let reachabilityStatus = AKReachability.statusFromReachabilityFlags(flags)
                 let isReachable = AKReachability.isReachableFromStatus(reachabilityStatus)
             
-                AKReachability.handleReachabilityStatusUpdate(info!,
-                    isReachable: isReachable,
-                    reachabilityStatus: reachabilityStatus)
+                let selfInstance = Unmanaged<AKReachability>.fromOpaque(info!).takeUnretainedValue()
+                if selfInstance.isReachable != isReachable {
+                    AKReachability.handleReachabilityStatusUpdate(info!,
+                                                                  isReachable: isReachable,
+                                                                  reachabilityStatus: reachabilityStatus)
+                }
             },
             &scNetworkContext)
         
@@ -291,6 +307,36 @@ public class AKReachability {
         }
         
         self.scNetworkReachability = addressReachability
+    }
+    
+    /**
+     Perform a synchronous check to determine current reachabillity state via reachability flags.
+     
+     - parameter shouldNotify: a Boolean value to indicate whether the application should be notified via the
+     usual channels (notification, closure) if a change in reachability is detected via synchronous check
+     
+     - returns: boolean value indicative of whether device is considered reachable based on reachability flags
+     */
+    public func performSynchronousReachabilityCheck(shouldNotify: Bool) -> Bool {
+        guard let reachabilityFlags = getReachabilityFlags() else { return false }
+        
+        let reachabilityStatus = AKReachability.statusFromReachabilityFlags(reachabilityFlags)
+        let isReachable = AKReachability.isReachableFromStatus(reachabilityStatus)
+        
+        if shouldNotify, self.isReachable != isReachable {
+            self._isReachable = isReachable
+            self._reachabilityStatus = reachabilityStatus
+            
+            NotificationCenter.default.post(name: Notification.Name(rawValue: AKReachabilityDidChangeNotification),
+                                            object: nil,
+                                            userInfo: ["AKReachabilityStatusChanged": reachabilityStatus.description])
+            
+            DispatchQueue.main.async(execute: { () -> Void in
+                self.reachabilityClosure?(self.isReachable,
+                                          self.reachabilityStatus)})
+        }
+        
+        return isReachable
     }
     
 // **************************************************

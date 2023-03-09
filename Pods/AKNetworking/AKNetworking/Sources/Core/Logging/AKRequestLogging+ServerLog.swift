@@ -34,7 +34,6 @@ extension AKRequestLogging {
      binary of the log file
      - parameter headers: Adittional headers that you may want to pass to your webserver, defaults
      to nil
-     
      - returns: A Request object that represents this operation
      */
     public func sendLogToWebserverInBody(_ method: Method = .POST, url: String, parameterName: String, headers: [String: String]? = nil) -> Request {

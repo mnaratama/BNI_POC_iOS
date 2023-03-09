@@ -132,7 +132,9 @@ public class Request: NSObject {
 
             // dispatch to the completion handler on the configured queue (main by default)
             if let response = self.response, let data = self.data {
-                AKRequestLogging.instance.saveResponseLogString(self, response: response, responseData: data)
+                if DataSourceManager.sharedInstance.shouldLog {
+                    AKRequestLogging.instance.saveResponseLogString(self, response: response, responseData: data)
+                }
             }
 
             self.completionQueue.async {
@@ -240,7 +242,7 @@ extension Request {
      */
     public class func stringResponseSerializer(_ encoding: String.Encoding = String.Encoding.utf8) -> Serializer {
         return { (_, _, data) in
-            var responseString: String?
+            var responseString: String? 
             if let data = data {
                 if let string = NSString(data: data, encoding: encoding.rawValue) as String? {
                     responseString = string
@@ -332,17 +334,16 @@ extension Request {
      - returns: an UIImage Serializer.
      */
     public class func imageResponseSerializer() -> Serializer {
+        // request, response
         return { _, _, data in
             if data == nil {
                 return (nil, nil)
             }
-
             // let image = UIImage(data: data!, scale: UIScreen.main.scale)
             let image = UIImage(data: data!, scale: UIScreen.main.scale)
 
             return (image, nil)
         }
-        
     }
 
     /**
@@ -358,9 +359,7 @@ extension Request {
             // call the completion handler and cast the unserialized data
             completionHandler(urlRequest, urlResponse, object as? UIImage, error)
         }
-        
     }
-    
 }
 
 // **************************************************
@@ -392,5 +391,4 @@ extension Request {
 
         return self
     }
-    
 }

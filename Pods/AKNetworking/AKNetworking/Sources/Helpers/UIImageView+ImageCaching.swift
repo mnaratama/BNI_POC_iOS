@@ -119,7 +119,7 @@ extension UIImageView {
                             
                             if let failure = failure {
                                 failure(urlRequest, response, error)
-                            } 
+                            }
 
                             // cleanup the request
                             strongSelf.request = nil
@@ -145,9 +145,7 @@ extension UIImageView {
                     }
                     
                 }
-                
             }
-            
         }
         
     }
