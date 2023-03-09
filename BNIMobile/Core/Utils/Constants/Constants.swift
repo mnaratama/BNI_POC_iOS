@@ -11,6 +11,10 @@ enum StoryboardName {
     static let main = "Main"
     static let preLogin = "PreLogin"
     static let home = "Home"
+    static let mpin = "Mpin"
+    static let landingPage = "LandingPage"
+    static let addRecipient = "AddRecipient"
+    static let transfer = "Transfer"
     static let enterMobileNumberVC = "EnterMobileNumberVC"
     static let congratulationsDoneVC = "CongratulationsDoneViewController"
     static let congratulationsPointVC = "CongratulationsPointViewController"
@@ -35,4 +39,5 @@ enum ViewControllerName {
     static let quicklinksVC = "QuicklinksView"
     static let transactionCell = "TransactionTableViewCell"
     
+    static let landingPageVC = "LandingPageVC"
 }
