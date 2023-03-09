@@ -14,6 +14,7 @@ class OtpViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var warningView: UIView!
     @IBOutlet weak var enterOTPLabel: UILabel!
+    @IBOutlet weak var resendOTPButton: UIButton!
     
     var otp: String = ""
     var timer: Timer?
@@ -35,6 +36,7 @@ class OtpViewController: BaseViewController, UITextFieldDelegate {
     }
     
     @objc func setTimer() {
+        resendOTPButton.isEnabled = false
         counter = 30
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateOTPTimerLabel), userInfo: nil, repeats: true)
     }
@@ -43,6 +45,7 @@ class OtpViewController: BaseViewController, UITextFieldDelegate {
         if counter > 0 {
             counter -= 1
         } else {
+            resendOTPButton.isEnabled = true
             timer?.invalidate()
         }
         warningLabel.text = "\(counter) sec"
