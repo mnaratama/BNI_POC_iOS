@@ -30,6 +30,8 @@ class PreLoginViewController: BaseViewController {
     }
     
     @IBAction func longPressForBalance(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
         showBalanceView(status: false)
     }
     
