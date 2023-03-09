@@ -68,18 +68,7 @@ class NetworkAccessLayer: NSObject {
         }
     }
     
-    func sendOTP(otp : String, completionHandler: @escaping (_ isSuccess: Bool,  _ json: JSON, _: NSError?) -> Void){
-        Request.sendOTP(otp: otp).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
-            if error == nil {
-                print("sendOTP response: \(json)")
-                completionHandler(true, json, nil)
-            } else {
-                completionHandler(false,json, error)
-            }
-        }
-    }
-    
-    func validateOTP(otp : String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: BaseResponse?, _: NSError?) -> Void){
+    func validateOTP(otp: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: BaseResponse?, _: NSError?) -> Void){
         Request.validateOTP(otp: otp).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
             if error == nil {
                 if let baseResponse = self.parse(response: json) {
@@ -89,5 +78,20 @@ class NetworkAccessLayer: NSObject {
                 completionHandler(false, nil, error)
             }
         }
+    }
+    
+    func verifyCredentials(userId: String, password: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: BaseResponse?, _: NSError?) -> Void) {
+        DataSourceManager.baseURLString = "https://productservice-mavipoc-ps.apps.mavipoc-pb.duh8.p1.openshiftapps.com"
+        Request.verifyCredentials(userId: userId, password: password).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
+            if error == nil {
+                print("verifyCredentials response: \(json)")
+                if let baseResponse = self.parse(response: json) {
+                    completionHandler(true, baseResponse, nil)
+                }
+            } else {
+                completionHandler(false, nil, error)
+            }
+        }
+
     }
 }

@@ -49,6 +49,7 @@ class EnterMobileNumberViewController: BaseViewController, UITextFieldDelegate {
         self.nextButton.backgroundColor = shouldEnable ? UIColor(named: Constants.colorBNITeal) : UIColor(named: Constants.colorButtonDisabled)
     }
     
+    // MARK: - TextField Delegates
     /// called each time user enters a value in the textFiled, Validation should happen here
     @objc func updatedValue(textField: UITextField) {
         guard let valueEntered = textField.text else {
@@ -70,6 +71,7 @@ class EnterMobileNumberViewController: BaseViewController, UITextFieldDelegate {
         return true
     }
     
+    // MARK: - Button action
     @IBAction func buttonDoneTapped(_ sender: Any) {
         UserDefaults.standard.set(self.mobileNumber, forKey: "MobileNumber")
         NetworkAccessLayer.shared.generateOTP(mobileNumber: self.mobileNumber, completionHandler: {isSuccess, baseResponse, _  in
