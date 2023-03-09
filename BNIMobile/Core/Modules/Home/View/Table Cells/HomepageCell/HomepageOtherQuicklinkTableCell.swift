@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomepageOtherQuicklinkTableCellCellDelegate: class {
     func collectionView(collectionviewcell: HomeQuicklinksCollectionCell?, index: Int, didTappedInTableViewCell: HomepageOtherQuicklinkTableCell)
+    func pushToManage()
 }
 
 class HomepageOtherQuicklinkTableCell: UITableViewCell {
@@ -39,6 +40,11 @@ class HomepageOtherQuicklinkTableCell: UITableViewCell {
         items = data
         collectionView.reloadData()
     }
+    
+    @IBAction func manageTapped(_ sender: UIButton) {
+        self.cellDelegate?.pushToManage()
+    }
+    
 }
 
 extension HomepageOtherQuicklinkTableCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{

@@ -18,7 +18,6 @@ class HomepageView: UIViewController {
     @IBOutlet weak var mySpaceView: UIView!
     
     var homeViewModel = HomeViewModel()
-    var selectedIndex = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,19 +48,6 @@ class HomepageView: UIViewController {
     }
     
     @IBAction func manageTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: StoryboardName.home, bundle: nil)
-        let presentingViewController = storyboard.instantiateViewController(withIdentifier: ViewControllerName.quicklinksVC)
-        if #available(iOS 15.0, *) {
-            if let sheet = presentingViewController.sheetPresentationController{
-                sheet.detents = [.medium(), .large()]
-                sheet.largestUndimmedDetentIdentifier = .medium
-                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
-            }
-        } else {
-            presentingViewController.modalPresentationStyle = .pageSheet
-            presentingViewController.modalTransitionStyle = .coverVertical
-        }
-        present(presentingViewController, animated: true, completion: nil)
     }
     
     @IBAction func mySpaceTapped(_ sender: UIButton) {
@@ -107,26 +93,11 @@ extension HomepageView: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 1 {
-            if selectedIndex == -1 {
-                selectedIndex = 1
-            }else{
-                selectedIndex = -1
-            }
-            tableView.reloadData()
-        }
-    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return 112
         } else if indexPath.row == 1 {
-            if selectedIndex == -1 {
-                return 156
-            }else{
-                return 256
-            }
+            return 156
         } else {
             return 164
         }
@@ -147,6 +118,23 @@ extension HomepageView: HomepageDebitCardTableCellDelegate, HomepageOtherQuickli
     // Navigate to Quicklink
     func collectionView(collectionviewcell: HomeQuicklinksCollectionCell?, index: Int, didTappedInTableViewCell: HomepageOtherQuicklinkTableCell) {
         //TODO: Load EPIC4 Here
+    }
+    
+    // Navigate to Quicklink
+    func pushToManage() {
+        let storyboard = UIStoryboard(name: StoryboardName.home, bundle: nil)
+        let presentingViewController = storyboard.instantiateViewController(withIdentifier: ViewControllerName.quicklinksVC)
+        if #available(iOS 15.0, *) {
+            if let sheet = presentingViewController.sheetPresentationController{
+                sheet.detents = [.medium(), .large()]
+                sheet.largestUndimmedDetentIdentifier = .medium
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            }
+        } else {
+            presentingViewController.modalPresentationStyle = .pageSheet
+            presentingViewController.modalTransitionStyle = .coverVertical
+        }
+        present(presentingViewController, animated: true, completion: nil)
     }
     
 }

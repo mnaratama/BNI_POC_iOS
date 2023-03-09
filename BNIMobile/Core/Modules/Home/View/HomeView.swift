@@ -55,6 +55,7 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate, UITabBarDelegate
             return cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuicklinkTableCell", for: indexPath) as! HomeQuicklinkTableCell
+            cell.cellDelegate = self
             cell.bind(data: homeViewModel.yourQuicklinkItems, selected: selectedIndex)
             return cell
         } else {
@@ -91,4 +92,30 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate, UITabBarDelegate
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         self.dismiss(animated: false, completion: nil)
     }
+}
+
+extension HomeView: HomeQuicklinkTableCellDelegate {
+    
+    // Navigate to Quicklink
+    func collectionView(collectionviewcell: HomeQuicklinksCollectionCell?, index: Int, didTappedInTableViewCell: HomeQuicklinkTableCell) {
+        //TODO: Load EPIC4 Here
+    }
+    
+    // Navigate to Quicklink
+    func pushToManage() {
+        let storyboard = UIStoryboard(name: StoryboardName.home, bundle: nil)
+        let presentingViewController = storyboard.instantiateViewController(withIdentifier: ViewControllerName.quicklinksVC)
+        if #available(iOS 15.0, *) {
+            if let sheet = presentingViewController.sheetPresentationController{
+                sheet.detents = [.medium(), .large()]
+                sheet.largestUndimmedDetentIdentifier = .medium
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            }
+        } else {
+            presentingViewController.modalPresentationStyle = .pageSheet
+            presentingViewController.modalTransitionStyle = .coverVertical
+        }
+        present(presentingViewController, animated: true, completion: nil)
+    }
+    
 }

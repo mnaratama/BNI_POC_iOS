@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol HomeQuicklinkTableCellDelegate: class {
+    func collectionView(collectionviewcell: HomeQuicklinksCollectionCell?, index: Int, didTappedInTableViewCell: HomeQuicklinkTableCell)
+    func pushToManage()
+}
+
 class HomeQuicklinkTableCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
@@ -15,7 +20,7 @@ class HomeQuicklinkTableCell: UITableViewCell {
     @IBOutlet weak var buttonImg: UIImageView!
     
     var items: [QuicklinkModel] = []
-    var didSelectCell: ((Int)->Void)?
+    weak var cellDelegate: HomeQuicklinkTableCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -57,6 +62,7 @@ class HomeQuicklinkTableCell: UITableViewCell {
     }
     
     @IBAction func manageTapped(_ sender: UIButton) {
+        self.cellDelegate?.pushToManage()
     }
     
 }
@@ -85,6 +91,9 @@ extension HomeQuicklinkTableCell: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didSelectCell?(indexPath.row)
+        if indexPath.row == 0 {
+            let cell = collectionView.cellForItem(at: indexPath) as? HomeQuicklinksCollectionCell
+            self.cellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
+        }
     }
 }
