@@ -58,7 +58,7 @@ class EnterCredentialViewController: BaseViewController, UITextFieldDelegate {
                 guard let viewController = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.congratulationsDoneVC) as? CongratulationsDoneViewController else {
                     fatalError("Failed to load Main from CongratulationsDoneViewController file")
                 }
-                self.userDefaultsToSaveCustomerRegStatus()
+                self.userDefaultsToSaveCustomerRegStatus(with: baseResponse.accountName)
                 self.navigationController?.pushViewController(viewController, animated: true)
             } else {
                 self.configureWarningBorderView(showWarning: true)
@@ -77,10 +77,11 @@ class EnterCredentialViewController: BaseViewController, UITextFieldDelegate {
         passwordWarningView.layer.borderColor = UIColor.red.cgColor
     }
 
-    func userDefaultsToSaveCustomerRegStatus() {
-        //TODO: can be removed once we have the API inplace to determine this status
+    func userDefaultsToSaveCustomerRegStatus(with accountName: String?) {
+        //TODO: userDefaults can be removed once we have the API inplace to determine this status
         let userDefaults = UserDefaults.standard
         userDefaults.set(true, forKey: "hasCustomerRegistered")
+        userDefaults.set(accountName, forKey: "accountName")
         if let username = userIdTextField.text, let password = passwordTextField.text {
             storeCredentials(username, password)
         }
