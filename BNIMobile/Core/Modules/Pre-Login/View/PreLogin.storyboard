@@ -292,6 +292,7 @@
                     <navigationItem key="navigationItem" id="tSU-KU-5c9"/>
                     <connections>
                         <outlet property="balanceView" destination="SYN-gf-59o" id="sAH-3m-Wnu"/>
+                        <outlet property="currentBalance" destination="yy7-eE-X50" id="j8M-wn-mpj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
