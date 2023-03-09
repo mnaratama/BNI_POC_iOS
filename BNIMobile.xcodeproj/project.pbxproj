@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C095D8A29B9F7C10015651E /* CurrencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C095D8929B9F7C10015651E /* CurrencyList.swift */; };
+		0C095D8E29B9F9B70015651E /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C095D8D29B9F9B70015651E /* Transfer.swift */; };
+		0C095D9029B9FAC40015651E /* Recurring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C095D8F29B9FAC30015651E /* Recurring.swift */; };
+		0C095D9229B9FB3A0015651E /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C095D9129B9FB3A0015651E /* Point.swift */; };
+		0C095D9429B9FC0B0015651E /* ReceiverList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C095D9329B9FC0B0015651E /* ReceiverList.swift */; };
+		0C095D9629B9FC4D0015651E /* Charges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C095D9529B9FC4D0015651E /* Charges.swift */; };
+		0C095D9829B9FCBD0015651E /* AddPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C095D9729B9FCBD0015651E /* AddPoint.swift */; };
+		0C095D9A29B9FDCD0015651E /* Mpin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C095D9929B9FDCD0015651E /* Mpin.storyboard */; };
 		0C47B60E29B6EB9E00513244 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47B60D29B6EB9E00513244 /* RadioButton.swift */; };
 		0C47B61129B73FBB00513244 /* AddRecipientBankDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47B61029B73FBB00513244 /* AddRecipientBankDetailsView.swift */; };
 		0C47B61429B7481100513244 /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C47B61329B7481100513244 /* LandingPage.storyboard */; };
@@ -26,9 +34,6 @@
 		0C7DD42C29B8D23A00FFDF0F /* MpinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7DD42B29B8D23A00FFDF0F /* MpinView.swift */; };
 		0C8957A629B8DA33007098CA /* TransferConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8957A529B8DA33007098CA /* TransferConfirmView.swift */; };
 		0C8957A829B8DA5A007098CA /* TransferReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8957A729B8DA5A007098CA /* TransferReviewView.swift */; };
-		0CC3A6F129B9932500F51D48 /* Mpin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F029B9932500F51D48 /* Mpin.storyboard */; };
-		0CC3A6F229B9932500F51D48 /* Mpin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F029B9932500F51D48 /* Mpin.storyboard */; };
-		0CC3A6F329B9932500F51D48 /* Mpin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F029B9932500F51D48 /* Mpin.storyboard */; };
 		0CC3A6F629B9956B00F51D48 /* LandingPageModalBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F529B9956B00F51D48 /* LandingPageModalBottomView.swift */; };
 		0CC3A6F729B9956B00F51D48 /* LandingPageModalBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F529B9956B00F51D48 /* LandingPageModalBottomView.swift */; };
 		0CC3A6F829B9956B00F51D48 /* LandingPageModalBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F529B9956B00F51D48 /* LandingPageModalBottomView.swift */; };
@@ -75,6 +80,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C095D8929B9F7C10015651E /* CurrencyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyList.swift; sourceTree = "<group>"; };
+		0C095D8D29B9F9B70015651E /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
+		0C095D8F29B9FAC30015651E /* Recurring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recurring.swift; sourceTree = "<group>"; };
+		0C095D9129B9FB3A0015651E /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		0C095D9329B9FC0B0015651E /* ReceiverList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverList.swift; sourceTree = "<group>"; };
+		0C095D9529B9FC4D0015651E /* Charges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charges.swift; sourceTree = "<group>"; };
+		0C095D9729B9FCBD0015651E /* AddPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPoint.swift; sourceTree = "<group>"; };
+		0C095D9929B9FDCD0015651E /* Mpin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mpin.storyboard; sourceTree = "<group>"; };
 		0C47B60D29B6EB9E00513244 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RadioButton.swift; path = BNIMobile/Core/Modules/Transfer/View/BeneficiaryAddCountry/RadioButton.swift; sourceTree = SOURCE_ROOT; };
 		0C47B61029B73FBB00513244 /* AddRecipientBankDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientBankDetailsView.swift; sourceTree = "<group>"; };
 		0C47B61329B7481100513244 /* LandingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LandingPage.storyboard; sourceTree = "<group>"; };
@@ -94,7 +107,6 @@
 		0C7DD42B29B8D23A00FFDF0F /* MpinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MpinView.swift; sourceTree = "<group>"; };
 		0C8957A529B8DA33007098CA /* TransferConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferConfirmView.swift; sourceTree = "<group>"; };
 		0C8957A729B8DA5A007098CA /* TransferReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferReviewView.swift; sourceTree = "<group>"; };
-		0CC3A6F029B9932500F51D48 /* Mpin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Mpin.storyboard; path = "../../../../../../../../../Downloads/maverick-poc-ios-app-dev-vicky/BNIMobile/Core/Modules/Transfer/View/Mpin.storyboard"; sourceTree = "<group>"; };
 		0CC3A6F529B9956B00F51D48 /* LandingPageModalBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageModalBottomView.swift; sourceTree = "<group>"; };
 		0CC3A6F929B99ED400F51D48 /* TransferRecurringModalBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRecurringModalBottomView.swift; sourceTree = "<group>"; };
 		0CC3A70229B9BE2000F51D48 /* LandingPageModalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageModalTableViewCell.swift; sourceTree = "<group>"; };
@@ -200,8 +212,8 @@
 		0C8957A929B9923F007098CA /* Mpin */ = {
 			isa = PBXGroup;
 			children = (
-				0CC3A6F029B9932500F51D48 /* Mpin.storyboard */,
 				0C7DD42B29B8D23A00FFDF0F /* MpinView.swift */,
+				0C095D9929B9FDCD0015651E /* Mpin.storyboard */,
 			);
 			path = Mpin;
 			sourceTree = "<group>";
@@ -234,6 +246,13 @@
 		0CE4827C29B5816A00A2FADC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C095D8929B9F7C10015651E /* CurrencyList.swift */,
+				0C095D8D29B9F9B70015651E /* Transfer.swift */,
+				0C095D8F29B9FAC30015651E /* Recurring.swift */,
+				0C095D9129B9FB3A0015651E /* Point.swift */,
+				0C095D9329B9FC0B0015651E /* ReceiverList.swift */,
+				0C095D9529B9FC4D0015651E /* Charges.swift */,
+				0C095D9729B9FCBD0015651E /* AddPoint.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -560,7 +579,7 @@
 			files = (
 				7457C10C29B1B5C5006874D5 /* LaunchScreen.storyboard in Resources */,
 				0CE4827F29B5819E00A2FADC /* AddRecipient.storyboard in Resources */,
-				0CC3A6F129B9932500F51D48 /* Mpin.storyboard in Resources */,
+				0C095D9A29B9FDCD0015651E /* Mpin.storyboard in Resources */,
 				7457C10929B1B5C5006874D5 /* Assets.xcassets in Resources */,
 				0C47B61429B7481100513244 /* LandingPage.storyboard in Resources */,
 				0C47B61929B7487500513244 /* Transfer.storyboard in Resources */,
@@ -573,7 +592,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CC3A6F229B9932500F51D48 /* Mpin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,7 +599,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CC3A6F329B9932500F51D48 /* Mpin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,15 +678,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C095D8A29B9F7C10015651E /* CurrencyList.swift in Sources */,
 				0C7DD42829B8AD7E00FFDF0F /* TransferSuccessView.swift in Sources */,
 				0C617A4429B5E3FD00A18AE9 /* AddRecipientSuccessView.swift in Sources */,
 				0C8957A829B8DA5A007098CA /* TransferReviewView.swift in Sources */,
+				0C095D9829B9FCBD0015651E /* AddPoint.swift in Sources */,
 				0C47B61B29B7488900513244 /* TransferView.swift in Sources */,
+				0C095D9629B9FC4D0015651E /* Charges.swift in Sources */,
 				0C7DD42429B8A0F600FFDF0F /* AddRecipientEnterPasswordView.swift in Sources */,
 				0CC3A6FA29B99ED400F51D48 /* TransferRecurringModalBottomView.swift in Sources */,
 				7457C10429B1B5C1006874D5 /* CustomerRegView.swift in Sources */,
 				0C617A4829B5EC7200A18AE9 /* AddRecipientReviewDetailsView.swift in Sources */,
 				0C47B60E29B6EB9E00513244 /* RadioButton.swift in Sources */,
+				0C095D9029B9FAC40015651E /* Recurring.swift in Sources */,
 				0C47B61D29B74AAD00513244 /* AddRecipientView.swift in Sources */,
 				0CC3A70329B9BE2000F51D48 /* LandingPageModalTableViewCell.swift in Sources */,
 				747FF27D29B20D5E009AC232 /* EnterMobileNumberView.swift in Sources */,
@@ -680,10 +701,13 @@
 				0C617A4A29B5F0D000A18AE9 /* AddRecipientTermAndConditionView.swift in Sources */,
 				0CE4828329B5836000A2FADC /* AddRecipientCountryView.swift in Sources */,
 				0C617A4629B5EC1300A18AE9 /* AddRecipientAccountDetailsView.swift in Sources */,
+				0C095D9429B9FC0B0015651E /* ReceiverList.swift in Sources */,
 				0C7DD42A29B8ADA200FFDF0F /* TransferRecurringSuccessView.swift in Sources */,
 				0C47B61629B7482E00513244 /* LandingPageView.swift in Sources */,
 				7457C10229B1B5C1006874D5 /* SceneDelegate.swift in Sources */,
+				0C095D8E29B9F9B70015651E /* Transfer.swift in Sources */,
 				0CC3A6F629B9956B00F51D48 /* LandingPageModalBottomView.swift in Sources */,
+				0C095D9229B9FB3A0015651E /* Point.swift in Sources */,
 				0C47B61F29B74C3100513244 /* TransferEnterDataView.swift in Sources */,
 				0C7DD42C29B8D23A00FFDF0F /* MpinView.swift in Sources */,
 				0C47B61129B73FBB00513244 /* AddRecipientBankDetailsView.swift in Sources */,
