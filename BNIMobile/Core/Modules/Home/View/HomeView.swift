@@ -13,9 +13,12 @@ class HomeView: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var tabBar: UITabBar!
+    @IBOutlet weak var nominalLabel: UILabel!
     
     var homeViewModel = HomeViewModel()
     var selectedIndex = -1
+    var cardNominal = 0
+    var accountNumber = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +38,12 @@ class HomeView: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.reloadData()
+        
+        nominalLabel.text = "Rp \(cardNominal.asPriceFormat)"
     }
     
     private func setupNetwork() {
-        NetworkAccessLayer.shared.getAccountTransaction(accountNo: "", completionHandler: { [self] isSuccess, baseResponse, _  in
+        NetworkAccessLayer.shared.getAccountTransaction(accountNo: accountNumber, completionHandler: { [self] isSuccess, baseResponse, _  in
             if isSuccess, let baseResponse = baseResponse, baseResponse.status == 200 {
                 homeViewModel.transactionList = baseResponse.transactions
                 tableView.reloadData()
@@ -47,7 +52,7 @@ class HomeView: UIViewController {
     }
     
     @IBAction func backTapped(_ sender: UIButton) {
-        self.dismiss(animated: false, completion: nil)
+        self.navigationController?.popViewController(animated: false)
     }
     
     
@@ -101,7 +106,7 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate, UITabBarDelegate
     }
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        self.dismiss(animated: false, completion: nil)
+        self.navigationController?.popViewController(animated: false)
     }
 }
 

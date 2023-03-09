@@ -128,10 +128,24 @@ class NetworkAccessLayer: NSObject {
     
     func getAccountTransaction(accountNo: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: TransactionBaseModel?, _: NSError?) -> Void) {
         DataSourceManager.baseURLString = "https://accountservice-mavipoc-accountservice.apps.mavipoc-pb.duh8.p1.openshiftapps.com/api/v1/"
-        Request.getAccountTransaction(accountNumber: "userId").execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
+        Request.getAccountTransaction(accountNumber: accountNo).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
             if error == nil {
                 print("get account number response: \(json)")
                 if let baseResponse:TransactionBaseModel = self.decodeToModel(response: json) {
+                    completionHandler(true, baseResponse, nil)
+                }
+            } else {
+                completionHandler(false, nil, error)
+            }
+        }
+    }
+    
+    func getRecieverAll(cifNo: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: ReceiverList?, _: NSError?) -> Void) {
+        DataSourceManager.baseURLString = "https://paymentservice-mavipoc-payment-service.apps.mavipoc-pb.duh8.p1.openshiftapps.com/api/v1/"
+        Request.getRecieverAll(cif: "cif").execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
+            if error == nil {
+                print("get account number response: \(json)")
+                if let baseResponse:ReceiverList = self.decodeToModel(response: json) {
                     completionHandler(true, baseResponse, nil)
                 }
             } else {

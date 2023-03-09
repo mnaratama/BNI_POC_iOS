@@ -22,7 +22,6 @@ class HomepageView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         setupView()
     }
     
@@ -128,6 +127,8 @@ extension HomepageView: HomepageDebitCardTableCellDelegate, HomepageOtherQuickli
         guard let viewController = UIStoryboard(name: StoryboardName.home, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.homeviewVC) as? HomeView else {
             fatalError("Failed to load Main from CongratulationsPointViewController file")
         }
+        viewController.cardNominal = Int(homeViewModel.accountList?[index].currentBalance ?? 0)
+        viewController.accountNumber = homeViewModel.accountList?[index].accountNo ?? ""
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
