@@ -10,5 +10,7 @@ import Foundation
 class HomeViewModel{
     let homepageQuicklinkItems: [QuicklinkModel] = [QuicklinkModel(id: 1, title: "Transfer", image: "ic_optimize_cashflow"), QuicklinkModel(id: 2, title: "Top up & payment", image: "ic_mobile_add"), QuicklinkModel(id: 3, title: "TapCash", image: "ic_tapcash"), QuicklinkModel(id: 4, title: "QR Pay", image: "ic_qr_code")]
     
-    let yourQuicklinkItems: [QuicklinkModel] = [QuicklinkModel(id: 1, title: "International Transfer", image: "ic_global_finance_euro"), QuicklinkModel(id: 2, title: "Pay Credit Card", image: "ic_credit_card"), QuicklinkModel(id: 3, title: "Bill Payment", image: "ic_receipt"), QuicklinkModel(id: 4, title: "Cardless", image: "ic_receipt"), QuicklinkModel(id: 4, title: "Cardless", image: "ic_receipt")]
+    let yourQuicklinkItems: [QuicklinkModel] = [QuicklinkModel(id: 1, title: "International Transfer", image: "ic_global_finance_euro"), QuicklinkModel(id: 2, title: "Pay Credit Card", image: "ic_credit_card"), QuicklinkModel(id: 3, title: "Bill Payment", image: "ic_receipt"), QuicklinkModel(id: 4, title: "Cardless Withdrawal", image: "ic_calculator"), QuicklinkModel(id: 5, title: "Mutual Funds", image: "ic_global_markets"), QuicklinkModel(id: 6, title: "POIN+ Homepage", image: "ic_bni_point"), QuicklinkModel(id: 7, title: "Book Transport", image: "ic_train"), QuicklinkModel(id: 8, title: "", image: "")]
+    
+    let availableQuicklinkItems: [QuicklinkModel] = [QuicklinkModel(id: 1, title: "Book Hotel", image: "ic_building"), QuicklinkModel(id: 2, title: "e-commerce", image: "ic_shop"), QuicklinkModel(id: 3, title: "Insurance", image: "ic_insurance")]
 }

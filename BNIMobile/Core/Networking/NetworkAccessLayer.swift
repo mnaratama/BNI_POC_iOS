@@ -29,14 +29,14 @@ class NetworkAccessLayer: NSObject {
     
     private override init() {}
     
-    func parse(response: JSON) -> BaseResponse? {
+    func decodeToModel<T: Codable>(response: JSON) -> T? {
         let mainDict = response.object as? Dictionary<String, AnyObject>
         if let eMainDict = mainDict {
             if let jsonData = try? JSONSerialization.data(withJSONObject: eMainDict, options: .sortedKeys) {
+
                 do {
-                    let basereponse = try JSONDecoder().decode(BaseResponse.self, from: jsonData)
-                    return basereponse
-                } catch {
+                    return try JSONDecoder().decode(T.self, from: jsonData)
+                } catch (let error) {
                     print(error)
                     return nil
                 }
@@ -59,7 +59,7 @@ class NetworkAccessLayer: NSObject {
     func generateOTP(mobileNumber : String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: BaseResponse?, _: NSError?) -> Void){
         Request.generateOTP(mobileNumber: mobileNumber).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
             if error == nil {
-                if let baseResponse = self.parse(response: json) {
+                if let baseResponse:BaseResponse = self.decodeToModel(response: json) {
                     completionHandler(true, baseResponse, nil)
                 }
             } else {
@@ -72,7 +72,7 @@ class NetworkAccessLayer: NSObject {
         Request.validateOTP(otp: otp).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
             if error == nil {
                 print("validateOTP response: \(json)")
-                if let baseResponse = self.parse(response: json) {
+                if let baseResponse:BaseResponse = self.decodeToModel(response: json) {
                     completionHandler(true, baseResponse, nil)
                 }
             } else {
@@ -86,7 +86,22 @@ class NetworkAccessLayer: NSObject {
         Request.verifyCredentials(userId: userId, password: password).execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
             if error == nil {
                 print("verifyCredentials response: \(json)")
-                if let baseResponse = self.parse(response: json) {
+                if let baseResponse:BaseResponse = self.decodeToModel(response: json) {
+                    completionHandler(true, baseResponse, nil)
+                }
+            } else {
+                completionHandler(false, nil, error)
+            }
+        }
+
+    }
+    
+    func getAccountBalance(accounrNo: String, completionHandler: @escaping (_ isSuccess: Bool,  _ baseResponse: AccountBalanceBaseModel?, _: NSError?) -> Void) {
+        DataSourceManager.baseURLString = "https://api.digi46.id/maverick/acn/core/"
+        Request.getAccountNumber(accountNumber: "userId").execute().responseJSON { (urlRequest, urlResponse, json, error) -> Void in
+            if error == nil {
+                print("get account number response: \(json)")
+                if let baseResponse:AccountBalanceBaseModel = self.decodeToModel(response: json) {
                     completionHandler(true, baseResponse, nil)
                 }
             } else {

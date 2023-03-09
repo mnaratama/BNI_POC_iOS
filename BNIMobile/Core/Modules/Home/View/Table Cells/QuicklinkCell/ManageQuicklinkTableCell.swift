@@ -1,23 +1,24 @@
 //
-//  HomepageOtherQuicklinkTableCell.swift
+//  ManageQuicklinkTableCell.swift
 //  BNIMobile
 //
-//  Created by Naratama on 07/03/23.
+//  Created by Naratama on 09/03/23.
 //
 
 import UIKit
 
-protocol HomepageOtherQuicklinkTableCellCellDelegate: class {
-    func collectionView(collectionviewcell: HomeQuicklinksCollectionCell?, index: Int, didTappedInTableViewCell: HomepageOtherQuicklinkTableCell)
-    func pushToManage()
+protocol ManageQuicklinkTableCellDelegate: class {
+//    func collectionView(collectionviewcell: HomeQuicklinksCollectionCell?, index: Int, didTappedInTableViewCell: HomepageOtherQuicklinkTableCell)
 }
 
-class HomepageOtherQuicklinkTableCell: UITableViewCell {
+class ManageQuicklinkTableCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var lineView: UIView!
     
-    weak var cellDelegate: HomepageOtherQuicklinkTableCellCellDelegate?
+    weak var cellDelegate: ManageQuicklinkTableCellDelegate?
     var items: [QuicklinkModel] = []
+    var selectedItems = true
         
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,35 +27,32 @@ class HomepageOtherQuicklinkTableCell: UITableViewCell {
     }
     
     private func setupCollectionView(){
-        collectionView.register(UINib(nibName: "HomeQuicklinksCollectionCell", bundle: .main), forCellWithReuseIdentifier: "QuicklinksCollectionCell")
+        collectionView.register(UINib(nibName: "ManageQuicklinkCollectionCell", bundle: .main), forCellWithReuseIdentifier: "ManageQuicklinkCollectionCell")
         collectionView.delegate = self
         collectionView.dataSource = self
         
         flowLayout.scrollDirection = .horizontal
-        flowLayout.minimumLineSpacing = 10
+        flowLayout.minimumLineSpacing = 20
         flowLayout.minimumInteritemSpacing = 0
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
     
-    func bind(data: [QuicklinkModel]){
+    func bind(data: [QuicklinkModel], selected: Bool){
         items = data
+        selectedItems = selected
+        lineView.isHidden = !selected
         collectionView.reloadData()
     }
-    
-    @IBAction func manageTapped(_ sender: UIButton) {
-        self.cellDelegate?.pushToManage()
-    }
-    
 }
 
-extension HomepageOtherQuicklinkTableCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension ManageQuicklinkTableCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuicklinksCollectionCell", for: indexPath) as! HomeQuicklinksCollectionCell
-        cell.bind(image: items[indexPath.row].image ?? "", title: items[indexPath.row].title ?? "")
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ManageQuicklinkCollectionCell", for: indexPath) as! ManageQuicklinkCollectionCell
+        cell.bind(image: items[indexPath.row].image ?? "", title: items[indexPath.row].title ?? "", selected: selectedItems)
         return cell
     }
     
@@ -65,7 +63,7 @@ extension HomepageOtherQuicklinkTableCell: UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             let cell = collectionView.cellForItem(at: indexPath) as? HomeQuicklinksCollectionCell
-            self.cellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
+//            self.cellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
         }
     }
 }

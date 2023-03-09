@@ -11,8 +11,7 @@ class HomeHeaderTableCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var containerView: UIView!
-    
-    var items:[HomeHeaderTab]?
+
     var didSelectCell: ((Int)->Void)?
         
     override func awakeFromNib() {
@@ -36,12 +35,8 @@ class HomeHeaderTableCell: UITableViewCell {
         containerView.layer.cornerRadius = 24
     }
     
-    func bind(items: [HomeHeaderTab]){
-        self.items = items
-        collectionView.reloadData()
-    }
-    
     @IBAction func copyTapped(_ sender: UIButton) {
+        
     }
     
 }
