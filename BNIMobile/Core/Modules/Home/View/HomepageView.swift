@@ -19,10 +19,6 @@ class HomepageView: UIViewController {
     
     var homeViewModel = HomeViewModel()
     
-    enum Constants {
-        static let homeStoryboardName = "Home"
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,8 +51,8 @@ class HomepageView: UIViewController {
     }
     
     @IBAction func mySpaceTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: Constants.homeStoryboardName, bundle: nil)
-        let presentingViewController = storyboard.instantiateViewController(withIdentifier: "MySpace")
+        let storyboard = UIStoryboard(name: StoryboardName.home, bundle: nil)
+        let presentingViewController = storyboard.instantiateViewController(withIdentifier: ViewControllerName.myspaceVC)
         if #available(iOS 15.0, *) {
             if let sheet = presentingViewController.sheetPresentationController{
                 sheet.detents = [.medium(), .large()]
@@ -122,6 +118,23 @@ extension HomepageView: HomepageDebitCardTableCellDelegate, HomepageOtherQuickli
     // Navigate to Quicklink
     func collectionView(collectionviewcell: HomeQuicklinksCollectionCell?, index: Int, didTappedInTableViewCell: HomepageOtherQuicklinkTableCell) {
         //TODO: Load EPIC4 Here
+    }
+    
+    // Navigate to Quicklink
+    func pushToManage() {
+        let storyboard = UIStoryboard(name: StoryboardName.home, bundle: nil)
+        let presentingViewController = storyboard.instantiateViewController(withIdentifier: ViewControllerName.quicklinksVC)
+        if #available(iOS 15.0, *) {
+            if let sheet = presentingViewController.sheetPresentationController{
+                sheet.detents = [.medium(), .large()]
+                sheet.largestUndimmedDetentIdentifier = .medium
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            }
+        } else {
+            presentingViewController.modalPresentationStyle = .pageSheet
+            presentingViewController.modalTransitionStyle = .coverVertical
+        }
+        present(presentingViewController, animated: true, completion: nil)
     }
     
 }

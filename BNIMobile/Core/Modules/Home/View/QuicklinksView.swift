@@ -11,9 +11,7 @@ class QuicklinksView: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    enum Constants {
-        static let homeStoryboardName = "Home"
-    }
+    var homeViewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +20,7 @@ class QuicklinksView: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.register(UINib(nibName: "MySpaceHeaderTableCell", bundle: nil), forCellReuseIdentifier: "MySpaceHeaderTableCell")
-        tableView.register(UINib(nibName: "MySpaceClaimRewardTableCell", bundle: nil), forCellReuseIdentifier: "MySpaceClaimRewardTableCell")
+        tableView.register(UINib(nibName: "ManageQuicklinkTableCell", bundle: nil), forCellReuseIdentifier: "ManageQuicklinkTableCell")
         
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.rowHeight = UITableView.automaticDimension
@@ -36,35 +33,26 @@ class QuicklinksView: UIViewController {
 extension QuicklinksView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MySpaceHeaderTableCell", for: indexPath) as! MySpaceHeaderTableCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ManageQuicklinkTableCell", for: indexPath) as! ManageQuicklinkTableCell
+            cell.bind(data: homeViewModel.yourQuicklinkItems, selected: true)
             return cell
-//        }
-        
-//        else if indexPath.row == 1 {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "QuicklinkTableCell", for: indexPath) as! HomeQuicklinkTableCell
-//            return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MySpaceClaimRewardTableCell", for: indexPath) as! MySpaceClaimRewardTableCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ManageQuicklinkTableCell", for: indexPath) as! ManageQuicklinkTableCell
+            cell.bind(data: homeViewModel.availableQuicklinkItems, selected: false)
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 112
-//        } else if indexPath.row == 1 {
-//            return 180
+            return 208
         } else {
-            return 250
+            return 128
         }
     }
-    
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        delegate?.didSelectotherMaterial(index: indexPath.row)
-    //    }
 }
