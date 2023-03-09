@@ -64,6 +64,7 @@ extension LandingPageModalBottomView : UITableViewDelegate, UITableViewDataSourc
         viewController.nameReceiverLabel = transferViewModel.receiversList?[indexPath.row].receiverName ?? ""
         viewController.bankReceiverLabel = bankNamesLabel
         viewController.currencyReceiverLabel = countryNamesLabel
+        viewController.recepient = transferViewModel.receiversList?[indexPath.row]
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

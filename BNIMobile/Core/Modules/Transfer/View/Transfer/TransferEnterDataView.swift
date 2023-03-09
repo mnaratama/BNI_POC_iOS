@@ -7,17 +7,17 @@
 
 import UIKit
 
-class TransferEnterDataView : UIViewController {
+class TransferEnterDataView : UIViewController, UITextFieldDelegate {
     enum Constants {
         static let transferStoryboardName = "Transfer"
         static let transferConfirmView = "TransferConfirmVC"
     }
-    
-    var chargeType = ""
+    var recepient: Receivers?
     var nameReceiverLabel = ""
     var bankReceiverLabel = ""
     var currencyReceiverLabel = ""
-    var isChecked = false
+    var isBeneficiaryChecked = false, isGuaranteedChecked = false
+    var chargeType: ChargeType?
         
     @IBOutlet weak var beneficiaryRadioButton: UIImageView!
     @IBOutlet weak var guaranteedRadioButton: UIImageView!
@@ -25,38 +25,51 @@ class TransferEnterDataView : UIViewController {
     @IBOutlet weak var bankLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     
+    @IBOutlet weak var sourceCurrencyField: UITextField!
+    
+    @IBOutlet weak var destinationCurrencyField: UITextField!
+    
+    var currencyConverter = CurrencyConverter()
     override func viewDidLoad() {
         super.viewDidLoad()
         print("TransferEnterDataView")
         setupGestureRecognizer()
         setupView()
+        sourceCurrencyField.delegate = self
+        destinationCurrencyField.delegate = self
+        currencyConverter.exchangeRate = 16391.45
+        currencyConverter.sourceCurrencyCode = "RP"
+        currencyConverter.destinationCurrencyCode = "EUR"
     }
     
     @objc func beneficiaryRadioButtonSelector(tapGestureRecognizer: UITapGestureRecognizer){
         let tappedImage = tapGestureRecognizer.view as! UIImageView
-        if(isChecked){
+        if(isBeneficiaryChecked){
             tappedImage.image = UIImage(named: "ic_radio_button_outline_blank")
             guaranteedRadioButton.image =  UIImage(named: "ic_radio_button")
-            isChecked = false
+            isBeneficiaryChecked = false
         }
         else {
             tappedImage.image = UIImage(named: "ic_radio_button")
             guaranteedRadioButton.image =  UIImage(named: "ic_radio_button_outline_blank")
-            isChecked = true
+            isBeneficiaryChecked = true
+            self.chargeType = .beneficiary
         }
+        
     }
     
     @objc func guaranteedRadioButtonSelector(tapGestureRecognizer: UITapGestureRecognizer){
         let tappedImage = tapGestureRecognizer.view as! UIImageView
-        if(isChecked){
+        if(isGuaranteedChecked){
             tappedImage.image = UIImage(named: "ic_radio_button_outline_blank")
             beneficiaryRadioButton.image =  UIImage(named: "ic_radio_button")
-            isChecked = false
+            isGuaranteedChecked = false
         }
         else {
             tappedImage.image = UIImage(named: "ic_radio_button")
             beneficiaryRadioButton.image =  UIImage(named: "ic_radio_button_outline_blank")
-            isChecked = true
+            isGuaranteedChecked = true
+            self.chargeType = .guaranteed
         }
     }
     
@@ -69,9 +82,9 @@ class TransferEnterDataView : UIViewController {
     }
     
     func setupView(){
-        nameLabel.text = nameReceiverLabel
-        bankLabel.text = bankReceiverLabel
-        currencyLabel.text = currencyReceiverLabel
+        nameLabel.text = recepient?.receiverName
+        bankLabel.text = "\(recepient?.receiverBankName ?? "") | \(recepient?.receiverAcNumber ?? "")"
+        currencyLabel.text = "\(recepient?.receiverCountryName ?? "") - \(recepient?.receiverCurrency ?? "")"
     }
     
     @IBAction func buttonNextTapped(_ sender: Any) {
@@ -79,7 +92,14 @@ class TransferEnterDataView : UIViewController {
         guard let viewController = UIStoryboard(name: Constants.transferStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.transferConfirmView) as? TransferConfirmView else {
             fatalError("Failed to load Transfer from TransferEnterDataView file")
         }
-
+        let transferConfirmViewModel = TransferConfirmationViewModel()
+        transferConfirmViewModel.receiver = recepient
+        transferConfirmViewModel.chargeType = self.chargeType
+        currencyConverter.sourceCurrencyCode = recepient?.payerBaseCurrencySymbol ?? ""
+        currencyConverter.destinationCurrencyCode = recepient?.receiverCurrencySymbol ?? ""
+        transferConfirmViewModel.currencyConversion = currencyConverter
+        viewController.transferConfirmationModel = transferConfirmViewModel
+        
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -87,6 +107,32 @@ class TransferEnterDataView : UIViewController {
     @IBAction func backButtonTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("test")
+        let oldText = textField.text ?? ""
+        let newText = (oldText as NSString).replacingCharacters(in: range, with: string)
+        
+        if newText.isEmpty {
+            return true
+        }
+        if textField.tag == 1000 {
+            
+            let value = Double(newText) ?? 0.00
+            let exchangeValue = currencyConverter.exchangeRate
+            self.destinationCurrencyField.text = "\(value / exchangeValue)"
+            currencyConverter.destinationAmount = value / exchangeValue
+            currencyConverter.sourceAmount = value
+        } else {
+            let value = Double(newText ) ?? 0.00
+            let exchangeValue = currencyConverter.exchangeRate
+            self.sourceCurrencyField.text = "\(value * exchangeValue)"
+            currencyConverter.sourceAmount = value * exchangeValue
+            currencyConverter.destinationAmount = value
+        }
+        return true
+    }
+    
 }
 
 extension TransferEnterDataView {

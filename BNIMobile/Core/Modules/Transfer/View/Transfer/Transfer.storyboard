@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cJr-hR-FXX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cJr-hR-FXX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -249,7 +249,7 @@
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJa-t6-jQY">
                                                                                                 <rect key="frame" x="90" y="0.0" width="256" height="59"/>
                                                                                                 <subviews>
-                                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AvM-oP-p1V">
+                                                                                                    <textField opaque="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AvM-oP-p1V">
                                                                                                         <rect key="frame" x="0.0" y="28" width="240" height="23"/>
                                                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -319,7 +319,7 @@
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9A-Ud-rvf">
                                                                                                 <rect key="frame" x="90" y="0.0" width="256" height="59"/>
                                                                                                 <subviews>
-                                                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tu6-i2-f2J">
+                                                                                                    <textField opaque="NO" tag="1001" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tu6-i2-f2J">
                                                                                                         <rect key="frame" x="0.0" y="28" width="240" height="23"/>
                                                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -815,8 +815,10 @@
                         <outlet property="bankLabel" destination="LbZ-od-vFC" id="3ea-7H-Qmc"/>
                         <outlet property="beneficiaryRadioButton" destination="iaV-29-slN" id="SQM-1J-rMx"/>
                         <outlet property="currencyLabel" destination="lpe-Jy-hN9" id="0rw-xx-P3F"/>
+                        <outlet property="destinationCurrencyField" destination="tu6-i2-f2J" id="7Za-OH-DF5"/>
                         <outlet property="guaranteedRadioButton" destination="K27-ze-tG0" id="h9S-rs-agR"/>
                         <outlet property="nameLabel" destination="sYl-Db-4f3" id="Kqq-gO-kWd"/>
+                        <outlet property="sourceCurrencyField" destination="AvM-oP-p1V" id="1F3-lJ-cif"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g85-l1-uUs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1600,7 +1602,15 @@
                     <navigationItem key="navigationItem" id="65r-wP-iTv"/>
                     <size key="freeformSize" width="378" height="1000"/>
                     <connections>
+                        <outlet property="currencyLabel" destination="qJG-Zh-nik" id="PUx-KB-fqg"/>
+                        <outlet property="foreignCurrencyAmountLabel" destination="Umr-r4-t9R" id="djv-bp-tuO"/>
+                        <outlet property="guaranteedFeesLabel" destination="cIl-kM-INv" id="WbA-LR-yob"/>
+                        <outlet property="idrAmountLabel" destination="NN0-zw-c6h" id="GoS-TM-XgI"/>
+                        <outlet property="receipientBankAccountLabel" destination="65U-jL-ZqB" id="L6b-Je-Zao"/>
+                        <outlet property="receipientFeesLabel" destination="Fng-DP-p2g" id="NFb-qS-zAD"/>
+                        <outlet property="recipientLabel" destination="3PF-2o-6qR" id="qN1-12-JUV"/>
                         <outlet property="tcButton" destination="bls-22-KTg" id="pCP-xL-UeI"/>
+                        <outlet property="totalAmountLabel" destination="gbV-pb-HzX" id="yfq-oi-UMF"/>
                         <outlet property="usePoinButton" destination="uSi-1e-MbS" id="3WC-bC-eMx"/>
                     </connections>
                 </viewController>
@@ -2229,6 +2239,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="vxT-hm-2V5"/>
                     <size key="freeformSize" width="393" height="1000"/>
+                    <connections>
+                        <outlet property="accountNumberLabel" destination="R1p-Zg-fz6" id="MIS-pU-5qN"/>
+                        <outlet property="bicCodeLabel" destination="P9a-0Q-oZ3" id="yAx-Mt-wq9"/>
+                        <outlet property="exchangeRateLabel" destination="qr0-9s-km6" id="sdd-bG-RK7"/>
+                        <outlet property="foreignCurrencyAmountLabel" destination="orb-4Y-gqO" id="oIt-U2-d7W"/>
+                        <outlet property="idrAmountLabel" destination="bax-cd-mqW" id="uhK-Fy-kAd"/>
+                        <outlet property="recipientBankLabel" destination="Wi2-VA-Tah" id="Gaa-OB-1u0"/>
+                        <outlet property="recipientNameLabel" destination="g6d-fT-Fbo" id="6q9-ZR-SLE"/>
+                        <outlet property="recipientReceivedAmountLabel" destination="jDo-KQ-z4l" id="o7Q-8W-Igl"/>
+                        <outlet property="reipientCurrencyLabel" destination="bRc-D0-GCv" id="Tew-T3-jBW"/>
+                        <outlet property="totalAmountLabel" destination="JNV-Su-fR0" id="yYF-gP-zi6"/>
+                        <outlet property="transferFeesGuaranteedLabel" destination="hng-yq-J6c" id="H98-jg-m5k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXi-jX-IrS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Dk6-Kz-SKF">
