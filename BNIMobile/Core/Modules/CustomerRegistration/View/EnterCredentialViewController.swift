@@ -18,15 +18,22 @@ class EnterCredentialViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var userIdTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextField()
         hideErrorLabel()
         enableNextButton()
+        self.setCustomBackButton(imgName: "close", target: self, selector: #selector(backAction))
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+    }
+    
+    @objc func backAction() {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     /// Configures the text filed and adds the tap gesture
@@ -59,6 +66,17 @@ class EnterCredentialViewController: BaseViewController, UITextFieldDelegate {
         //TODO: can be removed once we have the API inplace to determine this status
         let userDefaults = UserDefaults.standard
         userDefaults.set(true, forKey: "hasCustomerRegistered")
+        if let username = userIdTextField.text, let password = passwordTextField.text {
+            storeCredentials(username, password)
+        }
+    }
+    
+    func storeCredentials(_ username: String, _ password: String) {
+        // store credentials in keychain for next offline
+        let credentials = ["username": username as NSString, "password": password as NSString]
+        _ = KeychainOptions().securityAccessType(SecurityAccessType.whenUnlocked)
+        _ = Keychain.saveData(credentials, forUserAccount: Keychain.Keys.credentials)
+
     }
     
     func hideErrorLabel(){

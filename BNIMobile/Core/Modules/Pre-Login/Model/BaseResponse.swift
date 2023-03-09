@@ -19,7 +19,7 @@ struct BaseResponse : Codable {
 	let success : Bool?
 	let responsestatuscode : Int?
 	let message : String?
-	let error : Error?
+	let error : BNIError?
 	let value : Value?
     let data : String?
     let userData: String?
@@ -40,9 +40,13 @@ struct BaseResponse : Codable {
 		success = try values.decodeIfPresent(Bool.self, forKey: .success)
 		responsestatuscode = try values.decodeIfPresent(Int.self, forKey: .responsestatuscode)
 		message = try values.decodeIfPresent(String.self, forKey: .message)
-		error = try values.decodeIfPresent(Error.self, forKey: .error)
+		error = try values.decodeIfPresent(BNIError.self, forKey: .error)
 		value = try values.decodeIfPresent(Value.self, forKey: .value)
         data = try values.decodeIfPresent(String.self, forKey: .data)
         userData = try values.decodeIfPresent(String.self, forKey: .userData)
 	}
+    
+    func encode(to encoder: Encoder) throws {
+        
+    }
 }

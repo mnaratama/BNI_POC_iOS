@@ -36,6 +36,8 @@
 		749B662C29B5EDD500B0A4A4 /* NetworkAccessLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B662A29B5EDD500B0A4A4 /* NetworkAccessLayer.swift */; };
 		749B663229B7449300B0A4A4 /* PreLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749B663129B7449300B0A4A4 /* PreLogin.storyboard */; };
 		749B663429B7542F00B0A4A4 /* PreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B663329B7542F00B0A4A4 /* PreLoginViewController.swift */; };
+		76BDBDE729B9D67E0001C287 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BDBDE529B9D67E0001C287 /* Keychain.swift */; };
+		76BDBDE829B9D67E0001C287 /* Keychain+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BDBDE629B9D67E0001C287 /* Keychain+Utils.swift */; };
 		8008807229B7391D00580816 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807129B7391D00580816 /* Coordinator.swift */; };
 		8008807D29B7558B00580816 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807C29B7558B00580816 /* Constants.swift */; };
 		8008807F29B7572A00580816 /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008807E29B7572A00580816 /* OtpViewController.swift */; };
@@ -144,6 +146,8 @@
 		749B662A29B5EDD500B0A4A4 /* NetworkAccessLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAccessLayer.swift; sourceTree = "<group>"; };
 		749B663129B7449300B0A4A4 /* PreLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreLogin.storyboard; sourceTree = "<group>"; };
 		749B663329B7542F00B0A4A4 /* PreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoginViewController.swift; sourceTree = "<group>"; };
+		76BDBDE529B9D67E0001C287 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		76BDBDE629B9D67E0001C287 /* Keychain+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Keychain+Utils.swift"; sourceTree = "<group>"; };
 		8008807129B7391D00580816 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8008807629B7398900580816 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		8008807929B753F100580816 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -410,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				2399804529B9E2C7005458D6 /* Other */,
+				76BDBDE429B9D6480001C287 /* Keychain */,
 				8008807B29B7557700580816 /* Constants */,
 				80347F1E29B39CB500048831 /* Logger */,
 			);
@@ -470,6 +475,15 @@
 				6F8BEC0829B8D0EA00E5D798 /* LoginViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		76BDBDE429B9D6480001C287 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				76BDBDE529B9D67E0001C287 /* Keychain.swift */,
+				76BDBDE629B9D67E0001C287 /* Keychain+Utils.swift */,
+			);
+			path = Keychain;
 			sourceTree = "<group>";
 		};
 		8008807329B7393500580816 /* NavigationBar */ = {
@@ -980,6 +994,7 @@
 				8089435B29B6F8B4006B5555 /* CongratulationsDoneViewController.swift in Sources */,
 				2399803D29B98D3B005458D6 /* ManageQuicklinkTableCell.swift in Sources */,
 				800880DA29B84DDB00580816 /* HomeRecentTransactionHeaderCollectionCell.swift in Sources */,
+				76BDBDE729B9D67E0001C287 /* Keychain.swift in Sources */,
 				8089435D29B6F8B4006B5555 /* CongratulationsPointViewController.swift in Sources */,
 				8089435C29B6F8B4006B5555 /* EnterCredentialViewController.swift in Sources */,
 				800880C829B84DDB00580816 /* HomepageDebitCardCollectionCell.swift in Sources */,
@@ -991,6 +1006,7 @@
 				740CC3C429B8A6AF000B3D44 /* Error.swift in Sources */,
 				2399804729B9E2D6005458D6 /* Extension.swift in Sources */,
 				800880E329B84DDB00580816 /* HomeView.swift in Sources */,
+				76BDBDE829B9D67E0001C287 /* Keychain+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1172,6 +1188,7 @@
 				DEVELOPMENT_TEAM = MY65R8DR6S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BNIMobile/Config/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1210,6 +1227,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = MY65R8DR6S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BNIMobile/Config/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

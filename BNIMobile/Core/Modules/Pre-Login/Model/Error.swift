@@ -14,7 +14,7 @@
  */
 
 import Foundation
-struct Error : Codable {
+struct BNIError : Codable {
 	let type : String?
 	let code : String?
 	let message : String?
