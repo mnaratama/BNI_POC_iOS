@@ -20,8 +20,8 @@ enum Request {
     
     case verifyAccount(mobileNumber: String)
     case generateOTP(mobileNumber: String)
-    case sendOTP(otp: String)
     case validateOTP(otp: String)
+    case verifyCredentials(userId: String, password: String)
     
     func execute() -> AKNetworking.Request {
         let request: AKNetworking.Request
@@ -35,14 +35,16 @@ enum Request {
             var headers = self.headers
             headers["mobileNumber"] = mobileNumber
             request = DataSourceManager.request(.GET, "/api/v1/generateotp", parameters: nil, encoding: .json, headers: headers)
-        case .sendOTP(otp: let otp):
-            var headers = self.headers
-            headers["otp"] = otp
-            request = DataSourceManager.request(.GET, "/api/v1/sendotp", parameters: nil, encoding: .json, headers: headers)
         case .validateOTP(otp: let otp):
             var headers = self.headers
             headers["otp"] = otp
             request = DataSourceManager.request(.GET, "/api/v1/validateotp", parameters: nil, encoding: .json, headers: headers)
+        case .verifyCredentials(userId: let userId, password: let password):
+            var parameters = [String: AnyObject]()
+            parameters["acid"] = "100216" as AnyObject
+            parameters["password"] = "bnipassword" as AnyObject
+
+            request = DataSourceManager.request(.POST, "/api/v1/verifyCredentials", parameters: parameters, headers: self.headers)
         }
         // log the response
         request.responseString { (urlRequest, urlResponse, string, error) -> Void in

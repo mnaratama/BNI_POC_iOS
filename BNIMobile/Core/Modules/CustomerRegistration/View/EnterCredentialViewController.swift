@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EnterCredentialViewController: BaseViewController {
+class EnterCredentialViewController: BaseViewController, UITextFieldDelegate {
     
     @IBOutlet weak var vwToBG:UIView!
     @IBOutlet weak var stackVW:UIStackView!
@@ -20,25 +20,39 @@ class EnterCredentialViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTextField()
         hideErrorLabel()
-//        nextButton(shouldEnable: false)
+        enableNextButton()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }
     
-    fileprivate func nextButton(shouldEnable: Bool = false) {
+    /// Configures the text filed and adds the tap gesture
+    fileprivate func setupTextField() {
+        userIdTextField.isUserInteractionEnabled = true
+        userIdTextField.delegate = self
+        passwordTextField.isUserInteractionEnabled = true
+        passwordTextField.delegate = self
+    }
+    
+    fileprivate func enableNextButton() {
+        let shouldEnable = !(userIdTextField.text ?? "").isEmpty && !(passwordTextField.text ?? "").isEmpty
         self.nextButton.isEnabled = shouldEnable
         self.nextButton.backgroundColor = shouldEnable ? UIColor(named: EnterMobileNumberViewController.Constants.colorBNITeal) : UIColor(named: EnterMobileNumberViewController.Constants.colorButtonDisabled)
     }
 
     @IBAction func buttonNextTapped(_ sender: Any) {
-        guard let viewController = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.congratulationsDoneVC) as? CongratulationsDoneViewController else {
-            fatalError("Failed to load Main from CongratulationsDoneViewController file")
-        }
-        userDefaultsToSaveCustomerRegStatus()
-        self.navigationController?.pushViewController(viewController, animated: true)
+        NetworkAccessLayer.shared.verifyCredentials(userId: userIdTextField.text ?? "", password: passwordTextField.text ?? "", completionHandler: { isSuccess, baseResponse, _  in
+            if isSuccess, let baseResponse = baseResponse, baseResponse.message == "success" {
+                guard let viewController = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.congratulationsDoneVC) as? CongratulationsDoneViewController else {
+                    fatalError("Failed to load Main from CongratulationsDoneViewController file")
+                }
+                self.userDefaultsToSaveCustomerRegStatus()
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+        })
     }
     
     func userDefaultsToSaveCustomerRegStatus() {
@@ -50,5 +64,10 @@ class EnterCredentialViewController: BaseViewController {
     func hideErrorLabel(){
         lblPswdError.isHidden = true
         lblUrerIdError.isHidden = true
+    }
+    
+    // MARK: - TextField Delegates
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        enableNextButton()
     }
 }
