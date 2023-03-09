@@ -42,8 +42,8 @@ enum Request {
             request = DataSourceManager.request(.GET, "/api/v1/validateotp", parameters: nil, encoding: .json, headers: headers)
         case .verifyCredentials(userId: let userId, password: let password):
             var parameters = [String: AnyObject]()
-            parameters["acid"] = "100216" as AnyObject
-            parameters["password"] = "bnipassword" as AnyObject
+            parameters["acid"] = userId as AnyObject
+            parameters["password"] = password as AnyObject
 
             request = DataSourceManager.request(.POST, "/api/v1/verifyCredentials", parameters: parameters, headers: self.headers)
             

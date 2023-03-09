@@ -24,7 +24,7 @@ class EnterCredentialViewController: BaseViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextField()
-        hideErrorLabel()
+        configureWarningBorderView(showWarning: false)
         enableNextButton()
     }
     
@@ -54,19 +54,34 @@ class EnterCredentialViewController: BaseViewController, UITextFieldDelegate {
                 }
                 self.userDefaultsToSaveCustomerRegStatus()
                 self.navigationController?.pushViewController(viewController, animated: true)
+            } else {
+                self.configureWarningBorderView(showWarning: true)
             }
         })
     }
     
+    func configureWarningBorderView(showWarning: Bool) {
+        configureErrorLabel(shouldShow: showWarning)
+        userIdWarningView.isHidden = !showWarning
+        userIdWarningView.layer.borderWidth = 2
+        userIdWarningView.layer.borderColor = UIColor.red.cgColor
+        
+        passwordWarningView.isHidden = !showWarning
+        passwordWarningView.layer.borderWidth = 2
+        passwordWarningView.layer.borderColor = UIColor.red.cgColor
+    }
+
     func userDefaultsToSaveCustomerRegStatus() {
         //TODO: can be removed once we have the API inplace to determine this status
         let userDefaults = UserDefaults.standard
         userDefaults.set(true, forKey: "hasCustomerRegistered")
     }
     
-    func hideErrorLabel(){
-        lblPswdError.isHidden = true
-        lblUrerIdError.isHidden = true
+    func configureErrorLabel(shouldShow: Bool){
+        lblPswdError.isHidden = !shouldShow
+        lblPswdError.textColor = UIColor.red
+        lblUrerIdError.isHidden = !shouldShow
+        lblUrerIdError.textColor = UIColor.red
     }
     
     // MARK: - TextField Delegates

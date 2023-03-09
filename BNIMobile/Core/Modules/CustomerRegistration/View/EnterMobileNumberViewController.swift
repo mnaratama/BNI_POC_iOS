@@ -66,7 +66,7 @@ class EnterMobileNumberViewController: BaseViewController, UITextFieldDelegate {
         
         let newString = ((textField.text ?? "") as NSString).replacingCharacters(in: range, with: string)
         // enable next button only if the number is entered, disable if the number is cleared
-        self.nextButton(shouldEnable: !newString.isEmpty && newString.count > 7)
+        self.nextButton(shouldEnable: !newString.isEmpty && newString.count >= 10)
 
         return true
     }
