@@ -17,21 +17,17 @@ import UIKit
 
 class PreLoginViewController: BaseViewController {
     
+    @IBOutlet weak var currentBalance: UILabel!
     @IBOutlet weak var balanceView: UIVisualEffectView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkAccessLayer.shared.getAccountBalance(accounrNo: "", completionHandler: { isSuccess, baseResponse, _  in
-            if isSuccess, let baseResponse = baseResponse, baseResponse.message == "success" {
-//                let data = baseResponse.content?.current_balance
-//                print("xxxxxxxxx", data)
-            }
-        })
+        getAccountBalance()
     }
     
     @IBAction func longPressForBalance(_ sender: Any) {
         let generator = UINotificationFeedbackGenerator()
-            generator.notificationOccurred(.success)
+        generator.notificationOccurred(.success)
         showBalanceView(status: false)
     }
     
@@ -52,5 +48,18 @@ class PreLoginViewController: BaseViewController {
             fatalError("Failed to load Main from BiometricLoginViewController file")
         }
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension PreLoginViewController {
+    func getAccountBalance(){
+        NetworkAccessLayer.shared.getAccountBalance(accounrNo: "", completionHandler: { [weak self] isSuccess, baseResponse, _  in
+            if isSuccess, let baseResponse = baseResponse, baseResponse.message == "success" {
+                let data = baseResponse.content?.current_balance
+                DispatchQueue.main.async {
+                    self?.currentBalance.text = String(data ?? 10000)
+                }
+            }
+        })
     }
 }

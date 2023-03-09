@@ -22,7 +22,6 @@ class HomepageCreditCardCollectionCell: UICollectionViewCell {
     
     func bind(){
         cardView.layer.cornerRadius = 8
-        
         cardView.layer.shadowOffset = CGSize(width: 0.2,
                                              height: 0.7)
         cardView.layer.shadowRadius = 1.3

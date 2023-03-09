@@ -22,11 +22,17 @@ class HomepageView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupTableView()
+        
         setupView()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     private func setupTableView() {
+        setupNetwork()
         tableView.register(UINib(nibName: "HomepageHeaderTableCell", bundle: nil), forCellReuseIdentifier: "HomepageHeaderTableCell")
         tableView.register(UINib(nibName: "HomepageOtherQuicklinkTableCell", bundle: nil), forCellReuseIdentifier: "HomepageOtherQuicklinkTableCell")
         tableView.register(UINib(nibName: "HomepageDebitCardTableCell", bundle: nil), forCellReuseIdentifier: "HomepageDebitCardTableCell")
@@ -45,6 +51,16 @@ class HomepageView: UIViewController {
                                                 height: -3.0)
         mySpaceView.layer.shadowRadius = 3.5
         mySpaceView.layer.shadowOpacity = 0.1
+        setupTableView()
+    }
+    
+    private func setupNetwork() {
+        NetworkAccessLayer.shared.getAccountCIF(cifNo: "", completionHandler: { [self] isSuccess, baseResponse, _  in
+            if isSuccess, let baseResponse = baseResponse, baseResponse.status == 200 {
+                homeViewModel.accountList = baseResponse.accounts
+                tableView.reloadData()
+            }
+        })
     }
     
     @IBAction func manageTapped(_ sender: UIButton) {
@@ -86,6 +102,7 @@ extension HomepageView: UITableViewDataSource, UITableViewDelegate {
         } else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomepageDebitCardTableCell", for: indexPath) as! HomepageDebitCardTableCell
             cell.cellDelegate = self
+            cell.bind(data: homeViewModel.accountList ?? [])
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomepageCreditCardTableCell", for: indexPath) as! HomepageCreditCardTableCell

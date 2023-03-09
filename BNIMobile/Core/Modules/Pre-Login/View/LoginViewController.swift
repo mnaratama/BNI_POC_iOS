@@ -30,5 +30,9 @@ class LoginViewController: BaseViewController {
 
     @IBAction func buttonLoginTapped(_ sender: Any) {
         //TO DO move to homescreen
+        guard let viewController = UIStoryboard(name: StoryboardName.home, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.tabBarVC) as? UITabBarController else {
+            fatalError("Failed to load Main from EnterMobileNumberVC file")
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
