@@ -59,7 +59,11 @@ extension LandingPageModalBottomView : UITableViewDelegate, UITableViewDataSourc
         guard let viewController = UIStoryboard(name: Constants.transferStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.transferEnterDataView) as? TransferEnterDataView else {
             fatalError("Failed to load Transfer from LandingPageVC file")
         }
-
+        let bankNamesLabel = "\(transferViewModel.receiversList?[indexPath.row].receiverBankName ?? "") | \(transferViewModel.receiversList?[indexPath.row].receiverAcNumber ?? "")"
+        let countryNamesLabel = "\(transferViewModel.receiversList?[indexPath.row].receiverCountryName ?? "") - \(transferViewModel.receiversList?[indexPath.row].payerBaseCurrency ?? "")"
+        viewController.nameReceiverLabel = transferViewModel.receiversList?[indexPath.row].receiverName ?? ""
+        viewController.bankReceiverLabel = bankNamesLabel
+        viewController.currencyReceiverLabel = countryNamesLabel
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

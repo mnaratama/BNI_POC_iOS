@@ -14,18 +14,22 @@ class TransferEnterDataView : UIViewController {
     }
     
     var chargeType = ""
-    
+    var nameReceiverLabel = ""
+    var bankReceiverLabel = ""
+    var currencyReceiverLabel = ""
     var isChecked = false
         
     @IBOutlet weak var beneficiaryRadioButton: UIImageView!
-    
     @IBOutlet weak var guaranteedRadioButton: UIImageView!
-    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var bankLabel: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("TransferEnterDataView")
         setupGestureRecognizer()
+        setupView()
     }
     
     @objc func beneficiaryRadioButtonSelector(tapGestureRecognizer: UITapGestureRecognizer){
@@ -62,6 +66,12 @@ class TransferEnterDataView : UIViewController {
         
         let guaranteedGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(guaranteedRadioButtonSelector(tapGestureRecognizer:)))
         guaranteedRadioButton.addGestureRecognizer(guaranteedGestureRecognizer)
+    }
+    
+    func setupView(){
+        nameLabel.text = nameReceiverLabel
+        bankLabel.text = bankReceiverLabel
+        currencyLabel.text = currencyReceiverLabel
     }
     
     @IBAction func buttonNextTapped(_ sender: Any) {
