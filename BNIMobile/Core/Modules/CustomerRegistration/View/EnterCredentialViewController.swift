@@ -18,6 +18,9 @@ class EnterCredentialViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var userIdTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var userIdWarningView: UIView!
+    @IBOutlet weak var passwordWarningView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextField()

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="65Y-kz-hzs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="65Y-kz-hzs">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -588,6 +588,19 @@ enjoy your BNI Mobile Banking app!</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMx-a6-eHg">
+                                                <rect key="frame" x="0.0" y="16.333333333333311" width="353.66666666666669" height="61.666666666666657"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="nx9-o4-JUn">
+                                                        <rect key="frame" x="323.66666666666663" y="24" width="14" height="14"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="nx9-o4-JUn" secondAttribute="trailing" constant="16" id="Fhn-ED-0ZJ"/>
+                                                    <constraint firstItem="nx9-o4-JUn" firstAttribute="centerY" secondItem="QMx-a6-eHg" secondAttribute="centerY" id="yKj-Qg-gxJ"/>
+                                                </constraints>
+                                            </view>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter user id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4j0-DG-aXt">
                                                 <rect key="frame" x="10" y="24.333333333333314" width="333.66666666666669" height="48"/>
                                                 <constraints>
@@ -616,17 +629,21 @@ enjoy your BNI Mobile Banking app!</string>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yyY-nI-5on" secondAttribute="trailing" constant="20" symbolic="YES" id="0fY-Ue-Y4F"/>
+                                            <constraint firstItem="3oQ-0Y-5wj" firstAttribute="top" secondItem="QMx-a6-eHg" secondAttribute="bottom" constant="2" id="7dl-4p-pZ4"/>
                                             <constraint firstItem="Pjl-0w-R0e" firstAttribute="leading" secondItem="3oQ-0Y-5wj" secondAttribute="leading" id="K3b-Bo-cNU"/>
                                             <constraint firstItem="3oQ-0Y-5wj" firstAttribute="centerX" secondItem="4j0-DG-aXt" secondAttribute="centerX" id="Xgk-4y-9ga"/>
                                             <constraint firstItem="4j0-DG-aXt" firstAttribute="top" secondItem="yyY-nI-5on" secondAttribute="bottom" constant="10" id="ZSb-SN-CwT"/>
                                             <constraint firstAttribute="width" secondItem="4j0-DG-aXt" secondAttribute="width" constant="20" id="aI0-IM-L9L"/>
+                                            <constraint firstItem="QMx-a6-eHg" firstAttribute="leading" secondItem="qwD-tr-DUU" secondAttribute="leading" id="auu-L0-9PF"/>
                                             <constraint firstItem="Pjl-0w-R0e" firstAttribute="leading" secondItem="qwD-tr-DUU" secondAttribute="leading" id="cx3-dI-3VM"/>
                                             <constraint firstItem="3oQ-0Y-5wj" firstAttribute="top" secondItem="4j0-DG-aXt" secondAttribute="bottom" constant="7.666666666666643" id="f1d-8C-mtp"/>
                                             <constraint firstItem="yyY-nI-5on" firstAttribute="top" secondItem="qwD-tr-DUU" secondAttribute="top" id="gYc-c4-Obx"/>
+                                            <constraint firstItem="QMx-a6-eHg" firstAttribute="top" secondItem="yyY-nI-5on" secondAttribute="bottom" constant="2" id="pEV-d3-JHo"/>
                                             <constraint firstItem="Pjl-0w-R0e" firstAttribute="top" secondItem="3oQ-0Y-5wj" secondAttribute="bottom" constant="10" id="rNj-mt-6Zc"/>
                                             <constraint firstItem="yyY-nI-5on" firstAttribute="leading" secondItem="qwD-tr-DUU" secondAttribute="leading" id="sW3-WJ-JNf"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pjl-0w-R0e" secondAttribute="trailing" constant="20" symbolic="YES" id="tTg-7j-lGq"/>
                                             <constraint firstItem="4j0-DG-aXt" firstAttribute="centerX" secondItem="qwD-tr-DUU" secondAttribute="centerX" id="tpD-jO-ZhO"/>
+                                            <constraint firstAttribute="trailing" secondItem="QMx-a6-eHg" secondAttribute="trailing" id="wVw-h2-HIb"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOc-1m-1fS">
@@ -638,6 +655,19 @@ enjoy your BNI Mobile Banking app!</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqj-Ca-Cx4">
+                                                <rect key="frame" x="0.0" y="16.333333333333368" width="353.66666666666669" height="61.666666666666657"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="5kO-5w-vkE">
+                                                        <rect key="frame" x="323.66666666666663" y="24" width="14" height="14"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="5kO-5w-vkE" secondAttribute="trailing" constant="16" id="Ctw-Hv-bCD"/>
+                                                    <constraint firstItem="5kO-5w-vkE" firstAttribute="centerY" secondItem="wqj-Ca-Cx4" secondAttribute="centerY" id="JlO-Jy-5t9"/>
+                                                </constraints>
+                                            </view>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FzI-1X-UWb">
                                                 <rect key="frame" x="10" y="24.333333333333371" width="333.66666666666669" height="48"/>
                                                 <constraints>
@@ -669,13 +699,17 @@ enjoy your BNI Mobile Banking app!</string>
                                             <constraint firstItem="FzI-1X-UWb" firstAttribute="centerX" secondItem="tOc-1m-1fS" secondAttribute="centerX" id="BbT-7u-qfZ"/>
                                             <constraint firstAttribute="width" secondItem="FzI-1X-UWb" secondAttribute="width" constant="20" id="BvY-Xu-jFZ"/>
                                             <constraint firstItem="FzI-1X-UWb" firstAttribute="top" secondItem="IA5-55-hQG" secondAttribute="bottom" constant="10" id="Dl8-ET-yar"/>
+                                            <constraint firstItem="wqj-Ca-Cx4" firstAttribute="leading" secondItem="tOc-1m-1fS" secondAttribute="leading" id="GeJ-Hq-pQY"/>
                                             <constraint firstItem="OoK-a9-Ocr" firstAttribute="centerX" secondItem="FzI-1X-UWb" secondAttribute="centerX" id="KNw-s4-ogF"/>
+                                            <constraint firstItem="wqj-Ca-Cx4" firstAttribute="top" secondItem="IA5-55-hQG" secondAttribute="bottom" constant="2" id="NT2-bc-stD"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IA5-55-hQG" secondAttribute="trailing" constant="20" symbolic="YES" id="PlQ-sk-X59"/>
                                             <constraint firstItem="KrG-hD-Yg5" firstAttribute="leading" secondItem="OoK-a9-Ocr" secondAttribute="leading" id="Rwz-gv-5hI"/>
                                             <constraint firstItem="IA5-55-hQG" firstAttribute="top" secondItem="tOc-1m-1fS" secondAttribute="top" id="Ucp-yF-sE1"/>
+                                            <constraint firstItem="OoK-a9-Ocr" firstAttribute="top" secondItem="wqj-Ca-Cx4" secondAttribute="bottom" constant="2" id="Uf8-b6-1Qx"/>
                                             <constraint firstItem="OoK-a9-Ocr" firstAttribute="top" secondItem="FzI-1X-UWb" secondAttribute="bottom" constant="7.666666666666643" id="cyH-4N-k0g"/>
                                             <constraint firstItem="IA5-55-hQG" firstAttribute="leading" secondItem="tOc-1m-1fS" secondAttribute="leading" id="sDR-uV-3Qj"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KrG-hD-Yg5" secondAttribute="trailing" constant="20" symbolic="YES" id="tib-kJ-z7K"/>
+                                            <constraint firstAttribute="trailing" secondItem="wqj-Ca-Cx4" secondAttribute="trailing" id="voR-AG-fIy"/>
                                             <constraint firstItem="OoK-a9-Ocr" firstAttribute="width" secondItem="FzI-1X-UWb" secondAttribute="width" constant="20" id="xKs-EO-NQr"/>
                                         </constraints>
                                     </view>
@@ -738,14 +772,16 @@ enjoy your BNI Mobile Banking app!</string>
                         <outlet property="lblUrerIdError" destination="Pjl-0w-R0e" id="RYn-ks-teQ"/>
                         <outlet property="nextButton" destination="X9Z-tl-b9v" id="bi6-Rg-M81"/>
                         <outlet property="passwordTextField" destination="FzI-1X-UWb" id="D79-gb-L2k"/>
+                        <outlet property="passwordWarningView" destination="wqj-Ca-Cx4" id="5f9-h9-Vse"/>
                         <outlet property="stackVW" destination="1PJ-9m-pAq" id="y8Y-op-OMs"/>
                         <outlet property="userIdTextField" destination="4j0-DG-aXt" id="tJe-7Q-OvL"/>
+                        <outlet property="userIdWarningView" destination="QMx-a6-eHg" id="a0c-de-qeZ"/>
                         <outlet property="vwToBG" destination="34F-iC-SlM" id="s82-VL-LaX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1C-zV-bgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3309" y="-6"/>
+            <point key="canvasLocation" x="3307.6335877862593" y="-6.3380281690140849"/>
         </scene>
     </scenes>
     <resources>
