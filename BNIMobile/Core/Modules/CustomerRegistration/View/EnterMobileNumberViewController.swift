@@ -28,6 +28,8 @@ class EnterMobileNumberViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var textField: UITextField!
     
+    var mobileNumber: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextField()
@@ -37,7 +39,6 @@ class EnterMobileNumberViewController: BaseViewController, UITextFieldDelegate {
     /// Configures the text filed and adds the tap gesture
     fileprivate func setupTextField() {
         textField.isUserInteractionEnabled = true
-        textField.keyboardType = .numberPad
         textField.delegate = self
         textField.addTarget(self, action: #selector(updatedValue(textField:)), for: .editingChanged)
     }
@@ -50,25 +51,33 @@ class EnterMobileNumberViewController: BaseViewController, UITextFieldDelegate {
     
     /// called each time user enters a value in the textFiled, Validation should happen here
     @objc func updatedValue(textField: UITextField) {
-        guard let _ = textField.text else {
+        guard let valueEntered = textField.text else {
             return
         }
 
-    //TODO: Validate the entered data here and enable the button
-        
-        self.nextButton(shouldEnable: true)
+        mobileNumber = valueEntered
     }
-
-    /// called when the keyboard gets dismissed,  any additional validation should happen here
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let _ = textField.text else {
-            return
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard CharacterSet(charactersIn: "0123456789").isSuperset(of: CharacterSet(charactersIn: string)) else {
+            return false
         }
-        self.nextButton(shouldEnable: true)
-        //TODO: save the data if required here
+        
+        let newString = ((textField.text ?? "") as NSString).replacingCharacters(in: range, with: string)
+        // enable next button only if the number is entered, disable if the number is cleared
+        self.nextButton(shouldEnable: !newString.isEmpty)
+
+        return true
     }
     
     @IBAction func buttonDoneTapped(_ sender: Any) {
+        UserDefaults.standard.set(self.mobileNumber, forKey: "MobileNumber")
+        NetworkAccessLayer.shared.generateOTP(mobileNumber: self.mobileNumber, completionHandler: {isSuccess, baseResponse, _  in
+            if isSuccess, let baseResponse = baseResponse {
+                print("Response JSON : \(baseResponse)")
+            }
+        })
+
         guard let viewController = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.OtpViewController) as? OtpViewController else {
             fatalError("Failed to load Main from CongratulationsPointViewController file")
         }

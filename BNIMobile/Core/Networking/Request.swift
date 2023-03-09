@@ -18,33 +18,49 @@ import AKNetworking
 
 enum Request {
     
-    case getMetadata(uuid: String)
+    case verifyAccount(mobileNumber: String)
+    case generateOTP(mobileNumber: String)
+    case sendOTP(otp: String)
+    case validateOTP(otp: String)
     
     func execute() -> AKNetworking.Request {
         let request: AKNetworking.Request
         
         switch self {
-            
-        case .getMetadata(_):
-            request = DataSourceManager.request(.GET, "/api/v1/generateotp", parameters: nil, encoding: .json, headers: self.headers)
+        case .verifyAccount(mobileNumber: let mobileNumber):
+            var headers = self.headers
+            headers["mobileNumber"] = mobileNumber
+            request = DataSourceManager.request(.GET, "/api/v1/verifyaccount", parameters: nil, encoding: .json, headers: headers)
+        case .generateOTP(mobileNumber: let mobileNumber):
+            var headers = self.headers
+            headers["mobileNumber"] = mobileNumber
+            request = DataSourceManager.request(.GET, "/api/v1/generateotp", parameters: nil, encoding: .json, headers: headers)
+        case .sendOTP(otp: let otp):
+            var headers = self.headers
+            headers["otp"] = otp
+            request = DataSourceManager.request(.GET, "/api/v1/sendotp", parameters: nil, encoding: .json, headers: headers)
+        case .validateOTP(otp: let otp):
+            var headers = self.headers
+            headers["otp"] = otp
+            request = DataSourceManager.request(.GET, "/api/v1/validateotp", parameters: nil, encoding: .json, headers: headers)
         }
-            // log the response
-            request.responseString { (urlRequest, urlResponse, string, error) -> Void in
-                // use this closure to log the response
-                
+        // log the response
+        request.responseString { (urlRequest, urlResponse, string, error) -> Void in
+            // use this closure to log the response
+            
 #if DEBUG
-                if let url = urlRequest?.url {
-                    print(url.absoluteURL)
-                }
-#endif
-                if let urlResponse = urlResponse {
-                    print(urlResponse)
-                }
+            if let url = urlRequest?.url {
+                print(url.absoluteURL)
             }
-            
-            return request
-            
+#endif
+            if let urlResponse = urlResponse {
+                print(urlResponse)
+            }
         }
+        
+        return request
+        
+    }
     
     var headers: [String: String] {
         let headers: [String: String] = [:]

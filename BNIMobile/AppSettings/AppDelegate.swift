@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Configure rootview based on Customer Registration Status
         chooseRootViewController()
-        
         return true
     }
     
@@ -37,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let hasCustomerRegistred = UserDefaults.standard.bool(forKey: "hasCustomerRegistered")
         
         if hasCustomerRegistred {
-            guard let preLoginVC = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.rootNavigationVC) as? UINavigationController else {
+            guard let preLoginVC = UIStoryboard(name: StoryboardName.preLogin, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.preLoginRootNavigation) as? UINavigationController else {
                 fatalError("Failed to load PreLogin from PreLoginViewController file")
             }
             rootVC = preLoginVC

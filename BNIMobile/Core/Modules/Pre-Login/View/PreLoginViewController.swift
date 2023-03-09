@@ -15,16 +15,34 @@
 
 import UIKit
 
-class PreLoginViewController: UIViewController {
+class PreLoginViewController: BaseViewController {
+    
+    @IBOutlet weak var balanceView: UIVisualEffectView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
-    @IBAction func pressAndHoldButtonAction(_ sender: Any) {
-        
+    @IBAction func longPressForBalance(_ sender: Any) {
+        showBalanceView(status: false)
     }
     
+    @IBAction func tapPressForCloseBalance(_ sender: Any) {
+        showBalanceView(status: true)
+    }
+    
+    private func showBalanceView(status:Bool) {
+        UIView.transition(with: balanceView, duration: 0.3,
+                          options: .transitionCrossDissolve,
+                          animations: {
+            self.balanceView.isHidden = status
+        })
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        guard let viewController = UIStoryboard(name: StoryboardName.preLogin, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.biometricLoginVC) as? BiometricLoginViewController else {
+            fatalError("Failed to load Main from BiometricLoginViewController file")
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }
-
