@@ -17,6 +17,12 @@ class OtpViewController: BaseViewController, UITextFieldDelegate {
     
     var otp: String = ""
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        nextButton(shouldEnable: false)
+        configureWarningLabel(showWarning: false)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextField()
