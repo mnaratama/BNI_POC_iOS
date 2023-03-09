@@ -81,7 +81,7 @@ class EnterMobileNumberViewController: BaseViewController, UITextFieldDelegate {
         })
 
         guard let viewController = UIStoryboard(name: StoryboardName.main, bundle: nil).instantiateViewController(withIdentifier: ViewControllerName.OtpViewController) as? OtpViewController else {
-            fatalError("Failed to load Main from CongratulationsPointViewController file")
+            fatalError("Failed to load Main from OtpViewController file")
         }
         self.navigationController?.pushViewController(viewController, animated: true)
     }
