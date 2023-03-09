@@ -63,6 +63,7 @@ extension PreLoginViewController {
                 NetworkAccessLayer.shared.getAccountBalance(accounrNo: accountNumber, completionHandler: { isSuccess, baseResponse, _ in
                     if let baseResponse = baseResponse, baseResponse.status == 200 {
                         self.transactions =  baseResponse.transactions ?? []
+                        self.currentBalance.text = baseResponse.currentBalance?.description
                         self.tableView.reloadData()
                     }
                 })
