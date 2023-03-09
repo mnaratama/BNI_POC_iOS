@@ -49,4 +49,4 @@ func keyForHost(_ host: String?, withPort port: Int?) -> String {
     return [host, port?.description].filter({ $0 != nil }).map({ $0! }).joined(separator: "")
 }
 
-func +=<K, V> (left: inout [K: V], right: [K: V]) { for (key, value) in right { left[key] = value } }
+func +=<Key, Val> (left: inout [Key: Val], right: [Key: Val]) { for (key, val) in right { left[key] = val } }

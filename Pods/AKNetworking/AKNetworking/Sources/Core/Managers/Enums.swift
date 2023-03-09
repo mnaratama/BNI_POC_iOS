@@ -15,6 +15,7 @@
 import Foundation
 import UIKit
 import MobileCoreServices
+import UniformTypeIdentifiers
 
 // **********************************************************************************************************
 //
@@ -26,7 +27,7 @@ import MobileCoreServices
  Session Configuration
  */
 public enum SessionConfiguration: String {
-    case sessionDefault
+    case `default`
     case ephemeral
 }
 
@@ -92,7 +93,7 @@ public enum ParameterEncoding {
      
      - parameter urlRequest: Request that needs to be encoded.
      - parameter parameters: The parameters that.
-     
+     - parameter encodingFlag: Flag to say FIle to be encoded or not
      - returns: the modified NSURLRequest with the suplied parameters.
      */
     public func encodeRequest(_ urlRequest: URLRequest, parameters: [String: AnyObject]?, encodingFlag: Bool? = nil) -> URLRequest {
@@ -151,7 +152,6 @@ public enum ParameterEncoding {
         return URLRequest(url: URL(string: "")!)
     }
     
-    // Added Encoding flag for base app team.
     private func encodeMultipartRequest(_ urlRequest: NSMutableURLRequest, _ parameters: [String: AnyObject]?, _ encodingFlag: Bool? = nil) -> URLRequest {
         let boundary = "----ABCD"
         let bodyData: NSMutableData = NSMutableData()
@@ -171,8 +171,7 @@ public enum ParameterEncoding {
                 bodyData.append("\n".data(using: String.Encoding.utf8)!)
                 do {
                     let parameterData = try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions())
-                    
-                    bodyData.append(parameterData.base64EncodedData(options: .lineLength64Characters))
+                        bodyData.append(parameterData.base64EncodedData(options: .lineLength64Characters))
                 } catch {
                     
                 }
@@ -191,7 +190,7 @@ public enum ParameterEncoding {
                     bodyData.append("Content-Type: \(mimeType!)\r\n".data(using: String.Encoding.utf8)!)
                     bodyData.append("\n".data(using: String.Encoding.utf8)!)
                     if encodingFlag == nil || encodingFlag == true {
-                        bodyData.append((fileData.base64EncodedData(options: .lineLength64Characters)))
+                         bodyData.append((fileData.base64EncodedData(options: .lineLength64Characters)))
                     } else {
                         bodyData.append(fileData as Data)
                     }
@@ -201,7 +200,7 @@ public enum ParameterEncoding {
                 
             }
             
-            //body
+            // body
             urlRequest.setValue("\(bodyData.length)", forHTTPHeaderField: "Content-Length")
             urlRequest.httpBody = bodyData as Data
         }
@@ -211,20 +210,26 @@ public enum ParameterEncoding {
     
     private func getMIMEType(fileExtension: String) -> String? {
         if !fileExtension.isEmpty {
-            let utiRef = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, fileExtension as CFString, nil)
-            let UTI = utiRef!.takeUnretainedValue()
-            utiRef!.release()
-            
-            let mimeTypeRef = UTTypeCopyPreferredTagWithClass(UTI, kUTTagClassMIMEType)
-            if mimeTypeRef != nil {
-                let mimeType = mimeTypeRef!.takeUnretainedValue()
-                mimeTypeRef!.release()
-                return mimeType as String
+            if #available(iOS 15.0, *) {
+                // let utiRef = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, fileExtension as CFString, nil)
+                let utiRef = UTType(tag: fileExtension, tagClass: UTTagClass.filenameExtension, conformingTo: nil)
+                if let mimeType = utiRef?.preferredMIMEType {
+                    return mimeType as String
+                }
+            } else {
+                let utiRef = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, fileExtension as CFString, nil)
+                let UTI = utiRef!.takeUnretainedValue()
+                utiRef!.release()
+                
+                let mimeTypeRef = UTTypeCopyPreferredTagWithClass(UTI, kUTTagClassMIMEType)
+                if mimeTypeRef != nil {
+                    let mimeType = mimeTypeRef!.takeUnretainedValue()
+                    mimeTypeRef!.release()
+                    return mimeType as String
+                }
             }
-            
         }
-        
-        return nil
+        return "application/octet-stream"
     }
     
 }

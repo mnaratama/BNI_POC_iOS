@@ -345,7 +345,12 @@ class Router {
 // **************************************************
 extension String {
     func urlDecodedString() -> String? {
-        return self.replacingOccurrences(of: "+", with: " ").removingPercentEncoding ?? self
+        if DataSourceManager.disableReplacingOccurOfPlusChar {
+            return self.removingPercentEncoding ?? self
+        } else {
+            return self.replacingOccurrences(of: "+", with: " ").removingPercentEncoding ?? self
+        }
+        
     }
     
     func urlParameters() -> [String: String] {

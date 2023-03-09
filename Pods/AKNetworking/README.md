@@ -25,7 +25,7 @@ Features:
 * Cache Management and Cache Policy
 * Client Certificate
 * Multipart file upload
-
+* MIME type detection
 # Installation
 
 #### CocoaPods:
@@ -57,7 +57,7 @@ git 'git@INMBZP4112.in.dst.ibm.com:assemblykit/framework_aknetworking.git' ~> 2.
 
 Version | Language | Xcode | iOS
 ------- | -------- | ----- | ---
-1.5.0 | Swift 5.3 | 12 | 12.0
+2.1.0 | Swift 5.3 | 12.0  | 12.0
 
 # Programming Guide
 
@@ -312,8 +312,8 @@ You can also validate a **String** type or **JSON** type, see the example with *
 let validator = ResponseValidator(string: "httpbin")
 
 let _ = DataSourceManager.request(.GET, "/get")
-	.validate(validator)
-	.responseString { (request, response, string, error) in
+    .validate(validator)
+    .responseString { (request, response, string, error) in
 
 }
 
@@ -818,19 +818,129 @@ How to create/make multipart upload request -
 
 ```
 DataSourceManager.multipartUploadRequest(urlString: "/upload", parameters: [MultipartConstants.Content : payload], headers: nil, uploadClosure: { 
-					error, status in
-     					if(error != "") {
-                   		//Handle error response
-                		} else {
-                   		 DispatchQueue.main.async {
-                    	//Handle success 
-                    	//Upload progress status
-                    	//Update UI here   
-                		}
+                    error, status in
+                         if(error != "") {
+                           //Handle error response
+                        } else {
+                            DispatchQueue.main.async {
+                        //Handle success 
+                        //Upload progress status
+                        //Update UI here   
+                        }
                })
 ```
 
+##Reachability
+
+###OverView
+
+To know the state of the system's current network and if a host or service is reachable through that network, AKReachability uses the SCNetworkReachability API provided by Apple.
+
+Following are the 3 ways to test for reachability of host :
+
+####Rechability Closure 
+
+```
+public var reachabilityClosure: AKReachabilityClosure?
+
+```
+
+This var holds a closure for receiving reachability changes.
+
+```
+let instance = AKReachability.instance
+instance.setHostForReachability("google.com")
+instance.reachabilityClosure = { (reachable, status) -> Void in
+  
+     print("reachable : \(reachable)")
+     print("status : \(status.description)")
+     instance.stopMonitoring()
+     }   
+instance.startMonitoring()
+
+```
+
+####Rechability Notification 
+
+```
+public let AKReachabilityDidChangeNotification = "com.ibm.akreachability.change"
+```
+
+Identifier for the notifications triggered from AKReachability
+The Notification info will contain a dictionary with the key AKReachabilityStatusChanged, that will contain a description of the current connection status.
+
+```
+let instance = AKReachability.instance
+instance.setHostForReachability("google.com")
+               
+NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: AKReachabilityDidChangeNotification), object: nil, queue: nil) { (Notification) in
+                let info = Notification.userInfo
+                let valueFromKey = info?["AKReachabilityStatusChanged"]
+
+                print("notification info: \(String(describing: info))")
+                print("value from key AKReachabilityStatusChanged: \(String(describing: valueFromKey))")
+                print("reachable : \(instance.isReachable)")
+                print("status : \(instance.reachabilityStatus.description)")
+instance.stopMonitoring()
+}
+
+instance.startMonitoring()
+
+```
+
+####Synchronous Reachability Check
+
+```
+public func performSynchronousReachabilityCheck(shouldNotify: Bool) -> Bool
+
+```
+
+Perform a synchronous check to determine current reachabillity state via reachability flags.
+ShouldNotify is a boolean value to indicate whether the application should be notified via the usual channels (notification, closure) if a change in reachability is detected via synchronous check.
+This function returns a boolean value indicative of whether device is considered reachable based on reachability flags.
+
+```
+let instance = AKReachability.instance
+instance.setHostForReachability("google.com")       
+instance.startMonitoring()
+
+NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: AKReachabilityDidChangeNotification), object: nil, queue: nil) { (Notification) in
+            let info = Notification.userInfo
+            let valueFromKey = info?["AKReachabilityStatusChanged"]
+           
+}
+      
+let result = AKReachability.instance.performSynchronousReachabilityCheck(shouldNotify: true)
+
+```
+## Client Certificate
+
+### Overview
+Networking supports SSL Pinning. We use SSL pinning to ensure that the app communicates only with the designated server itself. One of the prerequisites for SSL pinning is saving the target's server SSL certificate within the app bundle. The saved certificate is used when defining the pinned certificate(s) upon session configuration.
+
+### Usage
+
+How to configure  certificate is expained below.
+
+```
+if let pathToCert = bundle.path(forResource: "*.httpbin.org", ofType: "cer"),
+
+let localCertificate = (NSData(contentsOfFile: pathToCert)),
+let certificate = SecCertificateCreateWithData(nil, localCertificate) {
+let  serverPolicyManager = ServerPolicyManager()
+serverPolicyManager.certificatesPinning = [certificate]
+DataSourceManager.sharedInstance.serverPolicyManager = serverPolicyManager
+}
+
+```
+### Detecting MIME type 
+How to detect MIME type is explained below. We will try to fetch particluar MIME from Apple's prespecied dictionary
+
+```
+let mimeType = getMIMEType(fileExtension: "png")
+```
 # Communication
 
 Contact the developer's team:
 [assemblykit@us.ibm.com](mailto:assemblykit@us.ibm.com)
+

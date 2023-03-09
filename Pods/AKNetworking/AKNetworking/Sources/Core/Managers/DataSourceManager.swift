@@ -39,15 +39,19 @@ public class DataSourceManager: NSObject {
     
     public static var sharedInstance: DataSourceManager = DataSourceManager()
     
+    public var shouldLog: Bool = true
+    
     /**
      It's the delegate for local server, it'll be the responsible for handling all the local API requests
      */
     public class var localServerDelegate: LocalServerDelegate? {
         get {
             return SessionManager.sharedInstance.localServerDelegate
-        } set {
+        }
+        set {
             SessionManager.sharedInstance.localServerDelegate = newValue
         }
+        
     }
     
     public var serverPolicyManager: ServerPolicyManager?
@@ -61,9 +65,11 @@ public class DataSourceManager: NSObject {
     public class var baseURLString: String? {
         get {
             return SessionManager.sharedInstance.baseURLString
-        } set {
+        }
+        set {
             SessionManager.sharedInstance.baseURLString = newValue
         }
+        
     }
     
     /**
@@ -73,9 +79,11 @@ public class DataSourceManager: NSObject {
     public class var localMode: Bool {
         get {
             return SessionManager.sharedInstance.localMode
-        } set {
+        }
+        set {
             SessionManager.sharedInstance.localMode = newValue
         }
+        
     }
     
     /**
@@ -84,9 +92,11 @@ public class DataSourceManager: NSObject {
     public class var cachePolicy: NSURLRequest.CachePolicy! {
         get {
             return SessionManager.sharedInstance.cachePolicy
-        } set {
+        }
+        set {
             SessionManager.sharedInstance.cachePolicy = newValue
         }
+        
     }
     
     /**
@@ -95,10 +105,10 @@ public class DataSourceManager: NSObject {
     public class var cacheControl: RequestCacheControl? {
         get {
             return SessionManager.sharedInstance.cacheControl
-        } set {
+        }
+        set {
             SessionManager.sharedInstance.cacheControl = newValue
         }
-       
         
     }
     
@@ -108,9 +118,11 @@ public class DataSourceManager: NSObject {
     public class var sessionConfiguration: SessionConfiguration {
         get {
             return SessionManager.sessionConfiguration
-        } set {
+        }
+        set {
             SessionManager.sessionConfiguration = newValue
         }
+        
     }
     
     /**
@@ -119,9 +131,11 @@ public class DataSourceManager: NSObject {
     public class var enableRequestCache: Bool {
         get {
             return SessionManager.enableRequestCacche
-        } set {
+        }
+        set {
             SessionManager.enableRequestCacche = newValue
         }
+        
     }
     
     /**
@@ -130,9 +144,11 @@ public class DataSourceManager: NSObject {
     public class var enableURLCache: Bool {
         get {
             return SessionManager.enableURLCache
-        } set {
+        }
+        set {
             SessionManager.enableURLCache = newValue
         }
+        
     }
     
     /**
@@ -142,9 +158,11 @@ public class DataSourceManager: NSObject {
     public var responseValidator: ResponseValidator? {
         get {
             return SessionManager.sharedInstance.responseValidator
-        } set {
+        }
+        set {
             SessionManager.sharedInstance.responseValidator = newValue
         }
+        
     }
     
     // **************************************************
@@ -157,21 +175,24 @@ public class DataSourceManager: NSObject {
     public class var timeoutInterval: TimeInterval? {
         get {
             return SessionManager.sharedInstance.timeoutInterval
-        } set {
+        }
+        set {
             SessionManager.sharedInstance.timeoutInterval = newValue
         }
+        
     }
     
     /**
      property that controls the response delay from local requests
      */
     public class var localResponseDelayInterval: TimeInterval {
-        
         get {
             return SessionManager.sharedInstance.localResponseDelayInterval
-        } set {
+        }
+        set {
             SessionManager.sharedInstance.localResponseDelayInterval = newValue
         }
+        
     }
     
     /**
@@ -184,6 +205,7 @@ public class DataSourceManager: NSObject {
         set {
             SessionManager.timeoutSessionIntervalForRequest = newValue
         }
+        
     }
     
     /**
@@ -192,7 +214,8 @@ public class DataSourceManager: NSObject {
     public class var timeoutSessionIntervalForResource: TimeInterval {
         get {
             return SessionManager.timeoutSessionIntervalForResource
-        } set {
+        }
+        set {
             SessionManager.timeoutSessionIntervalForResource = newValue
         }
     }
@@ -201,13 +224,20 @@ public class DataSourceManager: NSObject {
      The maximum file size(in KB's) that is allowed for uploading to server. Default value is 2048 KB's.
      */
     public class var maximumFileSizeAllowedForUploading: Int {
-        
         get {
             return  SessionManager.maximumFileSizeAllowedForUploading
-        } set {
+        }
+        set {
             SessionManager.maximumFileSizeAllowedForUploading = newValue
         }
+        
     }
+    
+    /**
+     To disable replacement of '+' charater with space for local mode
+     */
+    
+    public static var disableReplacingOccurOfPlusChar =  false
     
     // **************************************************
     // MARK: - Constructors
@@ -235,7 +265,6 @@ public class DataSourceManager: NSObject {
      - parameter method:     The Method that should be used to make this request.
      - parameter urlString:  The url that you want to send the request.
      - parameter parameters: Parameters for the request. This parameter can be implied and defaults to nil.
-     - parameter encoding:   Encoding that should be used on this request. This parameter can be implied and
      defaults to JSON.
      - parameter headers:    HTTP Headers for the request. This parameter is can be implied and defaults to
      nil.
@@ -245,7 +274,8 @@ public class DataSourceManager: NSObject {
     public class func request(_ method: Method, _ urlString: String, parameters: [String: AnyObject]? = nil,
                               encoding: ParameterEncoding = .json, headers: [String: String]? = nil) -> Request {
         
-        return SessionManager.sharedInstance.request(method, urlString, parameters: parameters, encoding: encoding, headers: headers)
+        return SessionManager.sharedInstance.request(method, urlString, parameters: parameters, encoding: encoding,
+                                                     headers: headers)
     }
     
     /**
@@ -259,8 +289,8 @@ public class DataSourceManager: NSObject {
      
      - returns: a Request object that represents this request.
      */
-    public class func multipartUploadRequest(urlString: String, parameters: [String: AnyObject]? = nil, headers: [String: String]? = nil, uploadClosure: @escaping (_ error: String, _ progressStatus: String) -> Void  ) -> Request? {
-        return SessionManager.sharedInstance.multipartUploadRequest(urlString: urlString, parameters: parameters, headers: headers, closure: uploadClosure)
+    public class func multipartUploadRequest(urlString: String, parameters: [String: AnyObject]? = nil, headers: [String: String]? = nil, encodingFlag: Bool? = nil, uploadClosure: @escaping (_ error: String, _ progressStatus: String) -> Void  ) -> Request? {
+        return SessionManager.sharedInstance.multipartUploadRequest(urlString: urlString, parameters: parameters, headers: headers, encodingFlag: encodingFlag, closure: uploadClosure)
     }
     
     /**

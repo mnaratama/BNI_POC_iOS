@@ -51,6 +51,7 @@ public class ServerPolicyManager: NSObject, URLSessionDataDelegate {
 // **************************************************
 
     var certificates: [SecCertificate]?
+    @nonobjc public var certificatesPinning: [SecCertificate]?
     var keys: [SecKey]?
 
 // **************************************************
@@ -65,10 +66,15 @@ public class ServerPolicyManager: NSObject, URLSessionDataDelegate {
         var certificates: [SecCertificate] = []
 		print(SecTrustGetCertificateCount(trust))
         for index in 0..<SecTrustGetCertificateCount(trust) {
-            if let certificate = SecTrustGetCertificateAtIndex(trust, index) {
-                certificates.append(certificate)
+            if #available(iOS 15.0, *) {
+                if let certificates = SecTrustCopyCertificateChain(trust) as? [SecCertificate] {
+                    _ = Set(certificates.map { SecCertificateCopyData($0) as Data })
+                }
+            } else {
+                if let certificate = SecTrustGetCertificateAtIndex(trust, index) {
+                    certificates.append(certificate)
+                }
             }
-            
         }
 
         return allCertificateDataForCertificates(certificates)
@@ -80,45 +86,50 @@ public class ServerPolicyManager: NSObject, URLSessionDataDelegate {
     }
 
     internal func trustIsValid(_ trust: SecTrust) -> Bool {
-        
         var isValid = false
-        var result = SecTrustResultType.invalid
+        
         if #available(iOS 13, *) {
-            let status = SecTrustEvaluateWithError(trust, nil)
-            if status {
-                
-                let unspecified = SecTrustResultType.unspecified
-                let proceed = SecTrustResultType.proceed
-                
-                let validate = result == unspecified || result == proceed
-                isValid = validate
+            var error: CFError?
+            let evaluationSucceeded = SecTrustEvaluateWithError(trust, &error)
+            
+            if evaluationSucceeded {
+               // throw AFError.serverTrustEvaluationFailed(reason: .trustEvaluationFailed(error: error))
+                isValid = true
             }
-            return isValid
+            
         } else {
+            var result = SecTrustResultType.invalid
             let status = SecTrustEvaluate(trust, &result)
+
             if status == errSecSuccess {
                 let unspecified = SecTrustResultType.unspecified
                 let proceed = SecTrustResultType.proceed
-                
+
                 let validate = result == unspecified || result == proceed
                 isValid = validate
             }
-            return isValid
         }
+       
+        return isValid
     }
 
     internal  func keysForTrust(_ trust: SecTrust) -> [SecKey] {
         var publicKeysLoaded: [SecKey] = []
 
         for index in 0..<SecTrustGetCertificateCount(trust) {
-            if let
-                certificate = SecTrustGetCertificateAtIndex(trust, index),
-                let publicKey = keyForCertificate(certificate) {
-                publicKeysLoaded.append(publicKey)
+            if #available(iOS 15.0, *) {
+                if let certificates = SecTrustCopyCertificateChain(trust) as? [SecCertificate] {
+                    _ = Set(
+                        certificates.map { SecCertificateCopyData($0) as Data })
+                    let publicKey = keyForCertificate(certificates.first!)
+                    publicKeysLoaded.append(publicKey!)
+                }
+            } else {
+                if let certificate = SecTrustGetCertificateAtIndex(trust, index), let publicKey = keyForCertificate(certificate){
+                    publicKeysLoaded.append(publicKey)
+                }
             }
-            
         }
-
         return publicKeysLoaded
     }
 
@@ -130,10 +141,12 @@ public class ServerPolicyManager: NSObject, URLSessionDataDelegate {
         let trustCreationStatus = SecTrustCreateWithCertificates(certificate, policy, &trust)
 
         if let trust = trust, trustCreationStatus == errSecSuccess {
-            if #available(iOS 14, *) {
-            publicKey = SecTrustCopyKey(trust)
+            if #available(iOS 14.0, *) {
+                publicKey = SecTrustCopyKey(trust)
             } else {
+                // Fallback on earlier versions
                 publicKey = SecTrustCopyPublicKey(trust)
+
             }
         }
 
@@ -153,12 +166,14 @@ public class ServerPolicyManager: NSObject, URLSessionDataDelegate {
         let trustCreateStatus = SecTrustCreateWithCertificates(certificate, policy, &trust)
 
         if let trust = trust, trustCreateStatus == errSecSuccess {
-            if #available(iOS 14, *) {
+            if #available(iOS 14.0, *) {
                 currentPublicKey = SecTrustCopyKey(trust)
             } else {
+                // Fallback on earlier versions
                 currentPublicKey = SecTrustCopyPublicKey(trust)
             }
         }
+
         return currentPublicKey
     }
 

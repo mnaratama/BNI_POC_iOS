@@ -1,7 +1,7 @@
 /*
- * IBM iOS Accelerators component
+ * Assembly Kit
  * Licensed Materials - Property of IBM
- * Copyright (C) 2017 IBM Corp. All Rights Reserved.
+ * Copyright (C) 2015 IBM Corp. All Rights Reserved.
  * 6949 - XXX
  *
  * IMPORTANT:  This IBM software is supplied to you by IBM
@@ -13,6 +13,10 @@
  */
 
 import UIKit
+import Security
+import SystemConfiguration
+import MobileCoreServices
+import Foundation
 
 // **********************************************************************************************************
 //
@@ -33,11 +37,12 @@ import UIKit
 // **********************************************************************************************************
 
 /**
-This class acts as delegate for all NSURLSessionTasks and also handles calling
-the delegate methods for each task that was created.
-*/
+ This class acts as delegate for all NSURLSessionTasks and also handles calling
+ the delegate methods for each task that was created.
+ */
+
 final public class SessionManagerDelegate: NSObject, URLSessionDataDelegate {
-	
+    
     // private let requestsQueue = DispatchQueue(label: "queue", attributes: DispatchQueueAttributes.concurrent)
     private let requestsQueue = DispatchQueue(label: "queue", attributes: DispatchQueue.Attributes.concurrent)
     
@@ -76,18 +81,18 @@ final public class SessionManagerDelegate: NSObject, URLSessionDataDelegate {
         }
         
     }
-
+    
     public func urlSession(_ session: URLSession, task: URLSessionTask, didSendBodyData bytesSent: Int64, totalBytesSent: Int64, totalBytesExpectedToSend: Int64) {
         if let delegate = self[task] {
             delegate.urlSession(session, task: task, didSendBodyData: bytesSent, totalBytesSent: totalBytesSent, totalBytesExpectedToSend: totalBytesExpectedToSend)
         }
         
     }
-           
-// **************************************************
-// MARK: - Override Public Methods
-// **************************************************
-
+    
+    // **************************************************
+    // MARK: - Override Public Methods
+    // **************************************************
+    
 }
 
 // **************************************************
@@ -95,82 +100,116 @@ final public class SessionManagerDelegate: NSObject, URLSessionDataDelegate {
 // **************************************************
 
 extension SessionManagerDelegate {
-
-	typealias AuthResult = (disposition: Foundation.URLSession.AuthChallengeDisposition, credential: URLCredential?)
-
-// **************************************************
-// MARK: - Private Methods
-// **************************************************
-
+    
+    typealias AuthResult = (disposition: Foundation.URLSession.AuthChallengeDisposition, credential: URLCredential?)
+    
+    // **************************************************
+    // MARK: - Private Methods
+    // **************************************************
+    
     private func trustIsValid(_ trust: SecTrust) -> Bool {
         var isValid = false
         
-        var result = SecTrustResultType.invalid
         if #available(iOS 13, *) {
-            let status = SecTrustEvaluateWithError(trust, nil)
-            if status {
-                let unspecified = SecTrustResultType.unspecified
-                let proceed = SecTrustResultType.proceed
-                isValid = result == unspecified || result == proceed
+            var error: CFError?
+            let evaluationSucceeded = SecTrustEvaluateWithError(trust, &error)
+            
+            if evaluationSucceeded {
+                // throw AFError.serverTrustEvaluationFailed(reason: .trustEvaluationFailed(error: error))
+                isValid = true
             }
-            return isValid
+            
         } else {
+            var result = SecTrustResultType.invalid
             let status = SecTrustEvaluate(trust, &result)
+            
             if status == errSecSuccess {
                 let unspecified = SecTrustResultType.unspecified
                 let proceed = SecTrustResultType.proceed
-                isValid = result == unspecified || result == proceed
+                
+                let validate = result == unspecified || result == proceed
+                isValid = validate
             }
-            return isValid
         }
+        
+        return isValid
     }
-
-	private func handleLocalCertificates(_ challenge: URLAuthenticationChallenge) {
-
-		let servicePoliceManager =  DataSourceManager.sharedInstance.serverPolicyManager
-
-		if let serverTrust = challenge.protectionSpace.serverTrust,
-			let certificatesArray = servicePoliceManager?.certificates {
-
-			var serverTrustIsValid = false
-
-			if certificatesArray.count > 1 {
-				let policy = SecPolicyCreateSSL(true, (challenge.protectionSpace.host as CFString?))
-				SecTrustSetPolicies(serverTrust, [policy] as CFTypeRef)
-
-				SecTrustSetAnchorCertificates(serverTrust, certificatesArray as CFArray)
-				SecTrustSetAnchorCertificatesOnly(serverTrust, true)
-
-				serverTrustIsValid = trustIsValid(serverTrust)
-			} else {
-
-				let serverCertificatesDataArray = servicePoliceManager?.certificateDataForTrust(serverTrust)
-				let pinnedCertificatesDataArray = servicePoliceManager?.allCertificateDataForCertificates(certificatesArray)
-
-				outerLoop: for serverCertificateData in serverCertificatesDataArray! {
-					for pinnedCertificateData in pinnedCertificatesDataArray! 
-						where serverCertificateData == pinnedCertificateData {
-							serverTrustIsValid = true
-							break outerLoop
-						}
-					
-				}
-			}
-
-			if !serverTrustIsValid {
-				self.error = NSError(domain: AKNetworkingErrorDomain, code: 0, userInfo:
-					[NSLocalizedDescriptionKey: NSLocalizedString("local certificate was not found",
-						comment: "You dont have a valid local certificate in ServerPolicyManager, please add a certificate.")])
-			}
-		}
-	}
-
-	private func handleLocalKeys(_ challenge: URLAuthenticationChallenge) {
-
-        let servicePoliceManager =  DataSourceManager.sharedInstance.serverPolicyManager
+    
+    private func handleLocalCertificates(_ challenge: URLAuthenticationChallenge) {
+        
+        guard let servicePoliceManager =  DataSourceManager.sharedInstance.serverPolicyManager else {
+            return
+        }
         
         if let serverTrust = challenge.protectionSpace.serverTrust,
-            let pinnedPublicKeys = servicePoliceManager?.keys {
+           let certificatesArray = servicePoliceManager.certificatesPinning {
+            
+            var serverTrustIsValid = false
+            
+            if certificatesArray.count > 1 {
+                let policy = SecPolicyCreateSSL(true, (challenge.protectionSpace.host as CFString?))
+                SecTrustSetPolicies(serverTrust, [policy] as CFTypeRef)
+                
+                SecTrustSetAnchorCertificates(serverTrust, certificatesArray as CFArray)
+                SecTrustSetAnchorCertificatesOnly(serverTrust, true)
+                
+                serverTrustIsValid = trustIsValid(serverTrust)
+            } else {
+                
+                let serverCertificatesDataArray = servicePoliceManager.certificateDataForTrust(serverTrust)
+                let pinnedCertificatesDataArray = servicePoliceManager.allCertificateDataForCertificates(certificatesArray)
+                
+                outerLoop: for serverCertificateData in serverCertificatesDataArray {
+                    for pinnedCertificateData in pinnedCertificatesDataArray
+                    where serverCertificateData == pinnedCertificateData {
+                        serverTrustIsValid = true
+                        break outerLoop
+                    }
+                }
+            }
+            
+            if !serverTrustIsValid {
+                self.error = NSError(domain: AKNetworkingErrorDomain, code: 0, userInfo:
+                                        [NSLocalizedDescriptionKey: NSLocalizedString("local certificate was not found",
+                                                                                      comment: "You dont have a valid local certificate in ServerPolicyManager, please add a certificate.")])
+            }
+            
+        }
+        
+    }
+    
+    // **************************************************
+    // MARK: - Internal Methods
+    // **************************************************
+    
+    func handleChallenge(challenge: URLAuthenticationChallenge,
+                         completionHandler: (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        
+        var authDisposition: URLSession.AuthChallengeDisposition = .useCredential
+        var authCredential: URLCredential? 
+        
+        switch challenge.protectionSpace.authenticationMethod {
+        case NSURLAuthenticationMethodServerTrust:
+            self.hanldeServerTrust(challenge: challenge, completionHandler: completionHandler)
+        case NSURLAuthenticationMethodClientCertificate:
+            let result = self.handleAuthenticationChallenge(challenge)
+            authDisposition = result.disposition
+            authCredential = result.credential
+        default:
+            break
+        }
+        completionHandler(authDisposition, authCredential)
+
+    }
+    
+    private func handleLocalKeys(_ challenge: URLAuthenticationChallenge) {
+        
+        guard let servicePoliceManager =  DataSourceManager.sharedInstance.serverPolicyManager else {
+            return
+        }
+        
+        if let serverTrust = challenge.protectionSpace.serverTrust,
+           let pinnedPublicKeys = servicePoliceManager.keys {
             
             let policies = NSMutableArray()
             policies.add(SecPolicyCreateSSL(true, (challenge.protectionSpace.host as CFString?)))
@@ -179,10 +218,10 @@ extension SessionManagerDelegate {
             var certificateChainEvaluationPassed = true
             var hasKey = false
             
-            certificateChainEvaluationPassed = servicePoliceManager?.trustIsValid(serverTrust) ?? false
+            certificateChainEvaluationPassed = servicePoliceManager.trustIsValid(serverTrust)
             
             if certificateChainEvaluationPassed {
-                outerLoop: for serverPublicKey in (servicePoliceManager?.keysForTrust(serverTrust))! {
+                outerLoop: for serverPublicKey in (servicePoliceManager.keysForTrust(serverTrust)) {
                     if (pinnedPublicKeys as NSArray).contains(serverPublicKey) {
                         hasKey = true
                         break outerLoop
@@ -197,82 +236,94 @@ extension SessionManagerDelegate {
                 }
                 
             }
-        }
-
-	}
-
-	private func handleAuthenticationChallenge(_ challenge: URLAuthenticationChallenge) -> AuthResult {
-		var disposition = Foundation.URLSession.AuthChallengeDisposition.cancelAuthenticationChallenge
-		var credential: URLCredential?
-
-		if DataSourceManager.isSelfSignedServerValid(challenge.protectionSpace.host) {
-			if let serverTrust = challenge.protectionSpace.serverTrust {
-				credential = URLCredential(trust: serverTrust)
-				disposition = Foundation.URLSession.AuthChallengeDisposition.useCredential
-			}
-		}
-
-		// *************************
-		// MARK: - Client Certificates
-		// *************************
-
-		self.handleLocalCertificates(challenge)
-
-		// *************************
-		// MARK: - Client Keys
-		// *************************
-
-		self.handleLocalKeys(challenge)
-
-		return (disposition: disposition, credential: credential)
-	}
-
-// **************************************************
-// MARK: - Internal Methods
-// **************************************************
-    
-    func handleChallenge(challenge: URLAuthenticationChallenge,
-                         completionHandler: (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        
-        var authDisposition: URLSession.AuthChallengeDisposition = .useCredential
-        var authCredential: URLCredential?
-        
-        switch challenge.protectionSpace.authenticationMethod {
-        case NSURLAuthenticationMethodServerTrust:
-            break
-        case NSURLAuthenticationMethodClientCertificate:
-            let result = self.handleAuthenticationChallenge(challenge)
             
-            authDisposition = result.disposition
-            authCredential = result.credential
-            
-        default:
-            break
         }
         
-        completionHandler(authDisposition, authCredential)
     }
-	
-	public func urlSession(_ session: URLSession,
-	                       didReceive challenge: URLAuthenticationChallenge,
-	                       completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-		self.handleChallenge(challenge: challenge, completionHandler: completionHandler)
-	}
-	
-	public func urlSession(_ session: URLSession,
-	                       task: URLSessionTask,
-	                       didReceive challenge: URLAuthenticationChallenge,
-	                       completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-		self.handleChallenge(challenge: challenge, completionHandler: completionHandler)
-	}
-
+    
+    private func handleAuthenticationChallenge(_ challenge: URLAuthenticationChallenge) -> AuthResult {
+        var disposition = Foundation.URLSession.AuthChallengeDisposition.cancelAuthenticationChallenge
+        var credential: URLCredential? 
+        
+        if DataSourceManager.isSelfSignedServerValid(challenge.protectionSpace.host) {
+            if let serverTrust = challenge.protectionSpace.serverTrust {
+                credential = URLCredential(trust: serverTrust)
+                disposition = Foundation.URLSession.AuthChallengeDisposition.useCredential
+            }
+            
+        }
+        
+        // *************************
+        // MARK: - Client Certificates
+        // *************************
+        
+        self.handleLocalCertificates(challenge)
+        
+        // *************************
+        // MARK: - Client Keys
+        // *************************
+        
+        self.handleLocalKeys(challenge)
+        
+        return (disposition: disposition, credential: credential)
+    }
+    
+    public func urlSession(_ session: URLSession,
+                           didReceive challenge: URLAuthenticationChallenge,
+                           completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        self.handleChallenge(challenge: challenge, completionHandler: completionHandler)
+    }
+    
+    public func urlSession(_ session: URLSession,
+                           task: URLSessionTask,
+                           didReceive challenge: URLAuthenticationChallenge,
+                           completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        self.handleChallenge(challenge: challenge, completionHandler: completionHandler)
+    }
+    
+    func hanldeServerTrust(challenge: URLAuthenticationChallenge, completionHandler: (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        if let secTrust = challenge.protectionSpace.serverTrust {
+           // _ = SecTrustGetCertificateAtIndex(secTrust, 0)
+            
+            let policies = NSMutableArray()
+            policies.add(SecPolicyCreateSSL(true, (challenge.protectionSpace.host as CFString?)))
+            SecTrustSetPolicies(secTrust, policies)
+            
+            var evaluationSucceeded = false
+            var result = SecTrustResultType.invalid
+            
+            if #available(iOS 13, *) {
+                var error: CFError?
+                evaluationSucceeded = SecTrustEvaluateWithError(secTrust, &error)
+            } else {
+                SecTrustEvaluate(secTrust, &result)
+                evaluationSucceeded = (result == SecTrustResultType.unspecified || result == SecTrustResultType.proceed)
+            }
+            // Perform default handling for a non-trusted server and local certificate handling for a trusted one
+            if !evaluationSucceeded {
+                completionHandler(.performDefaultHandling, nil)
+            } else {
+                self.handleLocalCertificates(challenge)
+                if self.error != nil {
+                    completionHandler(.performDefaultHandling, nil)
+                    
+                } else {
+                    let credential: URLCredential = URLCredential(trust: secTrust)
+                    completionHandler(.useCredential, credential)
+                }
+            }
+        } else {
+            completionHandler(.performDefaultHandling, nil)
+        }
+        
+    }
+    
     public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, willCacheResponse proposedResponse: CachedURLResponse, completionHandler: (CachedURLResponse) -> Void) {
-        var cached: CachedURLResponse?
+        var cached: CachedURLResponse = CachedURLResponse()
         if let request = dataTask.currentRequest {
             switch request.cachePolicy {
             case .reloadIgnoringLocalCacheData:
-                cached = nil
-                
+                break
             default:
                 if let cachedResponse = URLCache.shared.cachedResponse(for: request) {
                     cached = cachedResponse
@@ -283,8 +334,8 @@ extension SessionManagerDelegate {
             }
             
         }
-
-        completionHandler(cached!)
+        
+        completionHandler(cached)
     }
     
 }

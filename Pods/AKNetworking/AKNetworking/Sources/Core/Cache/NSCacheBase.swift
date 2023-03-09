@@ -46,11 +46,12 @@ public class NSCacheBase: NSCache<AnyObject, AnyObject> {
 	override init() {
 		super.init()
 		
-		_ = NotificationCenter.default.addObserver(forName: UIApplication.didReceiveMemoryWarningNotification,
-		                                                        object: nil,
-		                                                        queue: OperationQueue.main) { _ in
-																	self.memoryWarning()
-		}
+        _ = NotificationCenter.default.addObserver(forName: UIApplication.didReceiveMemoryWarningNotification,
+                                               object: nil,
+                                               queue: OperationQueue.main) { _ in
+                                                self.memoryWarning()
+        }
+
 	}
 	
 	deinit {

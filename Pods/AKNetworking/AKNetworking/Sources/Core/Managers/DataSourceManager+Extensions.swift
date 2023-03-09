@@ -36,12 +36,13 @@ extension DataSourceManager {
      ssl certificate
      */
     public class var acceptedSelfSignedServers: [String] {
-       
         get {
             return SessionManager.sharedInstance.acceptedSelfSignedServers
-        } set {
+        }
+        set {
             SessionManager.sharedInstance.acceptedSelfSignedServers = newValue
         }
+        
     }
     
     // **************************************************
@@ -95,12 +96,13 @@ extension DataSourceManager {
      this feature
      */
     public class var username: String? {
-        
         get {
             return SessionManager.sharedInstance.username
-        } set {
+        }
+        set {
             SessionManager.sharedInstance.username = newValue
         }
+        
     }
     
     /**
@@ -111,9 +113,11 @@ extension DataSourceManager {
     public class var password: String? {
         get {
             return SessionManager.sharedInstance.password
-        } set {
+        }
+        set {
             SessionManager.sharedInstance.password = newValue
         }
+        
     }
     
 }
