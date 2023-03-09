@@ -16,4 +16,9 @@ class HomeRecentTransactionCollectionCell: UICollectionViewCell {
         
         backgroundColor = .clear
     }
+    
+    func bind(transactionName: String, transactionNominal: String){
+        nameLabel.text = transactionName
+        nominalLabel.text = "-Rp \(transactionNominal)"
+    }
 }

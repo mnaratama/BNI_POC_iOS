@@ -23,6 +23,8 @@ enum Request {
     case validateOTP(otp: String)
     case verifyCredentials(userId: String, password: String)
     case getAccountNumber(accountNumber: String)
+    case getAccountCif(cif: String)
+    case getAccountTransaction(accountNumber: String)
     
     func execute() -> AKNetworking.Request {
         let request: AKNetworking.Request
@@ -49,6 +51,12 @@ enum Request {
             
         case .getAccountNumber(accountNumber: _):
             request = DataSourceManager.request(.GET, "balance-info?account-num=000000", parameters: nil, headers: self.headers)
+            
+        case .getAccountCif(cif: _):
+            request = DataSourceManager.request(.GET, "account/all?cif=CIF-00001", parameters: nil, headers: self.headers)
+            
+        case .getAccountTransaction(accountNumber: let accountNumber):
+            request = DataSourceManager.request(.GET, "account/transaction?accountNo=000001", parameters: nil, headers: self.headers)
         }
         // log the response
         request.responseString { (urlRequest, urlResponse, string, error) -> Void in

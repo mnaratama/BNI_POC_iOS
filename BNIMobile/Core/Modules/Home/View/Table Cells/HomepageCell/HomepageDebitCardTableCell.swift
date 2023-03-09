@@ -16,6 +16,7 @@ class HomepageDebitCardTableCell: UITableViewCell {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     weak var cellDelegate: HomepageDebitCardTableCellDelegate?
+    var items: [Accounts] = []
         
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,16 +34,21 @@ class HomepageDebitCardTableCell: UITableViewCell {
         flowLayout.minimumInteritemSpacing = 0
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
+    
+    func bind(data: [Accounts]){
+        items = data
+        collectionView.reloadData()
+    }
 }
 
 extension HomepageDebitCardTableCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomepageDebitCardCollectionCell", for: indexPath) as! HomepageDebitCardCollectionCell
-        cell.bind()
+        cell.bind(cardName: items[indexPath.row].productType ?? "", cardNominal: "\(Int(items[indexPath.row].currentBalance ?? 0).asPriceFormatOnlyNumber)")
         return cell
     }
     
