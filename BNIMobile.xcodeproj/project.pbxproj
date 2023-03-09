@@ -35,6 +35,9 @@
 		0CC3A6FA29B99ED400F51D48 /* TransferRecurringModalBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F929B99ED400F51D48 /* TransferRecurringModalBottomView.swift */; };
 		0CC3A6FB29B99ED400F51D48 /* TransferRecurringModalBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F929B99ED400F51D48 /* TransferRecurringModalBottomView.swift */; };
 		0CC3A6FC29B99ED400F51D48 /* TransferRecurringModalBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A6F929B99ED400F51D48 /* TransferRecurringModalBottomView.swift */; };
+		0CC3A70329B9BE2000F51D48 /* LandingPageModalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A70229B9BE2000F51D48 /* LandingPageModalTableViewCell.swift */; };
+		0CC3A70429B9BE2000F51D48 /* LandingPageModalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A70229B9BE2000F51D48 /* LandingPageModalTableViewCell.swift */; };
+		0CC3A70529B9BE2000F51D48 /* LandingPageModalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3A70229B9BE2000F51D48 /* LandingPageModalTableViewCell.swift */; };
 		0CE4827F29B5819E00A2FADC /* AddRecipient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4827E29B5819E00A2FADC /* AddRecipient.storyboard */; };
 		0CE4828329B5836000A2FADC /* AddRecipientCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4828229B5836000A2FADC /* AddRecipientCountryView.swift */; };
 		5BC07276206D885092ED4A31 /* Pods_BNIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AF8BEA4437779214F08121 /* Pods_BNIMobile.framework */; };
@@ -94,6 +97,7 @@
 		0CC3A6F029B9932500F51D48 /* Mpin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Mpin.storyboard; path = "../../../../../../../../../Downloads/maverick-poc-ios-app-dev-vicky/BNIMobile/Core/Modules/Transfer/View/Mpin.storyboard"; sourceTree = "<group>"; };
 		0CC3A6F529B9956B00F51D48 /* LandingPageModalBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageModalBottomView.swift; sourceTree = "<group>"; };
 		0CC3A6F929B99ED400F51D48 /* TransferRecurringModalBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRecurringModalBottomView.swift; sourceTree = "<group>"; };
+		0CC3A70229B9BE2000F51D48 /* LandingPageModalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageModalTableViewCell.swift; sourceTree = "<group>"; };
 		0CE4827E29B5819E00A2FADC /* AddRecipient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipient.storyboard; sourceTree = "<group>"; };
 		0CE4828229B5836000A2FADC /* AddRecipientCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientCountryView.swift; sourceTree = "<group>"; };
 		32B1DEC082ECBC362E51D9AE /* Pods-BNIMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNIMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-BNIMobileTests/Pods-BNIMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 		0C47B61229B747F900513244 /* LandingPage */ = {
 			isa = PBXGroup;
 			children = (
+				0CC3A6FD29B9BDF400F51D48 /* LandingPageTableView */,
 				0C47B61329B7481100513244 /* LandingPage.storyboard */,
 				0C47B61529B7482E00513244 /* LandingPageView.swift */,
 				0CC3A6F529B9956B00F51D48 /* LandingPageModalBottomView.swift */,
@@ -199,6 +204,14 @@
 				0C7DD42B29B8D23A00FFDF0F /* MpinView.swift */,
 			);
 			path = Mpin;
+			sourceTree = "<group>";
+		};
+		0CC3A6FD29B9BDF400F51D48 /* LandingPageTableView */ = {
+			isa = PBXGroup;
+			children = (
+				0CC3A70229B9BE2000F51D48 /* LandingPageModalTableViewCell.swift */,
+			);
+			path = LandingPageTableView;
 			sourceTree = "<group>";
 		};
 		0CE4827A29B5806A00A2FADC /* Transfer */ = {
@@ -658,6 +671,7 @@
 				0C617A4829B5EC7200A18AE9 /* AddRecipientReviewDetailsView.swift in Sources */,
 				0C47B60E29B6EB9E00513244 /* RadioButton.swift in Sources */,
 				0C47B61D29B74AAD00513244 /* AddRecipientView.swift in Sources */,
+				0CC3A70329B9BE2000F51D48 /* LandingPageModalTableViewCell.swift in Sources */,
 				747FF27D29B20D5E009AC232 /* EnterMobileNumberView.swift in Sources */,
 				7457C10029B1B5C1006874D5 /* AppDelegate.swift in Sources */,
 				0C7DD42629B8AB3900FFDF0F /* Extension.swift in Sources */,
@@ -683,6 +697,7 @@
 				0CC3A6FB29B99ED400F51D48 /* TransferRecurringModalBottomView.swift in Sources */,
 				0CC3A6F729B9956B00F51D48 /* LandingPageModalBottomView.swift in Sources */,
 				7457C11729B1B5C5006874D5 /* BNIMobileTests.swift in Sources */,
+				0CC3A70429B9BE2000F51D48 /* LandingPageModalTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,6 +709,7 @@
 				7457C12329B1B5C5006874D5 /* BNIMobileUITestsLaunchTests.swift in Sources */,
 				7457C12129B1B5C5006874D5 /* BNIMobileUITests.swift in Sources */,
 				0CC3A6F829B9956B00F51D48 /* LandingPageModalBottomView.swift in Sources */,
+				0CC3A70529B9BE2000F51D48 /* LandingPageModalTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,6 +19,13 @@ class LandingPageView : UIViewController {
         print("LandingPageView")
     }
     
+    
+    
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func buttonMakeTransferTapped(_ sender: Any) {
         print("buttonTapped")
         guard let viewController = UIStoryboard(name: Constants.transferStoryboardName, bundle: nil).instantiateViewController(withIdentifier: Constants.transferEnterDataView) as? TransferEnterDataView else {

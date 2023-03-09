@@ -2242,9 +2242,12 @@
                                                         </constraints>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="ic_close">
+                                                        <state key="normal" image="xmark" catalog="system">
                                                             <color key="titleColor" systemColor="labelColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="closeButtonTapped:" destination="y7T-yK-weS" eventType="touchUpInside" id="8qH-Ou-e9V"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -3049,7 +3052,7 @@
                                                         </constraints>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="ic_close">
+                                                        <state key="normal" image="xmark" catalog="system">
                                                             <color key="titleColor" systemColor="labelColor"/>
                                                         </state>
                                                         <connections>
@@ -3447,11 +3450,11 @@
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="ic_bni_point" width="39" height="18"/>
         <image name="ic_checkbox" width="5.3333334922790527" height="5.3333334922790527"/>
-        <image name="ic_close" width="9.3333330154418945" height="9.3333330154418945"/>
         <image name="ic_radio_button_outline_blank" width="6.6666665077209473" height="6.6666665077209473"/>
         <image name="img_avatar_transfer" width="10.666666984558105" height="10.666666984558105"/>
         <image name="img_card" width="45.666667938232422" height="29.666666030883789"/>
         <image name="img_checkmark" width="24" height="24"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="BNI Teal">
             <color red="0.0" green="0.40000000000000002" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
