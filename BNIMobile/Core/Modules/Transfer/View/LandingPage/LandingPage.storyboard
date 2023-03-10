@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WrT-g9-eu1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WrT-g9-eu1">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -549,6 +549,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3gJ-dH-70w"/>
+                    <connections>
+                        <outlet property="currencyExchangeLabel" destination="zjR-bm-icD" id="Vql-Qi-Zbf"/>
+                        <outlet property="myExchangeTextField" destination="8HS-DG-nOw" id="Ilz-8d-0IP"/>
+                        <outlet property="pointLabel" destination="K38-oG-pGu" id="B49-no-flZ"/>
+                        <outlet property="recipientTextField" destination="sUh-LH-mq8" id="bqK-Oh-yZK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btZ-FL-eYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="UR0-nS-P5c">
